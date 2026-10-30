@@ -1,4 +1,6 @@
 Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+
+DOI: [10.5281/zenodo.23819806](https://doi.org/10.5281/zenodo.23819806)
 © 1993–2026 Abhishek Choudhary. All rights reserved.
 # Physical AI Platform
 
