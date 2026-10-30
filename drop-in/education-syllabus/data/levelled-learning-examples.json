@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PAP_PEDAGOGICAL_EXAMPLES_NOT_BOARD_SYLLABUS",
+  "conceptId": "measurement.quantity",
+  "bands": [
+    {
+      "band": "preschool",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Notice and compare lengths using everyday words.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Compare two safe classroom objects and point to the longer one.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Compare two safe classroom objects and point to the longer one.",
+      "assessmentEvidence": "Learner describes or indicates which is longer.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "primary",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Measure and compare objects using a common unit and tool.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Measure three objects with the same ruler and record centimetres.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Measure three objects with the same ruler and record centimetres.",
+      "assessmentEvidence": "Recorded values include units and a sensible comparison.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "middle",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Explain measurement, repeatability and simple uncertainty.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Take repeated measurements, calculate a mean and describe spread.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Take repeated measurements, calculate a mean and describe spread.",
+      "assessmentEvidence": "Learner identifies why readings differ and avoids false precision.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "secondary",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Use significant figures, uncertainty and dimensional consistency in calculations.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Estimate uncertainty in a derived area from measured length and width.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Estimate uncertainty in a derived area from measured length and width.",
+      "assessmentEvidence": "Calculation includes units, assumptions and uncertainty discussion.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "senior_secondary",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Propagate uncertainty through a mathematical model and compare analytical and measured values.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Measure a moving object and estimate velocity from a position-time dataset.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Measure a moving object and estimate velocity from a position-time dataset.",
+      "assessmentEvidence": "Learner compares slope estimate, uncertainty and model assumptions.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "undergraduate",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Design a traceable measurement procedure and uncertainty budget.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Calibrate a sensor against a reference and quantify systematic and random components.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Calibrate a sensor against a reference and quantify systematic and random components.",
+      "assessmentEvidence": "Reproducible procedure, calibration record and uncertainty budget.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "postgraduate",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Critically evaluate measurement models, calibration transfer and uncertainty propagation.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Compare two sensor models and quantify uncertainty using analytical and Monte Carlo methods.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Compare two sensor models and quantify uncertainty using analytical and Monte Carlo methods.",
+      "assessmentEvidence": "Independent benchmark, uncertainty analysis and documented limitations.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "doctoral",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Formulate and defend an original measurement method with falsifiable performance claims.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Design an experiment that could disconfirm a proposed sensor calibration model.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Design an experiment that could disconfirm a proposed sensor calibration model.",
+      "assessmentEvidence": "Protocol, preregistered criteria, evidence and reproducibility artifact.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "postdoctoral",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Synthesize measurement science into reusable reference methods and community benchmarks.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Develop a cross-laboratory comparison protocol and open benchmark dataset.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Develop a cross-laboratory comparison protocol and open benchmark dataset.",
+      "assessmentEvidence": "Versioned protocol, inter-lab evidence and independently reviewed benchmark.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "lifelong",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Refresh a practical measurement skill for a chosen project.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Measure a household or workshop component and document units and method.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Measure a household or workshop component and document units and method.",
+      "assessmentEvidence": "Portfolio entry demonstrates correct measurement and safe tool use.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": false,
+        "formativeRetry": true
+      }
+    },
+    {
+      "band": "late_learner",
+      "conceptId": "measurement.quantity",
+      "learningOutcome": "Rebuild prerequisite ideas of quantity, number and units at a chosen pace.",
+      "explanation": {
+        "intuitive": "A measurement describes how much of something there is, using a shared unit and a clear method.",
+        "worked": "Use objects, drawings and spoken explanations before moving to symbols.",
+        "formal": "A measurement result associates a value with a quantity, unit, procedure and uncertainty appropriate to the measurement context."
+      },
+      "activity": "Use objects, drawings and spoken explanations before moving to symbols.",
+      "assessmentEvidence": "Learner demonstrates understanding through a chosen accessible format.",
+      "officialCurriculumAlignment": "NOT_ASSERTED",
+      "adaptationPrinciples": {
+        "choiceOfRepresentation": true,
+        "noAgeInference": true,
+        "formativeRetry": true
+      }
+    }
+  ]
+}

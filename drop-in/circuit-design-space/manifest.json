@@ -1,0 +1,53 @@
+{
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "spdxLicense": "GPL-3.0-only",
+  "package": "physical-ai-platform/drop-in/circuit-design-space",
+  "packageVersion": "1.0.0",
+  "classification": "additional-drop-in-not-listed-in-iteration-47-handoff",
+  "entrypoint": "./module.py",
+  "runtime": "Python 3.10+ in optional Google Colab runtime; not imported by static browser bundle",
+  "dependencies": {
+    "required": [
+      "numpy",
+      "scipy"
+    ],
+    "optional": [
+      "jax"
+    ]
+  },
+  "capabilities": [
+    "rc-analytical-response",
+    "rc-design-space-grid",
+    "rc-time-constant-identification",
+    "optional-jax-device-vectorization",
+    "series-rlc-step-response",
+    "rlc-damping-classification",
+    "rlc-design-space-grid"
+  ],
+  "contracts": {
+    "invalidInputReturnsHold": true,
+    "gpuClaimRequiresJaxGpuDevice": true,
+    "simulationNotPhysicalVerification": true,
+    "doesNotOwnCanonicalCircuitGraph": true
+  },
+  "tests": [
+    "python -m unittest -v",
+    "python notebooks/validate_notebook.py"
+  ],
+  "platformKernelModified": false,
+  "acceptanceScriptModified": false,
+  "notebooks": [
+    "notebooks/circuit-design-space-lab.ipynb"
+  ],
+  "browserOnly": {
+    "staticSiteRunsNoPythonOrNativeExecutables": true,
+    "colabOptionalCloudRuntime": true,
+    "gpuClaimRequiresJaxGpuDevice": true
+  },
+  "samples": [
+    "samples/rc-design-space.json",
+    "samples/rc-measurements.json",
+    "samples/rlc-damping-regimes.json"
+  ],
+  "testCount": 53
+}

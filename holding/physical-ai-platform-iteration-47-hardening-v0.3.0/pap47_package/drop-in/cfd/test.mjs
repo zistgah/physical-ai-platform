@@ -1,0 +1,4 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import { cfdStep } from './module.js'; const a=(v,m)=>{if(!v)throw Error(m)};
+const r=cfdStep({mesh:{cells:8,length:1},fluid:{diffusivity:1,velocity:0,left:0,right:1},steps:10000,tolerance:1e-8});
+a(r.outcome==='OK'&&r.converged,'diffusion converges');a(r.field.every((v,i)=>Math.abs(v-(i+1)/9)<1e-6),'linear analytical solution');a(cfdStep({mesh:{cells:2,length:1},fluid:{diffusivity:0,velocity:0,left:0,right:1}}).outcome==='HOLD','rejects zero diffusivity');a(cfdStep({mesh:{cells:8,length:1},fluid:{diffusivity:1,velocity:0,left:0,right:1},steps:1,tolerance:1e-30}).outcome==='HOLD','holds non-convergence');console.log('cfd PASS');

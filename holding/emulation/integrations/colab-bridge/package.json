@@ -1,0 +1,16 @@
+{
+  "name": "physical-ai-colab-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test.mjs && node mutation-test.mjs",
+    "test:unit": "node test.mjs",
+    "test:mutation": "node mutation-test.mjs"
+  },
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

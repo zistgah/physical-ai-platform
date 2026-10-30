@@ -1,0 +1,25 @@
+{
+  "backendId": "scipy",
+  "capability": "numerics.process.optimize",
+  "operation": "numerics.process.optimize",
+  "payload": {
+    "toolDiameterMm": 6,
+    "fluteCount": 2,
+    "processMinFeedMmMin": 10,
+    "machineMaxFeedMmMin": 800,
+    "machineMinSpindleRpm": 500,
+    "machineMaxSpindleRpm": 10000,
+    "materialMaxCuttingSpeedMMin": 200,
+    "chipLoadMinMmPerTooth": 0.02,
+    "chipLoadMaxMmPerTooth": 0.05,
+    "stepdownMm": 2,
+    "stepoverMm": 3
+  },
+  "expected": {
+    "feedMmMin": 800,
+    "spindleRpm": 8000,
+    "chipLoadMmPerTooth": 0.05,
+    "materialRemovalRateMm3Min": 4800
+  },
+  "notes": "Synthetic known-answer optimization fixture. Limits are test inputs, not qualified production cutting data."
+}

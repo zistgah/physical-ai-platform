@@ -1,0 +1,83 @@
+{
+  "schema": "pap.hosted-compute-result/1.0",
+  "planId": "PAP-HOSTED-COMPUTE-DEMO:CFG-MMS-POISSON-001:RUN-ITER50-MMS-001",
+  "projectId": "PAP-HOSTED-COMPUTE-DEMO",
+  "configurationId": "CFG-MMS-POISSON-001",
+  "runId": "RUN-ITER50-MMS-001",
+  "solverId": "poisson-2d-cg",
+  "backendId": "numba",
+  "backendVersion": "0.65.1",
+  "metadata": {
+    "platform": "Physical AI Platform",
+    "iteration": 50,
+    "license": "GPL-3.0-only",
+    "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.",
+    "trademarks": [
+      "AyeAI®",
+      "AyeAM®",
+      "AyeCNSe®"
+    ],
+    "notebook": "notebooks/PAP_Hosted_Compute_Backends.ipynb"
+  },
+  "status": "COMPLETED",
+  "runtime": "Python 3.13.5 / hosted notebook",
+  "device": "CPU",
+  "precision": "float64",
+  "inputHash": "48582a7d7acd58fefd69f8dcec29fed99dee2a148253ecc49d20c913e77ea087",
+  "outputHash": "c272088b9e34c90ec926dca6c3115055973da1e4a7efcfd431b4466de2972685",
+  "startedAt": "2026-10-30T08:05:20.461410+00:00",
+  "finishedAt": "2026-10-30T08:05:25.523973+00:00",
+  "executionMode": "COLAB_HOSTED",
+  "checks": [
+    {
+      "id": "GRID_REFINEMENT_MONOTONIC",
+      "passed": true
+    },
+    {
+      "id": "GRID_REFINEMENT_ORDER",
+      "passed": true
+    },
+    {
+      "id": "ANALYTICAL_ERROR_BOUND",
+      "passed": true
+    },
+    {
+      "id": "LINEAR_SOLVER_RESIDUAL",
+      "passed": true
+    },
+    {
+      "id": "REQUESTED_BACKEND_AVAILABLE",
+      "passed": true
+    },
+    {
+      "id": "NUMBA_STENCIL_VALIDATION",
+      "passed": true
+    },
+    {
+      "id": "PYTORCH_STENCIL_VALIDATION",
+      "passed": true
+    },
+    {
+      "id": "JAX_STENCIL_VALIDATION",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "relativeL2Error": 0.000755592165604222,
+    "relativeResidual": 3.6468117140002975e-14,
+    "gridRefinementOrderMin": 1.9156734133254256,
+    "scipyIterationsFineGrid": 1
+  },
+  "validation": {
+    "passed": true,
+    "error": 0.000755592165604222,
+    "method": "manufactured-solution-analytical-comparison-and-grid-refinement"
+  },
+  "resourceUsage": {
+    "wallSeconds": 2.5541350849998707,
+    "peakMemoryGiB": 0.5670852661132812,
+    "gpuCount": 0
+  },
+  "digestPayload": "{\"backendId\":\"numba\",\"backendVersion\":\"0.65.1\",\"checks\":[{\"id\":\"GRID_REFINEMENT_MONOTONIC\",\"passed\":true},{\"id\":\"GRID_REFINEMENT_ORDER\",\"passed\":true},{\"id\":\"ANALYTICAL_ERROR_BOUND\",\"passed\":true},{\"id\":\"LINEAR_SOLVER_RESIDUAL\",\"passed\":true},{\"id\":\"REQUESTED_BACKEND_AVAILABLE\",\"passed\":true},{\"id\":\"NUMBA_STENCIL_VALIDATION\",\"passed\":true},{\"id\":\"PYTORCH_STENCIL_VALIDATION\",\"passed\":true},{\"id\":\"JAX_STENCIL_VALIDATION\",\"passed\":true}],\"configurationId\":\"CFG-MMS-POISSON-001\",\"device\":\"CPU\",\"executionMode\":\"COLAB_HOSTED\",\"finishedAt\":\"2026-10-30T08:05:25.523973+00:00\",\"inputHash\":\"48582a7d7acd58fefd69f8dcec29fed99dee2a148253ecc49d20c913e77ea087\",\"metadata\":{\"copyright\":\"Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.\",\"iteration\":50,\"license\":\"GPL-3.0-only\",\"notebook\":\"notebooks/PAP_Hosted_Compute_Backends.ipynb\",\"platform\":\"Physical AI Platform\",\"trademarks\":[\"AyeAI®\",\"AyeAM®\",\"AyeCNSe®\"]},\"metrics\":{\"gridRefinementOrderMin\":1.9156734133254256,\"relativeL2Error\":0.000755592165604222,\"relativeResidual\":3.6468117140002975e-14,\"scipyIterationsFineGrid\":1},\"outputHash\":\"c272088b9e34c90ec926dca6c3115055973da1e4a7efcfd431b4466de2972685\",\"planId\":\"PAP-HOSTED-COMPUTE-DEMO:CFG-MMS-POISSON-001:RUN-ITER50-MMS-001\",\"precision\":\"float64\",\"projectId\":\"PAP-HOSTED-COMPUTE-DEMO\",\"resourceUsage\":{\"gpuCount\":0,\"peakMemoryGiB\":0.5670852661132812,\"wallSeconds\":2.5541350849998707},\"runId\":\"RUN-ITER50-MMS-001\",\"runtime\":\"Python 3.13.5 / hosted notebook\",\"schema\":\"pap.hosted-compute-result/1.0\",\"solverId\":\"poisson-2d-cg\",\"startedAt\":\"2026-10-30T08:05:20.461410+00:00\",\"status\":\"COMPLETED\",\"validation\":{\"error\":0.000755592165604222,\"method\":\"manufactured-solution-analytical-comparison-and-grid-refinement\",\"passed\":true}}",
+  "resultDigest": "154f31509cf1a63a1b4cf28d04c149ee032e7d442feec1234394e0e5c4de7cba"
+}

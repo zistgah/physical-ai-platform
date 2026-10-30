@@ -1,0 +1,46 @@
+template_id: engineering.manufacturing_package
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Manufacturing / Production Engineering Package
+purpose: Translate an approved design baseline into controlled, inspectable and repeatable manufacturing
+  and assembly instructions.
+guide_mode: false
+sections:
+- id: release
+  title: Manufacturing Release and Configuration
+  required: true
+- id: product_definition
+  title: Product Definition
+  required: true
+- id: drawings
+  title: 'Drawings: Models and Specifications'
+  required: true
+- id: process
+  title: Process Plan and Routing
+  required: true
+- id: tooling
+  title: 'Tooling: Fixtures and Equipment'
+  required: true
+- id: procurement
+  title: Procurement and Supplier Data
+  required: true
+- id: assembly
+  title: Assembly and Work Instructions
+  required: true
+- id: quality
+  title: Quality Control and Inspection Plan
+  required: true
+- id: traceability
+  title: Traceability and Configuration Records
+  required: true
+- id: cost_yield
+  title: 'Cost: Capacity and Yield'
+  required: true
+- id: safety
+  title: Manufacturing Safety and Compliance
+  required: true
+- id: service
+  title: 'Service: Repair and End-of-Life'
+  required: true
+description: Production template. Content is populated from the canonical project model or reviewed author
+  input.

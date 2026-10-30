@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ayeai.uncertainty",
+  "name": "Uncertainty Study Orchestrator",
+  "version": "1.0.0",
+  "iteration": 47,
+  "entrypoints": { "study": "./module.js#uncertaintyStudy" },
+  "contracts": { "inputSchema": "./schemas/study.schema.json", "resultOutcomes": ["OK", "HOLD"] },
+  "execution": { "deterministicSeed": "uint32", "runner": "injected simulation function", "failurePolicy": "HOLD on any failed sample", "canonicalModelMutation": false },
+  "qualification": { "algorithm": "tested deterministic Monte Carlo orchestration", "physicalValidation": false }
+}

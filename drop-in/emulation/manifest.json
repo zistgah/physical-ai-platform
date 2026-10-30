@@ -1,0 +1,59 @@
+{
+  "packageId": "pap.drop-in.emulation",
+  "name": "Physical AI Platform Emulation Drop-in",
+  "version": "1.2.0",
+  "apiVersion": "1.2.0",
+  "license": "GPL-3.0-only",
+  "entrypoints": {
+    "core": "module.js",
+    "backendCatalog": "backends/registry.json",
+    "notebooksIndex": "../../notebooks/emulation/COLAB-INDEX.md"
+  },
+  "runtime": {
+    "platform": "static-first browser ES modules",
+    "core": "browser-native ES2022",
+    "backendExecution": "user-launched Google Colab notebooks",
+    "mandatoryServer": false,
+    "mandatoryNode": false,
+    "mandatoryPythonInBrowser": false
+  },
+  "dependencies": {
+    "core": [],
+    "optionalColab": [
+      "numpy",
+      "scipy",
+      "fmpy[complete]",
+      "pybamm",
+      "mujoco-mjx",
+      "jax",
+      "ngspice"
+    ]
+  },
+  "contracts": {
+    "outcomes": [
+      "OK",
+      "MISMATCH",
+      "HOLD"
+    ],
+    "canonicalModel": "SIR",
+    "externalBackendsAreReplaceable": true,
+    "simulationIsPhysicalVerification": false
+  },
+  "preserves": [
+    "HOLD",
+    "MISMATCH",
+    "UNVERIFIED evidence boundary",
+    "SIR ownership"
+  ],
+  "doesNotModify": [
+    "canonical kernel",
+    "acceptance script",
+    "other drop-in packages"
+  ],
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "additionalModuleSuggestion": {
+    "packageId": "pap.integration.colab-bridge",
+    "path": "integrations/colab-bridge",
+    "reason": "Browser-native job export/result import boundary for Colab; intentionally separate from emulation core"
+  }
+}

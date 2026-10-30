@@ -1,0 +1,88 @@
+{
+  "template_id": "research.technical_report",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Research / Technical Report",
+  "purpose": "Record a research programme, engineering investigation or milestone with enough context for internal review, external dissemination or later paper conversion.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "cover",
+      "title": "Cover and Document Control",
+      "required": true,
+      "instruction": "Report ID, title, authors, organization, sponsor, revision, date, classification, distribution, approvals and change history."
+    },
+    {
+      "id": "executive_summary",
+      "title": "Executive Summary",
+      "required": true,
+      "instruction": "State problem, scope, approach, key supported findings, decisions required and limitations. Keep it readable without the full report."
+    },
+    {
+      "id": "context",
+      "title": "Background and Need",
+      "required": true,
+      "instruction": "Describe origin, stakeholders, mission context, need, prior work and constraints."
+    },
+    {
+      "id": "objectives",
+      "title": "Objectives: Scope and Success Criteria",
+      "required": true,
+      "instruction": "Map objectives to measurable acceptance criteria and identify exclusions."
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements and Traceability",
+      "required": true,
+      "instruction": "List requirement IDs, rationale, source, verification method, owner and current status."
+    },
+    {
+      "id": "method",
+      "title": "Methodology and Work Performed",
+      "required": true,
+      "instruction": "Record methods, procedures, design decisions, configuration, tools, personnel, dates and deviations."
+    },
+    {
+      "id": "system",
+      "title": "System / Technical Description",
+      "required": true,
+      "instruction": "Describe architecture, interfaces, components, versions, materials, software, data flows and operating envelope."
+    },
+    {
+      "id": "results",
+      "title": "Results and Evidence",
+      "required": true,
+      "instruction": "Separate measured, simulated, derived, reported and planned outcomes. Attach evidence references and limitations."
+    },
+    {
+      "id": "analysis",
+      "title": "Analysis and Interpretation",
+      "required": true,
+      "instruction": "Explain findings, uncertainties, anomalies, failure modes and alternative interpretations."
+    },
+    {
+      "id": "risks",
+      "title": "Risks: Safety and Compliance",
+      "required": true,
+      "instruction": "Record hazards, controls, residual risks, applicable standards, deviations and open determinations."
+    },
+    {
+      "id": "resources",
+      "title": "Resources and Cost",
+      "required": true,
+      "instruction": "Use canonical BOM, labor, equipment, facilities, procurement and cost records; label estimates and price dates."
+    },
+    {
+      "id": "conclusions",
+      "title": "Conclusions and Recommendations",
+      "required": true,
+      "instruction": "Give evidence-bounded conclusions and prioritized recommendations with owners."
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false,
+      "instruction": "Include detailed logs, drawings, data dictionaries, test procedures, calculations, source listings and configuration manifests."
+    }
+  ]
+}

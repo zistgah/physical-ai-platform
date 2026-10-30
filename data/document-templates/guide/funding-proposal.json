@@ -1,0 +1,136 @@
+{
+  "template_id": "proposal.research_grant",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Research Grant / Funding Proposal",
+  "purpose": "Request resources for a defined programme of work. It may be submitted before a paper exists; planned work and preliminary evidence must be labelled accurately.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "call_compliance",
+      "title": "Call Fit and Submission Compliance",
+      "required": true,
+      "instruction": "Capture funder, call ID, version/date, deadline/timezone, eligible applicant/geography, award range, duration, cost-share, indirect-cost rules, page limits, attachments, evaluation criteria and submission portal. The live call overrides this generic template."
+    },
+    {
+      "id": "cover",
+      "title": "Cover Sheet and Administrative Data",
+      "required": true,
+      "instruction": "Applicant, lead PI, co-investigators, partners, legal entity, addresses, project title, duration, requested amount, keywords, declarations and authorized signatories."
+    },
+    {
+      "id": "summary",
+      "title": "Project Summary / Abstract",
+      "required": true,
+      "instruction": "Concise overview of problem, objective, approach, expected outputs, significance and beneficiaries. Follow call-specific structure and word limit."
+    },
+    {
+      "id": "context",
+      "title": "Problem: Context and Need",
+      "required": true,
+      "instruction": "Define the problem, affected stakeholders, scale, geography, evidence base and why the timing matters. Cite reliable sources."
+    },
+    {
+      "id": "gap",
+      "title": "Knowledge / Technology Gap and State of the Art",
+      "required": true,
+      "instruction": "Compare existing approaches and explain precisely what remains unresolved. Do not claim novelty without a documented prior-art/literature review."
+    },
+    {
+      "id": "objectives",
+      "title": "Objectives: Research Questions and Hypotheses",
+      "required": true,
+      "instruction": "Make objectives measurable, bounded and linked to outcomes. Hypotheses are optional where inappropriate; do not force them into engineering development calls."
+    },
+    {
+      "id": "innovation",
+      "title": "Innovation and Contribution",
+      "required": true,
+      "instruction": "Explain technical, methodological, scientific, societal or implementation novelty and distinguish proposed novelty from demonstrated advantage."
+    },
+    {
+      "id": "approach",
+      "title": "Approach: Methodology and Work Packages",
+      "required": true,
+      "instruction": "Describe methods, work packages, tasks, dependencies, milestones, deliverables, acceptance criteria, owners and decision gates."
+    },
+    {
+      "id": "system",
+      "title": "System Architecture / Technical Plan",
+      "required": true,
+      "instruction": "Use canonical SIR, architecture graph, interfaces, component choices, alternatives, verification strategy and lifecycle plan."
+    },
+    {
+      "id": "evidence",
+      "title": "Preliminary Work and Evidence",
+      "required": true,
+      "instruction": "Present prior work, prototypes, simulation, datasets and tests with fidelity labels. If none, state no preliminary results and explain feasibility through analysis or staged risk reduction."
+    },
+    {
+      "id": "impact",
+      "title": "Expected Outcomes: Impact and Dissemination",
+      "required": true,
+      "instruction": "Separate outputs, outcomes and longer-term impacts. Define indicators, beneficiaries, dissemination, adoption and attribution."
+    },
+    {
+      "id": "team",
+      "title": "Team: Governance and Partnerships",
+      "required": true,
+      "instruction": "Roles, qualifications, time commitments, partner contributions, decision rights, facilities and capability gaps. Verify all biographies and commitments."
+    },
+    {
+      "id": "infrastructure",
+      "title": "Facilities: Equipment and Resources",
+      "required": true,
+      "instruction": "Inventory available and requested facilities, instruments, compute, labs, software, manufacturing capability and access arrangements."
+    },
+    {
+      "id": "timeline",
+      "title": "Timeline and Milestones",
+      "required": true,
+      "instruction": "Map tasks and dependencies to a calendar. Include review gates, procurement lead times, approvals and contingency."
+    },
+    {
+      "id": "risk",
+      "title": "Risk: Safety: Ethics and Compliance",
+      "required": true,
+      "instruction": "Risk register with likelihood, consequence, mitigation, residual risk, owner, safety, privacy, cybersecurity, environmental, export and regulatory issues."
+    },
+    {
+      "id": "budget",
+      "title": "Budget and Justification",
+      "required": true,
+      "instruction": "Build from BOM, labor, travel, facilities, equipment, consumables, services, subawards, overhead and contingency. State currency, tax, rates, quotes, assumptions and call allowability."
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability and Continuation",
+      "required": true,
+      "instruction": "Explain post-award operations, maintenance, ownership, data/software stewardship, recurring costs and continuation or exit."
+    },
+    {
+      "id": "data_management",
+      "title": "Data: Software and Research Output Management",
+      "required": true,
+      "instruction": "Data types, standards, metadata, storage, access, retention, sharing, licensing, privacy, security, software and reproducibility."
+    },
+    {
+      "id": "IP",
+      "title": "Intellectual Property and Knowledge Transfer",
+      "required": true,
+      "instruction": "Background/foreground IP, ownership, licensing, publication review, patent timing, partner agreements and transfer route."
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "required": true,
+      "instruction": "Verified sources only, formatted to call rules."
+    },
+    {
+      "id": "annexes",
+      "title": "Required Annexes",
+      "required": false,
+      "instruction": "CVs, letters, ethics approvals, partner commitments, detailed budget, Gantt, facilities, data plan, risk matrix and call-specific forms."
+    }
+  ]
+}

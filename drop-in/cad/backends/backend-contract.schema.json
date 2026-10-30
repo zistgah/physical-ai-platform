@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:schemas:cad-boolean-backend-v1",
+  "title": "CAD Boolean Backend Protocol v1",
+  "type": "object",
+  "oneOf": [
+    {
+      "properties": {"action": {"const": "probe"}},
+      "required": ["action"]
+    },
+    {
+      "properties": {
+        "base": {"$ref": "#/$defs/mesh"},
+        "cutter": {"$ref": "#/$defs/mesh"},
+        "tolerance": {"type": "number", "exclusiveMinimum": 0},
+        "deflection": {"type": "number", "exclusiveMinimum": 0},
+        "angularDeflection": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "required": ["base", "cutter"]
+    }
+  ],
+  "$defs": {
+    "mesh": {
+      "type": "object",
+      "required": ["vertices", "faces"],
+      "properties": {
+        "vertices": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["x", "y", "z"], "properties": {"x": {"type": "number"}, "y": {"type": "number"}, "z": {"type": "number"}}}},
+        "faces": {"type": "array", "minItems": 4, "items": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "integer", "minimum": 0}}}
+      }
+    }
+  }
+}

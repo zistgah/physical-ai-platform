@@ -1,0 +1,1478 @@
+[
+  {
+    "id": "std-iso-15288",
+    "name": "ISO/IEC/IEEE 15288",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/81702.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-12207",
+    "name": "ISO/IEC/IEEE 12207",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/90219.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-42010",
+    "name": "ISO/IEC/IEEE 42010",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/74393.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-24748",
+    "name": "ISO/IEC/IEEE 24748",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/84709.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-15939",
+    "name": "ISO/IEC/IEEE 15939",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/71197.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-eia-632",
+    "name": "EIA-632",
+    "authority": null,
+    "source_url": null,
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "INTERNAL_GROK_SOURCE"
+  },
+  {
+    "id": "std-ieee-1012",
+    "name": "IEEE 1012",
+    "authority": null,
+    "source_url": "https://standards.ieee.org/ieee/1012/5681/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-ieee-1028",
+    "name": "IEEE 1028",
+    "authority": null,
+    "source_url": "https://standards.ieee.org/ieee/1028/5680/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-ieee-828",
+    "name": "IEEE 828",
+    "authority": null,
+    "source_url": "https://standards.ieee.org/ieee/828/6708/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-9001",
+    "name": "ISO 9001",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/62085.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-19011",
+    "name": "ISO 19011",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/84924.html",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iec-61508",
+    "name": "IEC 61508",
+    "authority": null,
+    "source_url": "https://webstore.iec.ch/en/search?query=61508",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-13849",
+    "name": "ISO 13849",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/73481.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-10218",
+    "name": "ISO 10218",
+    "authority": null,
+    "source_url": "https://www.iso.org/sectors/engineering/robotics.html",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-10218-1",
+    "name": "ISO 10218-1",
+    "authority": null,
+    "source_url": "https://www.iso.org/sectors/engineering/robotics.html",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-10218-2",
+    "name": "ISO 10218-2",
+    "authority": null,
+    "source_url": "https://www.iso.org/sectors/engineering/robotics.html",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iso-13482",
+    "name": "ISO 13482",
+    "authority": null,
+    "source_url": "https://www.iso.org/standard/53820.html",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-iec-62443",
+    "name": "IEC 62443",
+    "authority": null,
+    "source_url": "https://webstore.iec.ch/en/search?query=62443",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-nasa-npr-7120",
+    "name": "NASA NPR 7120.5",
+    "authority": null,
+    "source_url": "https://nodis3.gsfc.nasa.gov/",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-882",
+    "name": "MIL-STD-882",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-810",
+    "name": "MIL-STD-810",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-461",
+    "name": "MIL-STD-461",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-883",
+    "name": "MIL-STD-883",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-202",
+    "name": "MIL-STD-202",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-961",
+    "name": "MIL-STD-961",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-mil-std-963",
+    "name": "MIL-STD-963",
+    "authority": null,
+    "source_url": "https://quicksearch.dla.mil/",
+    "accessed_at": null,
+    "provenance_basis": "sources/mrd-predecessor",
+    "provenance_state": "OFFICIAL_URL_ADDED"
+  },
+  {
+    "id": "std-isro-profile",
+    "name": "ISRO product assurance profile",
+    "authority": null,
+    "source_url": null,
+    "accessed_at": null,
+    "provenance_basis": "docs/MRD.md §7",
+    "provenance_state": "INTERNAL_GROK_SOURCE"
+  },
+  {
+    "id": "std-iso-21423",
+    "name": "ISO 21423:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/86749.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-19649",
+    "name": "ISO 19649:2017",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/65658.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-ts-25213",
+    "name": "ISO/TS 25213:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/89447.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-3691-4",
+    "name": "ISO 3691-4:2023",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/83545.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-18646-2",
+    "name": "ISO 18646-2:2024",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/committee/5915511/x/catalogue/p/0/u/1/w/0/d/0",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO/TC 299 catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-18646-3",
+    "name": "ISO 18646-3:2021",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/committee/5915511/x/catalogue/p/0/u/1/w/0/d/0",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO/TC 299 catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-18646-5",
+    "name": "ISO 18646-5:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/committee/5915511/x/catalogue/p/0/u/1/w/0/d/0",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO/TC 299 catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-tr-23482-1",
+    "name": "ISO/TR 23482-1:2020",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/71564.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-tr-23482-2",
+    "name": "ISO/TR 23482-2:2019",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/71627.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-13850",
+    "name": "ISO 13850:2015",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/59970.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-13849-1",
+    "name": "ISO 13849-1:2023",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/73481.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iec-62443-2-4",
+    "name": "IEC 62443-2-4:2023",
+    "authority": "IEC",
+    "source_url": "https://webstore.iec.ch/en/publication/67631",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official IEC Webstore record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iec-62443-3-2",
+    "name": "IEC 62443-3-2:2020",
+    "authority": "IEC",
+    "source_url": "https://webstore.iec.ch/en/publication/30727",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official IEC Webstore record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iec-62443-4-2",
+    "name": "IEC 62443-4-2:2019",
+    "authority": "IEC",
+    "source_url": "https://webstore.iec.ch/en/publication/34421",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official IEC Webstore record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iec-pas-62443-1-6",
+    "name": "IEC PAS 62443-1-6:2025",
+    "authority": "IEC",
+    "source_url": "https://webstore.iec.ch/en/publication/102885",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official IEC Webstore record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iec-pas-62443-2-2",
+    "name": "IEC PAS 62443-2-2:2025",
+    "authority": "IEC",
+    "source_url": "https://webstore.iec.ch/en/publication/63886",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official IEC Webstore record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-nasa-npr-7123-1d",
+    "name": "NPR 7123.1D",
+    "authority": "NASA",
+    "source_url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official NASA NODIS record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-nasa-npr-7150-2d",
+    "name": "NPR 7150.2D",
+    "authority": "NASA",
+    "source_url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official NASA NODIS record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-nasa-npr-8000-4c",
+    "name": "NPR 8000.4C",
+    "authority": "NASA",
+    "source_url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?c=8000&s=4C&t=NPR",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official NASA NODIS record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-bis-is-iso-10218-p1-2025",
+    "name": "IS/ISO 10218 (Part 1):2025",
+    "authority": "BIS",
+    "source_url": "https://standards.bis.gov.in/website/standard-details?encryptedId=eyJpdiI6IjR0TzUxQitnT1NzMzhra204cVJ3MHc9PSIsInZhbHVlIjoiTE5sYkN5cUJ3ZmpaVjl4SUpNZVlGZz09IiwibWFjIjoiYTVmNGMwN2I0NTc3N2RlNTFiMTI2MjgzZWE5YTI1ZjI4NDg2ODZhZGY3Nzk4NGMxYTFiMjUyZTgzMmM0ZTZiZCIsInRhZyI6IiJ9",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official BIS standard-details record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-bis-is-iso-10218-p2-2025",
+    "name": "IS/ISO 10218 (Part 2):2025",
+    "authority": "BIS",
+    "source_url": "https://standards.bis.gov.in/website/standard-details?encryptedId=eyJpdiI6IjVFMU1IdGc1ZWVTbTcwTmhEZEVRTXc9PSIsInZhbHVlIjoiay81U2VUT1Y5ZkhCemsyNnFZVDNUUT09IiwibWFjIjoiNzVkMmYwYmI3MDY1YWMxNzJiYTI4YjgyZjdkNDY5OTc3NmU4YjUxOTJhOWJhZTQ5NWNiOGI4ZGUwNGVlOTA4ZiIsInRhZyI6IiJ9",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official BIS standard-details record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-mil-std-882e-change1",
+    "name": "MIL-STD-882E w/Change 1",
+    "authority": "U.S. Department of Defense",
+    "source_url": "https://quicksearch.dla.mil/WMX/Default.aspx?token=5784600",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "DLA Quick Search record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-mil-std-461g",
+    "name": "MIL-STD-461G",
+    "authority": "U.S. Department of Defense",
+    "source_url": "https://quicksearch.dla.mil/WMX/Default.aspx?token=5738281",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "DLA Quick Search record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-15289",
+    "name": "ISO/IEC/IEEE 15289:2019",
+    "authority": "Systems and software engineering - Content of life-cycle information items (documentation)",
+    "source_url": "https://www.iso.org/standard/74909.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-1",
+    "name": "ISO/IEC/IEEE 24748-1:2024",
+    "authority": "Guidelines for life cycle management",
+    "source_url": "https://www.iso.org/standard/84709.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-2",
+    "name": "ISO/IEC/IEEE 24748-2:2024",
+    "authority": "Guidelines for application of ISO/IEC/IEEE 15288",
+    "source_url": "https://www.iso.org/standard/84661.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-3",
+    "name": "ISO/IEC/IEEE 24748-3:2020",
+    "authority": "Guidelines for application of ISO/IEC/IEEE 12207",
+    "source_url": "https://www.iso.org/standard/77698.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-4",
+    "name": "ISO/IEC/IEEE 24748-4:2026",
+    "authority": "Systems engineering management planning",
+    "source_url": "https://www.iso.org/standard/87797.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-5",
+    "name": "ISO/IEC/IEEE 24748-5:2017",
+    "authority": "Software development planning",
+    "source_url": "https://www.iso.org/standard/60062.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-7",
+    "name": "ISO/IEC/IEEE 24748-7:2026",
+    "authority": "Application of systems engineering on defence programs",
+    "source_url": "https://www.iso.org/standard/90139.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-8",
+    "name": "ISO/IEC/IEEE 24748-8:2026",
+    "authority": "Technical reviews and audits on defence programs",
+    "source_url": "https://www.iso.org/standard/91563.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24748-10",
+    "name": "ISO/IEC/IEEE 24748-10:2026",
+    "authority": "Guidelines for systems engineering agility",
+    "source_url": "https://www.iso.org/standard/90086.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-29148",
+    "name": "ISO/IEC/IEEE 29148:2018",
+    "authority": "Life cycle processes - Requirements engineering",
+    "source_url": "https://committee.iso.org/standard/72089.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-16085",
+    "name": "ISO/IEC/IEEE 16085:2021",
+    "authority": "Life cycle processes - Risk management",
+    "source_url": "https://www.iso.org/standard/74371.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-25010",
+    "name": "ISO/IEC 25010:2023",
+    "authority": "Systems and software product quality model",
+    "source_url": "https://www.iso.org/standard/78176.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-25002",
+    "name": "ISO/IEC 25002:2024",
+    "authority": "Quality model overview and usage",
+    "source_url": "https://www.iso.org/standard/78175.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-21839",
+    "name": "ISO/IEC/IEEE 21839",
+    "authority": "System of systems considerations in life cycle stages",
+    "source_url": "https://www.iso.org/standard/91120.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-21840",
+    "name": "ISO/IEC/IEEE 21840",
+    "authority": "Guidelines for utilization of 15288 in systems of systems",
+    "source_url": "https://www.iso.org/standard/92475.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-21841",
+    "name": "ISO/IEC/IEEE 21841:2019",
+    "authority": "Taxonomy of systems of systems",
+    "source_url": "https://www.iso.org/standard/71957.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-24765",
+    "name": "ISO/IEC/IEEE 24765",
+    "authority": "Systems and software engineering vocabulary",
+    "source_url": "https://www.iso.org/standard/85596.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-bpmn",
+    "name": "BPMN 2.0.2",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/spec/BPMN/2.0.2/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-cmmn",
+    "name": "CMMN 1.1",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/cmmn/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-dmn",
+    "name": "DMN 1.6",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/dmn/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-uaf",
+    "name": "UAF 1.3",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/spec/UAF/1.3",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-sbvr",
+    "name": "SBVR 1.5",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/spec/SBVR/1.5/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-bacm",
+    "name": "BACM 1.0",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/spec/BACM/1.0/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-vdml",
+    "name": "VDML 1.1",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/spec/VDML/1.1/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-ppm",
+    "name": "PPMN 1.0",
+    "authority": "OMG",
+    "source_url": "https://www.omg.org/spec/PPMN/1.0/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-togaf",
+    "name": "TOGAF Standard",
+    "authority": "The Open Group",
+    "source_url": "https://publications.opengroup.org/standards/togaf",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-archimate",
+    "name": "ArchiMate 3.2",
+    "authority": "The Open Group",
+    "source_url": "https://www.opengroup.org/archimate",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-it4it",
+    "name": "IT4IT Reference Architecture",
+    "authority": "The Open Group",
+    "source_url": "https://www.opengroup.org/it4it",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-open-fair",
+    "name": "Open FAIR",
+    "authority": "The Open Group",
+    "source_url": "https://www.opengroup.org/openfair",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-rdf",
+    "name": "RDF 1.2",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/rdf12-concepts/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-rdfs",
+    "name": "RDF Schema 1.2",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/rdf12-schema/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-owl2",
+    "name": "OWL 2",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/owl2-overview/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-skos",
+    "name": "SKOS",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/skos-reference/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-shacl",
+    "name": "SHACL 1.2",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/shacl12-core/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-sparql",
+    "name": "SPARQL 1.2",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/sparql12-query/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-jsonld",
+    "name": "JSON-LD 1.1",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/json-ld11/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-prov-o",
+    "name": "PROV-O",
+    "authority": "W3C",
+    "source_url": "https://www.w3.org/TR/prov-o/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso11179",
+    "name": "ISO/IEC 11179-1:2023",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/78914.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso15489",
+    "name": "ISO 15489-1:2016",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/62542.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso30300",
+    "name": "ISO 30300:2020",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/74291.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso30301",
+    "name": "ISO 30301:2019",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/74292.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso30302",
+    "name": "ISO 30302:2022",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/81595.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-oais",
+    "name": "CCSDS 650.0-M-3",
+    "authority": "CCSDS",
+    "source_url": "https://ccsds.org/Pubs/650x0m3.pdf",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-premis",
+    "name": "PREMIS",
+    "authority": "Library of Congress",
+    "source_url": "https://www.loc.gov/standards/premis/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-mets",
+    "name": "METS",
+    "authority": "Library of Congress",
+    "source_url": "https://www.loc.gov/standards/mets/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-bagit",
+    "name": "BagIt",
+    "authority": "IETF",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc8493",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-warc",
+    "name": "ISO 28500",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/68004.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-pdfa",
+    "name": "ISO 19005",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/38920.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-bpm-wp",
+    "name": "Workflow Patterns",
+    "authority": "Workflow Patterns Initiative",
+    "source_url": "https://www.workflowpatterns.com/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso27001",
+    "name": "ISO/IEC 27001:2022",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/27001.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso27002",
+    "name": "ISO/IEC 27002:2022",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/75652.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso27005",
+    "name": "ISO/IEC 27005:2022",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/80585.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso15408",
+    "name": "ISO/IEC 15408-1:2026",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/15408-1",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso18045",
+    "name": "ISO/IEC 18045:2026",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/18045",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso29100",
+    "name": "ISO/IEC 29100:2024",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/85938.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-nist-csf",
+    "name": "NIST CSF 2.0",
+    "authority": "NIST",
+    "source_url": "https://www.nist.gov/cyberframework",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-nist-800-53",
+    "name": "NIST SP 800-53 Rev. 5.2.0",
+    "authority": "NIST",
+    "source_url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-nist-ai-rmf",
+    "name": "NIST AI RMF 1.0",
+    "authority": "NIST",
+    "source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso42001",
+    "name": "ISO/IEC 42001:2023",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/81230.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso42005",
+    "name": "ISO/IEC 42005:2025",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/42005",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso42006",
+    "name": "ISO/IEC 42006:2025",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/42006",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso22989",
+    "name": "ISO/IEC 22989:2022",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/74296.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso23053",
+    "name": "ISO/IEC 23053:2022",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/74438.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso23894",
+    "name": "ISO/IEC 23894:2023",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/77304.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-spdx",
+    "name": "SPDX Specification",
+    "authority": "SPDX",
+    "source_url": "https://spdx.dev/specifications/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-cyclonedx",
+    "name": "CycloneDX",
+    "authority": "OWASP",
+    "source_url": "https://cyclonedx.org/specification/overview/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-slsa",
+    "name": "SLSA",
+    "authority": "OpenSSF",
+    "source_url": "https://slsa.dev/spec/v1.2/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-in-toto",
+    "name": "in-toto",
+    "authority": "in-toto",
+    "source_url": "https://in-toto.io/docs/specs/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-openapi",
+    "name": "OpenAPI Specification",
+    "authority": "OpenAPI Initiative",
+    "source_url": "https://spec.openapis.org/oas/v3.2.1.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-asyncapi",
+    "name": "AsyncAPI Specification",
+    "authority": "AsyncAPI Initiative",
+    "source_url": "https://www.asyncapi.com/docs/reference/specification/v3.0.0",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-ro-crate",
+    "name": "RO-Crate",
+    "authority": "researchobject.org",
+    "source_url": "https://www.researchobject.org/ro-crate/specification.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-jats",
+    "name": "ANSI/NISO Z39.96-2024",
+    "authority": "NISO",
+    "source_url": "https://www.niso.org/standards-committees/jats",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-cff",
+    "name": "Citation File Format",
+    "authority": "Citation File Format",
+    "source_url": "https://github.com/citation-file-format/citation-file-format",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-fair",
+    "name": "FAIR Principles",
+    "authority": "GO FAIR / FORCE11",
+    "source_url": "https://www.go-fair.org/fair-principles/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-datacite",
+    "name": "DataCite Metadata Schema",
+    "authority": "DataCite",
+    "source_url": "https://schema.datacite.org/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-crossref",
+    "name": "Crossref Metadata Deposit Schema",
+    "authority": "Crossref",
+    "source_url": "https://www.crossref.org/documentation/schema-library/metadata-deposit-schema/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-orcid",
+    "name": "ORCID iD",
+    "authority": "ORCID",
+    "source_url": "https://orcid.org/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-ror",
+    "name": "ROR",
+    "authority": "ROR",
+    "source_url": "https://ror.org/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-doi",
+    "name": "DOI",
+    "authority": "ISO/Centre?",
+    "source_url": "https://www.doi.org/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-gs1",
+    "name": "GS1 standards",
+    "authority": "GS1",
+    "source_url": "https://www.gs1.org/standards",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-9001-2026",
+    "name": "ISO 9001:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/62085.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record / ISO popular standards catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso19011-2026",
+    "name": "ISO 19011:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/84924.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso17025",
+    "name": "ISO/IEC 17025:2017",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/66912.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso13485",
+    "name": "ISO 13485:2016",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/59752.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso14971",
+    "name": "ISO 14971:2019",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/72704.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso26262",
+    "name": "ISO 26262:2018",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/publication/PUB200262.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso18497-1",
+    "name": "ISO 18497-1:2024",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/82684.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso18497-2",
+    "name": "ISO 18497-2:2024",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/82686.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso18497-3",
+    "name": "ISO 18497-3:2024",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/82687.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso18497-4",
+    "name": "ISO 18497-4:2024",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/82688.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso45001",
+    "name": "ISO 45001:2018",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/63787.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso14001",
+    "name": "ISO 14001:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/14001.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso50001",
+    "name": "ISO 50001:2018",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/69426.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso31101",
+    "name": "ISO 31101:2023",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/81172.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-j3016",
+    "name": "SAE J3016",
+    "authority": "SAE",
+    "source_url": "https://www.sae.org/standards/content/j3016_202104/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-imo-solas",
+    "name": "SOLAS 1974",
+    "authority": "IMO",
+    "source_url": "https://www.imo.org/en/about/conventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-imo-marpol",
+    "name": "MARPOL",
+    "authority": "IMO",
+    "source_url": "https://www.imo.org/en/about/conventions/pages/international-convention-for-the-prevention-of-pollution-from-ships-(marpol).aspx",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-imo-ism",
+    "name": "ISM Code",
+    "authority": "IMO",
+    "source_url": "https://www.imo.org/en/ourwork/humanelement/pages/ismcode.aspx",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-icao-sarps",
+    "name": "ICAO SARPs",
+    "authority": "ICAO",
+    "source_url": "https://www.icao.int/safety-management/standards-and-recommended-practices-sarps",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-modaf",
+    "name": "MODAF",
+    "authority": "UK MOD",
+    "source_url": "https://www.gov.uk/government/publications/modaf-architecture-framework",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-naf",
+    "name": "NATO Architecture Framework",
+    "authority": "NATO",
+    "source_url": "https://www.nato.int/cps/en/natohq/topics_157575.htm",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-zachman",
+    "name": "Zachman Framework",
+    "authority": "Zachman International",
+    "source_url": "https://www.zachman.com/about-the-zachman-framework",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-rm-odp",
+    "name": "ISO/IEC 10746 (RM-ODP)",
+    "authority": "ISO/IEC",
+    "source_url": "https://www.iso.org/standard/20696.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-rami40",
+    "name": "RAMI 4.0",
+    "authority": "Plattform Industrie 4.0",
+    "source_url": "https://www.plattform-i40.de/IP/Navigation/EN/Industrie40/Reference-Architecture-Model-Industrie40/reference-architecture-model-industrie40.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-sgam",
+    "name": "SGAM",
+    "authority": "CEN-CENELEC-ETSI",
+    "source_url": "https://www.entsoe.eu/technopedia/technology/smart-grid-architecture-model/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-dublincore",
+    "name": "Dublin Core",
+    "authority": "DCMI",
+    "source_url": "https://www.dublincore.org/specifications/dublin-core/dces/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-isni",
+    "name": "ISNI",
+    "authority": "ISNI International Agency",
+    "source_url": "https://isni.org/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-oidc",
+    "name": "OpenID Connect",
+    "authority": "OpenID Foundation",
+    "source_url": "https://openid.net/specs/openid-connect-core-1_0.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-oauth",
+    "name": "OAuth 2.0",
+    "authority": "IETF",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc6749",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-saml",
+    "name": "SAML 2.0",
+    "authority": "OASIS",
+    "source_url": "https://www.oasis-open.org/standard/saml/",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-scim",
+    "name": "SCIM 2.0",
+    "authority": "IETF",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc7644",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-x509",
+    "name": "X.509",
+    "authority": "ITU-T",
+    "source_url": "https://www.itu.int/rec/T-REC-X.509",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official authority record/catalogue",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-12207-2026",
+    "name": "ISO/IEC/IEEE 12207:2026",
+    "authority": "ISO/IEC/IEEE",
+    "source_url": "https://www.iso.org/standard/90219.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  },
+  {
+    "id": "std-iso-19011-2026",
+    "name": "ISO 19011:2026",
+    "authority": "ISO",
+    "source_url": "https://www.iso.org/standard/84924.html",
+    "accessed_at": "2026-10-24",
+    "provenance_basis": "Official ISO standard record",
+    "provenance_state": "WEB_VERIFIED"
+  }
+]

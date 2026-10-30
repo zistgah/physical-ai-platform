@@ -1,0 +1,82 @@
+{
+  "template_id": "engineering.manufacturing_package",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Manufacturing / Production Engineering Package",
+  "purpose": "Translate an approved design baseline into controlled, inspectable and repeatable manufacturing and assembly instructions.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "release",
+      "title": "Manufacturing Release and Configuration",
+      "required": true,
+      "instruction": "Part/product revision, release authority, effectivity, change notice and approved source baseline."
+    },
+    {
+      "id": "product_definition",
+      "title": "Product Definition",
+      "required": true,
+      "instruction": "System structure, EBOM, MBOM, SBOM, HBOM, CBOM and alternates with cross-reference to canonical component IDs."
+    },
+    {
+      "id": "drawings",
+      "title": "Drawings: Models and Specifications",
+      "required": true,
+      "instruction": "Native CAD, neutral exports, 2D drawings, tolerances, GD&T, material specs, surface finish and revision."
+    },
+    {
+      "id": "process",
+      "title": "Process Plan and Routing",
+      "required": true,
+      "instruction": "Operations, sequence, machine/tool, setup, parameters, work center, cycle time, inspection points and operator skill."
+    },
+    {
+      "id": "tooling",
+      "title": "Tooling: Fixtures and Equipment",
+      "required": true,
+      "instruction": "Tool IDs, calibration, maintenance, capacity, safety and source."
+    },
+    {
+      "id": "procurement",
+      "title": "Procurement and Supplier Data",
+      "required": true,
+      "instruction": "Approved suppliers, part numbers, alternates, lead times, MOQ, price date, origin, restrictions and quality records."
+    },
+    {
+      "id": "assembly",
+      "title": "Assembly and Work Instructions",
+      "required": true,
+      "instruction": "Stepwise instructions, torque/adhesive/wiring values, images, ESD/safety, verification and rework rules."
+    },
+    {
+      "id": "quality",
+      "title": "Quality Control and Inspection Plan",
+      "required": true,
+      "instruction": "Characteristics, methods, sampling, acceptance limits, instruments, calibration and records."
+    },
+    {
+      "id": "traceability",
+      "title": "Traceability and Configuration Records",
+      "required": true,
+      "instruction": "Serial/lot/batch, material certificates, firmware, operator, process data, inspection and nonconformance links."
+    },
+    {
+      "id": "cost_yield",
+      "title": "Cost: Capacity and Yield",
+      "required": true,
+      "instruction": "Material/labor/overhead/tooling, scrap, rework, yield assumptions, throughput and capacity constraints."
+    },
+    {
+      "id": "safety",
+      "title": "Manufacturing Safety and Compliance",
+      "required": true,
+      "instruction": "Machine safety, hazardous materials, battery handling, ESD, environmental permits and applicable standards."
+    },
+    {
+      "id": "service",
+      "title": "Service: Repair and End-of-Life",
+      "required": true,
+      "instruction": "Repairability, replaceable modules, spares, diagnostic procedures, recycling and disposal."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import { route } from './module.js';const a=(v,m)=>{if(!v)throw Error(m)};
+const stations=[{id:'cut-1',capabilities:['cut'],capacity:20},{id:'assemble-1',capabilities:['assemble'],capacity:20}];
+const r=route({order:{id:'wo-1',quantity:5},operations:[{id:'op1',capability:'cut',duration:2},{id:'op2',capability:'assemble',duration:3}],stations});a(r.outcome==='OK'&&r.completionTime===5,'schedules sequential operations');a(route({order:{id:'wo',quantity:5},operations:[{id:'op',capability:'cut',duration:2}],stations,quality:[{id:'ncr-1',status:'OPEN'}]}).outcome==='HOLD','quality hold blocks dispatch');a(route({order:{id:'wo',quantity:50},operations:[{id:'op',capability:'cut',duration:2}],stations}).outcome==='HOLD','capacity shortage holds order');console.log('manufacturing PASS');

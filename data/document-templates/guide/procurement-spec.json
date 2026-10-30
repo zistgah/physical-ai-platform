@@ -1,0 +1,70 @@
+{
+  "template_id": "engineering.procurement_specification",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Procurement / Request for Quotation Specification",
+  "purpose": "Enable comparable supplier responses against a controlled technical, quality, commercial and lifecycle requirement set.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "scope",
+      "title": "Scope and Procurement Description",
+      "required": true,
+      "instruction": "Item/service, quantity, delivery location, schedule, intended use, option lines and exclusions."
+    },
+    {
+      "id": "requirements",
+      "title": "Technical Requirements",
+      "required": true,
+      "instruction": "Unique shall statements, units, tolerance, operating environment, interfaces, performance and verification."
+    },
+    {
+      "id": "standards",
+      "title": "Standards and Regulatory Requirements",
+      "required": true,
+      "instruction": "Applicable standards, certifications, material restrictions, safety, cybersecurity and export controls."
+    },
+    {
+      "id": "quality",
+      "title": "Quality and Inspection",
+      "required": true,
+      "instruction": "Quality system, inspection plan, acceptance criteria, certificates, nonconformance and audit rights."
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery and Packaging",
+      "required": true,
+      "instruction": "Lead time, milestones, packaging, transport, storage, labeling, documentation and Incoterms where applicable."
+    },
+    {
+      "id": "supplier",
+      "title": "Supplier Qualification and Origin",
+      "required": true,
+      "instruction": "Legal entity, manufacturing site, country of origin, sub-tier suppliers, capacity, financial and continuity information."
+    },
+    {
+      "id": "lifecycle",
+      "title": "Support: Warranty and Lifecycle",
+      "required": true,
+      "instruction": "Warranty, service, spares, repair, firmware updates, obsolescence notice and end-of-life support."
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Response Schedule",
+      "required": true,
+      "instruction": "Unit price, tooling/NRE, taxes, freight, currency, validity, payment terms, MOQ, escalation and quote assumptions."
+    },
+    {
+      "id": "response",
+      "title": "Supplier Response Matrix",
+      "required": true,
+      "instruction": "Require explicit compliant/exception/no-bid response with evidence and proposed deviations."
+    },
+    {
+      "id": "evaluation",
+      "title": "Evaluation and Award Criteria",
+      "required": true,
+      "instruction": "Weighted criteria, mandatory pass/fail gates, technical risk, lifecycle cost, resilience and conflict controls."
+    }
+  ]
+}

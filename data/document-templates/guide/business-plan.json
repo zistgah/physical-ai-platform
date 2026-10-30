@@ -1,0 +1,124 @@
+{
+  "template_id": "business.plan",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Business Plan / Commercialization Plan",
+  "purpose": "Explain how a product or service creates, delivers and captures value, and how the organization will finance, build, sell, operate and sustain it.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "executive",
+      "title": "Executive Summary",
+      "required": true,
+      "instruction": "Concise business proposition, customer, product, market, business model, capital requirement, milestones and principal risks."
+    },
+    {
+      "id": "company",
+      "title": "Organization and Ownership",
+      "required": true,
+      "instruction": "Legal entity, jurisdiction, ownership, governance, mission, operating structure and current status."
+    },
+    {
+      "id": "problem",
+      "title": "Customer Problem and Jobs-to-be-Done",
+      "required": true,
+      "instruction": "Identify customer roles, workflows, pain, costs, alternatives, purchasing authority and evidence of demand."
+    },
+    {
+      "id": "product",
+      "title": "Product / Service Definition",
+      "required": true,
+      "instruction": "Product scope, versions, capabilities, exclusions, service levels, interfaces, lifecycle and roadmap."
+    },
+    {
+      "id": "technology",
+      "title": "Technology and IP",
+      "required": true,
+      "instruction": "Architecture, maturity, dependencies, IP ownership, licenses, cybersecurity, data, standards and technical differentiation."
+    },
+    {
+      "id": "market",
+      "title": "Market Analysis",
+      "required": true,
+      "instruction": "Segment market, geography, customer counts, TAM/SAM/SOM method, growth sources, adoption barriers and sensitivity."
+    },
+    {
+      "id": "competition",
+      "title": "Competition and Substitutes",
+      "required": true,
+      "instruction": "Compare direct competitors, substitute technologies, internal build options and status quo using transparent criteria."
+    },
+    {
+      "id": "value",
+      "title": "Value Proposition and Differentiation",
+      "required": true,
+      "instruction": "Quantify customer value where evidence exists: cost, time, yield, reliability, safety, energy, productivity or sovereignty."
+    },
+    {
+      "id": "go_to_market",
+      "title": "Marketing: Sales and Go-to-Market",
+      "required": true,
+      "instruction": "Positioning, channels, lead generation, sales process, procurement, partnerships, pricing and customer acquisition."
+    },
+    {
+      "id": "operations",
+      "title": "Operations and Delivery Model",
+      "required": true,
+      "instruction": "Manufacturing, sourcing, quality, installation, deployment, support, service, warranty, returns and end-of-life."
+    },
+    {
+      "id": "supply_chain",
+      "title": "Supply Chain and Resilience",
+      "required": true,
+      "instruction": "Suppliers, alternates, country/jurisdiction, lead time, single-source risk, obsolescence, repairability and substitution plan."
+    },
+    {
+      "id": "regulatory",
+      "title": "Regulatory and Standards Pathway",
+      "required": true,
+      "instruction": "Applicable regimes, certification route, test evidence, responsible party, schedule, cost and unresolved determinations."
+    },
+    {
+      "id": "organization",
+      "title": "Team and Human Resources",
+      "required": true,
+      "instruction": "Founders, leadership, technical, sales, operations, advisors, hiring sequence, skills gaps and labor assumptions."
+    },
+    {
+      "id": "economics",
+      "title": "Unit Economics and Pricing",
+      "required": true,
+      "instruction": "Cost build-up from BOM/MBOM/SBOM/HBOM, labor, tooling, yield, logistics, service, warranty, overhead, pricing and margin."
+    },
+    {
+      "id": "financials",
+      "title": "Financial Plan and Projections",
+      "required": true,
+      "instruction": "Monthly/quarterly first-year and annual multi-year P&L, cash flow, balance sheet, capex, working capital, funding, scenario and sensitivity. Explicitly label assumptions."
+    },
+    {
+      "id": "capital",
+      "title": "Capital Requirement and Use of Funds",
+      "required": true,
+      "instruction": "Amount, timing, instrument, use by work package, runway, milestones and financing alternatives."
+    },
+    {
+      "id": "risks",
+      "title": "Risk Register and Contingency",
+      "required": true,
+      "instruction": "Risk owner, probability, impact, mitigation, trigger, contingency and residual risk."
+    },
+    {
+      "id": "impact",
+      "title": "Impact: Sustainability and Sovereignty",
+      "required": true,
+      "instruction": "Environmental, social, economic, repairability, local capability, jurisdictional and resilience effects with measurable indicators."
+    },
+    {
+      "id": "appendices",
+      "title": "Supporting Schedules",
+      "required": false,
+      "instruction": "Detailed assumptions, quotes, market sources, BOM, org chart, product roadmap, contracts, IP, permits and financial statements."
+    }
+  ]
+}

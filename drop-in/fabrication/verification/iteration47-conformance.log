@@ -1,0 +1,14 @@
+PASS BIBO cfd below
+PASS BIBO cfd on
+PASS BIBO cfd within
+PASS BIBO cfd above
+PASS BIBO hilDrop below
+PASS BIBO hilDrop on
+PASS BIBO hilDrop within
+PASS BIBO hilDrop above
+PASS BIBO logistics below
+PASS BIBO logistics on
+PASS BIBO logistics within
+PASS BIBO logistics above
+
+=== ALL ITERATION 47 TESTS PASSED ===

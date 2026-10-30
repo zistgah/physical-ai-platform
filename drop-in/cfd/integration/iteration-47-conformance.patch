@@ -1,0 +1,18 @@
+--- a/tools/conformance-test-iter47.mjs
++++ b/tools/conformance-test-iter47.mjs
+@@ -15,11 +15,12 @@
+ const dirs = readdirSync("drop-in").filter(d => readFileSync(join("drop-in", d, "EXPLAINER.md"), "utf8").includes("What an industry leader has"));
+ assert(dirs.length === 10, "Ten packages");
+ 
++const cfdValid = { mesh: { cells: 16, height: 1 }, fluid: { rho: 1, mu: 1 }, pressureGradient: -1, steps: 1 };
+ bibo("cfd", {
+   below: { fn: () => cfdStep({}), expect: (r) => r.outcome === "HOLD" },
+-  on: { fn: () => cfdStep({ mesh: { cells: 1 }, fluid: { rho: 1000 }, steps: 1 }), expect: (r) => r.outcome === "OK" },
+-  within: { fn: () => cfdStep({ mesh: { cells: 1 }, fluid: { rho: 1000 }, steps: 1 }).residual, expect: (r) => r === 1 },
+-  above: { fn: () => cfdStep({ mesh: { cells: 1 }, fluid: { rho: 1000 }, steps: 0 }), expect: (r) => r.outcome === "HOLD" }
++  on: { fn: () => cfdStep({ ...cfdValid, mesh: { cells: 3, height: 1 } }), expect: (r) => r.outcome === "OK" && r.converged === true },
++  within: { fn: () => cfdStep(cfdValid), expect: (r) => r.outcome === "OK" && Number.isFinite(r.residual) && r.residual <= 1e-10 },
++  above: { fn: () => cfdStep({ ...cfdValid, steps: 0 }), expect: (r) => r.outcome === "HOLD" }
+ });
+ 
+ bibo("hilDrop", {

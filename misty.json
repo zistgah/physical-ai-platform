@@ -1,0 +1,31 @@
+{
+ "title": "Physical AI Platform: Sovereign Physical AI and Robotics Guidance Platform",
+ "version": "0.1.0",
+ "upload_type": "software",
+ "description": "<p>The Physical AI Platform at iteration 51: a static-first, componentised knowledge graph, engineering workbench, simulator, education system, research system, manufacturing system, teleoperation layer, safety system and compliance framework for physical AI and robotics. It runs as a static site with no mandatory backend, database, cloud AI provider or proprietary runtime.</p><p>The release carries the Master Requirements Document (docs/MRD.md), the predecessor documents it consolidates, the repository's conformance suites and acceptance script, thirteen drop-in engineering packages, and a provenance ledger (docs/iterations/PROVENANCE.md) recording the hash of every received file and where it landed. Files changed when the repository was seeded are listed in origin/SEED-DIFF.md, with each original kept under origin/.</p><p>© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.</p>",
+ "license": "gpl-3.0-only",
+ "access_right": "open",
+ "language": "eng",
+ "creators": [
+  {
+   "name": "Choudhary, Abhishek",
+   "affiliation": "AyeAI",
+   "orcid": "0009-0002-0684-8320"
+  }
+ ],
+ "keywords": [
+  "physical AI",
+  "robotics",
+  "systems engineering",
+  "knowledge graph",
+  "digital twin",
+  "simulation",
+  "safety assurance",
+  "standards and compliance",
+  "CAD",
+  "education"
+ ],
+ "programming_language": "JavaScript",
+ "repository": "https://github.com/zistgah/physical-ai-platform",
+ "related_identifiers": []
+}

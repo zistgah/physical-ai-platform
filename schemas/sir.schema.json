@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://physical-ai-platform.example/schemas/sir.schema.json",
+  "title": "System Intent Representation (SIR)",
+  "description": "Semantic interchange representation. Distinct from project package (.pap.json). Iteration 02 – deterministic interchange contract.",
+  "type": "object",
+  "required": ["magic", "version", "header", "identity", "graph"],
+  "properties": {
+    "magic": { "const": "PAI-SIR" },
+    "version": { "type": "string" },
+    "header": {
+      "type": "object",
+      "required": ["projectId", "kind"],
+      "properties": {
+        "projectId": { "type": "string" },
+        "name": { "type": "string" },
+        "exportedAt": { "type": "string" },
+        "kind": { "const": "sir" }
+      }
+    },
+    "identity": { "type": "object" },
+    "intent": { "type": "array" },
+    "policy": { "type": "array" },
+    "requirements": { "type": "array" },
+    "architecture": { "type": "object" },
+    "components": { "type": "array" },
+    "ports": { "type": "array" },
+    "connections": { "type": "array" },
+    "events": { "type": "array" },
+    "states": { "type": "array" },
+    "authority": { "type": "object" },
+    "safety": { "type": "object" },
+    "security": { "type": "object" },
+    "execution": { "type": "object" },
+    "resources": { "type": "array" },
+    "simulation": { "type": "object" },
+    "verification": { "type": "object" },
+    "validation": { "type": "object" },
+    "configuration": { "type": "array" },
+    "provenance": { "type": "array" },
+    "graph": {
+      "type": "object",
+      "required": ["entities", "relations"],
+      "properties": {
+        "entities": { "type": "array" },
+        "relations": { "type": "array" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

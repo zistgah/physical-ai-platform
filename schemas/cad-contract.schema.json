@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cad-contract.schema.json",
+  "title": "Geometry CAD contract",
+  "description": "A solid is geometry. A volume number without a watertight mesh is not CAD.",
+  "type": "object",
+  "required": ["id", "rules"],
+  "properties": {
+    "id": { "const": "CAD-GEOMETRY" },
+    "rules": {
+      "type": "array",
+      "minItems": 6,
+      "items": { "type": "string" }
+    }
+  }
+}

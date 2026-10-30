@@ -1,0 +1,10 @@
+{
+  "name": "ayeai-physical-ai-uncertainty-dropin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic, fail-closed uncertainty study orchestration for Iteration 47 simulation runners",
+  "engines": { "node": ">=18" },
+  "scripts": { "check": "node --check module.js", "test": "node tests/run.mjs", "integration": "node tests/integration.mjs" },
+  "exports": { ".": "./module.js" }
+}

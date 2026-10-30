@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "1.2.0",
+  "policy": {
+    "canonicalModel": "SIR",
+    "backendRole": "replaceable-execution-engine",
+    "browserExecution": "notebook-handoff-only",
+    "externalCodeExecution": "explicit-user-opt-in-in-colab",
+    "backendFailure": "HOLD",
+    "resultPromotion": "never-automatic",
+    "nativeRuntimeInBrowser": false
+  },
+  "backends": [
+    {
+      "id": "scipy.solve_ivp",
+      "domain": [
+        "ode",
+        "state-space",
+        "transient"
+      ],
+      "adapter": "colab-notebook",
+      "status": "runtime-verified",
+      "tested": true,
+      "testedWhere": "local CPU SciPy 1.17.0; six solve_ivp methods against analytical first-order reference; 51 samples",
+      "package": "scipy",
+      "minimumVersion": "1.11",
+      "methods": [
+        "RK23",
+        "RK45",
+        "DOP853",
+        "Radau",
+        "BDF",
+        "LSODA"
+      ],
+      "license": "BSD-3-Clause",
+      "notebook": "notebooks/emulation/01_scipy_solver_validation.ipynb"
+    },
+    {
+      "id": "fmpy.fmi",
+      "domain": [
+        "fmi",
+        "fmu",
+        "co-simulation",
+        "model-exchange"
+      ],
+      "adapter": "colab-notebook",
+      "status": "notebook-implemented-runtime-unverified",
+      "tested": false,
+      "package": "fmpy[complete]",
+      "fmiVersions": [
+        "1.0",
+        "2.0",
+        "3.0"
+      ],
+      "license": "BSD-2-Clause",
+      "notebook": "notebooks/emulation/02_fmi_fmpy_colab.ipynb"
+    },
+    {
+      "id": "pybamm.battery",
+      "domain": [
+        "battery",
+        "electrochemical",
+        "thermal"
+      ],
+      "adapter": "colab-notebook",
+      "status": "notebook-implemented-runtime-unverified",
+      "tested": false,
+      "package": "pybamm",
+      "models": [
+        "SPM",
+        "SPMe",
+        "DFN"
+      ],
+      "license": "BSD-3-Clause",
+      "notebook": "notebooks/emulation/03_pybamm_battery_colab.ipynb"
+    },
+    {
+      "id": "mujoco.mjx",
+      "domain": [
+        "robotics",
+        "articulated-body",
+        "contact",
+        "batched-physics"
+      ],
+      "adapter": "colab-notebook",
+      "status": "notebook-implemented-runtime-unverified",
+      "tested": false,
+      "package": "mujoco-mjx",
+      "accelerators": [
+        "cpu",
+        "nvidia-gpu",
+        "amd-gpu",
+        "google-tpu"
+      ],
+      "license": "Apache-2.0",
+      "notebook": "notebooks/emulation/04_mujoco_mjx_gpu_colab.ipynb"
+    },
+    {
+      "id": "jax.xla",
+      "domain": [
+        "vectorized-compute",
+        "parameter-sweep",
+        "differentiable-kernels"
+      ],
+      "adapter": "colab-notebook",
+      "status": "runtime-verified",
+      "tested": true,
+      "package": "jax",
+      "accelerators": [
+        "cpu",
+        "nvidia-gpu",
+        "amd-gpu",
+        "google-tpu"
+      ],
+      "license": "Apache-2.0",
+      "notebook": "notebooks/emulation/06_jax_gpu_ensemble_colab.ipynb",
+      "testedWhere": "local CPU JAX 0.9.0.1; 100,000-member x 200-step RK4 ensemble against analytical solution; Colab GPU/TPU unverified"
+    },
+    {
+      "id": "ngspice",
+      "domain": [
+        "circuit",
+        "spice",
+        "transient",
+        "ac"
+      ],
+      "adapter": "colab-notebook",
+      "status": "notebook-implemented-runtime-unverified",
+      "tested": false,
+      "package": "ngspice",
+      "license": "GPL-2.0-or-later; verify exact distribution/fork",
+      "notebook": "notebooks/emulation/05_ngspice_circuit_colab.ipynb"
+    },
+    {
+      "id": "sundials",
+      "domain": [
+        "ode",
+        "dae",
+        "nonlinear",
+        "sensitivity"
+      ],
+      "adapter": "future-plugin-specification",
+      "status": "plugin-specification",
+      "tested": false,
+      "package": "SUNDIALS",
+      "license": "BSD-3-Clause",
+      "notebook": null
+    },
+    {
+      "id": "openmodelica.omsimulator",
+      "domain": [
+        "modelica",
+        "ssp",
+        "fmi-co-simulation"
+      ],
+      "adapter": "future-plugin-specification",
+      "status": "plugin-specification",
+      "tested": false,
+      "package": "OpenModelica / OMSimulator",
+      "license": "OSMC Public License; verify exact release",
+      "notebook": null
+    },
+    {
+      "id": "projectchrono",
+      "domain": [
+        "multibody",
+        "contact",
+        "fea",
+        "vehicle",
+        "fsi"
+      ],
+      "adapter": "future-plugin-specification",
+      "status": "plugin-specification",
+      "tested": false,
+      "package": "Project Chrono / PyChrono",
+      "license": "BSD-3-Clause",
+      "notebook": null
+    },
+    {
+      "id": "openfoam",
+      "domain": [
+        "cfd",
+        "multiphase",
+        "heat-transfer"
+      ],
+      "adapter": "future-plugin-specification",
+      "status": "plugin-specification",
+      "tested": false,
+      "package": "OpenFOAM Foundation distribution",
+      "license": "GPL-3.0-or-later; verify exact distribution/fork",
+      "notebook": null
+    }
+  ],
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

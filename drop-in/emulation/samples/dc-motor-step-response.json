@@ -1,0 +1,106 @@
+{
+  "name": "DC motor step-response conformance sample",
+  "description": "Synthetic first-order motor response fixture; not measured hardware data.",
+  "device": {
+    "id": "sample-dc-motor-01",
+    "type": "DC_MOTOR",
+    "modelId": "first-order-motor",
+    "modelVersion": "1.0.0"
+  },
+  "model": {
+    "kind": "first-order-discrete",
+    "gainRpmPerVolt": 120,
+    "timeConstantSeconds": 0.25
+  },
+  "tolerance": {
+    "absolute": 1e-10,
+    "relative": 1e-10
+  },
+  "steps": [
+    {
+      "time": 0,
+      "sequence": 0,
+      "dt": 0.1,
+      "input": {
+        "voltage": 0,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 0.0
+      }
+    },
+    {
+      "time": 0.1,
+      "sequence": 1,
+      "dt": 0.1,
+      "input": {
+        "voltage": 5,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 197.8079723786164
+      }
+    },
+    {
+      "time": 0.2,
+      "sequence": 2,
+      "dt": 0.1,
+      "input": {
+        "voltage": 5,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 330.40262152966704
+      }
+    },
+    {
+      "time": 0.3,
+      "sequence": 3,
+      "dt": 0.1,
+      "input": {
+        "voltage": 5,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 419.28347285267876
+      }
+    },
+    {
+      "time": 0.4,
+      "sequence": 4,
+      "dt": 0.1,
+      "input": {
+        "voltage": 5,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 478.8620892032068
+      }
+    },
+    {
+      "time": 0.5,
+      "sequence": 5,
+      "dt": 0.1,
+      "input": {
+        "voltage": 2,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 400.11404663086256
+      }
+    },
+    {
+      "time": 0.6,
+      "sequence": 6,
+      "dt": 0.1,
+      "input": {
+        "voltage": 0,
+        "dt": 0.1
+      },
+      "observed": {
+        "rpm": 268.20446615710574
+      }
+    }
+  ],
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

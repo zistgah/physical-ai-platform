@@ -1,0 +1,20 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. SPDX-License-Identifier: GPL-3.0-only */
+import assert from 'node:assert/strict';
+import { REACHABLE, reachableCount } from '../site/components/core/module-registry.js';
+import { createComputePlan, validateComputeResult, COMPUTE_BACKEND_CATALOG } from '../drop-in/hosted-compute/module.js';
+let n=0; const check=(v,m)=>{assert.ok(v,m);n++;};
+check(reachableCount()>0,'platform registry reachable');
+check(Boolean(REACHABLE['drop-in/hosted-compute/module.js']),'hosted compute registered');
+const api=REACHABLE['drop-in/hosted-compute/module.js'];
+check(api.catalog.length===COMPUTE_BACKEND_CATALOG.length,'registry exposes complete backend catalog');
+check(typeof api.createComputePlan==='function','plan API reachable');
+check(typeof api.validateComputeResultAsync==='function','async validator reachable');
+check(typeof api.verifyComputeResultDigest==='function','digest verifier reachable');
+check(api.listComputeBackends({accelerator:'nvidia-gpu'}).length>=5,'GPU backends discoverable through spine');
+const hold=api.createComputePlan({}); check(hold.status==='HOLD' && hold.plan===null,'invalid plan holds through registry');
+const p=api.createComputePlan({projectId:'P',configurationId:'C',runId:'R',solverId:'S',backendId:'numpy-scipy',domain:'sparse',accelerator:'cpu',requirements:['REQ'],inputHash:'a'.repeat(64)});
+check(p.status==='READY','valid plan ready through registry');
+const bad=api.validateComputeResult({status:'COMPLETED'},p,{digestVerified:true});
+check(bad.status==='HOLD' && bad.evidenceDraft===null,'incomplete result cannot produce evidence');
+check(api.catalog.every(x=>x.id && x.url && x.license),'catalog metadata is complete');
+console.log(`Hosted Compute Iteration 50 conformance PASS: ${n} assertions; registry reachability and fail-closed spine adapter.`);

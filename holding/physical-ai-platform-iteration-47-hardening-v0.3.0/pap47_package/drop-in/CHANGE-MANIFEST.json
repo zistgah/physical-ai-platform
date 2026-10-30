@@ -1,0 +1,41 @@
+{
+  "package": "PAP Iteration 47 drop-in engineering hardening",
+  "version": "0.3.0",
+  "scope": "Ten bounded drop-in modules, package tests, sample fixtures, package conformance test and integration documentation.",
+  "added": [
+    "drop-in/README.md",
+    "drop-in/STITCH-INSTRUCTIONS.md",
+    "drop-in/CHANGE-MANIFEST.json",
+    "drop-in/samples/engineering-samples.json",
+    "drop-in/run-samples.mjs",
+    "docs/ITERATION-47-PACKAGE-DEPTH.md"
+  ],
+  "modified": [
+    "drop-in/*/module.js",
+    "drop-in/*/test.mjs",
+    "drop-in/*/EXPLAINER.md",
+    "drop-in/*/manifest.json",
+    "tools/conformance-test-iter47.mjs"
+  ],
+  "notModified": [
+    "site/components/core/canonical-kernel.js",
+    "schemas/sir.schema.json",
+    "tests/acceptance.mjs",
+    "site/assets/js/app.js",
+    "site/index.html"
+  ],
+  "integrationStatus": "DROP_IN_TESTED_NOT_REGISTERED",
+  "testCommands": [
+    "for f in drop-in/*/test.mjs; do node \"$f\" || exit 1; done",
+    "node tools/conformance-test-iter47.mjs",
+    "node drop-in/run-samples.mjs",
+    "node tests/run.mjs",
+    "node tests/acceptance.mjs --no-mutation --no-browser"
+  ],
+  "knownLimitations": [
+    "No platform adapter or registry integration is included.",
+    "Reduced-order solver and geometry modules are not industrially qualified.",
+    "HIL adapter attestation verifier must be implemented against a trusted hardware identity root.",
+    "Full acceptance mutation run exceeded available execution window; browser gate is unverified because Playwright is unavailable."
+  ]
+}

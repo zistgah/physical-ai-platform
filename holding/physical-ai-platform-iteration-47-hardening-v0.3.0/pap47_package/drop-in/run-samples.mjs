@@ -1,0 +1,8 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import {readFileSync} from 'node:fs';
+import {cadClip} from './cad/module.js';import {cfdStep} from './cfd/module.js';import {circuitStep} from './circuit/module.js';import {simStep} from './simulation/module.js';import {hilStep} from './hil/module.js';import {fabricate} from './fabrication/module.js';import {route} from './manufacturing/module.js';import {supply} from './logistics/module.js';import {prototype} from './prototyping/module.js';import {emulate} from './emulation/module.js';
+const s=JSON.parse(readFileSync(new URL('./samples/engineering-samples.json',import.meta.url),'utf8')).samples;
+const results={cad:cadClip(s.cad.base,s.cad.cutter),cfd:cfdStep(s.cfd),circuit:circuitStep(s.circuit),simulation:simStep(s.simulation),hil:await hilStep({...s.hil,verifyAttestation:async()=>({verified:false})}),fabrication:fabricate(s.fabrication),manufacturing:route(s.manufacturing),logistics:supply(s.logistics),prototyping:prototype(s.prototyping),emulation:emulate(s.emulation)};
+const expected={cad:'OK',cfd:'OK',circuit:'OK',simulation:'OK',hil:'HOLD',fabrication:'OK',manufacturing:'OK',logistics:'HOLD',prototyping:'OK',emulation:'OK'};
+let failed=0;for(const [name,r] of Object.entries(results)){const pass=r.outcome===expected[name];console.log(`${pass?'PASS':'FAIL'} sample:${name} expected=${expected[name]} actual=${r.outcome}`);if(!pass)failed++;}
+if(failed)process.exitCode=1;else console.log(`ALL ${Object.keys(results).length} SAMPLE FLOWS PASSED`);

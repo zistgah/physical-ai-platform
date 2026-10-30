@@ -1,0 +1,50 @@
+PASS catalog contains optional geometry, CAM and NC backends
+PASS registry rejects duplicate IDs
+PASS registry rejects descriptors without capabilities
+PASS capability lookup returns all suitable backends
+PASS no host is HOLD, never silently falls back
+PASS undeclared capability is HOLD
+PASS unregistered backend is HOLD
+PASS backend not ready is HOLD
+PASS missing installed capability is HOLD
+PASS backend operation completes with provenance
+PASS backend receives a detached JSON payload
+PASS backend response identity mismatch FAILs
+PASS backend response protocol mismatch FAILs
+PASS backend version mismatch FAILs
+PASS incomplete backend result HOLDs
+PASS backend exception HOLDs
+PASS invalid timeout FAILs
+PASS timeout aborts backend call and HOLDs
+PASS pre-aborted signal prevents dispatch
+PASS resolver selects first available preferred backend
+PASS resolver HOLDs when no compatible backend is ready
+PASS resolver reports incompatible preferred backend
+PASS pipeline runs sequentially and passes prior output
+PASS pipeline stops on HOLD without invoking later stages
+PASS pipeline rejects empty stages
+PASS pipeline rejects malformed stage
+PASS real Python worker advertises installed numerical backends
+PASS real CadQuery/OCCT, Trimesh and Shapely self-test
+PASS Shapely backend sample executes with expected area
+PASS real Shapely rejects self-intersecting polygon
+PASS worker denies file access without sandbox root
+PASS worker rejects unsupported operation
+PASS Node host probes actual CadQuery/OCCT backend
+PASS Node host probes actual Trimesh backend
+PASS Node host probes actual Shapely backend
+PASS adapter invokes real Shapely backend through Node host
+PASS Node host refuses unallowlisted backend
+PASS cancellation during probe prevents backend dispatch
+PASS Node host rejects inherited secret environment keys
+PASS Node host requires an existing directory root
+PASS real Shapely polygon validity capability executes
+PASS real Shapely boolean intersection executes
+PASS SciPy backend sample executes with constrained optimum
+PASS SciPy process optimizer rejects invalid flute count
+PASS SciPy process optimizer rejects infeasible chip-load envelope
+PASS external CAM toolpath is normalized and independently validated
+PASS external CAM toolpath mismatch is rejected
+PASS fabricate accepts a validated backend toolpath without replanning
+
+BACKEND ADAPTER TESTS: 48 passed, 0 failed

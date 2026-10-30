@@ -1,0 +1,3 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import { simStep } from './module.js';const a=(v,m)=>{if(!v)throw Error(m)};
+const r=simStep({bodies:[{id:'a',mass:1,x:0,v:1,radius:.5},{id:'b',mass:1,x:.9,v:0,radius:.5}],dt:.01,restitution:0});a(r.outcome==='OK'&&r.contacts.length,'detects contact');a(r.bodies[0].v>=-1e-8&&r.bodies[1].v>=-1e-8,'inelastic contact removes closing velocity');a(simStep({bodies:[{mass:1,x:0,v:0}],dt:.01}).outcome==='HOLD','requires multi-body');a(simStep({bodies:[{mass:1,x:0,v:0},{mass:1,x:1,v:0}],dt:NaN}).outcome==='HOLD','rejects NaN timestep');console.log('simulation PASS');

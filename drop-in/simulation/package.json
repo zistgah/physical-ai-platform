@@ -1,0 +1,30 @@
+{
+  "name": "ayeai-physical-ai-simulation-dropin",
+  "version": "3.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-first simulation backend federation with Colab GPU qualification notebook and separate host execution profiles",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node --check module.js && node --check backends/registry.js && node --check backends/profiles.js && node --check backends/index.js && node --check backends/rapier2d.js && node --check backends/rapier2d-session.js && node --check platform-rapier-adapter.js && node --check notebook-check.mjs",
+    "test": "node test.mjs && node backend-tests.mjs && node notebook-check.mjs",
+    "samples": "node run-samples.mjs",
+    "integration": "node platform-integration.test.mjs && node platform-backend-integration.test.mjs",
+    "backend-smoke": "node backend-live-smoke.mjs"
+  },
+  "peerDependencies": {
+    "@dimforge/rapier2d-compat": ">=0.17.0 <0.20.0"
+  },
+  "peerDependenciesMeta": {
+    "@dimforge/rapier2d-compat": {
+      "optional": true
+    }
+  },
+  "exports": {
+    ".": "./module.js",
+    "./backends": "./backends/index.js",
+    "./platform-rapier": "./platform-rapier-adapter.js"
+  }
+}

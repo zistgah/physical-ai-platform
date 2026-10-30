@@ -1,0 +1,57 @@
+{
+  "id": "ayeai.physical-ai.compute-orchestration",
+  "name": "Distributed Compute Orchestration",
+  "version": "1.0.0",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks.",
+  "entrypoints": {
+    "native": "./module.js",
+    "tests": "./test.mjs",
+    "colabNotebook": "./notebooks/reliability_monte_carlo_colab.ipynb",
+    "browserWorker": "./browser-worker.js",
+    "providerCatalog": "./provider-catalog.json"
+  },
+  "protocol": "ayeai.compute.job/v1",
+  "dependencies": {
+    "required": [],
+    "optional": {
+      "gpu": "Google Colab GPU runtime + PyTorch CUDA build",
+      "cpu": "Python 3 + NumPy",
+      "remote": "HTTPS JSON worker implementing ayeai.compute.job/v1",
+      "jax": "JAX with a compatible Colab CUDA or TPU runtime; optional notebook path",
+      "pytorch": "PyTorch with CUDA-enabled build supplied by Colab GPU runtime; optional notebook path"
+    }
+  },
+  "canonicalIntegration": {
+    "kernelOwner": "host platform",
+    "graphMutation": false,
+    "authorityGrant": false,
+    "evidencePromotion": false,
+    "physicalActuation": false
+  },
+  "capabilities": [
+    "compute.provider.discovery",
+    "compute.job.plan",
+    "compute.result.validate",
+    "compute.colab.launch",
+    "reliability.series.monte-carlo"
+  ],
+  "transports": [
+    "browser-worker",
+    "colab-manual",
+    "https-json"
+  ],
+  "compatibility": {
+    "browserBundle": "module.js is browser-safe ES module",
+    "noMandatoryBackend": true,
+    "colabIsOptional": true
+  },
+  "documentation": [
+    "BUILD-ANALYSIS.md",
+    "API-REFERENCE.md",
+    "TEST-MATRIX.md",
+    "COLAB-GUIDE.md",
+    "STITCH-INSTRUCTIONS.md",
+    "VERIFICATION.md"
+  ]
+}

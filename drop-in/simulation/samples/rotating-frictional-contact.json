@@ -1,0 +1,11 @@
+{
+  "description": "Offset contact with tangential relative velocity exercises friction and angular impulse response.",
+  "input": {
+    "bodies":[
+      {"id":"driver","x":-0.49,"y":0.04,"vx":1,"vy":0,"omega":0,"mass":1,"radius":0.5,"restitution":0,"friction":0.8},
+      {"id":"target","x":0.49,"y":0,"vx":-0.2,"vy":0.3,"omega":0,"mass":2,"radius":0.5,"restitution":0,"friction":0.8}
+    ],
+    "dt":0.002,"steps":5,"gravity":{"x":0,"y":0},"floor":null,"solverIterations":20,"seed":31
+  },
+  "expect":{"outcome":"OK","bodyCount":2,"finiteAngularState":true}
+}

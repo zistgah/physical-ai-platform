@@ -1,0 +1,24 @@
+{
+  "order": {
+    "id": "SAMPLE-WO-001",
+    "quantity": 10,
+    "expectedYield": 0.95,
+    "routing": [
+      { "id": "cut-10", "process": "CUT", "cycleTimeMinutes": 2.5, "setupMinutes": 5, "requiredCapabilities": ["LASER"] },
+      { "id": "inspect-20", "process": "INSPECT", "cycleTimeMinutes": 1, "inspectionRequired": true }
+    ],
+    "materialRequirements": [{ "materialId": "SHEET-AL-2MM", "quantity": 2 }]
+  },
+  "stations": [
+    { "id": "laser-01", "processes": ["CUT"], "capabilities": ["LASER"], "status": "READY", "capacityMinutes": 120, "bookedMinutes": 10, "calibration": { "status": "VALID" } },
+    { "id": "cmm-01", "processes": ["INSPECT"], "capabilities": ["CMM"], "status": "READY", "capacityMinutes": 60, "bookedMinutes": 0, "calibration": { "status": "VALID" } }
+  ],
+  "quality": {
+    "status": "RELEASED",
+    "requiredInspections": ["inspect-20"],
+    "inspections": [{ "stepId": "inspect-20", "outcome": "PASS", "verified": true }],
+    "nonconformances": [],
+    "exportStatus": "NOT_APPLICABLE"
+  },
+  "materials": [{ "materialId": "SHEET-AL-2MM", "availableQuantity": 5, "status": "RELEASED" }]
+}

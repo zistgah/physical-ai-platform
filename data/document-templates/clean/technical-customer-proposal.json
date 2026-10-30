@@ -1,0 +1,76 @@
+{
+  "template_id": "proposal.technical_customer",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Technical Proposal / Customer Proposal / RFP Response",
+  "purpose": "Respond to a defined customer need or solicitation with a compliant, technically credible and commercially clear offer.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "compliance",
+      "title": "Solicitation Compliance Matrix",
+      "required": true
+    },
+    {
+      "id": "executive",
+      "title": "Executive Summary",
+      "required": true
+    },
+    {
+      "id": "understanding",
+      "title": "Understanding of Need",
+      "required": true
+    },
+    {
+      "id": "solution",
+      "title": "Proposed Solution",
+      "required": true
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements Compliance",
+      "required": true
+    },
+    {
+      "id": "implementation",
+      "title": "Delivery and Implementation Plan",
+      "required": true
+    },
+    {
+      "id": "verification",
+      "title": "Verification: Validation and Acceptance",
+      "required": true
+    },
+    {
+      "id": "operations",
+      "title": "Operations: Support and Service",
+      "required": true
+    },
+    {
+      "id": "security",
+      "title": "Safety: Security: Privacy and Compliance",
+      "required": true
+    },
+    {
+      "id": "team",
+      "title": "Team and Governance",
+      "required": true
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Offer",
+      "required": true
+    },
+    {
+      "id": "risks",
+      "title": "Risks: Assumptions and Dependencies",
+      "required": true
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

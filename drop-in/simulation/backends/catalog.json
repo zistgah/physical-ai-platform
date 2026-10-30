@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0",
+  "policy": "Engine-neutral canonical model; external engines are replaceable execution backends. Never treat backend-native state as the canonical system model.",
+  "profiles": [
+    {
+      "id": "rapier2d",
+      "engine": "Rapier 2D",
+      "integration": "direct-js-wasm-adapter",
+      "package": "@dimforge/rapier2d-compat",
+      "license": "Apache-2.0",
+      "status": "adapter-implemented-runtime-dependency-optional",
+      "bestFor": [
+        "browser-and-node 2D/3D real-time rigid body",
+        "contacts",
+        "joints",
+        "deterministic game/robotics prototyping"
+      ],
+      "source": "https://rapier.rs/docs/"
+    },
+    {
+      "id": "mujoco",
+      "engine": "MuJoCo",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "Apache-2.0",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "articulated robotics",
+        "contact dynamics",
+        "biomechanics",
+        "optimization and control"
+      ],
+      "source": "https://mujoco.readthedocs.io/en/stable/overview.html"
+    },
+    {
+      "id": "project-chrono",
+      "engine": "Project Chrono",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "BSD-3-Clause",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "multibody dynamics",
+        "FEA",
+        "vehicle dynamics",
+        "granular and fluid-solid interaction"
+      ],
+      "source": "https://www.projectchrono.org/"
+    },
+    {
+      "id": "ode",
+      "engine": "Open Dynamics Engine",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "BSD-3-Clause OR LGPL-2.1-or-later",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "articulated rigid body dynamics",
+        "joints",
+        "frictional contact"
+      ],
+      "source": "https://ode.org/"
+    },
+    {
+      "id": "bullet",
+      "engine": "Bullet Physics",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "zlib",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "rigid-body dynamics",
+        "collision detection",
+        "robotics and real-time 3D"
+      ],
+      "source": "https://github.com/bulletphysics/bullet3"
+    },
+    {
+      "id": "physx",
+      "engine": "NVIDIA PhysX",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "Apache-2.0 (current repository; verify exact release)",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "real-time 3D rigid body",
+        "collision detection",
+        "CPU/GPU execution where supported"
+      ],
+      "source": "https://github.com/NVIDIA-Omniverse/PhysX"
+    },
+    {
+      "id": "jolt",
+      "engine": "Jolt Physics",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "MIT",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "multicore real-time rigid body and collision"
+      ],
+      "source": "https://github.com/jrouwe/JoltPhysics"
+    },
+    {
+      "id": "drake",
+      "engine": "Drake",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "BSD-3-Clause (review separately licensed portions/dependencies)",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "robotics multibody",
+        "optimization-based design and control",
+        "trajectory analysis",
+        "contact modeling"
+      ],
+      "source": "https://drake.mit.edu/"
+    },
+    {
+      "id": "dart",
+      "engine": "DART",
+      "integration": "remote-json-rpc-host-adapter",
+      "license": "BSD-2-Clause",
+      "status": "protocol-ready-engine-host-required",
+      "bestFor": [
+        "articulated rigid-body dynamics",
+        "Featherstone articulated-body algorithm",
+        "LCP-based contact and friction",
+        "robotics"
+      ],
+      "source": "https://dartsim.github.io/"
+    },
+    {
+      "id": "nvidia-warp",
+      "engine": "NVIDIA Warp",
+      "integration": "colab-python-qualification-notebook",
+      "license": "Apache-2.0",
+      "status": "notebook-research-path-only-host-driver-required",
+      "bestFor": [
+        "GPU-accelerated custom simulation kernels",
+        "differentiable simulation building blocks",
+        "particle, FEM, fluids and geometry workloads"
+      ],
+      "source": "https://nvidia.github.io/warp/stable/index.html"
+    },
+    {
+      "id": "mujoco-mjx",
+      "engine": "MuJoCo MJX",
+      "integration": "colab-python-qualification-notebook",
+      "license": "Apache-2.0 for MuJoCo; verify exact package/dependency notices",
+      "status": "notebook-research-path-only-host-driver-required",
+      "bestFor": [
+        "batched articulated-body dynamics",
+        "JAX/XLA GPU and TPU execution",
+        "robotics and differentiable workflows"
+      ],
+      "source": "https://mujoco.readthedocs.io/en/latest/mjx.html"
+    }
+  ],
+  "non-goal": "This catalog does not imply that external engines are bundled, installed, licensed for a particular deployment, or runtime-tested. The host must pin exact versions, verify transitive licenses, expose the JSON-RPC contract, and pass backend-specific conformance tests. NVIDIA Warp and MuJoCo MJX are documented as Colab research/qualification paths only; no direct JS/WASM adapter or live JSON-RPC host driver is included."
+}

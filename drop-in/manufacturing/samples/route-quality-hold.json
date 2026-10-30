@@ -1,0 +1,5 @@
+{
+  "order": { "id": "SAMPLE-WO-HOLD", "quantity": 4, "routing": [{ "id": "mill-10", "process": "MILL", "cycleTimeMinutes": 8 }] },
+  "stations": [{ "id": "mill-01", "processes": ["MILL"], "status": "READY", "capacityMinutes": 120, "bookedMinutes": 0, "calibration": { "status": "VALID" } }],
+  "quality": { "status": "HOLD", "nonconformances": [{ "id": "NCR-77", "status": "OPEN" }] }
+}

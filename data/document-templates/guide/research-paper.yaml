@@ -1,0 +1,199 @@
+template_id: research.paper.general
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Research Article / Journal Paper
+purpose: Report a completed or explicitly bounded research contribution with reproducible methods and
+  traceable evidence.
+audiences:
+- researchers
+- reviewers
+- editors
+- practitioners
+guide_mode: true
+sections:
+- id: front_matter
+  title: Front Matter
+  required: true
+  fields:
+  - id: title
+    type: string
+    required: true
+    instruction: State the precise subject, system, method or finding. Avoid promotional claims such as
+      'revolutionary' or 'world-first' unless independently substantiated.
+  - id: authors
+    type: person_list
+    required: true
+    instruction: Include only contributors meeting the target venue's authorship criteria. Capture affiliations,
+      ORCID where supplied, contribution roles and corresponding-author details.
+  - id: abstract
+    type: structured_or_unstructured_text
+    required: true
+    instruction: Summarize context, objective, method, principal supported results and bounded conclusion.
+      Do not include results that are only targets or plans.
+  - id: keywords
+    type: string_list
+    required: true
+    instruction: Use searchable technical terms, not marketing slogans.
+  - id: article_type
+    type: enum
+    required: true
+    values:
+    - original_research
+    - methods
+    - systems
+    - hardware
+    - dataset
+    - benchmark
+    - field_study
+    - review
+    - short_communication
+- id: introduction
+  title: Introduction
+  required: true
+  instruction: Establish problem context, importance, current state of knowledge, limitations of prior
+    approaches, precise gap, research question, objectives and contribution. Separate literature-supported
+    facts from the authors' interpretation.
+  subsections:
+  - context
+  - problem_definition
+  - state_of_the_art
+  - research_gap
+  - research_questions
+  - objectives
+  - contributions
+  - paper_organization
+- id: related_work
+  title: Related Work
+  required: true
+  instruction: Organize prior work by technical theme and compare methods, assumptions, datasets, operating
+    domains and limitations. Cite primary sources. Do not create citations or claim exhaustive coverage
+    without a documented search.
+  subsections:
+  - search_scope
+  - thematic_review
+  - comparative_analysis
+  - limitations_of_prior_work
+  - distinction_from_present_work
+- id: research_method
+  title: Research Method and System
+  required: true
+  instruction: Describe enough detail for another competent group to reproduce the work. Include design
+    rationale, architecture, algorithms, equations, component versions, interfaces, materials, software,
+    operating conditions, calibration and deviations.
+  subsections:
+  - study_design
+  - system_architecture
+  - materials_components
+  - algorithms_models
+  - procedures
+  - parameters_units
+  - calibration
+  - implementation_versions
+  - ethics_safety
+- id: experimental_setup
+  title: Experimental / Computational Setup
+  required: true
+  instruction: Identify simulation, software, hardware, datasets, instruments, test fixtures, environment,
+    sampling, repetitions, randomization, baselines and inclusion/exclusion criteria. Distinguish simulated,
+    software-in-loop, hardware-in-loop and physical tests.
+  subsections:
+  - environment
+  - hardware_software
+  - simulation_configuration
+  - datasets
+  - instruments
+  - baselines
+  - protocol
+  - repetitions
+  - exclusions
+- id: metrics_analysis
+  title: Metrics and Analysis
+  required: true
+  instruction: Define each metric, unit, calculation, aggregation, uncertainty and statistical procedure
+    before interpreting results. Explain missing data and sensitivity analyses.
+  subsections:
+  - primary_metrics
+  - secondary_metrics
+  - statistical_methods
+  - uncertainty
+  - sensitivity
+  - validity_threats
+- id: results
+  title: Results
+  required: true
+  instruction: Report observed outputs only. Every table and figure must trace to a dataset, run, test
+    or source. Include negative and null findings. Do not substitute screenshots for quantitative data.
+  subsections:
+  - primary_results
+  - secondary_results
+  - ablations
+  - comparisons
+  - failures
+  - robustness
+- id: discussion
+  title: Discussion
+  required: true
+  instruction: Interpret results in relation to questions and prior work. Explain mechanisms cautiously,
+    practical significance, generalizability and alternative explanations. Do not claim causality from
+    correlation.
+  subsections:
+  - principal_findings
+  - interpretation
+  - comparison_prior_work
+  - implications
+  - limitations
+  - threats_to_validity
+- id: reproducibility
+  title: Reproducibility and Open Science
+  required: true
+  instruction: Provide code, data, model, configuration, environment, seeds, protocols, version identifiers
+    and access restrictions. If not public, state why and how access may be requested.
+  subsections:
+  - code_availability
+  - data_availability
+  - model_availability
+  - materials
+  - environment_lock
+  - run_manifest
+  - preregistration_if_any
+- id: conclusion
+  title: Conclusion
+  required: true
+  instruction: Answer the research question in proportion to the evidence. State contribution, limitations
+    and next work. Do not introduce new results.
+- id: declarations
+  title: Declarations
+  required: true
+  subsections:
+  - funding
+  - conflicts_of_interest
+  - author_contributions
+  - ethics_approval
+  - consent
+  - data_availability
+  - code_availability
+  - acknowledgements
+- id: references
+  title: References
+  required: true
+  instruction: Render from verified reference records in the requested style. Check every in-text citation
+    has a reference and every listed reference is cited unless the venue explicitly allows otherwise.
+- id: supplementary
+  title: Supplementary Material
+  required: false
+  subsections:
+  - extended_methods
+  - additional_results
+  - datasets
+  - source_code
+  - CAD_files
+  - simulation_models
+  - videos
+  - checklists
+overlays:
+- ieee_journal
+- acm_article
+- target_journal
+- systematic_review_prisma
+- randomized_trial_consort
+- animal_research_arrive

@@ -1,0 +1,343 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:manufacturing:input:1",
+  "title": "Manufacturing route feasibility input",
+  "type": "object",
+  "required": [
+    "order",
+    "stations",
+    "quality"
+  ],
+  "properties": {
+    "order": {
+      "type": "object",
+      "required": [
+        "id",
+        "quantity",
+        "routing"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quantity": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "expectedYield": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "materialRequirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/materialRequirement"
+          }
+        },
+        "routing": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/operation"
+          }
+        }
+      }
+    },
+    "stations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/station"
+      }
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "status",
+        "exportStatus"
+      ],
+      "properties": {
+        "status": {
+          "const": "RELEASED"
+        },
+        "hold": {
+          "type": "boolean"
+        },
+        "exportStatus": {
+          "enum": [
+            "CLEARED",
+            "NOT_CONTROLLED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "requiredInspections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inspections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/inspection"
+          }
+        },
+        "nonconformances": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nonconformance"
+          }
+        }
+      }
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/materialStock"
+      }
+    }
+  },
+  "$defs": {
+    "materialRequirement": {
+      "type": "object",
+      "required": [
+        "materialId",
+        "quantity"
+      ],
+      "properties": {
+        "materialId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quantity": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "required": [
+        "process",
+        "cycleTimeMinutes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "process": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quantity": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cycleTimeMinutes": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "setupMinutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "stationId": {
+          "type": "string"
+        },
+        "requiredCapabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inspectionRequired": {
+          "type": "boolean"
+        },
+        "materialRequirements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/materialRequirement"
+          }
+        }
+      }
+    },
+    "station": {
+      "type": "object",
+      "required": [
+        "id",
+        "processes",
+        "capacityMinutes",
+        "calibration"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "processes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "capacityMinutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "bookedMinutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "availableMinutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "AVAILABLE",
+            "IDLE",
+            "READY",
+            "OFFLINE",
+            "MAINTENANCE",
+            "DISABLED"
+          ]
+        },
+        "maintenanceDue": {
+          "type": "boolean"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "exportStatus": {
+          "enum": [
+            "CLEARED",
+            "NOT_CONTROLLED",
+            "NOT_APPLICABLE",
+            "UNKNOWN",
+            "UNDER_REVIEW"
+          ]
+        },
+        "calibration": {
+          "type": "object",
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "validUntil": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "available"
+          ],
+          "properties": {
+            "available": {
+              "const": true
+            }
+          }
+        },
+        {
+          "required": [
+            "status"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "AVAILABLE",
+                "IDLE",
+                "READY"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "inspection": {
+      "type": "object",
+      "required": [
+        "outcome",
+        "verified"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "stepId": {
+          "type": "string"
+        },
+        "inspectionId": {
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "verified": {
+          "type": "boolean"
+        }
+      }
+    },
+    "nonconformance": {
+      "type": "object",
+      "required": [
+        "id",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "materialStock": {
+      "type": "object",
+      "required": [
+        "materialId",
+        "availableQuantity",
+        "status"
+      ],
+      "properties": {
+        "materialId": {
+          "type": "string"
+        },
+        "availableQuantity": {
+          "type": "number",
+          "minimum": 0
+        },
+        "status": {
+          "enum": [
+            "AVAILABLE",
+            "RELEASED",
+            "QUARANTINED",
+            "HOLD"
+          ]
+        }
+      }
+    }
+  },
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks. Licensed under GPL-3.0-only."
+}

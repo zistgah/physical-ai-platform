@@ -1,0 +1,9 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "schema": "circuit-design-space/rc-step-measurement/1",
+  "times_s": [0.00025, 0.0005, 0.00075, 0.001, 0.0015, 0.002, 0.003, 0.004, 0.005],
+  "measured_voltage_v": [0.11750309741540454, 0.22119921692859512, 0.31271072120902776, 0.3934693402873666, 0.5276334472589853, 0.6321205588285577, 0.7768698398515702, 0.8646647167633873, 0.9179150013761012],
+  "known_initial_v": 0.0,
+  "known_final_v": 1.0,
+  "expected_tau_s": 0.002
+}

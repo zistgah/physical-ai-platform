@@ -1,0 +1,66 @@
+pap-acceptance 1.0.0   script sha256 f4816e22ea970672
+SKIP       report A5   Every route renders in a real browser with no page error  ::  --no-browser
+SKIP       gate   G1a  Mutant: Power-up needs isolation confirmed  ::  --no-mutation
+SKIP       gate   G1b  Mutant: Compliance rejects evidence in an invalid state  ::  --no-mutation
+SKIP       gate   G1c  Mutant: Compliance evidence must belong to the project  ::  --no-mutation
+SKIP       gate   G1d  Mutant: Safety readiness returns NO-GO for unresolved hazards  ::  --no-mutation
+SKIP       gate   G1e  Mutant: CAD contract rejects a mesh that is not watertight  ::  --no-mutation
+SKIP       gate   G1f  Mutant: Cockpit refuses to leave S0 with an unfrozen configuration  ::  --no-mutation
+SKIP       gate   G1g  Mutant: Prover holds what it cannot prove  ::  --no-mutation
+PASS       gate   A1   app.js parses as an ES module
+PASS       gate   A2   App module evaluates without error
+PASS       gate   A3   Every route handler is defined  ::  30 routes
+PASS       gate   A4   Every route renders without error and with content  ::  30 routes render
+PASS       gate   A6   CI runs the checklist and this acceptance script before deploying
+PASS       gate   B1   A clean project file imports and is shown
+PASS       gate   B2   Imported markup never reaches the page unescaped  ::  every payload was escaped or held
+PASS       gate   B3   index.html sets a Content-Security-Policy without unsafe-inline scripts  ::  default-src 
+PASS       gate   C1   IndexedDB adapter persists across adapter instances  ::  indexedDB.open called 2 times
+PASS       gate   C2   GitHub adapter never reports success without a request  ::  honest outcome: UNAVAILABLE
+PASS       gate   C3   'What leaves my machine?' lists the fields that would actually leave  ::  9 payload keys disclosed
+PASS       gate   C4   Save, Sync and Publish are explicit controls in the UI
+PASS       gate   D1   Software-only loops are never labelled HIL
+PASS       gate   D2   Compliance does not accept unpromoted simulation evidence  ::  HOLD
+PASS       gate   D3   A waiver needs a registered role, not any string  ::  HOLD
+PASS       gate   D4   A standards binding needs real evidence  ::  acceptance itself holds an unregistered role
+PASS       gate   D5   Prover is sound and handles <=
+PASS       gate   D6   ERP will not issue the same order twice  ::  HOLD
+PASS       gate   D7   Evidence in a rejected state does not clear compliance  ::  HOLD
+PASS       gate   E1   Chamfer 1 mm on a 10 mm cube  ::  980 mm³
+PASS       gate   E2   Fillet r2 on the vertical edges of a 10 mm cube  ::  964.86 mm³
+PASS       gate   E3   Draft 5 degrees on a 10 mm cube  ::  835.23 mm³
+PASS       gate   E4   Shell 1 mm keeps a floor  ::  424 mm³
+PASS       gate   E5   Pocket 4x4x2 subtracts only its own volume  ::  968 mm³
+PASS       gate   E6   Union of two overlapping cubes  ::  1750 mm³
+PASS       gate   E7   Solids are outward-facing (positive signed volume)
+PASS       gate   E8   Every solid above is closed with consistent winding  ::  8 solids
+PASS       gate   E9   A failed operation leaves no solid behind  ::  valid shell
+PASS       gate   E10  Interference is geometric, not bounding-box overlap
+PASS       gate   E11  STEP export opens in OpenCascade with the same volume  ::  volume 1000
+PASS       gate   E12  NURBS extrude is a closed solid  ::  411.17 mm³
+PASS       gate   E13  CAD workbench builds the profile the user draws  ::  12000 mm³
+PASS       gate   F1   No hazard log is not GO  ::  HOLD
+PASS       gate   F2   Unfrozen configuration is not GO  ::  HOLD
+PASS       gate   F3   Power-up needs an explicit isolation confirmation  ::  stopped at S2_POWER_ISOLATED_CHECK
+PASS       gate   F4   Abort reaches a safe state from every operating state without a role
+PASS       report F5   Shutdown authority is a registered role  ::  Shutdown role is not in the registry
+PASS       gate   G2   The test runner reports PASS, FAIL, SKIP and UNVERIFIED
+PASS       gate   G3   No tautological tests remain
+PASS       gate   H1   Every 'MRD' or 'predecessor' citation in the corpus is true
+PASS       gate   H2   Every standard named in MRD section 7 is in the corpus
+PASS       gate   H3   No duplicate standards in the corpus  ::  178 records
+PASS       gate   H4   TRACEABILITY.md claims nothing this run shows to fail
+PASS       gate   I1   LICENSE carries the full GPL-3.0 text
+PASS       gate   I2   CITATION.cff records the ORCID, the AyeAI affiliation and a URL that resolves  ::  no repository URL recorded
+PASS       report I3   Copyright line in the standard form
+PASS       gate   J1   The twelve architectural acceptance tests and the V1 to V2 experiment pass
+PASS       gate   K1   Export-control regimes are in the corpus
+PASS       gate   K2   Every standard carries the evidence it requires
+PASS       report K3   Regional regulations are in the corpus
+PASS       report K4   Jurisdictions beyond ISO, IEC, the US and India are covered
+PASS       gate   L1   Role cards are keyboard-operable  ::  10 cards
+PASS       report L2   High-contrast or forced-colours support
+PASS       gate   M1   AI Guide lists providers and sends the project's context  ::  5 providers
+PASS       gate   S0   Repository checklist passes  ::  tools/regression-checklist.mjs: 64 suites pass
+
+63 checks: 55 PASS, 8 SKIP. Verdict: ACCEPTED

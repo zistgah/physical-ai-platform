@@ -1,0 +1,49 @@
+template_id: research.systematic_review
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Systematic / Scoping Review
+purpose: Transparent synthesis of a defined body of literature using a reproducible search, screening,
+  appraisal and synthesis method.
+guide_mode: false
+sections:
+- id: title_abstract
+  title: Title and Structured Abstract
+  required: true
+- id: rationale
+  title: Rationale and Questions
+  required: true
+- id: protocol
+  title: Protocol and Registration
+  required: true
+- id: eligibility
+  title: Eligibility Criteria
+  required: true
+- id: sources
+  title: Information Sources and Search Strategy
+  required: true
+- id: selection
+  title: Selection Process
+  required: true
+- id: extraction
+  title: Data Collection and Variables
+  required: true
+- id: appraisal
+  title: Risk of Bias / Quality Appraisal
+  required: true
+- id: synthesis
+  title: Synthesis Methods
+  required: true
+- id: results
+  title: Results and Flow
+  required: true
+- id: discussion
+  title: Discussion
+  required: true
+- id: funding_conflicts
+  title: Funding and Conflicts
+  required: true
+- id: checklist
+  title: Reporting Checklist
+  required: true
+description: Production template. Content is populated from the canonical project model or reviewed author
+  input.

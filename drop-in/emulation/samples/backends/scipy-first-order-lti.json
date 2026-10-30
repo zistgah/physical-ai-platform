@@ -1,0 +1,53 @@
+{
+  "sampleId": "SCIPY-LTI-001",
+  "description": "First-order stable LTI state-space response, compared against its closed-form analytical solution.",
+  "backend": "scipy.solve_ivp",
+  "operation": "scipy.linear_ode",
+  "request": {
+    "times": [
+      0,
+      0.1,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "initialState": [
+      0
+    ],
+    "A": [
+      [
+        -1
+      ]
+    ],
+    "B": [
+      [
+        1
+      ]
+    ],
+    "input": [
+      1
+    ],
+    "C": [
+      [
+        1
+      ]
+    ],
+    "D": [
+      [
+        0
+      ]
+    ],
+    "method": "DOP853",
+    "rtol": 1e-11,
+    "atol": 1e-13
+  },
+  "analyticalReference": "x(t) = y(t) = 1 - exp(-t)",
+  "tolerance": {
+    "absolute": 2e-09,
+    "relative": 2e-09
+  },
+  "observationSource": "ANALYTICAL_REFERENCE_NOT_PHYSICAL_MEASUREMENT",
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

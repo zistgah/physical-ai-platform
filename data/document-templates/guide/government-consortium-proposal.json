@@ -1,0 +1,88 @@
+{
+  "template_id": "proposal.government_consortium",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Government / Public Programme / Consortium Proposal",
+  "purpose": "Address public programme objectives, public value, institutional accountability, multi-party delivery and measurable outcomes.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "call",
+      "title": "Programme Alignment and Eligibility",
+      "required": true,
+      "instruction": "Programme objectives, eligible applicant, geography, priority sectors, policy alignment, call rules and required indicators."
+    },
+    {
+      "id": "summary",
+      "title": "Executive Summary",
+      "required": true,
+      "instruction": "Need, public purpose, proposed intervention, partners, outcomes, cost and duration."
+    },
+    {
+      "id": "need",
+      "title": "Need and Baseline",
+      "required": true,
+      "instruction": "Establish baseline with cited data, affected populations/regions and existing provision."
+    },
+    {
+      "id": "objectives",
+      "title": "Objectives and Public Outcomes",
+      "required": true,
+      "instruction": "Measurable outputs/outcomes, beneficiaries, equity, inclusion, regional impact and additionality."
+    },
+    {
+      "id": "solution",
+      "title": "Programme Design and Technical Architecture",
+      "required": true,
+      "instruction": "System model, workstreams, infrastructure, interfaces, standards and deployment approach."
+    },
+    {
+      "id": "consortium",
+      "title": "Consortium Structure and Governance",
+      "required": true,
+      "instruction": "Lead, partners, legal entities, workshare, decision rights, IP, data and dispute mechanisms."
+    },
+    {
+      "id": "workplan",
+      "title": "Work Packages and Milestones",
+      "required": true,
+      "instruction": "Deliverables, owners, dependencies, procurement, gates and measurable acceptance."
+    },
+    {
+      "id": "capacity",
+      "title": "Institutional Capacity and Facilities",
+      "required": true,
+      "instruction": "Demonstrate capacity and identify capacity-building requirements."
+    },
+    {
+      "id": "budget",
+      "title": "Budget and Value for Money",
+      "required": true,
+      "instruction": "Detailed cost basis, co-funding, procurement, lifecycle cost, audit and value-for-money rationale."
+    },
+    {
+      "id": "impact",
+      "title": "Impact: Monitoring and Evaluation",
+      "required": true,
+      "instruction": "Indicators, baseline, targets, data collection, evaluation, reporting and attribution."
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability and Exit",
+      "required": true,
+      "instruction": "Post-grant ownership, recurring costs, local capability, maintenance, institutionalization and exit."
+    },
+    {
+      "id": "safeguards",
+      "title": "Safeguards: Ethics and Compliance",
+      "required": true,
+      "instruction": "Environmental/social safeguards, privacy, cybersecurity, procurement integrity, conflict of interest, export and regulatory issues."
+    },
+    {
+      "id": "annexes",
+      "title": "Annexes",
+      "required": false,
+      "instruction": "Partner letters, governance agreements, detailed budgets, procurement plan, risk matrix, CVs and monitoring framework."
+    }
+  ]
+}

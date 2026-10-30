@@ -1,0 +1,243 @@
+{
+  "id": "pap-stem-foundations-1",
+  "version": "1.0.0",
+  "title": "Mathematics, Measurement and Physical Systems - Starter Syllabus",
+  "subject": "Integrated STEM",
+  "band": "middle",
+  "locale": "en",
+  "frameworkIds": [],
+  "delivery": "BLENDED",
+  "accessibility": [
+    "captions-for-media",
+    "keyboard-navigation",
+    "screen-reader-compatible-text",
+    "high-contrast-compatible-visuals",
+    "multiple-representation",
+    "chunked-instructions"
+  ],
+  "concepts": [
+    {
+      "id": "measurement.quantity",
+      "title": "Measurement and quantities",
+      "learningOutcome": "Represent a measurable property with a number, unit, instrument and uncertainty statement.",
+      "prerequisites": [],
+      "explanation": {
+        "core": "A measurement is not just a number. It is a value associated with a defined quantity and unit, obtained by a method or instrument. Repeated measurements may differ; report precision honestly.",
+        "worked": "Measure the same desk edge three times. Record each value with the same unit, calculate the mean, and report the spread rather than pretending the instrument is exact."
+      },
+      "misconceptions": [
+        "A number without a unit is always sufficient.",
+        "More decimal places guarantee greater accuracy."
+      ],
+      "activities": [
+        {
+          "type": "observation",
+          "prompt": "Compare the length of three objects using the same ruler and unit."
+        },
+        {
+          "type": "notebook",
+          "notebookRef": "measurement-lab-01"
+        }
+      ],
+      "checks": [
+        {
+          "type": "explain",
+          "prompt": "Why must a measurement include a unit?"
+        },
+        {
+          "type": "apply",
+          "prompt": "Identify one source of measurement uncertainty."
+        }
+      ],
+      "explanations": {
+        "intuitive": "Measurement connects an observation to a shared scale. A number alone is not enough: say what was measured, in which unit, with which method, and how certain the result is.",
+        "concrete": "Measure one desk edge three times with the same ruler. Record 120 mm, 121 mm and 120 mm. The mean is 120.33 mm, but the ruler and alignment limit the precision; do not report unsupported decimal places.",
+        "visual": "Represent each reading as a point on a number line. The cluster shows repeatability; its spread gives a first indication of variation.",
+        "formal": "A measurement result is a value attributed to a quantity together with a unit and an associated measurement uncertainty, obtained under a stated measurement procedure.",
+        "analogy": "A measurement is like a location: a number without a coordinate reference is ambiguous, just as a length without a unit is ambiguous.",
+        "extension": "Distinguish resolution, repeatability, reproducibility, calibration error and uncertainty. Propagate uncertainty through derived quantities.",
+        "localContext": {
+          "default": "Measure a classroom desk, a seedling, or a local water container using a consistent unit."
+        }
+      }
+    },
+    {
+      "id": "math.ratio.proportion",
+      "title": "Ratios and proportional reasoning",
+      "learningOutcome": "Use ratios and proportional relationships to compare quantities and predict outcomes.",
+      "prerequisites": [
+        "measurement.quantity"
+      ],
+      "explanation": {
+        "core": "A ratio compares quantities. A proportional relationship has a constant multiplicative relationship over the stated domain.",
+        "worked": "If 2 identical sensors cost 600 units of currency, a proportional estimate for 5 sensors is 5/2 times the cost, provided unit price and conditions remain unchanged."
+      },
+      "misconceptions": [
+        "Every relationship is proportional.",
+        "Adding the same amount preserves a ratio."
+      ],
+      "activities": [
+        {
+          "type": "model",
+          "prompt": "Build a table for distance travelled at constant speed."
+        },
+        {
+          "type": "simulation",
+          "simulationRef": "constant-speed-explorer",
+          "adapterId": "pap.simulation.adapter"
+        }
+      ],
+      "checks": [
+        {
+          "type": "predict",
+          "prompt": "What changes if speed doubles while time is fixed?"
+        }
+      ],
+      "explanations": {
+        "intuitive": "A ratio compares quantities multiplicatively. Proportionality means one quantity changes by a constant factor relative to another over a stated range.",
+        "concrete": "If 2 identical sensors cost 600 currency units, a proportional estimate for 5 is 1500, provided the per-unit price is unchanged and no bulk discount or fixed fee applies.",
+        "visual": "Plot paired values. A direct proportion passes through the origin and has constant slope; a fixed fee shifts the line away from the origin.",
+        "formal": "For a direct proportional relationship y=kx, the ratio y/x=k is constant for x≠0 over the model domain.",
+        "analogy": "Scaling a recipe preserves ingredient ratios, but adding a fixed delivery charge breaks direct proportionality of total cost.",
+        "extension": "Compare direct, inverse, affine and nonlinear relationships; estimate parameters and inspect residuals.",
+        "localContext": {
+          "default": "Compare market quantities, travel distance at constant speed, or water flow over equal time intervals."
+        }
+      }
+    },
+    {
+      "id": "math.linear.model",
+      "title": "Linear models and algebra",
+      "learningOutcome": "Construct, interpret and test a linear model from a stated relationship.",
+      "prerequisites": [
+        "math.ratio.proportion"
+      ],
+      "explanation": {
+        "core": "A linear model represents a constant rate of change. Its parameters have meaning in the context; a good model states its domain and assumptions.",
+        "worked": "For constant speed v and initial position x0, position is x(t)=x0+vt. The slope is speed and the intercept is initial position."
+      },
+      "misconceptions": [
+        "A straight-line fit proves a causal relationship.",
+        "A model remains valid outside its observed domain."
+      ],
+      "activities": [
+        {
+          "type": "notebook",
+          "notebookRef": "linear-model-lab-01"
+        },
+        {
+          "type": "discussion",
+          "prompt": "When would a constant-speed model fail?"
+        }
+      ],
+      "checks": [
+        {
+          "type": "derive",
+          "prompt": "Identify slope and intercept in a position-time graph."
+        }
+      ],
+      "explanations": {
+        "intuitive": "A linear model describes a constant rate of change. The slope tells how much the output changes for one unit of input; the intercept is the output at input zero.",
+        "concrete": "For x(t)=x0+vt, a cart starting at 2 m and moving at 0.5 m/s is at 4 m after 4 s, assuming constant velocity.",
+        "visual": "On a position-time graph, constant velocity appears as a straight line. A steeper slope means a larger speed; a negative slope means motion in the negative direction.",
+        "formal": "An affine linear model is y=mx+b, where m is the constant first derivative dy/dx and b is the value at x=0. The domain and assumptions must be stated.",
+        "analogy": "A fixed-rate taxi fare is a line with a starting charge (intercept) plus a per-kilometre charge (slope).",
+        "extension": "Fit a model to data, inspect residuals, quantify uncertainty and test whether a linear approximation is justified in the domain.",
+        "localContext": {
+          "default": "Model a bicycle trip, a water tank filling at constant rate, or a small motor moving at near-constant speed."
+        }
+      }
+    },
+    {
+      "id": "physics.motion.force",
+      "title": "Motion, force and interaction",
+      "learningOutcome": "Relate observed motion to forces and identify the assumptions of a simple mechanical model.",
+      "prerequisites": [
+        "measurement.quantity",
+        "math.linear.model"
+      ],
+      "explanation": {
+        "core": "Motion describes change in position over time. Force is an interaction that can change momentum. A model must specify the system, reference frame and relevant interactions.",
+        "worked": "For a constant net force on a fixed mass in a simple inertial-frame model, acceleration is constant. Friction, changing mass or other forces may invalidate that simplification."
+      },
+      "misconceptions": [
+        "Motion always requires a continuing net force.",
+        "A diagram alone proves the force model is complete."
+      ],
+      "activities": [
+        {
+          "type": "simulation",
+          "simulationRef": "cart-force-motion",
+          "adapterId": "pap.simulation.adapter"
+        },
+        {
+          "type": "lab_protocol",
+          "physical": false,
+          "prompt": "Use a virtual cart to vary mass and applied force."
+        }
+      ],
+      "checks": [
+        {
+          "type": "predict",
+          "prompt": "Predict the acceleration change when mass doubles and net force is fixed."
+        }
+      ],
+      "explanations": {
+        "intuitive": "Motion tells how position changes. A net force changes momentum; an object can keep moving at constant velocity even when the net force is zero.",
+        "concrete": "A low-friction cart speeds up when pulled. If the same net pull acts on twice the mass, the acceleration is half as large in the simple constant-mass model.",
+        "visual": "Draw a free-body diagram. Add force vectors to obtain the net force, then connect the net force direction to the acceleration direction.",
+        "formal": "For a system of constant mass in an inertial frame, the translational equation is ΣF=ma. The system boundary, reference frame and force model must be specified.",
+        "analogy": "A shopping trolley changes velocity when a net push acts; a balanced set of pushes can produce zero acceleration even while it is moving.",
+        "extension": "Extend to momentum balance, variable mass, friction, non-inertial frames and coupled rigid-body motion.",
+        "localContext": {
+          "default": "Observe a toy cart on a smooth surface, a bicycle braking, or a loaded trolley being pushed safely."
+        }
+      }
+    },
+    {
+      "id": "engineering.feedback.control",
+      "title": "Feedback and control",
+      "learningOutcome": "Explain a feedback loop and compare desired, measured and actual system states.",
+      "prerequisites": [
+        "physics.motion.force",
+        "math.linear.model"
+      ],
+      "explanation": {
+        "core": "A feedback controller compares a desired value with a measured value, computes an error and chooses an action. Stability, delay, saturation, noise and actuator limits matter.",
+        "worked": "A temperature controller compares a setpoint with a sensor reading and adjusts heater power. Sensor delay and heater limits affect the response."
+      },
+      "misconceptions": [
+        "Feedback always improves stability.",
+        "A simulated controller is automatically safe on physical hardware."
+      ],
+      "activities": [
+        {
+          "type": "notebook",
+          "notebookRef": "feedback-control-lab-01"
+        },
+        {
+          "type": "simulation",
+          "simulationRef": "closed-loop-temperature",
+          "adapterId": "pap.simulation.adapter"
+        }
+      ],
+      "checks": [
+        {
+          "type": "analyse",
+          "prompt": "Identify one source of delay and one actuator limit."
+        }
+      ],
+      "explanations": {
+        "intuitive": "Feedback measures what a system is doing, compares it with what is wanted, and adjusts an input to reduce the difference. Feedback can also destabilize a system if delay or gain is poorly chosen.",
+        "concrete": "A temperature controller compares a 25 °C setpoint with a 22 °C reading and requests more heater power, subject to sensor accuracy and heater limits.",
+        "visual": "Show a loop: reference → comparator → controller → plant → sensor → measured feedback. Label disturbances and delays.",
+        "formal": "For a discrete controller, e[k]=r[k]-y[k]. A control law maps error and possibly its history to an actuator command u[k], subject to sampling, saturation and stability constraints.",
+        "analogy": "A person adjusting a shower tap uses temperature feedback. A delayed hot-water response can cause over-correction.",
+        "extension": "Study stability margins, sampling, quantization, saturation, anti-windup, noise, robustness and system identification.",
+        "localContext": {
+          "default": "Use a virtual room-temperature model or a supervised low-voltage educational control kit."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "protocolVersion": "1.0.0",
+  "executionBoundary": "WORKER_RPC",
+  "security": {
+    "shellInterpolation": false,
+    "userSuppliedExecutables": false,
+    "workerMustPinImageDigest": true,
+    "workerMustEnforceTimeout": true,
+    "workerMustEnforceResourceQuotas": true,
+    "artifactUrisMustResolveToImmutableDigests": true
+  },
+  "profiles": [
+    {
+      "backendId": "scipy",
+      "workerProfile": "scipy.solve_ivp.v1",
+      "driver": "workers/scipy_reference_worker.py",
+      "entrypoint": "python3 worker script (fixed deployment entrypoint)",
+      "input": "JSON typed solverOptions + immutable input artifacts",
+      "output": "JSON metrics and content-addressed result artifact",
+      "implementedHere": true,
+      "operations": [
+        "numerics.ode"
+      ]
+    },
+    {
+      "backendId": "opencascade",
+      "workerProfile": "occt.geometry.v1",
+      "driver": "OCCT C++ or PythonOCC worker plugin",
+      "entrypoint": "allowlisted OCCT worker plugin",
+      "input": "STEP/IGES/BREP plus typed geometry operation",
+      "output": "STEP/IGES/BREP/STL plus volume/topology metrics",
+      "implementedHere": false,
+      "operations": [
+        "geometry.boolean",
+        "geometry.tessellate",
+        "geometry.validate",
+        "geometry.brep"
+      ]
+    },
+    {
+      "backendId": "gmsh",
+      "workerProfile": "gmsh.mesh.v1",
+      "driver": "Gmsh worker plugin",
+      "entrypoint": "gmsh allowlisted argv profile",
+      "input": "GEO/STEP/IGES/BREP/STL",
+      "output": "MSH/VTK/UNV plus mesh-quality metrics",
+      "implementedHere": false,
+      "operations": [
+        "mesh.generate",
+        "mesh.refine",
+        "mesh.convert"
+      ]
+    },
+    {
+      "backendId": "openfoam",
+      "workerProfile": "openfoam.case.v1",
+      "driver": "OpenFOAM case worker plugin",
+      "entrypoint": "simpleFoam/pimpleFoam/declared solver allowlist",
+      "input": "immutable case archive and mesh",
+      "output": "field files, VTK/EnSight and residual/conservation metrics",
+      "implementedHere": false,
+      "operations": [
+        "cfd.steady",
+        "cfd.transient",
+        "cfd.multiphase",
+        "cfd.conjugate-heat-transfer"
+      ]
+    },
+    {
+      "backendId": "elmer",
+      "workerProfile": "elmer.sif.v1",
+      "driver": "ElmerSolver worker plugin",
+      "entrypoint": "ElmerSolver fixed argv profile",
+      "input": "SIF plus mesh and material/boundary data",
+      "output": "VTU/VTK and solver convergence metrics",
+      "implementedHere": false,
+      "operations": [
+        "fem.solve",
+        "thermal.solve",
+        "em.solve",
+        "acoustics.solve",
+        "multiphysics.solve"
+      ]
+    },
+    {
+      "backendId": "code-aster",
+      "workerProfile": "code-aster.comm.v1",
+      "driver": "Code_Aster runner plugin",
+      "entrypoint": "pinned distribution runner plugin; no free-form command",
+      "input": "COMM/MED/UNV plus export/job manifest",
+      "output": "MED/UNV and solver diagnostics",
+      "implementedHere": false,
+      "operations": [
+        "fea.linear-static",
+        "fea.nonlinear",
+        "fea.modal",
+        "fea.thermal",
+        "fea.contact",
+        "fea.fatigue"
+      ]
+    },
+    {
+      "backendId": "calculix",
+      "workerProfile": "calculix.ccx.v1",
+      "driver": "CalculiX CCX worker plugin",
+      "entrypoint": "ccx fixed argv profile",
+      "input": "INP deck and referenced mesh/material data",
+      "output": "FRD/DAT/STA plus solver diagnostics",
+      "implementedHere": false,
+      "operations": [
+        "fea.linear-static",
+        "fea.nonlinear",
+        "fea.modal",
+        "fea.thermal",
+        "fea.contact"
+      ]
+    },
+    {
+      "backendId": "ngspice",
+      "workerProfile": "ngspice.spice.v1",
+      "driver": "ngspice batch worker plugin",
+      "entrypoint": "ngspice -b fixed argv profile",
+      "input": "SPICE deck and model library references",
+      "output": "RAW/CSV/LOG and .measure values",
+      "implementedHere": false,
+      "operations": [
+        "circuit.dc",
+        "circuit.ac",
+        "circuit.transient",
+        "circuit.noise"
+      ]
+    },
+    {
+      "backendId": "xyce",
+      "workerProfile": "xyce.spice.v1",
+      "driver": "Xyce batch worker plugin",
+      "entrypoint": "Xyce fixed argv profile",
+      "input": "SPICE deck and model library references",
+      "output": "PRN/CSV/RAW and sensitivity data",
+      "implementedHere": false,
+      "operations": [
+        "circuit.dc",
+        "circuit.ac",
+        "circuit.transient",
+        "circuit.sensitivity"
+      ]
+    },
+    {
+      "backendId": "chrono",
+      "workerProfile": "chrono.driver.v1",
+      "driver": "Project Chrono C++/PyChrono worker plugin",
+      "entrypoint": "compiled/Python driver plugin",
+      "input": "typed multibody model, contact/material parameters, meshes",
+      "output": "CSV/HDF5/VTK and solver/contact diagnostics",
+      "implementedHere": false,
+      "operations": [
+        "multibody.step",
+        "multibody.contact",
+        "vehicle.simulate",
+        "fsi.solve",
+        "dem.solve"
+      ]
+    },
+    {
+      "backendId": "mbdyn",
+      "workerProfile": "mbdyn.input.v1",
+      "driver": "MBDyn worker plugin",
+      "entrypoint": "mbdyn fixed argv profile",
+      "input": "MBDyn model deck and referenced data",
+      "output": "native result files/NetCDF and convergence diagnostics",
+      "implementedHere": false,
+      "operations": [
+        "multibody.solve",
+        "aeroelastic.solve",
+        "structural.dynamic"
+      ]
+    },
+    {
+      "backendId": "mujoco",
+      "workerProfile": "mujoco.mjcf.v1",
+      "driver": "MuJoCo C/Python worker plugin",
+      "entrypoint": "pinned MuJoCo worker plugin",
+      "input": "MJCF/URDF plus model assets",
+      "output": "state trajectory and contact/control metrics",
+      "implementedHere": false,
+      "operations": [
+        "multibody.step",
+        "multibody.contact",
+        "robotics.simulate",
+        "control.rollout"
+      ]
+    }
+  ],
+  "_copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

@@ -1,0 +1,53 @@
+{
+  "packageId": "pap.drop-in.prototyping",
+  "fromVersion": "1.0.0",
+  "toVersion": "1.1.0",
+  "baseline": "Iteration 47",
+  "added": [
+    "backend-registry.js",
+    "backend-runtime.js",
+    "benchmark-profiles.js",
+    "benchmark-validation.js",
+    "backend-catalog.json",
+    "backend-driver-profiles.json",
+    "backend-job.schema.json",
+    "backend-response.schema.json",
+    "BACKEND-ECOSYSTEM.md",
+    "STITCH-INSTRUCTIONS.md",
+    "manifest.json",
+    "CHANGE-MANIFEST.json",
+    "backend-test.mjs",
+    "workers/scipy_reference_worker.py",
+    "samples/scipy-rc-step-job.json",
+    "workers/README.md",
+    "MRD-TRACEABILITY.md",
+    "PACKAGE-DIFF.md"
+  ],
+  "modified": [
+    "module.js",
+    "test.mjs",
+    "samples/valid-simulation-evidence.json",
+    "EXPLAINER.md",
+    "INTEGRATION.md",
+    "TEST-REPORT.md",
+    "MARKET-COMPARISON.md",
+    "conformance-test-iter47.patch",
+    "integration-test.mjs"
+  ],
+  "compatibility": {
+    "existingPrototypeEvaluatorApi": "prototype(input) retained; simulation/SIL evidence now requires backendExecution provenance",
+    "kernel": "unchanged",
+    "acceptanceScript": "unchanged",
+    "canonicalGraph": "unchanged",
+    "otherDropIns": "unchanged",
+    "integration": "new optional backend worker protocol; host registration remains external"
+  },
+  "security": [
+    "No shell command strings accepted in solverOptions",
+    "No solver binaries or third-party implementation code bundled",
+    "Worker execution is out-of-process and injected by host transport",
+    "Backend output requires independent benchmark validation before evidence candidate creation",
+    "Backend run is bound to project, configuration fingerprint, revision and test"
+  ],
+  "_copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

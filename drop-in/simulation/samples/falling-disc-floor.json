@@ -1,0 +1,8 @@
+{
+  "description": "Disc falls under gravity onto a non-rebounding floor; contact must resolve without sustained penetration.",
+  "input": {
+    "bodies":[{"id":"payload","x":0,"y":1,"vx":0,"vy":0,"mass":2,"radius":0.25,"restitution":0,"friction":0.6}],
+    "dt":0.005,"steps":200,"gravity":{"x":0,"y":-9.81},"floor":0,"solverIterations":16,"seed":23
+  },
+  "expect":{"outcome":"OK","bodyCount":1,"minimumY":0.249,"maximumAbsVy":0.03,"maximumFinalPenetration":0.00001}
+}

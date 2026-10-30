@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const p = new URL('./notebooks/simulation-gpu-qualification.ipynb', import.meta.url);
+const nb = JSON.parse(fs.readFileSync(p, 'utf8'));
+assert.equal(nb.nbformat, 4);
+assert.ok(nb.cells.length >= 10);
+assert.equal(nb.metadata.pap.package, 'ayeai-physical-ai-simulation-dropin');
+assert.equal(nb.metadata.pap.version, '3.1.0');
+assert.deepEqual(nb.metadata.pap.pinned_optional_engines, { 'warp-lang':'1.18.0', 'mujoco':'3.17.0', 'mujoco-mjx':'3.17.0' });
+assert.match(nb.metadata.pap.copyright, /Abhishek Choudhary/);
+assert.ok(nb.metadata.pap.trademarks.includes('AyeAI®'));
+const all = nb.cells.map(c => c.source.join ? c.source.join('') : c.source).join('\n');
+for (const token of ['Copyright © 1993-2026 Abhishek Choudhary','NVIDIA Warp','MuJoCo MJX','HOLD','Grok integration checklist','https://colab.research.google.com/','warp-lang==1.18.0','mujoco-mjx==3.17.0']) assert.ok(all.includes(token), `missing notebook token: ${token}`);
+assert.ok(nb.cells.some(c => c.cell_type === 'code' && String(c.source).includes('wp.launch')));
+assert.ok(nb.cells.some(c => c.cell_type === 'code' && String(c.source).includes('mjx.step')));
+console.log(`notebook metadata/content: PASS (${nb.cells.length} cells)`);

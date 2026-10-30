@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://physical-ai-platform.example/schemas/component-contract.schema.json",
+  "title": "Component Contract / Robot ABI",
+  "description": "Canonical component contract interface boundary. Iteration 02.",
+  "type": "object",
+  "required": ["id", "interfaceVersion", "capabilities", "ports"],
+  "properties": {
+    "id": { "type": "string" },
+    "type": { "type": "string" },
+    "version": { "type": "string" },
+    "interfaceVersion": { "type": "string" },
+    "capabilities": { "type": "array", "items": { "type": "string" } },
+    "ports": { "type": "object" },
+    "parameters": { "type": "object" },
+    "states": { "type": "object" },
+    "events": { "type": "object" },
+    "dependencies": { "type": "array" },
+    "safety": { "type": "object" },
+    "compliance": { "type": "object" },
+    "simulation": { "type": ["object", "null"] },
+    "manufacturing": { "type": ["object", "null"] },
+    "provenance": { "type": ["object", "null"] },
+    "substitutions": { "type": "array" },
+    "units": { "type": "object" },
+    "frames": { "type": "object" },
+    "rates": { "type": "object" },
+    "timing": { "type": "object" },
+    "resources": { "type": "object" },
+    "authority": { "type": "object" },
+    "compatibility": { "type": "object" }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "package": "physical-ai-platform/drop-in/circuit",
+  "packageVersion": "0.4.1",
+  "nativeModuleVersion": "0.3.1",
+  "backendContractVersion": "1.0.0",
+  "entrypoints": {
+    "native": "./module.js",
+    "externalBackends": "./backends/index.js"
+  },
+  "runtime": {
+    "native": "JavaScript ES module; browser-compatible",
+    "externalBackends": "Node.js only; requires separately installed ngspice or Xyce"
+  },
+  "backends": [
+    {
+      "id": "native",
+      "status": "implemented",
+      "analysis": [
+        "transient"
+      ],
+      "devices": [
+        "R",
+        "C",
+        "L",
+        "V",
+        "I"
+      ]
+    },
+    {
+      "id": "ngspice",
+      "status": "adapter-implemented-real-binary-run-required-in-colab-or-controlled-worker",
+      "analysis": [
+        "transient"
+      ],
+      "devices": [
+        "R",
+        "C",
+        "L",
+        "V",
+        "I",
+        "D",
+        "Q",
+        "M",
+        "J",
+        "X-subcircuit"
+      ]
+    },
+    {
+      "id": "xyce",
+      "status": "adapter-implemented-real-binary-run-required-in-colab-or-controlled-worker",
+      "analysis": [
+        "transient"
+      ],
+      "devices": [
+        "R",
+        "C",
+        "L",
+        "V",
+        "I",
+        "D",
+        "Q",
+        "M",
+        "J",
+        "X-subcircuit"
+      ]
+    },
+    {
+      "id": "openmodelica",
+      "status": "planned-not-implemented",
+      "analysis": [],
+      "devices": []
+    }
+  ],
+  "contracts": {
+    "outcomes": [
+      "OK",
+      "HOLD"
+    ],
+    "unknownNeverBecomesAllow": true,
+    "simulationNeverImpliesPhysicalVerification": true,
+    "externalModelLibrariesRequireTrustedResolver": true
+  },
+  "tests": [
+    "node test.mjs",
+    "node backends/test.mjs",
+    "node backends/test-real-engines.mjs",
+    "python notebooks/validate_notebooks.py"
+  ],
+  "platformFilesModified": [
+    "drop-in/circuit/**"
+  ],
+  "kernelModified": false,
+  "acceptanceScriptModified": false,
+  "otherModulesModified": false,
+  "notebooks": [
+    "notebooks/circuit-backend-lab.ipynb"
+  ],
+  "browserOnly": {
+    "staticSiteRunsNoNativeExecutables": true,
+    "externalBackendsRunInColabOrTrustedWorker": true,
+    "colabIsOptional": true
+  },
+  "testAssertions": {
+    "native": 69,
+    "backendAdapterFakeRunner": 104
+  }
+}

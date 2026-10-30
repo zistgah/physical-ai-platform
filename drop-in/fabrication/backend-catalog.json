@@ -1,0 +1,14 @@
+{
+  "schema": "PAI-FAB-BACKEND-CATALOG/1",
+  "policy": "optional-replaceable-no-silent-fallback",
+  "backends": [
+    {"id":"cadquery-occt","name":"CadQuery / Open CASCADE","role":"BREP_GEOMETRY","license":"Apache-2.0 for CadQuery; LGPL-2.1 with OCCT exception for Open CASCADE Technology","capabilities":["geometry.step.inspect","geometry.brep.validate","geometry.mesh.tessellate"],"integration":"python-worker","status":"optional"},
+    {"id":"trimesh","name":"Trimesh","role":"MESH_GEOMETRY","license":"MIT","capabilities":["geometry.mesh.inspect","geometry.mesh.validate","geometry.mesh.bounds"],"integration":"python-worker","status":"optional"},
+    {"id":"shapely","name":"Shapely / GEOS","role":"PLANAR_GEOMETRY","license":"BSD-3-Clause for Shapely; verify GEOS distribution license","capabilities":["geometry.planar.validate","geometry.planar.offset","geometry.planar.boolean"],"integration":"python-worker","status":"optional"},
+    {"id":"scipy","name":"SciPy","role":"NUMERICAL_OPTIMIZATION","license":"BSD-3-Clause","capabilities":["numerics.process.optimize"],"integration":"python-worker","status":"optional"},
+    {"id":"opencamlib","name":"OpenCAMLib","role":"CAM_TOOLPATH","license":"LGPL-2.1-or-later; verify exact source release","capabilities":["cam.drop-cutter","cam.push-cutter","cam.toolpath.3d","cam.toolpath.normalized"],"integration":"external-worker","status":"adapter-contract-ready; runtime-not-installed"},
+    {"id":"freecad-cam","name":"FreeCAD CAM","role":"CAM_AND_POSTPROCESS","license":"LGPL-2.0-or-later for FreeCAD; audit bundled third-party libraries separately","capabilities":["cam.profile","cam.pocket","cam.adaptive","cam.drilling","cam.postprocess","cam.job.inspect","cam.toolpath.normalized"],"integration":"external-worker","status":"adapter-contract-ready; runtime-not-installed"},
+    {"id":"camotics","name":"CAMotics","role":"NC_SIMULATION","license":"GPL-2.0-or-later","capabilities":["simulation.gcode.3axis","simulation.stock.removal.3axis","simulation.gcode.annotate"],"integration":"external-worker","status":"adapter-contract-ready; runtime-not-installed"},
+    {"id":"cavalier-contours","name":"CavalierContours","role":"PLANAR_OFFSET","license":"MIT (verify selected source revision)","capabilities":["geometry.planar.offset","geometry.planar.boolean"],"integration":"external-worker","status":"adapter-contract-ready; runtime-not-installed"}
+  ]
+}

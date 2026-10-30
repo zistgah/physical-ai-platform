@@ -1,0 +1,3 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import { emulate } from './module.js';const a=(v,m)=>{if(!v)throw Error(m)};
+const r=emulate({device:{id:'sensor-1',gain:2,offset:1},input:3,observed:7.00001,tolerance:.001});a(r.outcome==='OK'&&r.predicted===7,'matches affine device response');a(emulate({device:{id:'sensor',gain:2,offset:1},input:3,observed:8,tolerance:.01}).outcome==='HOLD','mismatch held');a(emulate({device:{id:'x',gain:1,offset:0},input:NaN,observed:0}).outcome==='HOLD','rejects nonfinite input');console.log('emulation PASS');

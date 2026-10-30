@@ -1,0 +1,56 @@
+{
+  "packageId": "pap.drop-in.emulation",
+  "version": "1.2.0",
+  "apiVersion": "1.2.0",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "runtime": {
+    "platform": "browser-only static ES modules",
+    "mandatoryServer": false,
+    "mandatoryNodeInBrowser": false,
+    "mandatoryPythonInBrowser": false,
+    "externalCompute": "user-launched Google Colab notebooks"
+  },
+  "added": [
+    "ENGINEERING-ANALYSIS.md",
+    "BROWSER-ONLY-ARCHITECTURE.md",
+    "BACKEND-CATALOG.md",
+    "TEST-COVERAGE-MATRIX.md",
+    "CODE-REFERENCE.md",
+    "COLAB-NOTEBOOKS.md",
+    "LICENSES-AND-NOTICES.md",
+    "six standalone Colab notebooks under repository-root notebooks/emulation/ (delivered in the handoff bundle)",
+    "25 boundary/adversarial tests appended to the existing core test suite"
+  ],
+  "removed": [
+    "backends/backend-runtime.mjs (Node child_process runtime)",
+    "backends/python/bridge.py (Python subprocess bridge)",
+    "backends/backends.test.mjs (tests for removed Node/Python runtime)"
+  ],
+  "changed": [
+    "module.js API version 1.2.0 and comments",
+    "package.json browser-only deployment metadata and scripts",
+    "manifest.json runtime and entrypoints",
+    "backends/registry.json truthful notebook/plugin status",
+    "README.md, INTEGRATION.md, STITCH-INSTRUCTIONS.md, TEST-REPORT.md and CLOSURE-REPORT.md"
+  ],
+  "preserves": [
+    "emulate() outcome contract: OK/MISMATCH/HOLD",
+    "SIR ownership",
+    "UNVERIFIED evidence boundary",
+    "typed port and time/event/fault semantics",
+    "original motor, thermal and sensor sample fixtures"
+  ],
+  "doesNotModify": [
+    "canonical kernel",
+    "SIR ABI/schema",
+    "acceptance script",
+    "other nine Iteration 47 drop-in packages",
+    "unrelated application routes or modules"
+  ],
+  "additionalSiblingModule": {
+    "packageId": "pap.integration.colab-bridge",
+    "path": "integrations/colab-bridge",
+    "reason": "Browser-native digest-bound job export/result import and Colab URL construction; kept separate from emulation core"
+  }
+}

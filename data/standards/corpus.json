@@ -1,0 +1,3590 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-10-24",
+  "corpus_status": "ARCHITECTURE_COMPLETE_NAMED_AND_SUPPORTING",
+  "scope_definition": "Complete with respect to standards, specifications, frameworks and registries explicitly named in the architecture/MRD/predecessor corpus plus architecture-critical standards identified during 2026-10-24 authoritative-source verification. This is not a claim of completeness of every standard worldwide.",
+  "normative_text_note": "Metadata/provenance only. No copyrighted standards text is included. Authority source must be consulted for normative requirements.",
+  "provenance_policy": {
+    "accessed_at": "2026-10-24",
+    "authoritative_source_preference": [
+      "ISO",
+      "IEC",
+      "IEEE",
+      "W3C",
+      "NIST",
+      "OMG",
+      "The Open Group",
+      "CCSDS",
+      "NISO",
+      "Library of Congress",
+      "IETF",
+      "OASIS",
+      "OpenSSF",
+      "SPDX",
+      "OWASP/CycloneDX",
+      "ICAO",
+      "IMO",
+      "SAE",
+      "BIS",
+      "NASA",
+      "DLA"
+    ],
+    "existing_grok_entries": "Retained and not duplicated. Where an official authority URL was added, it is recorded as official_source_url; original internal provenance is preserved.",
+    "new_records": "Authoritative URL and access date recorded."
+  },
+  "coverage_layers": [
+    "Systems engineering",
+    "Enterprise architecture",
+    "Knowledge representation",
+    "Metadata and identifiers",
+    "Digital preservation",
+    "Records management",
+    "Workflow and decision modeling",
+    "Security and trust",
+    "Software/API interoperability",
+    "Software supply-chain security",
+    "AI and data governance",
+    "Research and scholarly communication",
+    "Quality and conformity assessment",
+    "Safety and robotics",
+    "Manufacturing and industrial",
+    "Automotive",
+    "Agriculture",
+    "Medical",
+    "Aviation",
+    "Maritime",
+    "Space",
+    "Defence",
+    "Environment",
+    "Energy"
+  ],
+  "standards": [
+    {
+      "id": "std-iso-15288",
+      "name": "ISO/IEC/IEEE 15288",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Systems engineering life cycle",
+      "domains": [
+        "TERRESTRIAL",
+        "AERIAL",
+        "INDUSTRIAL",
+        "AEROSPACE"
+      ],
+      "requiredEvidence": [
+        "Requirements traceability",
+        "Verification records",
+        "Configuration baseline"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/81702.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-12207",
+      "name": "ISO/IEC/IEEE 12207",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Software life cycle",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "Software configuration",
+        "Verification"
+      ],
+      "provenance": {
+        "source": "standards-registry.csv",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/90219.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS",
+        "note": "Not named in MRD \u00a77"
+      }
+    },
+    {
+      "id": "std-iso-42010",
+      "name": "ISO/IEC/IEEE 42010",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Architecture description",
+      "domains": [
+        "TERRESTRIAL",
+        "AERIAL",
+        "INDUSTRIAL",
+        "AEROSPACE"
+      ],
+      "requiredEvidence": [
+        "Architecture description",
+        "Viewpoint coverage"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/74393.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-24748",
+      "name": "ISO/IEC/IEEE 24748",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Life cycle management guidance",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL",
+        "AEROSPACE"
+      ],
+      "requiredEvidence": [
+        "Life cycle plan"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/84709.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-15939",
+      "name": "ISO/IEC/IEEE 15939",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Measurement process",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "Measurement plan",
+        "Measurement results"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/71197.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-eia-632",
+      "name": "EIA-632",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Processes for engineering a system",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL",
+        "AEROSPACE"
+      ],
+      "requiredEvidence": [
+        "Process records"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "external_provenance_status": "INTERNAL_SOURCE_ONLY"
+      }
+    },
+    {
+      "id": "std-ieee-1012",
+      "name": "IEEE 1012",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Verification and validation",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "V&V plan",
+        "V&V report"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://standards.ieee.org/ieee/1012/5681/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-ieee-1028",
+      "name": "IEEE 1028",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Reviews and audits",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "Review records"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://standards.ieee.org/ieee/1028/5680/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-ieee-828",
+      "name": "IEEE 828",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Configuration management",
+      "domains": [
+        "TERRESTRIAL",
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "CM plan",
+        "Baseline records"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://standards.ieee.org/ieee/828/6708/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-9001",
+      "name": "ISO 9001",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Quality management",
+      "domains": [
+        "INDUSTRIAL",
+        "MANUFACTURING"
+      ],
+      "requiredEvidence": [
+        "Quality plan",
+        "Records"
+      ],
+      "provenance": {
+        "source": "standards-registry.csv",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/62085.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS",
+        "note": "Not named in MRD \u00a77"
+      }
+    },
+    {
+      "id": "std-iso-19011",
+      "name": "ISO 19011",
+      "layer": "Global",
+      "tier": "Universal SE",
+      "topic": "Auditing management systems",
+      "domains": [
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "Audit plan",
+        "Audit report"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/84924.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iec-61508",
+      "name": "IEC 61508",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Functional safety",
+      "domains": [
+        "INDUSTRIAL",
+        "TERRESTRIAL"
+      ],
+      "riskClass": [
+        "HIGH",
+        "MEDIUM"
+      ],
+      "requiredEvidence": [
+        "Safety case",
+        "Hazard analysis"
+      ],
+      "provenance": {
+        "source": "standards-registry.csv",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://webstore.iec.ch/en/search?query=61508",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS",
+        "note": "Not named in MRD \u00a77"
+      }
+    },
+    {
+      "id": "std-iso-13849",
+      "name": "ISO 13849",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Safety of machinery",
+      "domains": [
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "Performance level assessment"
+      ],
+      "provenance": {
+        "source": "standards-registry.csv",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/73481.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS",
+        "note": "Not named in MRD \u00a77"
+      }
+    },
+    {
+      "id": "std-iso-10218",
+      "name": "ISO 10218",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Industrial robots safety",
+      "domains": [
+        "INDUSTRIAL"
+      ],
+      "embodiments": [
+        "FIXED"
+      ],
+      "requiredEvidence": [
+        "Risk assessment",
+        "Safeguarding"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/sectors/engineering/robotics.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-10218-1",
+      "name": "ISO 10218-1",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Industrial robots \u2014 robots",
+      "domains": [
+        "INDUSTRIAL"
+      ],
+      "embodiments": [
+        "FIXED"
+      ],
+      "requiredEvidence": [
+        "Robot safety requirements"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/sectors/engineering/robotics.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-10218-2",
+      "name": "ISO 10218-2",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Industrial robots \u2014 integration",
+      "domains": [
+        "INDUSTRIAL"
+      ],
+      "embodiments": [
+        "FIXED"
+      ],
+      "requiredEvidence": [
+        "Integration safety"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/sectors/engineering/robotics.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-iso-13482",
+      "name": "ISO 13482",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Personal care robots",
+      "domains": [
+        "DOMESTIC",
+        "HEALTHCARE"
+      ],
+      "requiredEvidence": [
+        "Safety requirements",
+        "Verification"
+      ],
+      "provenance": {
+        "source": "standards-registry.csv",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://www.iso.org/standard/53820.html",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS",
+        "note": "Not named in MRD \u00a77"
+      }
+    },
+    {
+      "id": "std-iec-62443",
+      "name": "IEC 62443",
+      "layer": "Global",
+      "tier": "Technical",
+      "topic": "Industrial cybersecurity",
+      "domains": [
+        "INDUSTRIAL"
+      ],
+      "requiredEvidence": [
+        "Security case",
+        "Zone/conduit"
+      ],
+      "provenance": {
+        "source": "standards-registry.csv",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://webstore.iec.ch/en/search?query=62443",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS",
+        "note": "Not named in MRD \u00a77"
+      }
+    },
+    {
+      "id": "std-nasa-npr-7120",
+      "name": "NASA NPR 7120.5",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "Space program and project management",
+      "domains": [
+        "AEROSPACE",
+        "ORBITAL"
+      ],
+      "requiredEvidence": [
+        "Project plan",
+        "Reviews"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://nodis3.gsfc.nasa.gov/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-882",
+      "name": "MIL-STD-882",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "System safety",
+      "domains": [
+        "DEFENCE"
+      ],
+      "requiredEvidence": [
+        "Hazard tracking",
+        "Risk acceptance"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-810",
+      "name": "MIL-STD-810",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "Environmental engineering",
+      "domains": [
+        "DEFENCE"
+      ],
+      "requiredEvidence": [
+        "Environmental test plan",
+        "Test report"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-461",
+      "name": "MIL-STD-461",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "EMI/EMC",
+      "domains": [
+        "DEFENCE"
+      ],
+      "requiredEvidence": [
+        "EMC test plan",
+        "EMC report"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-883",
+      "name": "MIL-STD-883",
+      "layer": "National",
+      "tier": "Technical",
+      "topic": "Microcircuits test methods",
+      "domains": [
+        "DEFENCE",
+        "AEROSPACE"
+      ],
+      "requiredEvidence": [
+        "Test method records"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-202",
+      "name": "MIL-STD-202",
+      "layer": "National",
+      "tier": "Technical",
+      "topic": "Electronic component test methods",
+      "domains": [
+        "DEFENCE"
+      ],
+      "requiredEvidence": [
+        "Test method records"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-961",
+      "name": "MIL-STD-961",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "Defense specifications",
+      "domains": [
+        "DEFENCE"
+      ],
+      "requiredEvidence": [
+        "Specification format"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-mil-std-963",
+      "name": "MIL-STD-963",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "Data item descriptions",
+      "domains": [
+        "DEFENCE"
+      ],
+      "requiredEvidence": [
+        "DID compliance"
+      ],
+      "provenance": {
+        "source": "sources/mrd-predecessor",
+        "confidence": "PROFILED",
+        "accessed_at": null,
+        "official_source_url": "https://quicksearch.dla.mil/",
+        "external_provenance_status": "AUTHORITY_URL_ADDED_FOR_REGISTRY_COMPLETENESS"
+      }
+    },
+    {
+      "id": "std-isro-profile",
+      "name": "ISRO product assurance profile",
+      "layer": "National",
+      "tier": "Agency",
+      "topic": "ISRO project assurance (profile, not a single numbered standard)",
+      "domains": [
+        "AEROSPACE",
+        "ORBITAL"
+      ],
+      "requiredEvidence": [
+        "Product assurance plan",
+        "Configuration records"
+      ],
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "PROFILED",
+        "note": "Profile of ISRO practice named in corpus; not an official ISRO publication",
+        "accessed_at": null,
+        "external_provenance_status": "INTERNAL_SOURCE_ONLY"
+      }
+    },
+    {
+      "id": "std-iso-21423",
+      "name": "ISO 21423:2026",
+      "title": "Robotics - Industrial mobile robots - Communications and interoperability",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Published",
+      "source_url": "https://www.iso.org/standard/86749.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Published 2026-10; current at access. Not safety-related; covers communications/interoperability for industrial mobile robots.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-19649",
+      "name": "ISO 19649:2017",
+      "title": "Mobile robots - Vocabulary",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Current / confirmed 2022",
+      "source_url": "https://www.iso.org/standard/65658.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Vocabulary for mobile robots, locomotion and navigation.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-ts-25213",
+      "name": "ISO/TS 25213:2026",
+      "title": "Robotics - Test methods for measuring the energy consumption of robots - 6-Axis articulated industrial robots",
+      "authority": "ISO",
+      "class": "Technical Specification",
+      "status": "Published",
+      "source_url": "https://www.iso.org/standard/89447.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Energy-consumption measurement methods for 6-axis articulated industrial robots; excludes service, medical, SCARA, AMR and DELTA robots.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-3691-4",
+      "name": "ISO 3691-4:2023",
+      "title": "Industrial trucks - Safety requirements and verification - Part 4: Driverless industrial trucks and their systems",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Published; revision under development",
+      "source_url": "https://www.iso.org/standard/83545.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Covers driverless industrial trucks including AGVs and autonomous mobile robots in industrial environments; ISO/DIS 3691-4 is under development.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-18646-2",
+      "name": "ISO 18646-2:2024",
+      "title": "Robotics - Performance criteria and related test methods for service robots - Part 2: Navigation",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Published",
+      "source_url": "https://www.iso.org/committee/5915511/x/catalogue/p/0/u/1/w/0/d/0",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO/TC 299 catalogue",
+      "notes": "Current 2024 edition; replaces withdrawn 2019 edition.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-18646-3",
+      "name": "ISO 18646-3:2021",
+      "title": "Robotics - Performance criteria and related test methods for service robots - Part 3: Manipulation",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Current catalogue entry",
+      "source_url": "https://www.iso.org/committee/5915511/x/catalogue/p/0/u/1/w/0/d/0",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO/TC 299 catalogue",
+      "notes": "Performance criteria and test methods for service-robot manipulation.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-18646-5",
+      "name": "ISO 18646-5:2026",
+      "title": "Robotics - Performance criteria and related test methods for service robots - Part 5: Locomotion for legged robots",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Published / current catalogue entry",
+      "source_url": "https://www.iso.org/committee/5915511/x/catalogue/p/0/u/1/w/0/d/0",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO/TC 299 catalogue",
+      "notes": "Legged-robot locomotion performance and test methods.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-tr-23482-1",
+      "name": "ISO/TR 23482-1:2020",
+      "title": "Robotics - Application of ISO 13482 - Part 1: Safety-related test methods",
+      "authority": "ISO",
+      "class": "Technical Report",
+      "status": "Published",
+      "source_url": "https://www.iso.org/standard/71564.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Safety-related test methods for personal care robots under ISO 13482.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-tr-23482-2",
+      "name": "ISO/TR 23482-2:2019",
+      "title": "Robotics - Application of ISO 13482 - Part 2: Application guidelines",
+      "authority": "ISO",
+      "class": "Technical Report",
+      "status": "Published",
+      "source_url": "https://www.iso.org/standard/71627.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Application guidance for ISO 13482 and risk assessment for service robots.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-13850",
+      "name": "ISO 13850:2015",
+      "title": "Safety of machinery - Emergency stop function - Principles for design",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Current; revision under development",
+      "source_url": "https://www.iso.org/standard/59970.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Functional requirements and design principles for emergency-stop functions.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-13849-1",
+      "name": "ISO 13849-1:2023",
+      "title": "Safety of machinery - Safety-related parts of control systems - Part 1: General principles for design",
+      "authority": "ISO",
+      "class": "International Standard",
+      "status": "Published",
+      "source_url": "https://www.iso.org/standard/73481.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "notes": "Methodology and requirements for safety-related parts of control systems.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iec-62443-2-4",
+      "name": "IEC 62443-2-4:2023",
+      "title": "Security for industrial automation and control systems - Part 2-4: Security program requirements for IACS service providers",
+      "authority": "IEC",
+      "class": "International Standard",
+      "status": "Valid",
+      "source_url": "https://webstore.iec.ch/en/publication/67631",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official IEC Webstore record",
+      "notes": "Security-program requirements for IACS service providers; supports contextual profiles.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iec-62443-3-2",
+      "name": "IEC 62443-3-2:2020",
+      "title": "Security for industrial automation and control systems - Part 3-2: Security risk assessment for system design",
+      "authority": "IEC",
+      "class": "International Standard",
+      "status": "Valid",
+      "source_url": "https://webstore.iec.ch/en/publication/30727",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official IEC Webstore record",
+      "notes": "Defines system-under-consideration, zones/conduits, risk assessment and target security levels.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iec-62443-4-2",
+      "name": "IEC 62443-4-2:2019",
+      "title": "Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components",
+      "authority": "IEC",
+      "class": "International Standard",
+      "status": "Valid with 2022 corrigendum incorporated",
+      "source_url": "https://webstore.iec.ch/en/publication/34421",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official IEC Webstore record",
+      "notes": "Component-level technical security requirements and capability security levels.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iec-pas-62443-1-6",
+      "name": "IEC PAS 62443-1-6:2025",
+      "title": "Security for industrial automation and control systems - Part 1-6: Application of the 62443 series to the Industrial Internet of Things",
+      "authority": "IEC",
+      "class": "Publicly Available Specification",
+      "status": "Published PAS",
+      "source_url": "https://webstore.iec.ch/en/publication/102885",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official IEC Webstore record",
+      "notes": "Guidance for applying the 62443 series to IIoT; PAS lifecycle applies.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iec-pas-62443-2-2",
+      "name": "IEC PAS 62443-2-2:2025",
+      "title": "Security for industrial automation and control systems - Part 2-2: IACS security protection scheme",
+      "authority": "IEC",
+      "class": "Publicly Available Specification",
+      "status": "Published PAS",
+      "source_url": "https://webstore.iec.ch/en/publication/63886",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official IEC Webstore record",
+      "notes": "Security Protection Scheme guidance for IACS asset owners.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-nasa-npr-7123-1d",
+      "name": "NPR 7123.1D",
+      "title": "NASA Systems Engineering Processes and Requirements Updated w/Change 2",
+      "authority": "NASA",
+      "class": "NASA Procedural Requirement",
+      "status": "Effective 2023-07-05 to 2028-07-05",
+      "source_url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7123_001D_",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official NASA NODIS record",
+      "notes": "NASA systems-engineering processes and requirements; applies across system life cycle.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-nasa-npr-7150-2d",
+      "name": "NPR 7150.2D",
+      "title": "NASA Software Engineering Requirements",
+      "authority": "NASA",
+      "class": "NASA Procedural Requirement",
+      "status": "Effective 2022-03-08 to 2027-03-08",
+      "source_url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official NASA NODIS record",
+      "notes": "Software acquisition, development, maintenance, operation, retirement and management requirements.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-nasa-npr-8000-4c",
+      "name": "NPR 8000.4C",
+      "title": "Agency Risk Management Procedural Requirements",
+      "authority": "NASA",
+      "class": "NASA Procedural Requirement",
+      "status": "Effective 2022-04-19 to 2027-04-19",
+      "source_url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?c=8000&s=4C&t=NPR",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official NASA NODIS record",
+      "notes": "Risk-informed decision making, continuous risk management and formal risk acceptance.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-bis-is-iso-10218-p1-2025",
+      "name": "IS/ISO 10218 (Part 1):2025",
+      "title": "Robotics safety requirements: Part 1 Industrial robots",
+      "authority": "BIS",
+      "class": "Indian Standard",
+      "status": "Published",
+      "source_url": "https://standards.bis.gov.in/website/standard-details?encryptedId=eyJpdiI6IjR0TzUxQitnT1NzMzhra204cVJ3MHc9PSIsInZhbHVlIjoiTE5sYkN5cUJ3ZmpaVjl4SUpNZVlGZz09IiwibWFjIjoiYTVmNGMwN2I0NTc3N2RlNTFiMTI2MjgzZWE5YTI1ZjI4NDg2ODZhZGY3Nzk4NGMxYTFiMjUyZTgzMmM0ZTZiZCIsInRhZyI6IiJ9",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official BIS standard-details record",
+      "notes": "Indian adoption identical under single numbering; supersedes IS 14530 Part 1:2019.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-bis-is-iso-10218-p2-2025",
+      "name": "IS/ISO 10218 (Part 2):2025",
+      "title": "Robotics safety requirements: Part 2 Industrial robot applications and robot cells",
+      "authority": "BIS",
+      "class": "Indian Standard",
+      "status": "Published",
+      "source_url": "https://standards.bis.gov.in/website/standard-details?encryptedId=eyJpdiI6IjVFMU1IdGc1ZWVTbTcwTmhEZEVRTXc9PSIsInZhbHVlIjoiay81U2VUT1Y5ZkhCemsyNnFZVDNUUT09IiwibWFjIjoiNzVkMmYwYmI3MDY1YWMxNzJiYTI4YjgyZjdkNDY5OTc3NmU4YjUxOTJhOWJhZTQ5NWNiOGI4ZGUwNGVlOTA4ZiIsInRhZyI6IiJ9",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official BIS standard-details record",
+      "notes": "Indian adoption identical under dual numbering; page also records the current Part 1 adoption.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-mil-std-882e-change1",
+      "name": "MIL-STD-882E w/Change 1",
+      "title": "System Safety",
+      "authority": "U.S. Department of Defense",
+      "class": "Military Standard",
+      "status": "Official DLA record located",
+      "source_url": "https://quicksearch.dla.mil/WMX/Default.aspx?token=5784600",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "DLA Quick Search record",
+      "notes": "System safety practice for hazard elimination and risk reduction; DLA record indicates current-source verification requirement.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-mil-std-461g",
+      "name": "MIL-STD-461G",
+      "title": "Requirements for the Control of Electromagnetic Interference Characteristics of Subsystems and Equipment",
+      "authority": "U.S. Department of Defense",
+      "class": "Military Standard",
+      "status": "Official DLA record located",
+      "source_url": "https://quicksearch.dla.mil/WMX/Default.aspx?token=5738281",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "DLA Quick Search record",
+      "notes": "EMI emission and susceptibility interface/verification requirements for covered military equipment and subsystems.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-15289",
+      "name": "ISO/IEC/IEEE 15289:2019",
+      "category": "Systems engineering",
+      "title": "Life-cycle information",
+      "authority": "Systems and software engineering - Content of life-cycle information items (documentation)",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2019",
+      "source_url": "https://www.iso.org/standard/74909.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-1",
+      "name": "ISO/IEC/IEEE 24748-1:2024",
+      "category": "Systems engineering",
+      "title": "Life-cycle management",
+      "authority": "Guidelines for life cycle management",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/84709.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-2",
+      "name": "ISO/IEC/IEEE 24748-2:2024",
+      "category": "Systems engineering",
+      "title": "Life-cycle management",
+      "authority": "Guidelines for application of ISO/IEC/IEEE 15288",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/84661.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-3",
+      "name": "ISO/IEC/IEEE 24748-3:2020",
+      "category": "Systems engineering",
+      "title": "Life-cycle management",
+      "authority": "Guidelines for application of ISO/IEC/IEEE 12207",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2020",
+      "source_url": "https://www.iso.org/standard/77698.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-4",
+      "name": "ISO/IEC/IEEE 24748-4:2026",
+      "category": "Systems engineering",
+      "title": "Life-cycle management",
+      "authority": "Systems engineering management planning",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/87797.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-5",
+      "name": "ISO/IEC/IEEE 24748-5:2017",
+      "category": "Systems engineering",
+      "title": "Life-cycle management",
+      "authority": "Software development planning",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2017",
+      "source_url": "https://www.iso.org/standard/60062.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-7",
+      "name": "ISO/IEC/IEEE 24748-7:2026",
+      "category": "Systems engineering",
+      "title": "Defence systems engineering",
+      "authority": "Application of systems engineering on defence programs",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/90139.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-8",
+      "name": "ISO/IEC/IEEE 24748-8:2026",
+      "category": "Systems engineering",
+      "title": "Defence reviews",
+      "authority": "Technical reviews and audits on defence programs",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/91563.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24748-10",
+      "name": "ISO/IEC/IEEE 24748-10:2026",
+      "category": "Systems engineering",
+      "title": "Life-cycle management",
+      "authority": "Guidelines for systems engineering agility",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/90086.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-29148",
+      "name": "ISO/IEC/IEEE 29148:2018",
+      "category": "Systems engineering",
+      "title": "Requirements engineering",
+      "authority": "Life cycle processes - Requirements engineering",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2018",
+      "source_url": "https://committee.iso.org/standard/72089.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-16085",
+      "name": "ISO/IEC/IEEE 16085:2021",
+      "category": "Systems engineering",
+      "title": "Risk management",
+      "authority": "Life cycle processes - Risk management",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2021",
+      "source_url": "https://www.iso.org/standard/74371.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-25010",
+      "name": "ISO/IEC 25010:2023",
+      "category": "Systems engineering",
+      "title": "Quality model",
+      "authority": "Systems and software product quality model",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2023",
+      "source_url": "https://www.iso.org/standard/78176.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-25002",
+      "name": "ISO/IEC 25002:2024",
+      "category": "Systems engineering",
+      "title": "Quality model",
+      "authority": "Quality model overview and usage",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/78175.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-21839",
+      "name": "ISO/IEC/IEEE 21839",
+      "category": "Systems engineering",
+      "title": "Systems of systems",
+      "authority": "System of systems considerations in life cycle stages",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026 under publication",
+      "source_url": "https://www.iso.org/standard/91120.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-21840",
+      "name": "ISO/IEC/IEEE 21840",
+      "category": "Systems engineering",
+      "title": "Systems of systems",
+      "authority": "Guidelines for utilization of 15288 in systems of systems",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026 under publication",
+      "source_url": "https://www.iso.org/standard/92475.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-21841",
+      "name": "ISO/IEC/IEEE 21841:2019",
+      "category": "Systems engineering",
+      "title": "Systems of systems",
+      "authority": "Taxonomy of systems of systems",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2019",
+      "source_url": "https://www.iso.org/standard/71957.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-24765",
+      "name": "ISO/IEC/IEEE 24765",
+      "category": "Systems engineering",
+      "title": "Terminology",
+      "authority": "Systems and software engineering vocabulary",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current family",
+      "source_url": "https://www.iso.org/standard/85596.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "ALL"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-bpmn",
+      "name": "BPMN 2.0.2",
+      "category": "Workflow & process",
+      "title": "Business Process Model and Notation",
+      "authority": "OMG",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "2.0.2",
+      "source_url": "https://www.omg.org/spec/BPMN/2.0.2/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-cmmn",
+      "name": "CMMN 1.1",
+      "category": "Workflow & process",
+      "title": "Case Management Model and Notation",
+      "authority": "OMG",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.1",
+      "source_url": "https://www.omg.org/cmmn/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-dmn",
+      "name": "DMN 1.6",
+      "category": "Workflow & process",
+      "title": "Decision Model and Notation",
+      "authority": "OMG",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.6",
+      "source_url": "https://www.omg.org/dmn/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-uaf",
+      "name": "UAF 1.3",
+      "category": "Enterprise architecture",
+      "title": "Unified Architecture Framework",
+      "authority": "OMG",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.3",
+      "source_url": "https://www.omg.org/spec/UAF/1.3",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-sbvr",
+      "name": "SBVR 1.5",
+      "category": "Business semantics",
+      "title": "Semantics of Business Vocabulary and Business Rules",
+      "authority": "OMG",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "1.5",
+      "source_url": "https://www.omg.org/spec/SBVR/1.5/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-bacm",
+      "name": "BACM 1.0",
+      "category": "Enterprise architecture",
+      "title": "Business Architecture Core Metamodel",
+      "authority": "OMG",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.0",
+      "source_url": "https://www.omg.org/spec/BACM/1.0/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-vdml",
+      "name": "VDML 1.1",
+      "category": "Business architecture",
+      "title": "Value Delivery Modeling Language",
+      "authority": "OMG",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "1.1",
+      "source_url": "https://www.omg.org/spec/VDML/1.1/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-ppm",
+      "name": "PPMN 1.0",
+      "category": "Provenance",
+      "title": "Pedigree and Provenance Model and Notation",
+      "authority": "OMG",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.0",
+      "source_url": "https://www.omg.org/spec/PPMN/1.0/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-togaf",
+      "name": "TOGAF Standard",
+      "category": "Enterprise architecture",
+      "title": "The TOGAF Standard",
+      "authority": "The Open Group",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "10th Edition",
+      "source_url": "https://publications.opengroup.org/standards/togaf",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-archimate",
+      "name": "ArchiMate 3.2",
+      "category": "Enterprise architecture",
+      "title": "ArchiMate Specification",
+      "authority": "The Open Group",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "3.2",
+      "source_url": "https://www.opengroup.org/archimate",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-it4it",
+      "name": "IT4IT Reference Architecture",
+      "category": "Enterprise architecture",
+      "title": "IT4IT Reference Architecture",
+      "authority": "The Open Group",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "3.0",
+      "source_url": "https://www.opengroup.org/it4it",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-open-fair",
+      "name": "Open FAIR",
+      "category": "Risk",
+      "title": "Open FAIR Body of Knowledge",
+      "authority": "The Open Group",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "2.0",
+      "source_url": "https://www.opengroup.org/openfair",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-rdf",
+      "name": "RDF 1.2",
+      "category": "Knowledge representation",
+      "title": "Resource Description Framework",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2",
+      "source_url": "https://www.w3.org/TR/rdf12-concepts/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-rdfs",
+      "name": "RDF Schema 1.2",
+      "category": "Knowledge representation",
+      "title": "RDF Schema",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2",
+      "source_url": "https://www.w3.org/TR/rdf12-schema/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-owl2",
+      "name": "OWL 2",
+      "category": "Knowledge representation",
+      "title": "Web Ontology Language",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "2",
+      "source_url": "https://www.w3.org/TR/owl2-overview/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-skos",
+      "name": "SKOS",
+      "category": "Knowledge representation",
+      "title": "Simple Knowledge Organization System",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current Recommendation",
+      "source_url": "https://www.w3.org/TR/skos-reference/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-shacl",
+      "name": "SHACL 1.2",
+      "category": "Knowledge representation",
+      "title": "Shapes Constraint Language",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2",
+      "source_url": "https://www.w3.org/TR/shacl12-core/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-sparql",
+      "name": "SPARQL 1.2",
+      "category": "Knowledge representation",
+      "title": "SPARQL Query Language",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2",
+      "source_url": "https://www.w3.org/TR/sparql12-query/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-jsonld",
+      "name": "JSON-LD 1.1",
+      "category": "Knowledge representation",
+      "title": "JSON-LD",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.1",
+      "source_url": "https://www.w3.org/TR/json-ld11/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-prov-o",
+      "name": "PROV-O",
+      "category": "Provenance",
+      "title": "PROV Ontology",
+      "authority": "W3C",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Recommendation",
+      "source_url": "https://www.w3.org/TR/prov-o/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso11179",
+      "name": "ISO/IEC 11179-1:2023",
+      "category": "Metadata",
+      "title": "Metadata registries - Framework",
+      "authority": "ISO/IEC",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "2023",
+      "source_url": "https://www.iso.org/standard/78914.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso15489",
+      "name": "ISO 15489-1:2016",
+      "category": "Records",
+      "title": "Records management - Concepts and principles",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2016",
+      "source_url": "https://www.iso.org/standard/62542.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso30300",
+      "name": "ISO 30300:2020",
+      "category": "Records",
+      "title": "Records management - Core concepts and vocabulary",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2020",
+      "source_url": "https://www.iso.org/standard/74291.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso30301",
+      "name": "ISO 30301:2019",
+      "category": "Records",
+      "title": "Management systems for records - Requirements",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2019",
+      "source_url": "https://www.iso.org/standard/74292.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso30302",
+      "name": "ISO 30302:2022",
+      "category": "Records",
+      "title": "Management systems for records - Implementation guidance",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2022",
+      "source_url": "https://www.iso.org/standard/81595.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-oais",
+      "name": "CCSDS 650.0-M-3",
+      "category": "Digital preservation",
+      "title": "Reference Model for an Open Archival Information System",
+      "authority": "CCSDS",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://ccsds.org/Pubs/650x0m3.pdf",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-premis",
+      "name": "PREMIS",
+      "category": "Digital preservation",
+      "title": "Preservation Metadata: Implementation Strategies",
+      "authority": "Library of Congress",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.loc.gov/standards/premis/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-mets",
+      "name": "METS",
+      "category": "Digital preservation",
+      "title": "Metadata Encoding and Transmission Standard",
+      "authority": "Library of Congress",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.loc.gov/standards/mets/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-bagit",
+      "name": "BagIt",
+      "category": "Digital preservation",
+      "title": "BagIt File Packaging Format",
+      "authority": "IETF",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current RFC family",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc8493",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-warc",
+      "name": "ISO 28500",
+      "category": "Digital preservation",
+      "title": "WARC file format",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2017",
+      "source_url": "https://www.iso.org/standard/68004.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-pdfa",
+      "name": "ISO 19005",
+      "category": "Digital preservation",
+      "title": "Document management - Electronic document file format for long-term preservation (PDF/A)",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Family",
+      "source_url": "https://www.iso.org/standard/38920.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-bpm-wp",
+      "name": "Workflow Patterns",
+      "category": "Workflow & process",
+      "title": "Workflow Patterns",
+      "authority": "Workflow Patterns Initiative",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.workflowpatterns.com/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso27001",
+      "name": "ISO/IEC 27001:2022",
+      "category": "Security",
+      "title": "Information security management systems - Requirements",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2022",
+      "source_url": "https://www.iso.org/standard/27001.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso27002",
+      "name": "ISO/IEC 27002:2022",
+      "category": "Security",
+      "title": "Information security controls",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2022",
+      "source_url": "https://www.iso.org/standard/75652.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso27005",
+      "name": "ISO/IEC 27005:2022",
+      "category": "Security",
+      "title": "Information security risk management",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2022",
+      "source_url": "https://www.iso.org/standard/80585.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso15408",
+      "name": "ISO/IEC 15408-1:2026",
+      "category": "Security evaluation",
+      "title": "Evaluation criteria for IT security - General model",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/15408-1",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso18045",
+      "name": "ISO/IEC 18045:2026",
+      "category": "Security evaluation",
+      "title": "Requirements and methodology for IT security evaluation",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/18045",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso29100",
+      "name": "ISO/IEC 29100:2024",
+      "category": "Privacy",
+      "title": "Privacy framework",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/85938.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-nist-csf",
+      "name": "NIST CSF 2.0",
+      "category": "Cybersecurity",
+      "title": "Cybersecurity Framework",
+      "authority": "NIST",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2.0",
+      "source_url": "https://www.nist.gov/cyberframework",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-nist-800-53",
+      "name": "NIST SP 800-53 Rev. 5.2.0",
+      "category": "Security controls",
+      "title": "Security and Privacy Controls",
+      "authority": "NIST",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "5.2.0",
+      "source_url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-nist-ai-rmf",
+      "name": "NIST AI RMF 1.0",
+      "category": "AI governance",
+      "title": "AI Risk Management Framework",
+      "authority": "NIST",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.0",
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso42001",
+      "name": "ISO/IEC 42001:2023",
+      "category": "AI governance",
+      "title": "Artificial intelligence - Management system",
+      "authority": "ISO/IEC",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "2023",
+      "source_url": "https://www.iso.org/standard/81230.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso42005",
+      "name": "ISO/IEC 42005:2025",
+      "category": "AI impact",
+      "title": "AI system impact assessment",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2025",
+      "source_url": "https://www.iso.org/standard/42005",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso42006",
+      "name": "ISO/IEC 42006:2025",
+      "category": "AI conformity assessment",
+      "title": "Requirements for bodies providing audit and certification of AIMS",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2025",
+      "source_url": "https://www.iso.org/standard/42006",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso22989",
+      "name": "ISO/IEC 22989:2022",
+      "category": "AI terminology",
+      "title": "Artificial intelligence concepts and terminology",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2022",
+      "source_url": "https://www.iso.org/standard/74296.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso23053",
+      "name": "ISO/IEC 23053:2022",
+      "category": "AI systems",
+      "title": "Framework for AI systems using machine learning",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2022",
+      "source_url": "https://www.iso.org/standard/74438.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso23894",
+      "name": "ISO/IEC 23894:2023",
+      "category": "AI risk",
+      "title": "Guidance on risk management for AI",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2023",
+      "source_url": "https://www.iso.org/standard/77304.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-spdx",
+      "name": "SPDX Specification",
+      "category": "Software supply chain",
+      "title": "Software Package Data Exchange",
+      "authority": "SPDX",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "3.x",
+      "source_url": "https://spdx.dev/specifications/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-cyclonedx",
+      "name": "CycloneDX",
+      "category": "Software supply chain",
+      "title": "Bill of Materials specification",
+      "authority": "OWASP",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.7",
+      "source_url": "https://cyclonedx.org/specification/overview/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-slsa",
+      "name": "SLSA",
+      "category": "Software supply chain",
+      "title": "Supply-chain Levels for Software Artifacts",
+      "authority": "OpenSSF",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2",
+      "source_url": "https://slsa.dev/spec/v1.2/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-in-toto",
+      "name": "in-toto",
+      "category": "Software supply chain",
+      "title": "Software supply-chain integrity specification",
+      "authority": "in-toto",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.0",
+      "source_url": "https://in-toto.io/docs/specs/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-openapi",
+      "name": "OpenAPI Specification",
+      "category": "API interoperability",
+      "title": "HTTP API interface description",
+      "authority": "OpenAPI Initiative",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "3.2.1",
+      "source_url": "https://spec.openapis.org/oas/v3.2.1.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-asyncapi",
+      "name": "AsyncAPI Specification",
+      "category": "Event interoperability",
+      "title": "Event-driven API description",
+      "authority": "AsyncAPI Initiative",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "3.0.0",
+      "source_url": "https://www.asyncapi.com/docs/reference/specification/v3.0.0",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-ro-crate",
+      "name": "RO-Crate",
+      "category": "Research data",
+      "title": "Research Object Crate",
+      "authority": "researchobject.org",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.3",
+      "source_url": "https://www.researchobject.org/ro-crate/specification.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-jats",
+      "name": "ANSI/NISO Z39.96-2024",
+      "category": "Scholarly publishing",
+      "title": "Journal Article Tag Suite",
+      "authority": "NISO",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.4",
+      "source_url": "https://www.niso.org/standards-committees/jats",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-cff",
+      "name": "Citation File Format",
+      "category": "Scholarly software",
+      "title": "Citation File Format",
+      "authority": "Citation File Format",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2.0",
+      "source_url": "https://github.com/citation-file-format/citation-file-format",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-fair",
+      "name": "FAIR Principles",
+      "category": "Research data",
+      "title": "FAIR data principles",
+      "authority": "GO FAIR / FORCE11",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Principles",
+      "source_url": "https://www.go-fair.org/fair-principles/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-datacite",
+      "name": "DataCite Metadata Schema",
+      "category": "Metadata",
+      "title": "DataCite metadata schema",
+      "authority": "DataCite",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://schema.datacite.org/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-crossref",
+      "name": "Crossref Metadata Deposit Schema",
+      "category": "Metadata",
+      "title": "Crossref metadata deposit schema",
+      "authority": "Crossref",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "5.5.0",
+      "source_url": "https://www.crossref.org/documentation/schema-library/metadata-deposit-schema/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-orcid",
+      "name": "ORCID iD",
+      "category": "Research identity",
+      "title": "ORCID persistent researcher identifier",
+      "authority": "ORCID",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://orcid.org/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-ror",
+      "name": "ROR",
+      "category": "Research identity",
+      "title": "Research Organization Registry",
+      "authority": "ROR",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://ror.org/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-doi",
+      "name": "DOI",
+      "category": "Persistent identifiers",
+      "title": "Digital Object Identifier",
+      "authority": "ISO/Centre?",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.doi.org/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-gs1",
+      "name": "GS1 standards",
+      "category": "Identifiers",
+      "title": "Global identification and data standards",
+      "authority": "GS1",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.gs1.org/standards",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-9001-2026",
+      "name": "ISO 9001:2026",
+      "category": "Quality",
+      "title": "Quality management systems - Requirements",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/62085.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record / ISO popular standards catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Current 2026 edition identified by ISO. Existing profile std-iso-9001 is retained for backward compatibility.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso19011-2026",
+      "name": "ISO 19011:2026",
+      "category": "Audit",
+      "title": "Guidelines for auditing management systems",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/84924.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso17025",
+      "name": "ISO/IEC 17025:2017",
+      "category": "Testing & calibration",
+      "title": "Competence of testing and calibration laboratories",
+      "authority": "ISO/IEC",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2017",
+      "source_url": "https://www.iso.org/standard/66912.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso13485",
+      "name": "ISO 13485:2016",
+      "category": "Medical quality",
+      "title": "Medical devices - Quality management systems",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2016",
+      "source_url": "https://www.iso.org/standard/59752.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso14971",
+      "name": "ISO 14971:2019",
+      "category": "Medical safety",
+      "title": "Medical devices - Risk management",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2019",
+      "source_url": "https://www.iso.org/standard/72704.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso26262",
+      "name": "ISO 26262:2018",
+      "category": "Automotive safety",
+      "title": "Road vehicles - Functional safety",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2018",
+      "source_url": "https://www.iso.org/publication/PUB200262.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso18497-1",
+      "name": "ISO 18497-1:2024",
+      "category": "Agricultural autonomy",
+      "title": "Safety of partially automated, semi-autonomous and autonomous machinery - Design principles and vocabulary",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/82684.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso18497-2",
+      "name": "ISO 18497-2:2024",
+      "category": "Agricultural autonomy",
+      "title": "Obstacle protection systems",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/82686.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso18497-3",
+      "name": "ISO 18497-3:2024",
+      "category": "Agricultural autonomy",
+      "title": "Autonomous operating zones",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/82687.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso18497-4",
+      "name": "ISO 18497-4:2024",
+      "category": "Agricultural autonomy",
+      "title": "Verification methods and validation principles",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2024",
+      "source_url": "https://www.iso.org/standard/82688.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso45001",
+      "name": "ISO 45001:2018",
+      "category": "Occupational safety",
+      "title": "Occupational health and safety management systems",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2018",
+      "source_url": "https://www.iso.org/standard/63787.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso14001",
+      "name": "ISO 14001:2026",
+      "category": "Environment",
+      "title": "Environmental management systems",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/14001.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso50001",
+      "name": "ISO 50001:2018",
+      "category": "Energy",
+      "title": "Energy management systems",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2018",
+      "source_url": "https://www.iso.org/standard/69426.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso31101",
+      "name": "ISO 31101:2023",
+      "category": "Service robotics",
+      "title": "Application services provided by service robots - Safety management systems requirements",
+      "authority": "ISO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2023",
+      "source_url": "https://www.iso.org/standard/81172.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-j3016",
+      "name": "SAE J3016",
+      "category": "Automotive automation",
+      "title": "Taxonomy and definitions for terms related to driving automation systems",
+      "authority": "SAE",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.sae.org/standards/content/j3016_202104/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-imo-solas",
+      "name": "SOLAS 1974",
+      "category": "Maritime",
+      "title": "International Convention for the Safety of Life at Sea",
+      "authority": "IMO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current consolidated",
+      "source_url": "https://www.imo.org/en/about/conventions/pages/international-convention-for-the-safety-of-life-at-sea-(solas),-1974.aspx",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-imo-marpol",
+      "name": "MARPOL",
+      "category": "Maritime",
+      "title": "International Convention for the Prevention of Pollution from Ships",
+      "authority": "IMO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.imo.org/en/about/conventions/pages/international-convention-for-the-prevention-of-pollution-from-ships-(marpol).aspx",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-imo-ism",
+      "name": "ISM Code",
+      "category": "Maritime safety",
+      "title": "International Safety Management Code",
+      "authority": "IMO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.imo.org/en/ourwork/humanelement/pages/ismcode.aspx",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-icao-sarps",
+      "name": "ICAO SARPs",
+      "category": "Aviation",
+      "title": "Standards and Recommended Practices",
+      "authority": "ICAO",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.icao.int/safety-management/standards-and-recommended-practices-sarps",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-modaf",
+      "name": "MODAF",
+      "category": "Enterprise architecture",
+      "title": "Ministry of Defence Architecture Framework",
+      "authority": "UK MOD",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.2",
+      "source_url": "https://www.gov.uk/government/publications/modaf-architecture-framework",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-naf",
+      "name": "NATO Architecture Framework",
+      "category": "Enterprise architecture",
+      "title": "NATO Architecture Framework",
+      "authority": "NATO",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "4.1",
+      "source_url": "https://www.nato.int/cps/en/natohq/topics_157575.htm",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-zachman",
+      "name": "Zachman Framework",
+      "category": "Enterprise architecture",
+      "title": "Zachman Framework for Enterprise Architecture",
+      "authority": "Zachman International",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.zachman.com/about-the-zachman-framework",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-rm-odp",
+      "name": "ISO/IEC 10746 (RM-ODP)",
+      "category": "Enterprise architecture",
+      "title": "Reference Model of Open Distributed Processing",
+      "authority": "ISO/IEC",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1998 family",
+      "source_url": "https://www.iso.org/standard/20696.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-rami40",
+      "name": "RAMI 4.0",
+      "category": "Industrial architecture",
+      "title": "Reference Architectural Model Industrie 4.0",
+      "authority": "Plattform Industrie 4.0",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.plattform-i40.de/IP/Navigation/EN/Industrie40/Reference-Architecture-Model-Industrie40/reference-architecture-model-industrie40.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-sgam",
+      "name": "SGAM",
+      "category": "Energy architecture",
+      "title": "Smart Grid Architecture Model",
+      "authority": "CEN-CENELEC-ETSI",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://www.entsoe.eu/technopedia/technology/smart-grid-architecture-model/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-dublincore",
+      "name": "Dublin Core",
+      "category": "Metadata",
+      "title": "Dublin Core Metadata Element Set",
+      "authority": "DCMI",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "DCMES",
+      "source_url": "https://www.dublincore.org/specifications/dublin-core/dces/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-isni",
+      "name": "ISNI",
+      "category": "Persistent identifiers",
+      "title": "International Standard Name Identifier",
+      "authority": "ISNI International Agency",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current",
+      "source_url": "https://isni.org/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-oidc",
+      "name": "OpenID Connect",
+      "category": "Identity",
+      "title": "OpenID Connect Core",
+      "authority": "OpenID Foundation",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "1.0",
+      "source_url": "https://openid.net/specs/openid-connect-core-1_0.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-oauth",
+      "name": "OAuth 2.0",
+      "category": "Authorization",
+      "title": "OAuth 2.0 Authorization Framework",
+      "authority": "IETF",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "RFC 6749",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc6749",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-saml",
+      "name": "SAML 2.0",
+      "category": "Identity federation",
+      "title": "Security Assertion Markup Language",
+      "authority": "OASIS",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "2.0",
+      "source_url": "https://www.oasis-open.org/standard/saml/",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-scim",
+      "name": "SCIM 2.0",
+      "category": "Identity provisioning",
+      "title": "System for Cross-domain Identity Management",
+      "authority": "IETF",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "RFC 7644",
+      "source_url": "https://www.rfc-editor.org/rfc/rfc7644",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-x509",
+      "name": "X.509",
+      "category": "PKI",
+      "title": "Information technology - Open Systems Interconnection - Directory - Public-key and attribute certificate frameworks",
+      "authority": "ITU-T",
+      "record_class": "SPECIFICATION_OR_FRAMEWORK",
+      "status": "CURRENT",
+      "edition": "Current family",
+      "source_url": "https://www.itu.int/rec/T-REC-X.509",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official authority record/catalogue",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Architecture-named or architecture-supporting record.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-iso-12207-2026",
+      "name": "ISO/IEC/IEEE 12207:2026",
+      "category": "Software life cycle",
+      "title": "Systems and software engineering - Software life cycle processes",
+      "authority": "ISO/IEC/IEEE",
+      "record_class": "STANDARD",
+      "status": "CURRENT",
+      "edition": "2026",
+      "source_url": "https://www.iso.org/standard/90219.html",
+      "accessed_at": "2026-10-24",
+      "provenance_basis": "Official ISO standard record",
+      "domains": [
+        "CROSS_DOMAIN"
+      ],
+      "notes": "Current edition. Supersedes ISO/IEC/IEEE 12207:2017, which is withdrawn.",
+      "requiredEvidence": [
+        "Traceability record",
+        "Verification record"
+      ]
+    },
+    {
+      "id": "std-sysml",
+      "name": "SysML",
+      "title": "Systems Modeling Language",
+      "layer": "Global",
+      "topic": "Architecture modeling",
+      "domains": [
+        "TERRESTRIAL",
+        "AERIAL",
+        "INDUSTRIAL",
+        "AEROSPACE"
+      ],
+      "requiredEvidence": [
+        "Architecture description"
+      ],
+      "status": "INFORMATIONAL",
+      "provenance": {
+        "source": "docs/MRD.md \u00a77",
+        "confidence": "NAMED"
+      }
+    },
+    {
+      "id": "std-wassenaar",
+      "name": "Wassenaar Arrangement",
+      "title": "Wassenaar Arrangement on Export Controls",
+      "authority": "Wassenaar",
+      "requiredEvidence": [
+        "Classification"
+      ],
+      "provenance": {
+        "source": "export-control"
+      }
+    },
+    {
+      "id": "std-ear",
+      "name": "US EAR",
+      "title": "Export Administration Regulations",
+      "authority": "BIS",
+      "requiredEvidence": [
+        "Classification"
+      ],
+      "provenance": {
+        "source": "export-control"
+      }
+    },
+    {
+      "id": "std-eu-2021-821",
+      "name": "EU 2021/821",
+      "title": "EU dual-use regulation 2021/821",
+      "authority": "European Union",
+      "requiredEvidence": [
+        "Classification"
+      ],
+      "provenance": {
+        "source": "export-control"
+      }
+    },
+    {
+      "id": "std-scomet",
+      "name": "India SCOMET",
+      "title": "SCOMET list",
+      "authority": "DGFT",
+      "requiredEvidence": [
+        "Classification"
+      ],
+      "provenance": {
+        "source": "export-control"
+      }
+    },
+    {
+      "id": "std-mach-2023",
+      "name": "EU Machinery Regulation 2023/1230",
+      "title": "Machinery Regulation",
+      "authority": "European Union",
+      "requiredEvidence": [
+        "Declaration"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-ai-act",
+      "name": "EU AI Act 2024/1689",
+      "title": "AI Act",
+      "authority": "European Union",
+      "requiredEvidence": [
+        "Risk class"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-gb",
+      "name": "GB/T robotics",
+      "title": "China SAC",
+      "authority": "SAC",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-jis",
+      "name": "JIS B robotics",
+      "title": "Japan",
+      "authority": "JIS",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-abnt",
+      "name": "ABNT NBR robotics",
+      "title": "Brazil",
+      "authority": "ABNT",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-sans",
+      "name": "SANS robotics",
+      "title": "South Africa",
+      "authority": "SANS",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-kebs",
+      "name": "KEBS KS EAS",
+      "title": "Kenya",
+      "authority": "KEBS",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-son",
+      "name": "SON NIS",
+      "title": "Nigeria",
+      "authority": "SON",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-bsti",
+      "name": "BSTI",
+      "title": "Bangladesh",
+      "authority": "BSTI",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    },
+    {
+      "id": "std-arso",
+      "name": "ARSO African",
+      "title": "African Union",
+      "authority": "ARSO",
+      "requiredEvidence": [
+        "Traceability record"
+      ],
+      "provenance": {
+        "source": "regional"
+      }
+    }
+  ]
+}

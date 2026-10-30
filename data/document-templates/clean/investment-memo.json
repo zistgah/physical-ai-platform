@@ -1,0 +1,71 @@
+{
+  "template_id": "business.investment_memo",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Investment Committee Memorandum",
+  "purpose": "Support a disciplined investment decision with thesis, diligence evidence, downside analysis and explicit decision request.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "decision",
+      "title": "Decision Requested",
+      "required": true
+    },
+    {
+      "id": "thesis",
+      "title": "Investment Thesis",
+      "required": true
+    },
+    {
+      "id": "company_product",
+      "title": "Company and Product",
+      "required": true
+    },
+    {
+      "id": "market",
+      "title": "Market and Competitive Position",
+      "required": true
+    },
+    {
+      "id": "technology",
+      "title": "Technology and IP Diligence",
+      "required": true
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Diligence",
+      "required": true
+    },
+    {
+      "id": "financial",
+      "title": "Financial Analysis",
+      "required": true
+    },
+    {
+      "id": "team",
+      "title": "Team and Governance",
+      "required": true
+    },
+    {
+      "id": "risks",
+      "title": "Risk and Mitigation",
+      "required": true
+    },
+    {
+      "id": "return",
+      "title": "Return Scenarios and Exit Considerations",
+      "required": true
+    },
+    {
+      "id": "recommendation",
+      "title": "Recommendation and Conditions",
+      "required": true
+    },
+    {
+      "id": "appendices",
+      "title": "Diligence Record",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

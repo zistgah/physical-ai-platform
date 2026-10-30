@@ -1,0 +1,63 @@
+{
+  "package": "manufacturing",
+  "version": "1.2.0",
+  "baseline": "Iteration 47 manufacturing hardened drop-in",
+  "changeType": "backward-compatible-additive",
+  "added": [
+    "backend-catalog.json",
+    "backend-adapters.js",
+    "node-worker-transport.js",
+    "workers/ortools_jobshop_worker.py",
+    "workers/highs_lp_worker.py",
+    "workers/simpy_flow_worker.py",
+    "BACKENDS.md",
+    "STITCH-INSTRUCTIONS.md",
+    "CHANGE-MANIFEST.json",
+    "backend-request.schema.json",
+    "backend-response.schema.json",
+    "THIRD-PARTY-NOTICES.md",
+    "requirements-optional.in",
+    "samples/backend-ortools-jobshop.json",
+    "samples/backend-highs-lot-sizing.json",
+    "samples/backend-simpy-flow.json",
+    "workers/test_workers.py",
+    "workers/scipy_highs_jobshop_worker.py",
+    "manifest.json",
+    "LICENSE",
+    "BUILD-ANALYSIS.md",
+    "API-REFERENCE.md",
+    "TEST-MATRIX.md",
+    "COLAB-GUIDE.md",
+    "notebooks/manufacturing_backend_lab.ipynb",
+    "samples/README.md"
+  ],
+  "modified": [
+    "test.mjs",
+    "EXPLAINER.md",
+    "VERIFICATION.md"
+  ],
+  "unchanged": [
+    "module.js",
+    "input.schema.json",
+    "output.schema.json",
+    "schedule-input.schema.json",
+    "samples/route-feasible.json",
+    "samples/route-quality-hold.json",
+    "samples/schedule-multi-order.json"
+  ],
+  "compatibility": {
+    "existingExportsPreserved": true,
+    "existingRouteSemanticsPreserved": true,
+    "newDependenciesRequired": false,
+    "kernelModified": false,
+    "acceptanceScriptModified": false
+  },
+  "notes": [
+    "External backend source code is not vendored.",
+    "Backend integrations are opt-in and disabled by default.",
+    "No external result is trusted without protocol and domain validation.",
+    "Physical machine actuation is not enabled."
+  ],
+  "iteration": "48",
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks."
+}

@@ -1,0 +1,111 @@
+=== Regression checklist ===
+PASS: No non-goals document
+PASS: Present: site/components/cad/geometry-kernel.js
+PASS: Present: site/components/cad/cad-workbench.js
+PASS: Present: site/components/cad/nurbs.js
+PASS: Present: site/components/sir/sir-abi.js
+PASS: Present: site/components/graph/graph-editor.js
+PASS: Present: site/components/simulation/fidelity-levels.js
+PASS: Present: site/components/simulation/hil-realtime.js
+PASS: Present: site/components/education/board-correlation.js
+PASS: Present: site/components/manufacturing/package-export.js
+PASS: Present: site/components/core/component-model.js
+PASS: Present: site/components/cad/cad-features.js
+PASS: Present: site/components/cad/cad-contracts.js
+PASS: Present: site/components/sir/sir-runtime.js
+PASS: Present: site/components/sir/sir-lang.js
+PASS: Present: site/components/manufacturing/mes.js
+PASS: Present: site/components/manufacturing/factory-execution.js
+PASS: Present: site/components/manufacturing/factory-resolution.js
+PASS: Present: site/components/core/erp.js
+PASS: Present: site/components/education/lms.js
+PASS: Present: site/components/education/education-path.js
+PASS: Present: site/components/core/prover.js
+PASS: Present: site/components/simulation/multiphysics.js
+PASS: Present: site/components/core/distributed.js
+PASS: Present: site/components/simulation/hil-loop.js
+PASS: Present: site/components/core/fleet-ops.js
+PASS: Present: site/components/teleoperation/remote-stack.js
+PASS: Present: site/components/core/cockpit-exec.js
+PASS: Present: site/components/compliance/standards-binding.js
+PASS: Present: site/components/compliance/standards-display.js
+PASS: Present: site/components/compliance/compliance-automation.js
+PASS: Present: site/components/compliance/standards-corpus.js
+PASS: Present: site/components/core/canonical-kernel.js
+PASS: Present: site/components/core/persistence-privacy.js
+PASS: Present: site/components/core/lifecycle-engine.js
+PASS: No non-goal markers (none)
+PASS: CAD contract is not weaker
+PASS: CAD types remain canonical
+PASS: Both manufacturing directions remain
+PASS: LMS still holds an unenrolled lesson
+PASS: LMS still keeps an unfinished course open
+PASS: LMS still completes only when every lesson is done
+PASS: Lessons are canonical entities
+PASS SUITE conformance-test-WP-AI-GUIDE.mjs
+PASS SUITE conformance-test-WP-ASSURANCE-CASE.mjs
+PASS SUITE conformance-test-WP-BUSINESS-COST.mjs
+PASS SUITE conformance-test-WP-CHANGE-STALE.mjs
+PASS SUITE conformance-test-WP-COCKPIT-STATES.mjs
+PASS SUITE conformance-test-WP-EDUCATION-PATH.mjs
+PASS SUITE conformance-test-WP-FLEET-TWIN.mjs
+PASS SUITE conformance-test-WP-FORMAL-ADAPTER.mjs
+PASS SUITE conformance-test-WP-INSPECTOR.mjs
+PASS SUITE conformance-test-WP-LIFECYCLE-GATES.mjs
+PASS SUITE conformance-test-WP-MFG-STRUCTURE.mjs
+PASS SUITE conformance-test-WP-RELATION-CLOSE.mjs
+PASS SUITE conformance-test-WP-RESEARCH-PROTOCOL.mjs
+PASS SUITE conformance-test-WP-ROLES.mjs
+PASS SUITE conformance-test-WP-SHARING-ADAPTER.mjs
+PASS SUITE conformance-test-WP-SIR-LANG-2.mjs
+PASS SUITE conformance-test-WP-SOVEREIGNTY.mjs
+PASS SUITE conformance-test-WP-STANDARDS-GRAPH.mjs
+PASS SUITE conformance-test-WP-TELEOP-SESSION.mjs
+PASS SUITE conformance-test-WP-WORKBENCH-WIRE.mjs
+PASS SUITE conformance-test-iter03.mjs
+PASS SUITE conformance-test-iter04.mjs
+PASS SUITE conformance-test-iter05.mjs
+PASS SUITE conformance-test-iter06.mjs
+PASS SUITE conformance-test-iter07.mjs
+PASS SUITE conformance-test-iter08.mjs
+PASS SUITE conformance-test-iter09.mjs
+PASS SUITE conformance-test-iter10.mjs
+PASS SUITE conformance-test-iter13.mjs
+PASS SUITE conformance-test-iter14.mjs
+PASS SUITE conformance-test-iter15.mjs
+PASS SUITE conformance-test-iter16.mjs
+PASS SUITE conformance-test-iter17.mjs
+PASS SUITE conformance-test-iter18.mjs
+PASS SUITE conformance-test-iter19.mjs
+PASS SUITE conformance-test-iter20.mjs
+PASS SUITE conformance-test-iter21.mjs
+PASS SUITE conformance-test-iter22.mjs
+PASS SUITE conformance-test-iter23.mjs
+PASS SUITE conformance-test-iter24.mjs
+PASS SUITE conformance-test-iter25.mjs
+PASS SUITE conformance-test-iter26.mjs
+PASS SUITE conformance-test-iter27.mjs
+PASS SUITE conformance-test-iter28.mjs
+PASS SUITE conformance-test-iter29.mjs
+PASS SUITE conformance-test-iter30.mjs
+PASS SUITE conformance-test-iter31.mjs
+PASS SUITE conformance-test-iter32.mjs
+PASS SUITE conformance-test-iter33.mjs
+PASS SUITE conformance-test-iter34.mjs
+PASS SUITE conformance-test-iter35.mjs
+PASS SUITE conformance-test-iter36.mjs
+PASS SUITE conformance-test-iter37.mjs
+PASS SUITE conformance-test-iter38.mjs
+PASS SUITE conformance-test-iter39.mjs
+PASS SUITE conformance-test-iter41.mjs
+PASS SUITE conformance-test-iter42.mjs
+PASS SUITE conformance-test-iter43.mjs
+PASS SUITE conformance-test-iter44.mjs
+PASS SUITE conformance-test-iter45.mjs
+PASS SUITE conformance-test-iter46.mjs
+PASS SUITE conformance-test-iter47.mjs
+PASS SUITE conformance-test.mjs
+PASS SUITE test-components.mjs
+PASS: All prior suites pass (64/64)
+
+=== CHECKLIST PASSED ===

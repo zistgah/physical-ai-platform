@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Component ABI Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "version",
+    "interfaceVersion",
+    "capabilities",
+    "interfaces"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "interfaceVersion": {
+      "type": "string"
+    },
+    "capabilities": {
+      "type": "array"
+    },
+    "interfaces": {
+      "type": "array"
+    },
+    "dependencies": {
+      "type": "array"
+    },
+    "simulation": {
+      "type": "object"
+    },
+    "safety": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "array"
+    }
+  }
+}

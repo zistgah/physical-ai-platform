@@ -1,0 +1,66 @@
+template_id: assurance.regulatory_dossier
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Regulatory / Compliance / Assurance Dossier
+purpose: Assemble an auditable case for applicability, conformity, safety and authorization. This template
+  does not itself certify or authorize a system.
+guide_mode: true
+sections:
+- id: scope
+  title: 'System Identity: Intended Use and Jurisdiction'
+  required: true
+  instruction: Identify system, variants, intended users, environments, deployment geography and responsible
+    legal entity.
+- id: applicability
+  title: Regulatory and Standards Applicability
+  required: true
+  instruction: List regimes, standards, editions, jurisdiction, applicability rationale, tailoring and
+    competent authority.
+- id: classification
+  title: Classification and Risk Category
+  required: true
+  instruction: Record classification basis and evidence. UNKNOWN applicability or export status must remain
+    HOLD, not ALLOW.
+- id: requirements
+  title: Compliance Requirements Matrix
+  required: true
+  instruction: Map each clause/requirement to design control, implementation, verification, evidence,
+    status and owner.
+- id: safety
+  title: Safety Case
+  required: true
+  instruction: Claims, arguments, hazards, controls, residual risk, evidence and acceptance authority.
+- id: design
+  title: Design and Configuration Evidence
+  required: true
+  instruction: Controlled drawings, software versions, component certificates, risk controls and configuration
+    baseline.
+- id: tests
+  title: Test and Assessment Evidence
+  required: true
+  instruction: Reports, test conditions, lab accreditation where relevant, deviations, calibration and
+    applicability limits.
+- id: cybersecurity
+  title: 'Cybersecurity: Privacy and Data Governance'
+  required: true
+  instruction: Threat model, access, update, logging, data minimization, privacy zones, retention and
+    incident handling.
+- id: manufacturing
+  title: Manufacturing Quality and Traceability
+  required: true
+  instruction: Quality system, production controls, supplier controls, serial traceability and change
+    management.
+- id: operations
+  title: 'Operations: Maintenance and Post-Market Controls'
+  required: true
+  instruction: Instructions, training, service, monitoring, incident reporting, corrective action and
+    recall.
+- id: declarations
+  title: 'Declarations: Authorizations and Open Items'
+  required: true
+  instruction: Authorized declarations only; list unresolved determinations, waivers, conditions and expiry
+    dates.
+- id: appendices
+  title: Evidence Register and Appendices
+  required: true
+  instruction: Evidence index with hashes, source, configuration, method, reviewer and status.

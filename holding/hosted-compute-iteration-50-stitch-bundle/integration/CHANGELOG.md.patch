@@ -1,0 +1,16 @@
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -257,3 +257,13 @@
+ - Registered the adapter factories in the platform module registry and extended HIL conformance checks.
+ - Added fake-client adapter tests and documented deployment-specific commissioning boundaries.
+ - Preserved the HIL core, canonical kernel, acceptance script, simulation semantics and attestation gate.
++
++
++## Iteration 50 - Hosted compute and numerical backend ecosystem
++
++- Added a separate eleventh `drop-in/hosted-compute/` package for backend discovery, canonical execution plans, result integrity validation and simulation-only evidence drafts.
++- Catalogued 22 numerical, GPU, sparse/FEM, CFD, robotics, ODE and mesh-processing upstream libraries as optional backends; no mandatory runtime dependencies added.
++- Added browser-first Google Colab notebook with a manufactured-solution Poisson solver, SciPy reference, PyTorch and JAX cross-checks, optional CuPy probe, runtime detection and digest-bearing output bundle.
++- Registered the new package in the existing module registry and added conformance, notebook and boundary coverage.
++- Added consolidated Iterations 47-50 analysis, test coverage matrix and Grok handoff instructions.
++- Preserved the canonical kernel, acceptance script, HIL package and all existing drop-in modules.

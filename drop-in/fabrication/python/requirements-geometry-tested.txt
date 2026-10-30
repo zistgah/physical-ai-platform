@@ -1,0 +1,8 @@
+# Direct dependency versions exercised by this handoff's backend tests.
+# This is not a complete transitive lockfile; use a platform-specific lock/resolution
+# and verify wheel hashes before controlled production deployment.
+cadquery==2.8.0
+trimesh==4.11.1
+shapely==2.1.2
+scipy==1.17.0
+numpy==2.3.5

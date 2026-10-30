@@ -1,0 +1,106 @@
+{
+  "template_id": "engineering.technical_specification",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Technical Specification / System Design Report",
+  "purpose": "Define what the system is, must do, how it is structured, how interfaces behave and how conformance will be demonstrated.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "document_control",
+      "title": "Document Control and Configuration",
+      "required": true,
+      "instruction": "Document ID, revision, baseline, approvals, applicability, change record and controlled distribution."
+    },
+    {
+      "id": "scope",
+      "title": "Scope: Purpose and System Boundary",
+      "required": true,
+      "instruction": "Mission, intended use, exclusions, stakeholders, operating context and system boundary."
+    },
+    {
+      "id": "references",
+      "title": "Applicable and Reference Documents",
+      "required": true,
+      "instruction": "Separate mandatory applicable documents from informative references. Record version/date and tailoring."
+    },
+    {
+      "id": "context",
+      "title": "Operational Concept and Use Cases",
+      "required": true,
+      "instruction": "ConOps, actors, scenarios, environment, lifecycle, modes and external systems."
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements",
+      "required": true,
+      "instruction": "Unique IDs, shall statements, rationale, source, priority, verification method, allocation and bidirectional traceability."
+    },
+    {
+      "id": "architecture",
+      "title": "System Architecture",
+      "required": true,
+      "instruction": "System/subsystem/component decomposition, functional/physical/software/electrical/data views and rationale."
+    },
+    {
+      "id": "interfaces",
+      "title": "Interfaces and Contracts",
+      "required": true,
+      "instruction": "Ports, protocols, units, coordinate frames, timing, error behavior, versioning, safety/security and adapters."
+    },
+    {
+      "id": "behavior",
+      "title": "Functional and State Behavior",
+      "required": true,
+      "instruction": "Modes, state machines, events, commands, authority, sequencing, timing and failure behavior."
+    },
+    {
+      "id": "performance",
+      "title": "Performance and Capacity",
+      "required": true,
+      "instruction": "Quantified limits, operating envelope, loads, duty cycle, latency, throughput, endurance and measurement methods."
+    },
+    {
+      "id": "safety",
+      "title": "Safety and Security Architecture",
+      "required": true,
+      "instruction": "Hazards, safety functions, assurance claims, threat model, access, fail-safe/fail-operational behavior and human authority."
+    },
+    {
+      "id": "physical",
+      "title": "Physical Design and Materials",
+      "required": true,
+      "instruction": "Dimensions, mass, materials, tolerances, power, thermal, mechanical, electrical and environmental constraints."
+    },
+    {
+      "id": "software",
+      "title": "Software: Compute and Data Architecture",
+      "required": true,
+      "instruction": "Execution targets, runtime, OS, ABI, dependencies, data schemas, update strategy and reproducible build."
+    },
+    {
+      "id": "verification",
+      "title": "Verification and Validation Strategy",
+      "required": true,
+      "instruction": "Requirement-to-test mapping, analysis, inspection, demonstration, simulation, SIL/HIL/physical test levels and acceptance criteria."
+    },
+    {
+      "id": "manufacturing",
+      "title": "Manufacturing and Supportability",
+      "required": true,
+      "instruction": "DFM/DFA, BOM, tooling, process, calibration, repair, spares, logistics and obsolescence."
+    },
+    {
+      "id": "compliance",
+      "title": "Standards and Regulatory Applicability",
+      "required": true,
+      "instruction": "Applicability determination, tailoring, implementation, evidence, deviations and open items."
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false,
+      "instruction": "Drawings, ICDs, data dictionaries, calculations, risk register, test matrix and configuration manifests."
+    }
+  ]
+}

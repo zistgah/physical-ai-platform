@@ -1,0 +1,142 @@
+{
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "schemaVersion": "1.0",
+  "scenarios": [
+    {
+      "id": "forward-lifecycle",
+      "kind": "lifecycle",
+      "events": [
+        {
+          "id": "S1",
+          "stage": "SUPPLIER",
+          "at": "2026-10-01T00:00:00Z",
+          "actor": "SUP-1",
+          "location": "SUP-LOC",
+          "evidenceRef": "EV-1"
+        },
+        {
+          "id": "P1",
+          "stage": "PROCUREMENT",
+          "at": "2026-10-02T00:00:00Z",
+          "actor": "BUYER-1",
+          "location": "HQ",
+          "evidenceRef": "EV-2"
+        },
+        {
+          "id": "I1",
+          "stage": "INBOUND",
+          "at": "2026-10-03T00:00:00Z",
+          "actor": "CARRIER-1",
+          "location": "PORT-1",
+          "evidenceRef": "EV-3"
+        },
+        {
+          "id": "W1",
+          "stage": "WAREHOUSE",
+          "at": "2026-10-04T00:00:00Z",
+          "actor": "WH-1",
+          "location": "WH-1",
+          "evidenceRef": "EV-4"
+        },
+        {
+          "id": "K1",
+          "stage": "KITTING",
+          "at": "2026-10-05T00:00:00Z",
+          "actor": "KIT-1",
+          "location": "WH-1",
+          "evidenceRef": "EV-5"
+        },
+        {
+          "id": "M1",
+          "stage": "PRODUCTION",
+          "at": "2026-10-06T00:00:00Z",
+          "actor": "OPS-1",
+          "location": "PLANT-1",
+          "evidenceRef": "EV-6"
+        },
+        {
+          "id": "F1",
+          "stage": "FINISHED_GOODS",
+          "at": "2026-10-07T00:00:00Z",
+          "actor": "QA-1",
+          "location": "PLANT-1",
+          "evidenceRef": "EV-7"
+        },
+        {
+          "id": "R1",
+          "stage": "REGIONAL_WAREHOUSE",
+          "at": "2026-10-08T00:00:00Z",
+          "actor": "WH-2",
+          "location": "REGION-1",
+          "evidenceRef": "EV-8"
+        },
+        {
+          "id": "D1",
+          "stage": "DISTRIBUTOR",
+          "at": "2026-10-09T00:00:00Z",
+          "actor": "DIST-1",
+          "location": "DIST-1",
+          "evidenceRef": "EV-9"
+        },
+        {
+          "id": "C1",
+          "stage": "CUSTOMER",
+          "at": "2026-10-10T00:00:00Z",
+          "actor": "CUSTOMER-1",
+          "location": "SITE-1",
+          "evidenceRef": "EV-10"
+        }
+      ]
+    },
+    {
+      "id": "route-with-hazmat",
+      "kind": "route",
+      "origin": "A",
+      "destination": "B",
+      "shipment": {
+        "qty": 5,
+        "hazardous": true
+      },
+      "nodes": [
+        {
+          "id": "A"
+        },
+        {
+          "id": "B"
+        }
+      ],
+      "edges": [
+        {
+          "id": "LANE-AB",
+          "from": "A",
+          "to": "B",
+          "capacity": 5,
+          "cost": 100,
+          "leadDays": 1,
+          "status": "ACTIVE",
+          "exportStatus": "CLEAR",
+          "hazmatAllowed": true,
+          "batteryAllowed": true,
+          "pressureVesselAllowed": true
+        }
+      ]
+    },
+    {
+      "id": "clear-trade-screen",
+      "kind": "trade",
+      "input": {
+        "itemClassification": "UNCLASSIFIED-EXAMPLE",
+        "origin": "IN",
+        "destination": "IN",
+        "endUser": "CUSTOMER-1",
+        "endUse": "CIVIL-INDUSTRIAL",
+        "exportStatus": "CLEAR",
+        "restrictedPartyScreening": "CLEAR",
+        "destinationScreening": "CLEAR",
+        "customsStatus": "CLEARED",
+        "hsCode": "85044090",
+        "originEvidenceStatus": "VERIFIED"
+      }
+    }
+  ]
+}

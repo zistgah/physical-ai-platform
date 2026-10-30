@@ -1,0 +1,7 @@
+Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+# Optional alternative open-source LP backends. Install only if needed.
+# OR-Tools GLOP backend:
+ortools>=9.10
+# Pyomo modeling layer with HiGHS solver:
+pyomo>=6.8
+highspy>=1.7

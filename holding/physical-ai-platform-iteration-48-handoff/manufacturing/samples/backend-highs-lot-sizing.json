@@ -1,0 +1,35 @@
+{
+  "protocol": "ayeai.manufacturing.backend/v1",
+  "requestId": "sample-highs-001",
+  "capability": "manufacturing.lot-sizing.optimize",
+  "operation": "solve-mip-model",
+  "executionClass": "planning",
+  "metadata": {
+    "modelVersion": "1.0.0",
+    "units": {
+      "units": "pieces"
+    }
+  },
+  "payload": {
+    "model": {
+      "variables": [
+        {
+          "id": "units",
+          "lower": 0,
+          "upper": 100,
+          "objective": -12,
+          "integer": true
+        }
+      ],
+      "constraints": [
+        {
+          "id": "available-capacity",
+          "terms": {
+            "units": 1
+          },
+          "upper": 42
+        }
+      ]
+    }
+  }
+}

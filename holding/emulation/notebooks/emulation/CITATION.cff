@@ -1,0 +1,24 @@
+# Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.
+# AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+# SPDX-License-Identifier: GPL-3.0-only
+cff-version: 1.2.0
+message: >-
+  If you use the Physical AI Platform emulation notebook suite, cite the
+  platform and the specific upstream numerical/physics backends used.
+title: Physical AI Platform - Emulation Notebook Suite
+version: 1.2.0
+authors:
+  - family-names: Choudhary
+    given-names: Abhishek
+    affiliation: AyeAI
+    orcid: https://orcid.org/0009-0002-0684-8320
+license: GPL-3.0-only
+keywords:
+  - Physical AI
+  - emulation
+  - numerical simulation
+  - FMI
+  - SciPy
+  - JAX
+  - robotics
+  - digital twin

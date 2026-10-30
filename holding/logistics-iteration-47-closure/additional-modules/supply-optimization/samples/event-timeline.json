@@ -1,0 +1,39 @@
+{
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "events": [
+    {
+      "id": "EV-04",
+      "time_days": 4.0,
+      "kind": "DELIVERY",
+      "entity_id": "ORDER-1",
+      "state": "DELIVERED"
+    },
+    {
+      "id": "EV-01",
+      "time_days": 0.0,
+      "kind": "PROCUREMENT",
+      "entity_id": "PO-1",
+      "state": "CONFIRMED"
+    },
+    {
+      "id": "EV-02",
+      "time_days": 2.0,
+      "kind": "RECEIPT",
+      "entity_id": "SHIP-1",
+      "state": "RECEIVED"
+    },
+    {
+      "id": "EV-03",
+      "time_days": 2.5,
+      "kind": "KITTING",
+      "entity_id": "KIT-1",
+      "state": "READY"
+    }
+  ],
+  "expected_order": [
+    "EV-01",
+    "EV-02",
+    "EV-03",
+    "EV-04"
+  ]
+}

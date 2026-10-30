@@ -1,0 +1,117 @@
+PASS public fabricate export remains available for Iteration 47
+PASS breaking async API contract is explicitly versioned
+PASS plan produces deterministic rounded-pocket path
+PASS plan does not call a machine adapter
+PASS offline planning does not require live machine readiness
+PASS feature origin is applied in stock coordinates
+PASS toolpath is within stock/feature bounds
+PASS trajectory interpreter returns safe terminal state
+PASS discrete stock-removal simulation covers the complete rounded pocket
+PASS stock-removal simulator rejects excessive grid resolution
+PASS stock-removal simulator rejects excessive cell-move work
+PASS stock-removal simulator rejects corrupted toolpath
+PASS stock-removal simulation detects missing perimeter contour passes
+PASS toolpath independently validates
+PASS planner output has deterministic checksum
+PASS checksum changes when a move changes
+PASS path uses alternating raster direction
+PASS path segments do not exceed configured segment length
+PASS toolpath ends every row with a retract
+PASS single-tool-width pocket is handled without zero-length contour segments
+PASS pathological tiny stepover rejected before allocation
+PASS move limit rejects pathological expansion
+PASS machine move limit enforced
+PASS non-finite path coordinate rejected
+PASS checksum tampering rejected
+PASS unsafe rapid at positive cutting depth rejected
+PASS diagonal plunge rejected
+PASS diagonal retract rejected
+PASS cut at changing Z without plunge rejected
+PASS missing nominal geometry rejected
+PASS empty toolpath rejected
+PASS missing solid is HOLD
+PASS missing stock is HOLD
+PASS missing machine is HOLD
+PASS missing tool is HOLD
+PASS missing process is HOLD
+PASS missing material is HOLD
+PASS missing fixture is HOLD
+PASS missing surfaceFinish is HOLD
+PASS missing inspectionPlan is HOLD
+PASS missing tolerance is HOLD
+PASS wrong units rejected
+PASS unsupported feature rejected
+PASS zero feature dimension rejected
+PASS feature outside stock rejected
+PASS corner radius smaller than tool radius rejected
+PASS corner radius larger than supported strategy rejected
+PASS tool shorter than pocket rejected
+PASS tool stepdown rating enforced
+PASS tool diameter larger than pocket rejected
+PASS stepover larger than cutter rejected
+PASS feed above machine rating rejected
+PASS spindle above machine rating rejected
+PASS material cutting speed limit enforced
+PASS material lot identity required
+PASS fixture verification required
+PASS fixture clearance evidence required
+PASS fixture clearance failure rejects plan
+PASS inspection plan identity required
+PASS stock above machine travel rejected
+PASS invalid maxMoves rejected
+PASS negative tolerance rejected
+PASS zero corner radius tolerance rejected
+PASS invalid safe clearance rejected
+PASS invalid origin rejected
+PASS missing tool flute length HOLDs
+PASS missing machine travel axis HOLDs
+PASS missing process feed HOLDs
+PASS invalid material cutting speed FAILs
+PASS measurement accepts in-tolerance guarded evidence
+PASS measurement rejects tolerance exceedance
+PASS uncertainty guard band rejects nominally close result
+PASS corner-radius deviation is independently checked
+PASS missing measurement provenance HOLDs
+PASS missing surface-finish measurement HOLDs
+PASS null measurement input HOLDs
+PASS missing measurement evidence HOLDs
+PASS missing measurement method HOLDs
+PASS missing uncertainty budget HOLDs
+PASS missing surface roughness uncertainty HOLDs
+PASS missing calibration evidence reference HOLDs
+PASS expired calibration FAILs
+PASS measurement outside calibration validity window FAILs
+PASS invalid measurement dimensions FAIL
+PASS negative uncertainty FAIL
+PASS surface finish above specified Ra limit FAILs
+PASS surface finish uncertainty guard band enforced
+PASS legacy two-field call now correctly HOLDs for missing fabrication evidence
+PASS empty input HOLDs
+PASS null input FAILs cleanly without throwing
+PASS execution missing ready is HOLD
+PASS execution false ready is HOLD
+PASS execution missing emergencyStopClear is HOLD
+PASS execution false emergencyStopClear is HOLD
+PASS execution missing doorClosed is HOLD
+PASS execution false doorClosed is HOLD
+PASS execution missing workholdingVerified is HOLD
+PASS execution false workholdingVerified is HOLD
+PASS missing execution adapter is HOLD
+PASS missing machine identity is HOLD
+PASS empty idempotency key FAILs
+PASS adapter receives frozen path and idempotency key
+PASS adapter mutation attempt cannot alter path
+PASS adapter exception returns HOLD
+PASS incomplete execution returns HOLD
+PASS missing execution ID returns HOLD
+PASS execution toolpath checksum mismatch FAILs
+PASS execution machine identity mismatch FAILs
+PASS missing measurement after execution HOLDs
+PASS measurement method mismatch with inspection plan HOLDs
+PASS full lifecycle sample returns measured conforming
+PASS full lifecycle out-of-tolerance returns FAIL
+PASS execution and metrology evidence share exact toolpath checksum
+PASS sample JSON is parseable and executable
+PASS timeout aborts adapter and returns HOLD
+
+FABRICATION TESTS: 115 passed, 0 failed

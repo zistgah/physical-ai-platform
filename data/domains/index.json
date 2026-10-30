@@ -1,0 +1,12 @@
+{
+  "domains": [
+    "TERRESTRIAL",
+    "MARINE",
+    "SUBSEA",
+    "AERIAL",
+    "AEROSPACE_ORBITAL",
+    "INDUSTRIAL",
+    "AGRICULTURAL",
+    "SCIENTIFIC"
+  ]
+}

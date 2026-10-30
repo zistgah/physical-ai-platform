@@ -1,0 +1,84 @@
+{
+  "accelerator": {
+    "available": false,
+    "backend": "NumPy/CPU",
+    "reason": "No module named 'cupy'"
+  },
+  "backend_execution": "NOT_EXECUTED_BY_THIS_NOTEBOOK",
+  "configuration_ref": null,
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "created_utc": "2026-10-30T07:58:38.449004+00:00",
+  "external_backend_install": {
+    "installed": false,
+    "package": "openfoam2606-default",
+    "requested": false
+  },
+  "external_backend_probe": {
+    "SU2_CFD": {
+      "available": false,
+      "path": null
+    },
+    "code_saturne": {
+      "available": false,
+      "path": null
+    },
+    "cs": {
+      "available": false,
+      "path": null
+    },
+    "foamRun": {
+      "available": false,
+      "path": null
+    },
+    "foamVersion": {
+      "available": false,
+      "path": null
+    },
+    "icoFoam": {
+      "available": false,
+      "path": null
+    },
+    "simpleFoam": {
+      "available": false,
+      "path": null
+    }
+  },
+  "external_backend_smoke": {
+    "execution_state": "NOT_REQUESTED",
+    "requested": false
+  },
+  "gpu_solver_execution_claim": false,
+  "notebook_id": "pap-cfd-backend-colab",
+  "notebook_license": "GPL-3.0-only",
+  "notebook_version": "1.0.0",
+  "parameter_sweep": {
+    "array_backend": "NumPy/CPU",
+    "flow_rate_max": 0.00014940290550174073,
+    "flow_rate_min": 1.523809523809524e-05,
+    "max_speed_max": 0.016774448173258506,
+    "samples": 250000
+  },
+  "reference_case": {
+    "equation": "mu*d2u/dy2=dpdx",
+    "flow_rate_per_span_m2_s": 8.316699933466402e-06,
+    "model": "STEADY_INCOMPRESSIBLE_LAMINAR_CHANNEL",
+    "parameters_si": {
+      "bottom_wall_velocity_m_s": 0.0,
+      "dynamic_viscosity_Pa_s": 0.001002,
+      "height_m": 0.01,
+      "pressure_gradient_Pa_m": -0.1,
+      "top_wall_velocity_m_s": 0.0
+    },
+    "validation_state": "ANALYTICAL_REFERENCE_ONLY_NOT_PHYSICAL_VALIDATION"
+  },
+  "runtime": {
+    "colab": false,
+    "machine": "x86_64",
+    "nvidia_smi": null,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "timestamp_utc": "2026-10-30T07:58:37.913537+00:00"
+  },
+  "subject_refs": [],
+  "trust_state": "UNVERIFIED"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "linear-model-lab-01",
+  "title": "Constant-speed model notebook",
+  "cells": [
+    {
+      "id": "question",
+      "type": "markdown",
+      "content": "A cart moves at constant speed. Predict position over time."
+    },
+    {
+      "id": "model",
+      "type": "math",
+      "content": "x(t)=x_0+vt"
+    },
+    {
+      "id": "data",
+      "type": "dataset",
+      "content": {
+        "columns": [
+          "time_s",
+          "position_m"
+        ],
+        "rows": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fit-line",
+      "type": "code",
+      "adapterId": "pap.education.reference",
+      "operation": "linear-regression",
+      "inputs": {
+        "points": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "interpret",
+      "type": "question",
+      "content": "Estimate the slope and intercept. Explain their physical meaning."
+    },
+    {
+      "id": "limits",
+      "type": "reflection",
+      "content": "Name conditions under which the constant-speed model is invalid."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+--- a/README.md
++++ b/README.md
+@@ -62,3 +62,9 @@
+ - Local-first; GitHub is an optional persistence adapter
+ 
+ See `docs/MRD.md` for the full consolidated requirements and `sources/mrd-predecessor/` for the original source documents.
++
++## Hosted numerical compute and accelerators (Iteration 50)
++
++The platform includes a replaceable hosted-compute contract at `drop-in/hosted-compute/` and a browser-first Google Colab notebook at [`notebooks/PAP_Hosted_Compute_Backends.ipynb`](notebooks/PAP_Hosted_Compute_Backends.ipynb). Open [Google Colab](https://colab.research.google.com/) and use **File → Upload notebook**, or use the repository's direct Colab GitHub link once its actual owner/name/branch are configured. The notebook probes available CPU/GPU/TPU libraries and emits a hash-bearing simulation result for validation by the canonical platform contract.
++
++See `BUILD-ANALYSIS-ITERATIONS-47-50.md`, `TEST-COVERAGE-MATRIX-ITERATION-50.md`, and `HANDOFF-ITERATION-50.md`. Hosted compute remains SIMULATION evidence; it does not claim HIL, physical verification or L5 fidelity.

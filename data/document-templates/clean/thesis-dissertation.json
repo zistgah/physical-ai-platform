@@ -1,0 +1,71 @@
+{
+  "template_id": "research.thesis_dissertation",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Thesis / Dissertation",
+  "purpose": "Demonstrate an original, coherent and examinable body of scholarly work under the rules of the awarding institution.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "preliminaries",
+      "title": "Preliminary Pages",
+      "required": true
+    },
+    {
+      "id": "introduction",
+      "title": "Introduction and Research Problem",
+      "required": true
+    },
+    {
+      "id": "literature",
+      "title": "Critical Literature Review",
+      "required": true
+    },
+    {
+      "id": "theory",
+      "title": "Theoretical / Conceptual Framework",
+      "required": true
+    },
+    {
+      "id": "methodology",
+      "title": "Research Methodology",
+      "required": true
+    },
+    {
+      "id": "chapters",
+      "title": "Research / Engineering Chapters",
+      "required": true
+    },
+    {
+      "id": "results",
+      "title": "Results and Analysis",
+      "required": true
+    },
+    {
+      "id": "discussion",
+      "title": "General Discussion",
+      "required": true
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusions and Future Work",
+      "required": true
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "required": true
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false
+    },
+    {
+      "id": "examination",
+      "title": "Examination / Submission Compliance",
+      "required": true
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

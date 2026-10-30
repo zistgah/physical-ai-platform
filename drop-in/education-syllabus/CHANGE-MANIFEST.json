@@ -1,0 +1,54 @@
+{
+  "package": "pap.education.syllabus",
+  "version": "1.3.0",
+  "change_type": "bounded_drop_in_extension",
+  "base": "Education syllabus package work-in-progress carried forward; target latest PAP spine at integration",
+  "kernel_changed": false,
+  "acceptance_script_changed": false,
+  "existing_platform_files_modified": [],
+  "new_capabilities": [
+    "249 country/territory curriculum discovery targets",
+    "5046 subnational jurisdiction discovery targets",
+    "36 India State/UT board discovery targets with unique ISO 3166-2 identifiers",
+    "source-edition registry with digest and rights metadata",
+    "two-person independent curriculum extraction review workflow",
+    "prerequisite-aware syllabus sequencing",
+    "11 learner-band levelled learning examples",
+    "source-authored explanation engine with ten modes",
+    "role/scope checked LMS workflow with assignments, rubric, submissions, consent and audit events",
+    "evidence-verifier-gated mastery",
+    "declarative notebook validation and host-attested adapters",
+    "three executable educational reference computations",
+    "learning event/progress/descriptive correlation",
+    "canonical Curriculum projection adapter",
+    "ISO 3166-2 subnational discovery directory (5,046 targets)",
+    "dual-review accepted curriculum mappings bound to verified source extractions",
+    "host-verified notebook adapter and bounded notebook structure validation",
+    "cohort-scoped descriptive correlation with minimum cohort size five",
+    "transaction rollback behavior in test-only LMS repository",
+    "two-person independent curriculum extraction review with copyright-safe metadata storage",
+    "5,046 subnational jurisdiction discovery targets",
+    "11 levelled learner-band examples",
+    "cohort-scoped privacy-preserving descriptive learning correlation"
+  ],
+  "not_included": [
+    "official global syllabus corpus",
+    "all national/state boards fully ingested",
+    "production LMS database or identity provider",
+    "browser UI integration",
+    "production notebook sandbox",
+    "LTI/CASE/QTI/Caliper certification",
+    "CAD/CFD/circuit/robotics solver qualification"
+  ],
+  "preserve_existing_guardrails": [
+    "unknown costs remain unspecified rather than zero",
+    "HIL requires actual bound and attested hardware transport plus safety/authority",
+    "fidelity promotion requires pre-existing accepted subject/configuration-bound evidence"
+  ],
+  "tests": {
+    "count": 150,
+    "command": "node tests/test.mjs",
+    "samples_command": "node run-samples.mjs"
+  },
+  "integration_state": "DROP_IN_ONLY_NOT_STITCHED"
+}

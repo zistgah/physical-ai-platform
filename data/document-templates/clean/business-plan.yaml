@@ -1,0 +1,67 @@
+template_id: business.plan
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Business Plan / Commercialization Plan
+purpose: Explain how a product or service creates, delivers and captures value, and how the organization
+  will finance, build, sell, operate and sustain it.
+guide_mode: false
+sections:
+- id: executive
+  title: Executive Summary
+  required: true
+- id: company
+  title: Organization and Ownership
+  required: true
+- id: problem
+  title: Customer Problem and Jobs-to-be-Done
+  required: true
+- id: product
+  title: Product / Service Definition
+  required: true
+- id: technology
+  title: Technology and IP
+  required: true
+- id: market
+  title: Market Analysis
+  required: true
+- id: competition
+  title: Competition and Substitutes
+  required: true
+- id: value
+  title: Value Proposition and Differentiation
+  required: true
+- id: go_to_market
+  title: 'Marketing: Sales and Go-to-Market'
+  required: true
+- id: operations
+  title: Operations and Delivery Model
+  required: true
+- id: supply_chain
+  title: Supply Chain and Resilience
+  required: true
+- id: regulatory
+  title: Regulatory and Standards Pathway
+  required: true
+- id: organization
+  title: Team and Human Resources
+  required: true
+- id: economics
+  title: Unit Economics and Pricing
+  required: true
+- id: financials
+  title: Financial Plan and Projections
+  required: true
+- id: capital
+  title: Capital Requirement and Use of Funds
+  required: true
+- id: risks
+  title: Risk Register and Contingency
+  required: true
+- id: impact
+  title: 'Impact: Sustainability and Sovereignty'
+  required: true
+- id: appendices
+  title: Supporting Schedules
+  required: false
+description: Production template. Content is populated from the canonical project model or reviewed author
+  input.

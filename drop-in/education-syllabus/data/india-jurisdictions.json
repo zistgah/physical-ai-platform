@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "country": "IN",
+  "note": "All Indian States and Union Territories are represented as ingestion targets. State/UT curriculum content is not claimed until an authoritative SCERT/board source, edition and syllabus artifact have been ingested and verified.",
+  "states": ["Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"],
+  "union_territories": ["Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli and Daman and Diu","Delhi","Jammu and Kashmir","Ladakh","Lakshadweep","Puducherry"],
+  "national_frameworks": [
+    {"id":"IN-NCF-FS-2022","name":"National Curriculum Framework for Foundational Stage 2022","authority":"NCERT","status":"SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED","url":"https://ncf.ncert.gov.in/"},
+    {"id":"IN-NCF-SE-2023","name":"National Curriculum Framework for School Education 2023","authority":"NCERT","status":"SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED","url":"https://ncf.ncert.gov.in/"}
+  ],
+  "board_targets": [
+    {"id":"IN-CBSE","name":"Central Board of Secondary Education","status":"SOURCE_INGESTION_REQUIRED"},
+    {"id":"IN-CISCE","name":"Council for the Indian School Certificate Examinations (ICSE/ISC)","status":"SOURCE_INGESTION_REQUIRED"},
+    {"id":"IN-NIOS","name":"National Institute of Open Schooling","status":"SOURCE_INGESTION_REQUIRED"}
+  ],
+  "state_coverage_policy": "Do not assume uniform curriculum across India. Education is administered through national and state/UT structures; ingest each jurisdiction's current authoritative syllabus separately, preserve academic year and revision, and map only verified source passages."
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ayeai.simulation",
+  "name": "Simulation Backend Federation",
+  "version": "3.1.0",
+  "iteration": 47,
+  "entrypoints": {
+    "native": "./module.js#simStep",
+    "dispatch": "./module.js#simStepWithBackend",
+    "registry": "./backends/index.js#createSimulationBackends",
+    "rapierBatch": "./backends/rapier2d.js#createRapier2DBackend",
+    "rapierSession": "./backends/rapier2d-session.js#createRapier2DSession",
+    "rapierPlatformComponent": "./platform-rapier-adapter.js#createRapierSimulationComponent",
+    "gpuQualificationNotebook": "./notebooks/simulation-gpu-qualification.ipynb"
+  },
+  "contracts": {
+    "requestSchema": "./schemas/simulation-request.schema.json",
+    "resultSchema": "./schemas/simulation-result.schema.json",
+    "remoteProtocol": "JSON-RPC 2.0; protocol version 1.0"
+  },
+  "units": {
+    "position": "m",
+    "time": "s",
+    "mass": "kg",
+    "force": "N",
+    "torque": "N*m",
+    "angle": "rad",
+    "angularVelocity": "rad/s",
+    "acceleration": "m/s^2"
+  },
+  "coordinateConvention": {
+    "native2d": {
+      "x": "right",
+      "y": "up",
+      "angle": "counter-clockwise"
+    }
+  },
+  "execution": {
+    "defaultBackend": "native-disc",
+    "explicitBackendFailure": "HOLD",
+    "silentFallback": false,
+    "simulationIsPhysicalVerification": false
+  },
+  "dependencies": {
+    "required": [],
+    "optionalPeer": {
+      "@dimforge/rapier2d-compat": ">=0.17.0 <0.20.0"
+    },
+    "remoteHosts": []
+  },
+  "profiles": "./backends/catalog.json",
+  "qualification": {
+    "native": "tested",
+    "rapierAdapter": "test-double-tested; live runtime pending",
+    "remoteEngines": "protocol-ready profiles; host drivers required",
+    "warp": "Colab notebook research path; host driver required",
+    "mujocoMjx": "Colab notebook research path; host driver required"
+  },
+  "notebooks": {
+    "gpuQualification": "./notebooks/simulation-gpu-qualification.ipynb",
+    "execution": "Google Colab browser runtime",
+    "gpuBackends": [
+      "NVIDIA Warp",
+      "MuJoCo MJX"
+    ],
+    "productionBridge": "not included; asynchronous host/worker required"
+  }
+}

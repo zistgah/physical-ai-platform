@@ -1,0 +1,12 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+import { createKernel } from "../site/components/core/canonical-kernel.js";
+import { exportPackage, importPackage } from "../site/components/core/sharing-adapter.js";
+const assert=(c,m)=>{if(!c)throw new Error("FAIL: "+m);console.log("PASS: "+m)};
+function run(){
+ const k=createKernel(); const p=k.upsert({id:"proj-1",type:"Project",name:"Sharing Slice",provenance:{origin:"package",derivedFrom:null,timestamp:k._now()}}); const c=k.upsert({id:"comp-1",type:"Component",name:"Shared Component",provenance:{origin:"package",derivedFrom:null,timestamp:k._now()}}); k.link(p.id,"CONTAINS",c.id);
+ const g=k.getProjectGraph(p.id); assert(g.entities.some(e=>e.id===c.id),"canonical graph query returns component"); assert(g.relations.some(r=>r.source===p.id&&r.target===c.id),"canonical graph query returns relation");
+ const pkg=exportPackage(k,p.id); assert(pkg.entities.some(e=>e.id===c.id),"export contains entity"); assert(pkg.relations.length===1,"export contains relation"); assert(pkg.trust.verified===false,"export does not establish verification");
+ const k2=createKernel(); const imp=importPackage(k2,pkg); const g2=k2.getProjectGraph(p.id); assert(g2.entities.some(e=>e.id===p.id)&&g2.entities.some(e=>e.id===c.id),"imported graph query returns entities"); assert(g2.relations.some(r=>r.source===p.id&&r.relation==="CONTAINS"&&r.target===c.id),"imported graph query returns relation"); assert(k2.store.get(p.id).id===p.id&&k2.store.get(c.id).id===c.id,"round-trip preserves ids"); assert(k2.store.get(c.id).trust.status==="IMPORTED","imported entity is IMPORTED"); assert(k2.store.get(c.id).trust.verified===false&&k2.store.get(c.id).trust.validationStatus==="UNVERIFIED","imported entity is unverified"); assert(imp.trust.verified===false,"import trust remains unverified");
+ const ek=createKernel(); const ep=ek.upsert({id:"proj-empty",type:"Project",name:"Empty",provenance:{origin:"package",derivedFrom:null,timestamp:ek._now()}}); const epkg=exportPackage(ek,ep.id); assert(epkg.entities.length===1&&epkg.relations.length===0,"empty project has no fabricated graph data");
+ let hold=false; try{importPackage(createKernel(),{projectId:"missing",entities:[],relations:null})}catch(e){hold=true;console.log("HOLD: missing required relation collection - explicit input gap")}; assert(hold,"missing required input is explicit gap"); console.log("=== ALL WP-SHARING-ADAPTER TESTS PASSED ==="); }
+run();

@@ -1,0 +1,8 @@
+Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+# Required CPU solver and graph packages for the optional Colab workbench
+numpy>=2.0,<3
+scipy>=1.14
+networkx>=3.4
+
+# Optional GPU acceleration: Colab runtime commonly provides PyTorch.
+# Install a CUDA-matched PyTorch build only if the selected runtime does not already provide it.

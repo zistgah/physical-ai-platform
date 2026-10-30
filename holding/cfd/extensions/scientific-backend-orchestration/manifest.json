@@ -1,0 +1,15 @@
+{
+  "id": "scientific-backend-orchestration",
+  "name": "Scientific Backend Orchestration",
+  "version": "1.0.0",
+  "license": "GPL-3.0-only",
+  "entrypoint": "module.js",
+  "test": "tests/test.mjs",
+  "dependencies": [],
+  "canonicalGraphOwner": false,
+  "networkIO": false,
+  "dynamicCodeLoading": false,
+  "executionModes": ["BROWSER", "COLAB", "REMOTE_SERVICE", "LOCAL_AGENT"],
+  "trustDefault": "UNVERIFIED",
+  "evidenceAutoPromotion": false
+}

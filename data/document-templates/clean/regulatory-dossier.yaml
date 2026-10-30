@@ -1,0 +1,46 @@
+template_id: assurance.regulatory_dossier
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Regulatory / Compliance / Assurance Dossier
+purpose: Assemble an auditable case for applicability, conformity, safety and authorization. This template
+  does not itself certify or authorize a system.
+guide_mode: false
+sections:
+- id: scope
+  title: 'System Identity: Intended Use and Jurisdiction'
+  required: true
+- id: applicability
+  title: Regulatory and Standards Applicability
+  required: true
+- id: classification
+  title: Classification and Risk Category
+  required: true
+- id: requirements
+  title: Compliance Requirements Matrix
+  required: true
+- id: safety
+  title: Safety Case
+  required: true
+- id: design
+  title: Design and Configuration Evidence
+  required: true
+- id: tests
+  title: Test and Assessment Evidence
+  required: true
+- id: cybersecurity
+  title: 'Cybersecurity: Privacy and Data Governance'
+  required: true
+- id: manufacturing
+  title: Manufacturing Quality and Traceability
+  required: true
+- id: operations
+  title: 'Operations: Maintenance and Post-Market Controls'
+  required: true
+- id: declarations
+  title: 'Declarations: Authorizations and Open Items'
+  required: true
+- id: appendices
+  title: Evidence Register and Appendices
+  required: true
+description: Production template. Content is populated from the canonical project model or reviewed author
+  input.

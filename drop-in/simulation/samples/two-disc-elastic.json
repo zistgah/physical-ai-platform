@@ -1,0 +1,11 @@
+{
+  "description": "Equal-mass, head-on elastic disc collision; velocity exchange and momentum conservation.",
+  "input": {
+    "bodies": [
+      {"id":"left","x":-0.505,"y":1,"vx":1,"vy":0,"mass":1,"radius":0.5,"restitution":1,"friction":0},
+      {"id":"right","x":0.505,"y":1,"vx":-1,"vy":0,"mass":1,"radius":0.5,"restitution":1,"friction":0}
+    ],
+    "dt":0.01,"steps":1,"gravity":{"x":0,"y":0},"floor":null,"solverIterations":20,"seed":17
+  },
+  "expect": {"outcome":"OK","bodyCount":2,"leftVxLessThan":-0.9,"rightVxGreaterThan":0.9,"momentumX":0,"tolerance":0.0001}
+}

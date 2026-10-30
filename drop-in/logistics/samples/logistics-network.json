@@ -1,0 +1,57 @@
+{
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "schemaVersion": "1.0",
+  "description": "Multi-tier supplier/process/component graph used to test topology depth and fail-closed network validation.",
+  "nodes": [
+    {
+      "id": "SUP-T2",
+      "kind": "SUPPLIER",
+      "exportStatus": "CLEAR",
+      "lifecycleStatus": "ACTIVE",
+      "origin": "IN",
+      "jurisdiction": "IN"
+    },
+    {
+      "id": "SUP-T1",
+      "kind": "SUPPLIER",
+      "exportStatus": "CLEAR",
+      "lifecycleStatus": "ACTIVE",
+      "origin": "IN",
+      "jurisdiction": "IN"
+    },
+    {
+      "id": "PROC-1",
+      "kind": "PROCESS",
+      "origin": "IN",
+      "process": "precision-machining"
+    },
+    {
+      "id": "PART-1",
+      "kind": "COMPONENT"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SUP-T2",
+      "to": "SUP-T1",
+      "part": "RAW-ALLOY",
+      "leadDays": 3
+    },
+    {
+      "from": "SUP-T1",
+      "to": "PROC-1",
+      "part": "SUBASSEMBLY",
+      "leadDays": 2
+    },
+    {
+      "from": "PROC-1",
+      "to": "PART-1",
+      "part": "FINAL-PART",
+      "leadDays": 1
+    }
+  ],
+  "expected": {
+    "outcome": "OK",
+    "maxTier": 3
+  }
+}

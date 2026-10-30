@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0.0",
+  "country": "IN",
+  "count": 36,
+  "coverage_status": "DISCOVERY_REQUIRED",
+  "jurisdictions": [
+    {
+      "jurisdiction": "Andhra Pradesh",
+      "id": "IN-AP",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-AP"
+    },
+    {
+      "jurisdiction": "Arunachal Pradesh",
+      "id": "IN-AR",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-AR"
+    },
+    {
+      "jurisdiction": "Assam",
+      "id": "IN-AS",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-AS"
+    },
+    {
+      "jurisdiction": "Bihar",
+      "id": "IN-BR",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-BR"
+    },
+    {
+      "jurisdiction": "Chhattisgarh",
+      "id": "IN-CT",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-CT"
+    },
+    {
+      "jurisdiction": "Goa",
+      "id": "IN-GA",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-GA"
+    },
+    {
+      "jurisdiction": "Gujarat",
+      "id": "IN-GJ",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-GJ"
+    },
+    {
+      "jurisdiction": "Haryana",
+      "id": "IN-HR",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-HR"
+    },
+    {
+      "jurisdiction": "Himachal Pradesh",
+      "id": "IN-HP",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-HP"
+    },
+    {
+      "jurisdiction": "Jharkhand",
+      "id": "IN-JH",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-JH"
+    },
+    {
+      "jurisdiction": "Karnataka",
+      "id": "IN-KA",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-KA"
+    },
+    {
+      "jurisdiction": "Kerala",
+      "id": "IN-KL",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-KL"
+    },
+    {
+      "jurisdiction": "Madhya Pradesh",
+      "id": "IN-MP",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-MP"
+    },
+    {
+      "jurisdiction": "Maharashtra",
+      "id": "IN-MH",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-MH"
+    },
+    {
+      "jurisdiction": "Manipur",
+      "id": "IN-MN",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-MN"
+    },
+    {
+      "jurisdiction": "Meghalaya",
+      "id": "IN-ML",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-ML"
+    },
+    {
+      "jurisdiction": "Mizoram",
+      "id": "IN-MZ",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-MZ"
+    },
+    {
+      "jurisdiction": "Nagaland",
+      "id": "IN-NL",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-NL"
+    },
+    {
+      "jurisdiction": "Odisha",
+      "id": "IN-OR",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-OR"
+    },
+    {
+      "jurisdiction": "Punjab",
+      "id": "IN-PB",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-PB"
+    },
+    {
+      "jurisdiction": "Rajasthan",
+      "id": "IN-RJ",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-RJ"
+    },
+    {
+      "jurisdiction": "Sikkim",
+      "id": "IN-SK",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-SK"
+    },
+    {
+      "jurisdiction": "Tamil Nadu",
+      "id": "IN-TN",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-TN"
+    },
+    {
+      "jurisdiction": "Telangana",
+      "id": "IN-TG",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-TG"
+    },
+    {
+      "jurisdiction": "Tripura",
+      "id": "IN-TR",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-TR"
+    },
+    {
+      "jurisdiction": "Uttar Pradesh",
+      "id": "IN-UP",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-UP"
+    },
+    {
+      "jurisdiction": "Uttarakhand",
+      "id": "IN-UT",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-UT"
+    },
+    {
+      "jurisdiction": "West Bengal",
+      "id": "IN-WB",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-WB"
+    },
+    {
+      "jurisdiction": "Andaman and Nicobar Islands",
+      "id": "IN-AN",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-AN"
+    },
+    {
+      "jurisdiction": "Chandigarh",
+      "id": "IN-CH",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-CH"
+    },
+    {
+      "jurisdiction": "Dadra and Nagar Haveli and Daman and Diu",
+      "id": "IN-DH",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-DH"
+    },
+    {
+      "jurisdiction": "Delhi",
+      "id": "IN-DL",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-DL"
+    },
+    {
+      "jurisdiction": "Jammu and Kashmir",
+      "id": "IN-JK",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-JK"
+    },
+    {
+      "jurisdiction": "Ladakh",
+      "id": "IN-LA",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-LA"
+    },
+    {
+      "jurisdiction": "Lakshadweep",
+      "id": "IN-LD",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-LD"
+    },
+    {
+      "jurisdiction": "Puducherry",
+      "id": "IN-PY",
+      "authority_target": "Identify current statutory State/UT education department, SCERT and all applicable school examination boards",
+      "board_name": "UNVERIFIED_DISCOVERY_REQUIRED",
+      "status": "DISCOVERY_REQUIRED",
+      "syllabus_coverage": false,
+      "required_next_step": "Identify the current legally authoritative education department, SCERT, school examination board(s), open-school authority and language-medium variants; ingest the current academic-year source and verify its edition before mapping.",
+      "iso_3166_2_subdivision": "IN-PY"
+    }
+  ],
+  "unique_id_count": 36,
+  "note": "36 Indian State/UT jurisdiction targets with distinct ISO 3166-2 subdivision identifiers. These are discovery targets, not verified board or syllabus coverage.",
+  "source": {
+    "title": "India Toponymic Factfile",
+    "publisher": "UK Government, Permanent Committee on Geographical Names",
+    "edition": "2026",
+    "url": "https://assets.publishing.service.gov.uk/media/6a33d3cf25c5199bda11778a/India_Toponymic_Factfile.pdf",
+    "verified_scope": "28 states and 8 union territories; ISO 3166-2 codes",
+    "note": "Geographic subdivision identifiers only; not education authority or curriculum verification."
+  }
+}

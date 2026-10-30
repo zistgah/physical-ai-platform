@@ -1,0 +1,82 @@
+{
+  "template_id": "research.thesis_dissertation",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Thesis / Dissertation",
+  "purpose": "Demonstrate an original, coherent and examinable body of scholarly work under the rules of the awarding institution.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "preliminaries",
+      "title": "Preliminary Pages",
+      "required": true,
+      "instruction": "Institutional title page, declaration, certificate where required, acknowledgements, abstract, keywords, contents, lists of figures/tables, abbreviations and glossary. Follow institution rules."
+    },
+    {
+      "id": "introduction",
+      "title": "Introduction and Research Problem",
+      "required": true,
+      "instruction": "Context, problem, rationale, aims, research questions, hypotheses, scope, definitions and chapter map."
+    },
+    {
+      "id": "literature",
+      "title": "Critical Literature Review",
+      "required": true,
+      "instruction": "Search strategy where applicable, theoretical foundations, thematic synthesis, competing positions, research gap and conceptual framework."
+    },
+    {
+      "id": "theory",
+      "title": "Theoretical / Conceptual Framework",
+      "required": true,
+      "instruction": "Define constructs, assumptions, propositions, formal model and relationship to research questions."
+    },
+    {
+      "id": "methodology",
+      "title": "Research Methodology",
+      "required": true,
+      "instruction": "Research philosophy where relevant, design, sampling, instruments, datasets, procedures, analysis, validity, ethics and reproducibility."
+    },
+    {
+      "id": "chapters",
+      "title": "Research / Engineering Chapters",
+      "required": true,
+      "instruction": "Organize substantial contributions into coherent chapters. Each chapter states its question, method, findings and link to thesis argument."
+    },
+    {
+      "id": "results",
+      "title": "Results and Analysis",
+      "required": true,
+      "instruction": "Present complete results with uncertainty, negative findings and traceability to data."
+    },
+    {
+      "id": "discussion",
+      "title": "General Discussion",
+      "required": true,
+      "instruction": "Integrate chapter findings, contribution, originality, limitations and implications."
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusions and Future Work",
+      "required": true,
+      "instruction": "Answer research questions, state contributions and bounded future directions."
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "required": true,
+      "instruction": "Apply institutional citation style consistently; verify metadata and citation links."
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false,
+      "instruction": "Protocols, instruments, source code, extended proofs, data dictionaries, ethics documents and supplementary evidence."
+    },
+    {
+      "id": "examination",
+      "title": "Examination / Submission Compliance",
+      "required": true,
+      "instruction": "Map word limits, formatting, originality statement, embargo, repository deposit, permissions and required forms."
+    }
+  ]
+}

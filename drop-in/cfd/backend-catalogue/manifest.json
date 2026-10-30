@@ -1,0 +1,10 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "license": "GPL-3.0-only",
+  "catalogueVersion": "1.0.0",
+  "entries": [
+    {"id":"openfoam.com","name":"OpenFOAM (OpenCFD distribution)","versionTrack":"v2606","license":"GPL-3.0","domains":["incompressible-flow","compressible-flow","heat-transfer","multiphase","turbulence"],"dimensions":[2,3],"executionModes":["COLAB","REMOTE_SERVICE","LOCAL_AGENT"],"gpu":"Do not infer general GPU solver support from GPU infrastructure/offload announcements; verify solver, model and hardware support for the selected release.","adapterStatus":"CATALOGUED_NOT_EXECUTION_TESTED","official":"https://www.openfoam.com/current-release","licenseUrl":"https://www.openfoam.com/documentation/licencing"},
+    {"id":"su2","name":"SU2","versionTrack":"v7 documentation track; pin exact release at integration","license":"LGPL-2.1","domains":["compressible-flow","incompressible-flow","aerodynamics","adjoint-optimization","heat-transfer"],"dimensions":[2,3],"executionModes":["COLAB","REMOTE_SERVICE","LOCAL_AGENT"],"gpu":"Do not claim GPU execution without release-specific build/runtime evidence; standard SU2 command-line solver can run on CPU and MPI parallelism requires an MPI-enabled build.","adapterStatus":"CATALOGUED_NOT_EXECUTION_TESTED","official":"https://su2code.github.io/","licenseUrl":"https://github.com/su2code/SU2/blob/master/LICENSE.md"},
+    {"id":"code-saturne","name":"Code_Saturne","versionTrack":"9.2 documentation track; pin exact release at integration","license":"GPL-2.0-or-later","domains":["incompressible-flow","compressible-flow","heat-transfer","turbulence","combustion","multiphase"],"dimensions":[2,3],"executionModes":["COLAB","REMOTE_SERVICE","LOCAL_AGENT"],"gpu":"CUDA support requires a purpose-built build and NVIDIA SDK/dependencies; do not assume a stock Colab runtime has a compatible Code_Saturne GPU build.","adapterStatus":"CATALOGUED_NOT_EXECUTION_TESTED","official":"https://code-saturne.org/doc/code_saturne-9.2/","licenseUrl":"https://github.com/code-saturne/code_saturne"}
+  ]
+}

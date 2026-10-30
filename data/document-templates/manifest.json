@@ -1,0 +1,209 @@
+{
+  "version": "1.0.1",
+  "templates": [
+    {
+      "template_id": "business.plan",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/business-plan.json"
+    },
+    {
+      "template_id": "proposal.research_grant",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/funding-proposal.json"
+    },
+    {
+      "template_id": "proposal.government_consortium",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/government-consortium-proposal.json"
+    },
+    {
+      "template_id": "business.investment_memo",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/investment-memo.json"
+    },
+    {
+      "template_id": "proposal.investment",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/investor-proposal.json"
+    },
+    {
+      "template_id": "engineering.manufacturing_package",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/manufacturing-package.json"
+    },
+    {
+      "template_id": "business.pitch_deck",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/pitch-deck.json"
+    },
+    {
+      "template_id": "engineering.procurement_specification",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/procurement-spec.json"
+    },
+    {
+      "template_id": "communication.project_poster",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/project-poster.json"
+    },
+    {
+      "template_id": "assurance.regulatory_dossier",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/regulatory-dossier.json"
+    },
+    {
+      "template_id": "research.paper.general",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/research-paper.json"
+    },
+    {
+      "template_id": "research.technical_report",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/research-report.json"
+    },
+    {
+      "template_id": "research.systematic_review",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/systematic-review.json"
+    },
+    {
+      "template_id": "proposal.technical_customer",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/technical-customer-proposal.json"
+    },
+    {
+      "template_id": "engineering.technical_specification",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/technical-specification.json"
+    },
+    {
+      "template_id": "engineering.verification_validation",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/test-plan-report.json"
+    },
+    {
+      "template_id": "research.thesis_dissertation",
+      "version": "1.0.0",
+      "mode": false,
+      "path": "clean/thesis-dissertation.json"
+    },
+    {
+      "template_id": "business.plan",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/business-plan.json"
+    },
+    {
+      "template_id": "proposal.research_grant",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/funding-proposal.json"
+    },
+    {
+      "template_id": "proposal.government_consortium",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/government-consortium-proposal.json"
+    },
+    {
+      "template_id": "business.investment_memo",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/investment-memo.json"
+    },
+    {
+      "template_id": "proposal.investment",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/investor-proposal.json"
+    },
+    {
+      "template_id": "engineering.manufacturing_package",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/manufacturing-package.json"
+    },
+    {
+      "template_id": "business.pitch_deck",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/pitch-deck.json"
+    },
+    {
+      "template_id": "engineering.procurement_specification",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/procurement-spec.json"
+    },
+    {
+      "template_id": "communication.project_poster",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/project-poster.json"
+    },
+    {
+      "template_id": "assurance.regulatory_dossier",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/regulatory-dossier.json"
+    },
+    {
+      "template_id": "research.paper.general",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/research-paper.json"
+    },
+    {
+      "template_id": "research.technical_report",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/research-report.json"
+    },
+    {
+      "template_id": "research.systematic_review",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/systematic-review.json"
+    },
+    {
+      "template_id": "proposal.technical_customer",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/technical-customer-proposal.json"
+    },
+    {
+      "template_id": "engineering.technical_specification",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/technical-specification.json"
+    },
+    {
+      "template_id": "engineering.verification_validation",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/test-plan-report.json"
+    },
+    {
+      "template_id": "research.thesis_dissertation",
+      "version": "1.0.0",
+      "mode": true,
+      "path": "guide/thesis-dissertation.json"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://physical-ai-platform.example/schemas/document-instance.schema.json",
+  "title": "PAP Document Instance",
+  "type": "object",
+  "required": [
+    "document_id",
+    "template_id",
+    "template_version",
+    "schema_version",
+    "project_id",
+    "title",
+    "status"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "template_id": {
+      "type": "string"
+    },
+    "template_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "document_type": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "WORKING",
+        "DRAFT",
+        "INTERNAL_REVIEW",
+        "TECHNICAL_REVIEW",
+        "EVIDENCE_REVIEW",
+        "IP_REVIEW",
+        "COMPLIANCE_REVIEW",
+        "APPROVED",
+        "RELEASED",
+        "SUBMITTED",
+        "PUBLISHED",
+        "SUPERSEDED",
+        "WITHDRAWN"
+      ]
+    },
+    "source_baseline": {
+      "type": "object"
+    },
+    "template_overlay": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sections": {
+      "type": "object"
+    },
+    "claims": {
+      "type": "array"
+    },
+    "assets": {
+      "type": "array"
+    },
+    "references": {
+      "type": "array"
+    },
+    "open_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

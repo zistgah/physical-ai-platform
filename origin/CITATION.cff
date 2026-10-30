@@ -1,0 +1,11 @@
+Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: Physical AI Platform
+version: 0.1.0
+authors:
+  - family-names: Choudhary
+    given-names: Abhishek
+    affiliation: AyeAI
+    orcid: https://orcid.org/0009-0002-0684-8320
+license: GPL-3.0-only

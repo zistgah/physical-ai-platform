@@ -1,0 +1,66 @@
+{
+  "template_id": "engineering.verification_validation",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Verification and Validation Plan / Test Report",
+  "purpose": "Plan, execute and report objective evidence that requirements and mission needs are satisfied.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "purpose",
+      "title": "Purpose: Scope and Authority",
+      "required": true
+    },
+    {
+      "id": "references",
+      "title": "References and Configuration",
+      "required": true
+    },
+    {
+      "id": "strategy",
+      "title": "Verification Strategy",
+      "required": true
+    },
+    {
+      "id": "environment",
+      "title": "Test Environment and Equipment",
+      "required": true
+    },
+    {
+      "id": "procedures",
+      "title": "Test Cases and Procedures",
+      "required": true
+    },
+    {
+      "id": "execution",
+      "title": "Execution Record",
+      "required": true
+    },
+    {
+      "id": "results",
+      "title": "Results and Disposition",
+      "required": true
+    },
+    {
+      "id": "analysis",
+      "title": "Analysis and Limitations",
+      "required": true
+    },
+    {
+      "id": "defects",
+      "title": "Defects and Corrective Action",
+      "required": true
+    },
+    {
+      "id": "approval",
+      "title": "Review and Approval",
+      "required": true
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

@@ -1,0 +1,61 @@
+{
+  "template_id": "engineering.procurement_specification",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Procurement / Request for Quotation Specification",
+  "purpose": "Enable comparable supplier responses against a controlled technical, quality, commercial and lifecycle requirement set.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "scope",
+      "title": "Scope and Procurement Description",
+      "required": true
+    },
+    {
+      "id": "requirements",
+      "title": "Technical Requirements",
+      "required": true
+    },
+    {
+      "id": "standards",
+      "title": "Standards and Regulatory Requirements",
+      "required": true
+    },
+    {
+      "id": "quality",
+      "title": "Quality and Inspection",
+      "required": true
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery and Packaging",
+      "required": true
+    },
+    {
+      "id": "supplier",
+      "title": "Supplier Qualification and Origin",
+      "required": true
+    },
+    {
+      "id": "lifecycle",
+      "title": "Support: Warranty and Lifecycle",
+      "required": true
+    },
+    {
+      "id": "commercial",
+      "title": "Commercial Response Schedule",
+      "required": true
+    },
+    {
+      "id": "response",
+      "title": "Supplier Response Matrix",
+      "required": true
+    },
+    {
+      "id": "evaluation",
+      "title": "Evaluation and Award Criteria",
+      "required": true
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

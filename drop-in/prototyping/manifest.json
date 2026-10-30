@@ -1,0 +1,64 @@
+{
+  "packageId": "pap.drop-in.prototyping",
+  "packageName": "Physical AI Platform - Prototyping and Open-Engine Adapter Layer",
+  "packageVersion": "1.1.0",
+  "iterationBaseline": 47,
+  "entrypoints": {
+    "prototypeEvaluator": "module.js#prototype",
+    "backendRegistry": "backend-registry.js",
+    "backendAdapterFactory": "backend-runtime.js#createBackendAdapter",
+    "simulationEvidenceCandidate": "backend-runtime.js#toSimulationEvidenceCandidate",
+    "benchmarkValidatorFactory": "benchmark-validation.js#createBenchmarkValidator"
+  },
+  "runtime": {
+    "javascript": "ES modules; browser-compatible evaluator and adapter core",
+    "testRuntime": "Node.js 22+",
+    "optionalWorkerRuntime": "Python 3 + SciPy for workers/scipy_reference_worker.py"
+  },
+  "dependencies": {
+    "javascriptRuntime": [],
+    "optionalExternalEngines": [
+      "Open CASCADE Technology",
+      "Gmsh",
+      "OpenFOAM",
+      "Elmer FEM",
+      "Code_Aster",
+      "CalculiX",
+      "ngspice",
+      "Xyce",
+      "Project Chrono",
+      "MBDyn",
+      "MuJoCo",
+      "SciPy"
+    ],
+    "thirdPartyCodeVendored": false
+  },
+  "contracts": [
+    "backend-job.schema.json",
+    "backend-response.schema.json",
+    "backend-driver-profiles.json"
+  ],
+  "tests": [
+    "test.mjs",
+    "backend-test.mjs",
+    "integration-test.mjs"
+  ],
+  "compatibility": {
+    "kernelModified": false,
+    "acceptanceScriptModified": false,
+    "canonicalEntityTypesAdded": false,
+    "canonicalRelationshipsAdded": false,
+    "platformRegistryModified": false,
+    "conformancePatchIncluded": true
+  },
+  "releaseState": {
+    "prototypeEvaluator": "PACKAGE_TESTED",
+    "backendProtocol": "CONTRACT_TESTED",
+    "scipyReferenceWorker": "EXECUTED_AND_BENCHMARK_VERIFIED_IN_BUILD_ENVIRONMENT",
+    "otherExternalEngineDrivers": "PROFILES_DEFINED_WORKER_IMPLEMENTATION_REQUIRED",
+    "platformRegistration": "NOT_IN_SCOPE_GROK_INTEGRATION",
+    "fullPlatformAcceptance": "MUST_BE_RERUN_BY_INTEGRATOR"
+  },
+  "license": "GPL-3.0-only",
+  "_copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

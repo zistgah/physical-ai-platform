@@ -1,0 +1,26 @@
+{
+  "protocol": "ayeai.compute.job/v1",
+  "jobId": "reliability-demo-001",
+  "capability": "reliability.series.monte-carlo",
+  "executionClass": "simulation",
+  "resourceRequirements": {
+    "accelerator": "preferred",
+    "minMemoryGiB": 2,
+    "maxRuntimeSeconds": 120
+  },
+  "provenance": {
+    "sourceRef": "sir://sample-system/mission-01",
+    "configurationRef": "config://sample-system/rev-1"
+  },
+  "payload": {
+    "failureRatesPerHour": [
+      0.0001,
+      0.0002,
+      0.00015
+    ],
+    "missionTimeHours": 1000,
+    "samples": 250000,
+    "seed": 4701
+  },
+  "inputDigest": "a43e532023d7fd74ff00601899724d1425de6fcd1c63ffec87289c8364b7c24f"
+}

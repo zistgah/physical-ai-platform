@@ -1,0 +1,36 @@
+{
+  "packageId": "pap.integration.colab-bridge",
+  "name": "Physical AI Platform Colab Bridge",
+  "version": "1.0.0",
+  "apiVersion": "1.0.0",
+  "license": "GPL-3.0-only",
+  "runtime": {
+    "platform": "browser ES2022",
+    "dependencies": [],
+    "webCryptoRequired": true,
+    "mandatoryServer": false,
+    "remoteExecution": false
+  },
+  "entrypoints": {
+    "module": "module.js"
+  },
+  "contracts": {
+    "jobSchema": "pap.emulation.job/1.0",
+    "resultSchema": "pap.emulation.result/1.0",
+    "digest": "SHA-256",
+    "promotion": "never-automatic"
+  },
+  "integratesWith": [
+    "pap.drop-in.emulation@1.2.0",
+    "canonical SIR"
+  ],
+  "doesNotOwn": [
+    "SIR ontology",
+    "kernel",
+    "Colab runtime",
+    "Google credentials",
+    "physical verification",
+    "evidence promotion"
+  ],
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

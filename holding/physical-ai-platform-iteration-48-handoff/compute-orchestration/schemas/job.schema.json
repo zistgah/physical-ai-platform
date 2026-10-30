@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:compute:job:1",
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks. Licensed GPL-3.0-only.",
+  "type": "object",
+  "required": [
+    "protocol",
+    "jobId",
+    "capability",
+    "executionClass",
+    "inputDigest",
+    "resourceRequirements",
+    "provenance",
+    "payload"
+  ],
+  "properties": {
+    "protocol": {
+      "const": "ayeai.compute.job/v1"
+    },
+    "jobId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "executionClass": {
+      "enum": [
+        "analysis",
+        "simulation",
+        "optimization",
+        "verification"
+      ]
+    },
+    "inputDigest": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "resourceRequirements": {
+      "type": "object",
+      "required": [
+        "accelerator"
+      ],
+      "properties": {
+        "accelerator": {
+          "enum": [
+            "none",
+            "preferred",
+            "required"
+          ]
+        },
+        "minMemoryGiB": {
+          "type": "number",
+          "minimum": 0
+        },
+        "maxRuntimeSeconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "sourceRef",
+        "configurationRef"
+      ],
+      "properties": {
+        "sourceRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configurationRef": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

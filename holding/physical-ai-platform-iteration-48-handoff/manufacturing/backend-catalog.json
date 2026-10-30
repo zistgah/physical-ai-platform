@@ -1,0 +1,208 @@
+{
+  "protocol": "ayeai.manufacturing.backend/v1",
+  "catalogVersion": "1.0.0",
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks.",
+  "policy": {
+    "canonicalOwner": "Physical AI Platform canonical graph",
+    "externalSystemsAre": "replaceable execution and algorithm backends",
+    "defaultBackendRequired": false,
+    "unknownAvailability": "HOLD",
+    "fallback": "Only on explicit UNAVAILABLE; never on INFEASIBLE, UNKNOWN, INVALID or FAILED",
+    "externalEvidence": "PLANNED or SIMULATED unless independently verified"
+  },
+  "backends": [
+    {
+      "id": "google-or-tools",
+      "name": "OR-Tools CP-SAT",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "Apache-2.0",
+      "role": "solver",
+      "capabilities": [
+        "manufacturing.jobshop.optimize",
+        "manufacturing.resource.assignment"
+      ],
+      "operations": [
+        "solve-jobshop"
+      ],
+      "transport": "worker-json",
+      "executionClass": "planning",
+      "defaultEnabled": false,
+      "notes": "Constraint programming and combinatorial optimization; preferred exact/constraint backend for finite job-shop models.",
+      "integrationStatus": "WORKER_INCLUDED_OPTIONAL_DEPENDENCY"
+    },
+    {
+      "id": "scipy-highs-jobshop",
+      "name": "SciPy MILP (HiGHS) Job-Shop Solver",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "BSD-3-Clause (SciPy) + MIT (HiGHS)",
+      "role": "solver",
+      "capabilities": [
+        "manufacturing.jobshop.optimize",
+        "manufacturing.resource.assignment"
+      ],
+      "operations": [
+        "solve-jobshop"
+      ],
+      "transport": "worker-json",
+      "executionClass": "planning",
+      "defaultEnabled": false,
+      "integrationStatus": "WORKER_INCLUDED_OPTIONAL_DEPENDENCY",
+      "notes": "MILP job-shop model using SciPy scipy.optimize.milp backed by HiGHS. Independent output validator remains mandatory."
+    },
+    {
+      "id": "highs",
+      "name": "HiGHS",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "MIT",
+      "role": "solver",
+      "capabilities": [
+        "manufacturing.lot-sizing.optimize",
+        "manufacturing.material-blend.optimize",
+        "manufacturing.capacity-allocation.optimize"
+      ],
+      "operations": [
+        "solve-linear-model",
+        "solve-mip-model"
+      ],
+      "transport": "worker-json",
+      "executionClass": "planning",
+      "defaultEnabled": false,
+      "notes": "LP and MILP worker is included. HiGHS also supports convex QP upstream, but this package does not expose QP until a QP worker and validation suite are added.",
+      "integrationStatus": "WORKER_INCLUDED_OPTIONAL_DEPENDENCY"
+    },
+    {
+      "id": "timefold-solver",
+      "name": "Timefold Solver Community",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "Apache-2.0",
+      "role": "solver",
+      "capabilities": [
+        "manufacturing.jobshop.optimize",
+        "manufacturing.workforce.schedule",
+        "manufacturing.maintenance.schedule"
+      ],
+      "operations": [
+        "solve-jobshop",
+        "solve-planning-model"
+      ],
+      "transport": "http-json",
+      "executionClass": "planning",
+      "defaultEnabled": false,
+      "notes": "Constraint/heuristic planning; compare solution quality and runtime against CP-SAT on benchmark sets.",
+      "integrationStatus": "HTTP_ADAPTER_CONTRACT"
+    },
+    {
+      "id": "frepple-community",
+      "name": "frePPLe Community Edition",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "MIT-community-edition",
+      "role": "aps-mrp",
+      "capabilities": [
+        "manufacturing.aps.plan",
+        "manufacturing.mrp.plan",
+        "manufacturing.demand.forecast"
+      ],
+      "operations": [
+        "run-plan",
+        "export-plan",
+        "read-plan"
+      ],
+      "transport": "http-json",
+      "executionClass": "planning",
+      "defaultEnabled": false,
+      "notes": "APS, supply-chain planning and forecasting; community and enterprise editions have different terms/features.",
+      "integrationStatus": "HTTP_ADAPTER_CONTRACT"
+    },
+    {
+      "id": "simpy",
+      "name": "SimPy",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "MIT",
+      "role": "discrete-event-simulator",
+      "capabilities": [
+        "manufacturing.discrete-event.simulate",
+        "manufacturing.queue.simulate",
+        "manufacturing.throughput.estimate"
+      ],
+      "operations": [
+        "simulate-flow",
+        "simulate-shift",
+        "simulate-fault"
+      ],
+      "transport": "worker-json",
+      "executionClass": "simulation",
+      "defaultEnabled": false,
+      "notes": "Process-based discrete-event simulation with shared capacity resources; not a continuous-physics solver.",
+      "integrationStatus": "WORKER_INCLUDED_OPTIONAL_DEPENDENCY"
+    },
+    {
+      "id": "freecad-opencamlib",
+      "name": "FreeCAD + OpenCAMLib",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "LGPL-2.1-or-later (verify component versions)",
+      "role": "cad-cam",
+      "capabilities": [
+        "manufacturing.cam.toolpath.generate",
+        "manufacturing.cam.toolpath.validate",
+        "manufacturing.geometry.exchange"
+      ],
+      "operations": [
+        "generate-toolpath",
+        "validate-toolpath",
+        "export-cam"
+      ],
+      "transport": "worker-json",
+      "executionClass": "planning",
+      "defaultEnabled": false,
+      "notes": "CAM toolpath generation and geometry exchange. Toolpath validity does not prove machine safety or part quality.",
+      "integrationStatus": "DEPLOYMENT_ADAPTER_REQUIRED"
+    },
+    {
+      "id": "erpnext",
+      "name": "ERPNext Manufacturing",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "GPL-3.0",
+      "role": "erp-mes-adapter",
+      "capabilities": [
+        "manufacturing.workorder.exchange",
+        "manufacturing.materials.exchange",
+        "manufacturing.quality.exchange",
+        "manufacturing.routing.exchange"
+      ],
+      "operations": [
+        "read-workorder",
+        "read-bom",
+        "read-stock",
+        "propose-workorder-update",
+        "read-quality-inspection"
+      ],
+      "transport": "http-json",
+      "executionClass": "enterprise-integration",
+      "defaultEnabled": false,
+      "notes": "External ERP/MRP/MES data exchange. Canonical platform remains source of truth for its own graph; writes require explicit authorization and idempotency.",
+      "integrationStatus": "READ_ONLY_FRAPPE_REST_ADAPTER"
+    },
+    {
+      "id": "linuxcnc",
+      "name": "LinuxCNC",
+      "versionPolicy": "pinned-by-deployment",
+      "license": "GPL-2.0 (verify bundled components)",
+      "role": "cnc-controller",
+      "capabilities": [
+        "manufacturing.cnc.program.validate",
+        "manufacturing.cnc.status.read",
+        "manufacturing.cnc.execution.request"
+      ],
+      "operations": [
+        "validate-gcode",
+        "read-machine-status",
+        "request-execution"
+      ],
+      "transport": "machine-gateway",
+      "executionClass": "physical-actuation",
+      "defaultEnabled": false,
+      "notes": "Physical actuation is disabled by default. This adapter package only defines the guarded gateway contract; it does not directly control a machine.",
+      "integrationStatus": "GUARDED_GATEWAY_CONTRACT_ACTUATION_BLOCKED"
+    }
+  ]
+}

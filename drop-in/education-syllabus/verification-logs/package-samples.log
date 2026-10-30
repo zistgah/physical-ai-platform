@@ -1,0 +1,18 @@
+PASS syllabus: 5 concepts sequenced; status=DRAFT
+PASS role experience: teacher
+PASS role experience: professor
+PASS role experience: lab_assistant
+PASS role experience: parent
+PASS role experience: student
+PASS role experience: independent_learner
+PASS explanation modes: 10 representations validated for measurement concept
+PASS levelled examples: 11 bands, no official board alignment asserted
+PASS executable notebook: measurement-lab-01/compute-summary
+PASS executable notebook: linear-model-lab-01/fit-line
+PASS executable notebook: feedback-control-lab-01/experiment
+PASS physical activity gate: unsupervised -> HOLD
+PASS LMS end-to-end: course -> lessons -> publish -> enrollment -> assignment -> submission -> rubric assessment -> verified mastery -> parent consent view
+PASS learning event capture: 1 event
+COVERAGE REGISTRY: 249 country/territory; 249 curriculum discovery targets; 5046 ISO subdivision discovery targets; India 28 states + 8 UTs / 36 board discovery targets.
+Coverage status remains DISCOVERY_REQUIRED; no claim of syllabus ingestion or board verification.
+SAMPLE RUN COMPLETE: three notebook computations and LMS workflow passed; fixture simulations are not engineering solver qualification.

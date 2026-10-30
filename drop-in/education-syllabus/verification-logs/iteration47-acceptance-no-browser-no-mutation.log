@@ -1,0 +1,9 @@
+Command: node tests/acceptance.mjs --no-browser --no-mutation
+Working tree: supplied Iteration 47 spine copy at /mnt/data/pap-syllabus-work/spine/physical-ai-platform
+Observed completed run:
+  63 checks: 55 PASS, 8 SKIP. Verdict: ACCEPTED
+  Browser walk A5 skipped by --no-browser.
+  Mutation gates G1a-G1g skipped by --no-mutation.
+  All other listed acceptance checks passed, including A1-A4, B1-B3, C1-C4, D1-D7, E1-E13, F1-F5, G2-G3, H1-H4, I1-I3, J1, K1-K4, L1-L2, M1, S0.
+
+This run did not include the Education drop-in package because it is not integrated into the spine. It is a baseline acceptance result, not a full browser or mutation acceptance claim.

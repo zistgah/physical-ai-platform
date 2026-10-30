@@ -1,0 +1,158 @@
+{
+  "package": "pap.drop-in.cad",
+  "version": "1.2.0",
+  "baseline": "Iteration 47",
+  "changes": [
+    {
+      "path": "backends/registry.mjs",
+      "action": "added",
+      "purpose": "Discover and select replaceable optional geometry engines"
+    },
+    {
+      "path": "backends/node-occt-adapter.mjs",
+      "action": "added_or_replaced",
+      "purpose": "Node subprocess adapters for OCCT, CGAL and Manifold3D"
+    },
+    {
+      "path": "backends/occt_backend.py",
+      "action": "replaced",
+      "purpose": "OCP-only OCCT Boolean and tessellation backend; CadQuery removed from runtime dependency"
+    },
+    {
+      "path": "backends/manifold_backend.py",
+      "action": "added",
+      "purpose": "Optional Manifold3D mesh Boolean backend"
+    },
+    {
+      "path": "backends/cgal_backend.cpp",
+      "action": "added",
+      "purpose": "CGAL EPECK corefinement Boolean bridge source"
+    },
+    {
+      "path": "backends/CMakeLists.txt",
+      "action": "added",
+      "purpose": "Build CGAL bridge"
+    },
+    {
+      "path": "backends/README.md",
+      "action": "added",
+      "purpose": "Backend setup, protocol and licensing"
+    },
+    {
+      "path": "samples/",
+      "action": "added",
+      "purpose": "Real closed-mesh sample inputs"
+    },
+    {
+      "path": "backend-integration-test.mjs",
+      "action": "added",
+      "purpose": "Backend discovery, sample execution and HOLD propagation"
+    },
+    {
+      "path": "tests/occt-test.py",
+      "action": "added",
+      "purpose": "Native OCCT test suite"
+    },
+    {
+      "path": "tests/optional-backend-test.py",
+      "action": "added",
+      "purpose": "Optional dependency probe"
+    },
+    {
+      "path": "STITCH-INSTRUCTIONS.md",
+      "action": "added",
+      "purpose": "Grok integration contract and steps"
+    },
+    {
+      "path": "ENGINE-COMPARISON.md",
+      "action": "added",
+      "purpose": "Backend comparison and selection rationale"
+    },
+    {
+      "path": "CAD-ENGINEERING-DOSSIER.md",
+      "action": "added",
+      "purpose": "Consolidated engineering analysis from preceding build cycles, architecture, algorithms, scope and release boundaries"
+    },
+    {
+      "path": "TEST-MATRIX.md",
+      "action": "added",
+      "purpose": "Boundary, adversarial, numerical, backend and integration coverage matrix"
+    },
+    {
+      "path": "COLAB_CAD_WORKBENCH.ipynb",
+      "action": "added",
+      "purpose": "Browser-launched remote notebook for package tests, OCCT samples and optional backend/GPU experiments"
+    },
+    {
+      "path": "COLAB-GPU-STRATEGY.md",
+      "action": "added",
+      "purpose": "Browser-only deployment and honest GPU workload boundaries"
+    },
+    {
+      "path": "COPYRIGHT-AND-LICENSING.md",
+      "action": "added",
+      "purpose": "Project attribution and third-party license inventory"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "action": "added",
+      "purpose": "CAD package release history"
+    },
+    {
+      "path": "test.mjs",
+      "action": "modified",
+      "purpose": "Added edge/vertex tangency and tolerance-boundary sliver tests"
+    },
+    {
+      "path": "manifest.json",
+      "action": "modified",
+      "purpose": "Version 1.2.0 and documentation/browser execution metadata"
+    },
+    {
+      "path": "README.md",
+      "action": "modified",
+      "purpose": "Navigation to complete dossier, matrix, Colab notebook and licensing"
+    },
+    {
+      "path": "STITCH-INSTRUCTIONS.md",
+      "action": "modified",
+      "purpose": "Grok instructions for optional Colab workbench integration"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "action": "modified",
+      "purpose": "Records v1.2.0 test execution, notebook syntax validation and live Colab/GPU non-execution"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "action": "regenerated",
+      "purpose": "Integrity hashes for all final package files"
+    }
+  ],
+  "preserved": [
+    "module.js convex path and HOLD semantics",
+    "test.mjs",
+    "integration-test.mjs contract",
+    "Iteration 47 canonical kernel",
+    "Iteration 47 acceptance script",
+    "other nine drop-in modules",
+    "existing convex CAD implementation and all prior tests",
+    "OCCT backend and all seven sample geometries",
+    "backend registry and optional CGAL/Manifold adapters",
+    "existing integration-test.mjs seam test"
+  ],
+  "not_changed_in_platform": [
+    "site/components/cad/geometry-kernel.js",
+    "site/components/core/canonical-kernel.js",
+    "tests/acceptance.mjs",
+    "schemas/cad-contract.schema.json",
+    "other nine drop-in modules"
+  ],
+  "compatibility_notes": [
+    "Browser/static imports remain dependency-free through module.js.",
+    "Node/Python/C++ backend code is isolated under backends/.",
+    "Native backends are optional and replaceable.",
+    "Only intersection is implemented by this package.",
+    "Canonical GeometryKernel.boolean dispatch and UI registration remain the integrator's task."
+  ]
+}

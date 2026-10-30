@@ -1,0 +1,29 @@
+{
+  "package": "ayeai-physical-ai-uncertainty-dropin",
+  "version": "1.0.0",
+  "iteration": 47,
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "trademarks": [
+    "AyeAI\u00ae",
+    "AyeAM\u00ae",
+    "AyeCNSe\u00ae"
+  ],
+  "license": "GPL-3.0",
+  "files": [
+    "module.js",
+    "package.json",
+    "manifest.json",
+    "schemas/study.schema.json",
+    "samples/drop-disc-study.json",
+    "tests/run.mjs",
+    "tests/integration.mjs",
+    "README.md",
+    "TEST-COVERAGE-MATRIX.md",
+    "GROK-HANDOFF.md",
+    "LICENSE",
+    "EXPLAINER.md"
+  ],
+  "platform_mutations": [],
+  "kernel_changes": false,
+  "acceptance_script_changes": false
+}

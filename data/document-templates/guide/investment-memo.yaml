@@ -1,0 +1,60 @@
+template_id: business.investment_memo
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Investment Committee Memorandum
+purpose: Support a disciplined investment decision with thesis, diligence evidence, downside analysis
+  and explicit decision request.
+guide_mode: true
+sections:
+- id: decision
+  title: Decision Requested
+  required: true
+  instruction: Amount, instrument, stage, valuation/terms if known, approval sought and decision deadline.
+- id: thesis
+  title: Investment Thesis
+  required: true
+  instruction: Core reasons to invest, evidence supporting each, and what must be true for the thesis
+    to work.
+- id: company_product
+  title: Company and Product
+  required: true
+  instruction: Entity, ownership, product scope, maturity, customer and strategic position.
+- id: market
+  title: Market and Competitive Position
+  required: true
+  instruction: Market sizing, segmentation, adoption, competition, substitutes and source quality.
+- id: technology
+  title: Technology and IP Diligence
+  required: true
+  instruction: Architecture, technical differentiation, validation, IP chain of title, open-source obligations
+    and dependencies.
+- id: commercial
+  title: Commercial Diligence
+  required: true
+  instruction: Customer interviews, contracts, pilots, pricing evidence, sales cycle and pipeline quality.
+- id: financial
+  title: Financial Analysis
+  required: true
+  instruction: Historicals if available, forecast scenarios, unit economics, cash needs, dilution, runway
+    and sensitivities.
+- id: team
+  title: Team and Governance
+  required: true
+  instruction: Founder-market fit, execution record, gaps, incentives, governance and key-person dependency.
+- id: risks
+  title: Risk and Mitigation
+  required: true
+  instruction: Ranked risks, red flags, unresolved diligence and mitigations.
+- id: return
+  title: Return Scenarios and Exit Considerations
+  required: true
+  instruction: Show scenario logic and assumptions; avoid false precision or promised returns.
+- id: recommendation
+  title: Recommendation and Conditions
+  required: true
+  instruction: Invest / decline / defer, rationale, conditions precedent, milestones, covenants and monitoring.
+- id: appendices
+  title: Diligence Record
+  required: false
+  instruction: Sources, interview notes, model, cap table, legal/IP review, technical reports and data-room
+    index.

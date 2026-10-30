@@ -1,0 +1,71 @@
+{
+  "template_id": "proposal.investment",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Investor / Capital-Raising Proposal",
+  "purpose": "Present an investable opportunity, capital requirement, risk profile and plausible path to value without disguising uncertainty.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "executive",
+      "title": "Investment Summary",
+      "required": true
+    },
+    {
+      "id": "problem",
+      "title": "Customer Problem and Market Need",
+      "required": true
+    },
+    {
+      "id": "solution",
+      "title": "Product and Technical Solution",
+      "required": true
+    },
+    {
+      "id": "market",
+      "title": "Market and Competition",
+      "required": true
+    },
+    {
+      "id": "business_model",
+      "title": "Business Model and Go-to-Market",
+      "required": true
+    },
+    {
+      "id": "traction",
+      "title": "Traction and Validation",
+      "required": true
+    },
+    {
+      "id": "economics",
+      "title": "Unit Economics and Financial Model",
+      "required": true
+    },
+    {
+      "id": "team",
+      "title": "Team and Governance",
+      "required": true
+    },
+    {
+      "id": "roadmap",
+      "title": "Milestones and Capital Plan",
+      "required": true
+    },
+    {
+      "id": "risks",
+      "title": "Risks and Mitigations",
+      "required": true
+    },
+    {
+      "id": "ask",
+      "title": "The Ask and Terms",
+      "required": true
+    },
+    {
+      "id": "appendix",
+      "title": "Due-Diligence Appendix",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

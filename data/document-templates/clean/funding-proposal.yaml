@@ -1,0 +1,73 @@
+template_id: proposal.research_grant
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Research Grant / Funding Proposal
+purpose: Request resources for a defined programme of work. It may be submitted before a paper exists;
+  planned work and preliminary evidence must be labelled accurately.
+guide_mode: false
+sections:
+- id: call_compliance
+  title: Call Fit and Submission Compliance
+  required: true
+- id: cover
+  title: Cover Sheet and Administrative Data
+  required: true
+- id: summary
+  title: Project Summary / Abstract
+  required: true
+- id: context
+  title: 'Problem: Context and Need'
+  required: true
+- id: gap
+  title: Knowledge / Technology Gap and State of the Art
+  required: true
+- id: objectives
+  title: 'Objectives: Research Questions and Hypotheses'
+  required: true
+- id: innovation
+  title: Innovation and Contribution
+  required: true
+- id: approach
+  title: 'Approach: Methodology and Work Packages'
+  required: true
+- id: system
+  title: System Architecture / Technical Plan
+  required: true
+- id: evidence
+  title: Preliminary Work and Evidence
+  required: true
+- id: impact
+  title: 'Expected Outcomes: Impact and Dissemination'
+  required: true
+- id: team
+  title: 'Team: Governance and Partnerships'
+  required: true
+- id: infrastructure
+  title: 'Facilities: Equipment and Resources'
+  required: true
+- id: timeline
+  title: Timeline and Milestones
+  required: true
+- id: risk
+  title: 'Risk: Safety: Ethics and Compliance'
+  required: true
+- id: budget
+  title: Budget and Justification
+  required: true
+- id: sustainability
+  title: Sustainability and Continuation
+  required: true
+- id: data_management
+  title: 'Data: Software and Research Output Management'
+  required: true
+- id: IP
+  title: Intellectual Property and Knowledge Transfer
+  required: true
+- id: references
+  title: References
+  required: true
+- id: annexes
+  title: Required Annexes
+  required: false
+description: Production template. Content is populated from the canonical project model or reviewed author
+  input.

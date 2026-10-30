@@ -1,0 +1,76 @@
+{
+  "template_id": "proposal.government_consortium",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Government / Public Programme / Consortium Proposal",
+  "purpose": "Address public programme objectives, public value, institutional accountability, multi-party delivery and measurable outcomes.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "call",
+      "title": "Programme Alignment and Eligibility",
+      "required": true
+    },
+    {
+      "id": "summary",
+      "title": "Executive Summary",
+      "required": true
+    },
+    {
+      "id": "need",
+      "title": "Need and Baseline",
+      "required": true
+    },
+    {
+      "id": "objectives",
+      "title": "Objectives and Public Outcomes",
+      "required": true
+    },
+    {
+      "id": "solution",
+      "title": "Programme Design and Technical Architecture",
+      "required": true
+    },
+    {
+      "id": "consortium",
+      "title": "Consortium Structure and Governance",
+      "required": true
+    },
+    {
+      "id": "workplan",
+      "title": "Work Packages and Milestones",
+      "required": true
+    },
+    {
+      "id": "capacity",
+      "title": "Institutional Capacity and Facilities",
+      "required": true
+    },
+    {
+      "id": "budget",
+      "title": "Budget and Value for Money",
+      "required": true
+    },
+    {
+      "id": "impact",
+      "title": "Impact: Monitoring and Evaluation",
+      "required": true
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability and Exit",
+      "required": true
+    },
+    {
+      "id": "safeguards",
+      "title": "Safeguards: Ethics and Compliance",
+      "required": true
+    },
+    {
+      "id": "annexes",
+      "title": "Annexes",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

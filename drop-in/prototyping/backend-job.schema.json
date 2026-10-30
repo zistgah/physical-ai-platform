@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:pap:prototyping:backend-job:1.0.0",
+  "title": "Physical AI Platform backend job envelope",
+  "type": "object",
+  "required": [
+    "protocolVersion",
+    "job",
+    "backend"
+  ],
+  "properties": {
+    "protocolVersion": {
+      "const": "1.0.0"
+    },
+    "job": {
+      "type": "object",
+      "required": [
+        "jobId",
+        "projectId",
+        "configurationId",
+        "configurationFingerprint",
+        "revisionId",
+        "testId",
+        "backendVersion",
+        "domain",
+        "operation",
+        "inputFormat",
+        "inputDigest",
+        "inputArtifacts",
+        "units",
+        "solverOptions",
+        "timeoutMs"
+      ],
+      "properties": {
+        "jobId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configurationId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configurationFingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revisionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "testId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backendId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backendVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputFormat": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputDigest": {
+          "type": "string",
+          "pattern": "^sha256:[a-fA-F0-9]{64}$"
+        },
+        "inputArtifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        },
+        "units": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "coordinateFrame": {
+          "type": "string"
+        },
+        "solverOptions": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "timeoutMs": {
+          "type": "integer",
+          "minimum": 1000,
+          "maximum": 3600000
+        },
+        "deterministic": {
+          "type": "boolean"
+        },
+        "seed": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": true
+    },
+    "backend": {
+      "type": "object",
+      "required": [
+        "id",
+        "workerProfile",
+        "source",
+        "license",
+        "mode"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "workerProfile": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "format": "uri"
+        },
+        "license": {
+          "type": "string"
+        },
+        "mode": {
+          "const": "WORKER_RPC"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": [
+        "uri",
+        "digest",
+        "mediaType"
+      ],
+      "properties": {
+        "uri": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(artifact|cas|https|s3|gs|inline):"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-fA-F0-9]{64}$"
+        },
+        "mediaType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$comment": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

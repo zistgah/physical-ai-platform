@@ -1,0 +1,88 @@
+{
+  "template_id": "research.systematic_review",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Systematic / Scoping Review",
+  "purpose": "Transparent synthesis of a defined body of literature using a reproducible search, screening, appraisal and synthesis method.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "title_abstract",
+      "title": "Title and Structured Abstract",
+      "required": true,
+      "instruction": "Identify review type and summarize objective, eligibility, sources, methods, results and conclusion."
+    },
+    {
+      "id": "rationale",
+      "title": "Rationale and Questions",
+      "required": true,
+      "instruction": "Explain why the review is needed and define question/framework (for example PICO, PICo or an appropriate domain-specific framework)."
+    },
+    {
+      "id": "protocol",
+      "title": "Protocol and Registration",
+      "required": true,
+      "instruction": "State protocol location, registration, amendments, dates and reasons for deviations."
+    },
+    {
+      "id": "eligibility",
+      "title": "Eligibility Criteria",
+      "required": true,
+      "instruction": "Define population, concept, context, study designs, language, date range, publication types and exclusions."
+    },
+    {
+      "id": "sources",
+      "title": "Information Sources and Search Strategy",
+      "required": true,
+      "instruction": "Name every database, index, repository, website and date searched. Provide full reproducible search strings and limits."
+    },
+    {
+      "id": "selection",
+      "title": "Selection Process",
+      "required": true,
+      "instruction": "Describe deduplication, reviewers, screening stages, conflict resolution and automation tools."
+    },
+    {
+      "id": "extraction",
+      "title": "Data Collection and Variables",
+      "required": true,
+      "instruction": "Define extraction form, variables, reviewers, verification, missing data and author contact."
+    },
+    {
+      "id": "appraisal",
+      "title": "Risk of Bias / Quality Appraisal",
+      "required": true,
+      "instruction": "Select design-appropriate tools and explain judgments. Do not treat quality scores as universal truth."
+    },
+    {
+      "id": "synthesis",
+      "title": "Synthesis Methods",
+      "required": true,
+      "instruction": "Explain grouping, transformations, qualitative synthesis, meta-analysis model, heterogeneity, sensitivity and publication bias where relevant."
+    },
+    {
+      "id": "results",
+      "title": "Results and Flow",
+      "required": true,
+      "instruction": "Provide screening counts, exclusions with reasons, study characteristics, appraisal and synthesis. Include appropriate PRISMA flow diagram."
+    },
+    {
+      "id": "discussion",
+      "title": "Discussion",
+      "required": true,
+      "instruction": "Interpret findings, limitations of evidence and review process, applicability and research priorities."
+    },
+    {
+      "id": "funding_conflicts",
+      "title": "Funding and Conflicts",
+      "required": true,
+      "instruction": "Declare review funding, competing interests and author contributions."
+    },
+    {
+      "id": "checklist",
+      "title": "Reporting Checklist",
+      "required": true,
+      "instruction": "Complete the current PRISMA 2020 checklist or relevant extension; preserve item-to-page/section mapping."
+    }
+  ]
+}

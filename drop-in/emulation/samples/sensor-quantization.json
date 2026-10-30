@@ -1,0 +1,72 @@
+{
+  "name": "Sensor quantization and bias conformance sample",
+  "description": "Synthetic deterministic sensor interface fixture; not measured hardware data.",
+  "device": {
+    "id": "sample-sensor-01",
+    "type": "ANALOG_SENSOR",
+    "modelId": "quantized-sensor",
+    "modelVersion": "1.0.0"
+  },
+  "model": {
+    "kind": "quantizer",
+    "resolution": 0.25,
+    "bias": 0.0
+  },
+  "tolerance": {
+    "absolute": 1e-12,
+    "relative": 0
+  },
+  "steps": [
+    {
+      "time": 0.0,
+      "sequence": 0,
+      "input": {
+        "raw": 0.001
+      },
+      "observed": {
+        "reported": 0.0
+      }
+    },
+    {
+      "time": 0.01,
+      "sequence": 1,
+      "input": {
+        "raw": 1.234
+      },
+      "observed": {
+        "reported": 1.25
+      }
+    },
+    {
+      "time": 0.02,
+      "sequence": 2,
+      "input": {
+        "raw": -2.11
+      },
+      "observed": {
+        "reported": -2.0
+      }
+    },
+    {
+      "time": 0.03,
+      "sequence": 3,
+      "input": {
+        "raw": 10.126
+      },
+      "observed": {
+        "reported": 10.25
+      }
+    },
+    {
+      "time": 0.04,
+      "sequence": 4,
+      "input": {
+        "raw": 0.124
+      },
+      "observed": {
+        "reported": 0.0
+      }
+    }
+  ],
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

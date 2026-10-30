@@ -1,0 +1,50 @@
+{
+  "id": "ayeai.physical-ai.hosted-compute",
+  "name": "Physical AI Platform Hosted Compute and Solver Interoperability",
+  "version": "1.0.0",
+  "iteration": 50,
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "trademarks": ["AyeAI®", "AyeAM®", "AyeCNSe®"],
+  "entrypoints": {"core": "./module.js", "notebook": "../../notebooks/PAP_Hosted_Compute_Backends.ipynb"},
+  "exports": ["COMPUTE_BACKEND_CATALOG", "listComputeBackends", "createComputePlan", "validateComputeResult", "validateComputeResultAsync", "verifyComputeResultDigest", "toCanonicalEvidenceDraft"],
+  "platformContracts": ["canonical project/configuration identity", "SIR/requirement identifiers carried in execution plan", "detached SHA-256 result digest", "SIMULATION-only evidence draft", "HOLD on missing/invalid numerical, provenance or resource data"],
+  "runtimeDependencies": [],
+  "optionalUpstreams": [
+    {"id":"numpy-scipy","url":"https://numpy.org/;https://scipy.org/","license":"BSD-3-Clause","hostedFit":"native-or-pip"},
+    {"id":"pytorch","url":"https://pytorch.org/","license":"BSD-3-Clause","hostedFit":"usually-preinstalled-check-version"},
+    {"id":"jax","url":"https://docs.jax.dev/en/latest/installation.html","license":"Apache-2.0","hostedFit":"pip-wheel-check-driver"},
+    {"id":"cupy","url":"https://docs.cupy.dev/en/stable/install.html","license":"MIT","hostedFit":"cuda-wheel-check-driver"},
+    {"id":"taichi","url":"https://www.taichi-lang.org/","license":"Apache-2.0","hostedFit":"pip-wheel-check-device"},
+    {"id":"warp","url":"https://github.com/NVIDIA/warp","license":"Apache-2.0","hostedFit":"pip-wheel-check-driver"},
+    {"id":"petsc","url":"https://petsc.org/","license":"BSD-2-Clause","hostedFit":"native-build-or-container"},
+    {"id":"fenicsx","url":"https://fenicsproject.org/","license":"LGPL-3.0-or-later","hostedFit":"container-or-conda-forge-check"},
+    {"id":"mfem","url":"https://mfem.org/","license":"BSD-3-Clause","hostedFit":"native-build-or-container"},
+    {"id":"su2","url":"https://su2code.github.io/","license":"LGPL-2.1-or-later","hostedFit":"binary-or-native-build"},
+    {"id":"openfoam","url":"https://openfoam.org/","license":"GPL-3.0-or-later","hostedFit":"container-or-native-build"},
+    {"id":"pybullet","url":"https://pybullet.org/","license":"zlib","hostedFit":"pip-wheel"},
+    {"id":"mujoco","url":"https://mujoco.org/","license":"Apache-2.0","hostedFit":"pip-wheel"},
+    {"id":"project-chrono","url":"https://projectchrono.org/","license":"BSD-3-Clause","hostedFit":"native-build-or-container"},
+    {"id":"elmer","url":"https://www.elmerfem.org/","license":"GPL-2.0-or-later","hostedFit":"binary-or-native-build"},
+    {"id":"numba","url":"https://numba.readthedocs.io/","license":"BSD-2-Clause","hostedFit":"pip-wheel"},
+    {"id":"pyamg","url":"https://pyamg.readthedocs.io/","license":"MIT","hostedFit":"pip-wheel"},
+    {"id":"scikit-fem","url":"https://github.com/kinnala/scikit-fem","license":"MIT","hostedFit":"pip-wheel"},
+    {"id":"torchdiffeq","url":"https://github.com/rtqichen/torchdiffeq","license":"MIT","hostedFit":"pip-wheel"},
+    {"id":"diffrax","url":"https://github.com/patrick-kidger/diffrax","license":"Apache-2.0","hostedFit":"pip-wheel-check-jax"},
+    {"id":"meshio","url":"https://github.com/nschloe/meshio","license":"MIT","hostedFit":"pip-wheel"},
+    {"id":"pyvista","url":"https://pyvista.org/","license":"MIT","hostedFit":"pip-wheel"}
+  ],
+  "testCommands": [
+    "node drop-in/hosted-compute/test.mjs",
+    "node drop-in/hosted-compute/integration.mjs",
+    "node tools/conformance-test-hosted-compute-iter50.mjs",
+    "python notebooks/test_notebook.py"
+  ],
+  "limitations": [
+    "Colab GPU/TPU availability, type, quotas and lifetime are controlled by the provider and are not guaranteed",
+    "Native solver packages may require pinned containers, MPI, system libraries or a separate hosted runner",
+    "Notebook numerical result is simulation evidence only; no HIL, L5, physical verification or certification claims",
+    "External solver APIs and licenses must be revalidated and version-pinned before deployment or redistribution",
+    "Notebook is an execution/validation harness, not a replacement for domain-specific solver validation"
+  ]
+}

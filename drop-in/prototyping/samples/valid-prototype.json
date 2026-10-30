@@ -1,0 +1,79 @@
+{
+  "config": {
+    "id": "sample-cfg-01",
+    "type": "Configuration",
+    "status": "FROZEN",
+    "fingerprint": "sha256:sample-cfg-01"
+  },
+  "revision": {
+    "id": "sample-rev-02",
+    "parentRevisionId": "sample-rev-01",
+    "parentRevision": {
+      "id": "sample-rev-01",
+      "configurationId": "sample-cfg-01"
+    },
+    "configurationId": "sample-cfg-01",
+    "changes": [
+      "Reinforced actuator mount",
+      "Added cable strain relief"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "sample-req-01",
+      "type": "Requirement"
+    }
+  ],
+  "tests": [
+    {
+      "id": "sample-test-01",
+      "configurationId": "sample-cfg-01",
+      "revisionId": "sample-rev-02",
+      "requirementIds": [
+        "sample-req-01"
+      ],
+      "status": "PASS",
+      "result": {
+        "convergence": true,
+        "residual": 0.0001,
+        "timeStep": 0.001
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "sample-evidence-01",
+      "configurationId": "sample-cfg-01",
+      "configurationFingerprint": "sha256:sample-cfg-01",
+      "revisionId": "sample-rev-02",
+      "testId": "sample-test-01",
+      "method": "PHYSICAL_TEST",
+      "state": "TESTED",
+      "realization": "REAL",
+      "fidelityLevel": "L6",
+      "result": {
+        "convergence": true,
+        "residual": 0.0001,
+        "timeStep": 0.001
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "sample-test-01",
+      "relation": "VERIFIES",
+      "target": "sample-req-01"
+    },
+    {
+      "source": "sample-evidence-01",
+      "relation": "CONFIGURED_BY",
+      "target": "sample-cfg-01"
+    },
+    {
+      "source": "sample-evidence-01",
+      "relation": "DERIVED_FROM",
+      "target": "sample-test-01"
+    }
+  ],
+  "_copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

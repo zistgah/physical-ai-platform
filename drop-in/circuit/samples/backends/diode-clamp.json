@@ -1,0 +1,25 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "name": "SPICE diode clamp",
+  "description": "External SPICE backend sample. 5 V source, 1 kOhm series resistor and a Shockley diode model. Approximate DC operating point at 27 C.",
+  "input": {
+    "netlist": {
+      "models": [{ "name": "DMOD", "type": "D", "card": ".model DMOD D(Is=1e-14 N=1)" }],
+      "elements": [
+        { "id": "VCC", "type": "V", "n1": "vcc", "n2": "0", "value": 5 },
+        { "id": "RLOAD", "type": "R", "n1": "vcc", "n2": "out", "value": 1000 }
+      ],
+      "devices": [
+        { "id": "DLED", "type": "D", "terminals": { "anode": "out", "cathode": "0" }, "model": "DMOD" }
+      ]
+    },
+    "steps": 2,
+    "dt": 1e-6,
+    "method": "trapezoidal"
+  },
+  "assertions": [
+    { "path": "final.nodeVoltages.out", "expected": 0.6929, "tolerance": 0.01 },
+    { "path": "final.terminalCurrents.DLED.anode", "expected": 0.004307, "tolerance": 0.0002 },
+    { "path": "final.terminalCurrents.DLED.cathode", "expected": -0.004307, "tolerance": 0.0002 }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "iteration": 50,
+  "package": "ayeai.physical-ai.hosted-compute",
+  "version": "1.0.0",
+  "changeType": "additive-new-package",
+  "added": [
+    "drop-in/hosted-compute/module.js",
+    "drop-in/hosted-compute/test.mjs",
+    "drop-in/hosted-compute/integration.mjs",
+    "drop-in/hosted-compute/fixtures/hosted-compute-result.sample.json",
+    "drop-in/hosted-compute/manifest.json",
+    "drop-in/hosted-compute/CHANGE-MANIFEST.json",
+    "drop-in/hosted-compute/EXPLAINER.md",
+    "drop-in/hosted-compute/STITCH-INSTRUCTIONS.md",
+    "notebooks/PAP_Hosted_Compute_Backends.ipynb",
+    "notebooks/README.md",
+    "notebooks/test_notebook.py",
+    "BUILD-ANALYSIS-ITERATIONS-47-50.md",
+    "TEST-COVERAGE-MATRIX-ITERATION-50.md",
+    "HANDOFF-ITERATION-50.md",
+    "tools/conformance-test-hosted-compute-iter50.mjs",
+    "HANDOFF.md"
+  ],
+  "modified": [
+    "site/components/core/module-registry.js",
+    "CHANGELOG.md",
+    "docs/iterations/MRD-TRACEABILITY.md",
+    "docs/iterations/HANDOFF.md",
+    "README.md"
+  ],
+  "preserved": [
+    "site/components/core/canonical-kernel.js",
+    "tests/acceptance.mjs",
+    "drop-in/hil/module.js",
+    "drop-in/hil/backends.mjs",
+    "drop-in/hil/test.mjs",
+    "drop-in/hil/backends.test.mjs",
+    "drop-in/hil/integration.mjs",
+    "all pre-existing drop-in modules"
+  ],
+  "compatibility": "No changes to canonical entity semantics, HIL transaction semantics, acceptance criteria or existing module APIs. New module is reachable through the existing module registry."
+}

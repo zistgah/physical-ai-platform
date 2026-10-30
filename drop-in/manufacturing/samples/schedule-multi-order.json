@@ -1,0 +1,63 @@
+{
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks.",
+  "orders": [
+    {
+      "order": {
+        "id": "SCHED-HIGH",
+        "quantity": 6,
+        "routing": [
+          {
+            "id": "high-mill",
+            "process": "MILL",
+            "cycleTimeMinutes": 10
+          }
+        ]
+      },
+      "priority": 10,
+      "dueDate": "2026-11-04T00:00:00Z",
+      "quality": {
+        "status": "RELEASED",
+        "exportStatus": "NOT_APPLICABLE",
+        "requiredInspections": [],
+        "inspections": [],
+        "nonconformances": []
+      }
+    },
+    {
+      "order": {
+        "id": "SCHED-LOW",
+        "quantity": 6,
+        "routing": [
+          {
+            "id": "low-mill",
+            "process": "MILL",
+            "cycleTimeMinutes": 10
+          }
+        ]
+      },
+      "priority": 1,
+      "dueDate": "2026-11-02T00:00:00Z",
+      "quality": {
+        "status": "RELEASED",
+        "exportStatus": "NOT_APPLICABLE",
+        "requiredInspections": [],
+        "inspections": [],
+        "nonconformances": []
+      }
+    }
+  ],
+  "stations": [
+    {
+      "id": "shared-mill",
+      "processes": [
+        "MILL"
+      ],
+      "status": "READY",
+      "capacityMinutes": 100,
+      "bookedMinutes": 0,
+      "calibration": {
+        "status": "VALID"
+      }
+    }
+  ]
+}

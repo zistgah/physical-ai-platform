@@ -1,0 +1,8 @@
+# Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks.
+# SPDX-License-Identifier: GPL-3.0-only
+# Optional worker dependencies. Resolve and lock exact versions per deployment.
+# Do not install these in the static browser build.
+ortools>=9.12,<10
+highspy>=1.10,<2
+numpy>=2,<3
+simpy>=4.1,<5

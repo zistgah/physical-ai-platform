@@ -1,0 +1,15 @@
+--- a/site/components/core/module-registry.js
++++ b/site/components/core/module-registry.js
+@@ -116,10 +116,12 @@
+ import { prove as m_prv } from "../core/prover.js";
+ import { hilStep as m_hil_step, hilStepAsync as m_hil_step_async, HilSession as m_hil_session, recordHilExecution as m_hil_record } from "../../../drop-in/hil/module.js";
+ import { createRosbridgeTransport as m_hil_rosbridge, createMqttTransport as m_hil_mqtt, createOpcUaTransport as m_hil_opcua, createModbusTransport as m_hil_modbus, createSocketCanTransport as m_hil_socketcan, listHilBackends as m_hil_backends } from "../../../drop-in/hil/backends.mjs";
++import { COMPUTE_BACKEND_CATALOG as m_compute_catalog, listComputeBackends as m_compute_list, createComputePlan as m_compute_plan, validateComputeResult as m_compute_validate, validateComputeResultAsync as m_compute_validate_async, verifyComputeResultDigest as m_compute_verify_digest, toCanonicalEvidenceDraft as m_compute_evidence } from "../../../drop-in/hosted-compute/module.js";
+ export const REACHABLE = {
+   "core/prover.js": m_prv,
+   "drop-in/hil/module.js": { hilStep: m_hil_step, hilStepAsync: m_hil_step_async, HilSession: m_hil_session, recordHilExecution: m_hil_record },
+   "drop-in/hil/backends.mjs": { createRosbridgeTransport: m_hil_rosbridge, createMqttTransport: m_hil_mqtt, createOpcUaTransport: m_hil_opcua, createModbusTransport: m_hil_modbus, createSocketCanTransport: m_hil_socketcan, listHilBackends: m_hil_backends },
++  "drop-in/hosted-compute/module.js": { catalog: m_compute_catalog, listComputeBackends: m_compute_list, createComputePlan: m_compute_plan, validateComputeResult: m_compute_validate, validateComputeResultAsync: m_compute_validate_async, verifyComputeResultDigest: m_compute_verify_digest, toCanonicalEvidenceDraft: m_compute_evidence },
+   "simulation/hil-transport.js": m_hil,
+   "simulation/multiphysics.js": m_mp,
+   "core/improve.js": m_imp,

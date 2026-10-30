@@ -1,0 +1,15 @@
+{
+  "id": "cfd-reference-and-backend-bridge",
+  "name": "CFD Reference Solver and External Backend Bridge",
+  "version": "1.3.0",
+  "license": "GPL-3.0-only",
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "entrypoints": ["module.js", "integration/backend-job.js"],
+  "tests": ["test.mjs", "tests/backend-job.test.mjs", "tests/notebook-structure.test.mjs"],
+  "runtimeDependencies": [],
+  "executionModes": ["BROWSER_REFERENCE", "COLAB_EXTERNAL_BACKEND", "REMOTE_SERVICE", "LOCAL_AGENT"],
+  "referencePhysics": {"domain":"plane-channel-couette-poiseuille","dimensions":1,"steady":true,"incompressible":true,"laminar":true},
+  "externalBackends": "backend-catalogue/manifest.json",
+  "notebooks": ["notebooks/CFD_Backend_Colab.ipynb"],
+  "trustDefault": "SIMULATED_NOT_PHYSICALLY_VALIDATED"
+}

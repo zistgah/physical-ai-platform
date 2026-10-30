@@ -1,0 +1,66 @@
+template_id: proposal.investment
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Investor / Capital-Raising Proposal
+purpose: Present an investable opportunity, capital requirement, risk profile and plausible path to value
+  without disguising uncertainty.
+guide_mode: true
+sections:
+- id: executive
+  title: Investment Summary
+  required: true
+  instruction: State company/project, raise amount, instrument, stage, use of proceeds, current traction
+    and proposed next milestone.
+- id: problem
+  title: Customer Problem and Market Need
+  required: true
+  instruction: Show customer segment, urgency, current workaround, willingness-to-pay evidence and market
+    evidence.
+- id: solution
+  title: Product and Technical Solution
+  required: true
+  instruction: Describe product, architecture, differentiation, IP, maturity, demo evidence and roadmap.
+    Label simulated vs deployed capability.
+- id: market
+  title: Market and Competition
+  required: true
+  instruction: Define TAM/SAM/SOM with reproducible method, geography, segment, source and assumptions.
+    Compare direct, indirect and substitute competitors.
+- id: business_model
+  title: Business Model and Go-to-Market
+  required: true
+  instruction: Pricing, sales channel, procurement cycle, customer acquisition, deployment, service, retention
+    and revenue recognition assumptions.
+- id: traction
+  title: Traction and Validation
+  required: true
+  instruction: Separate signed contracts, paid pilots, LOIs, interviews, waitlists, usage, lab tests and
+    simulations. Never represent an LOI as revenue.
+- id: economics
+  title: Unit Economics and Financial Model
+  required: true
+  instruction: Derive BOM, labor, manufacturing, service, warranty, logistics, gross margin, CAC, LTV
+    and working capital from traceable inputs.
+- id: team
+  title: Team and Governance
+  required: true
+  instruction: Verified experience, roles, ownership, hiring plan, board/governance and key-person risk.
+- id: roadmap
+  title: Milestones and Capital Plan
+  required: true
+  instruction: Use of proceeds by work package, runway, stage gates, next financing dependency and measurable
+    milestones.
+- id: risks
+  title: Risks and Mitigations
+  required: true
+  instruction: Technical, market, regulatory, supply chain, manufacturing, execution, financing and IP
+    risks.
+- id: ask
+  title: The Ask and Terms
+  required: true
+  instruction: Amount, instrument, valuation/terms if determined, tranches, conditions, timing and contact.
+- id: appendix
+  title: Due-Diligence Appendix
+  required: false
+  instruction: Financial model, cap table, IP schedule, customer evidence, technical architecture, test
+    reports, regulatory map and data room index.

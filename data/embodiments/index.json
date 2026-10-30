@@ -1,0 +1,13 @@
+{
+  "embodiments": [
+    "FIXED",
+    "WHEELED",
+    "TRACKED",
+    "LEGGED",
+    "AERIAL",
+    "SURFACE_VESSEL",
+    "UNDERWATER",
+    "SPACECRAFT",
+    "SWARM"
+  ]
+}

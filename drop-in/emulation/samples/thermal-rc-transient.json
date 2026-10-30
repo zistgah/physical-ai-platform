@@ -1,0 +1,107 @@
+{
+  "name": "Thermal RC transient conformance sample",
+  "description": "Synthetic first-order lumped thermal network fixture; not measured hardware data.",
+  "device": {
+    "id": "sample-thermal-rc-01",
+    "type": "THERMAL_PLANT",
+    "modelId": "first-order-thermal",
+    "modelVersion": "1.0.0"
+  },
+  "model": {
+    "kind": "first-order-thermal",
+    "ambientC": 22,
+    "thermalResistanceCPerW": 2.5,
+    "timeConstantSeconds": 3.0
+  },
+  "tolerance": {
+    "absolute": 1e-10,
+    "relative": 1e-10
+  },
+  "steps": [
+    {
+      "time": 0,
+      "sequence": 0,
+      "dt": 1.0,
+      "input": {
+        "powerW": 0,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 22.0
+      }
+    },
+    {
+      "time": 1,
+      "sequence": 1,
+      "dt": 1.0,
+      "input": {
+        "powerW": 10,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 29.086717235655268
+      }
+    },
+    {
+      "time": 2,
+      "sequence": 2,
+      "dt": 1.0,
+      "input": {
+        "powerW": 10,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 34.1645720241852
+      }
+    },
+    {
+      "time": 3,
+      "sequence": 3,
+      "dt": 1.0,
+      "input": {
+        "powerW": 10,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 37.80301397071394
+      }
+    },
+    {
+      "time": 4,
+      "sequence": 4,
+      "dt": 1.0,
+      "input": {
+        "powerW": 0,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 33.32335431145156
+      }
+    },
+    {
+      "time": 5,
+      "sequence": 5,
+      "dt": 1.0,
+      "input": {
+        "powerW": 0,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 30.113537904875752
+      }
+    },
+    {
+      "time": 6,
+      "sequence": 6,
+      "dt": 1.0,
+      "input": {
+        "powerW": 5,
+        "dt": 1.0
+      },
+      "observed": {
+        "temperatureC": 31.356962566198373
+      }
+    }
+  ],
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

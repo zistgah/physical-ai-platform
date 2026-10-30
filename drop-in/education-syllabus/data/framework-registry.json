@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0.0",
+  "frameworks": [
+    {
+      "id": "UNESCO-ISCED-2011",
+      "name": "International Standard Classification of Education 2011",
+      "kind": "LEVEL_CLASSIFICATION",
+      "authority": "UNESCO Institute for Statistics",
+      "jurisdiction": "GLOBAL",
+      "version": "2011",
+      "url": "https://uis.unesco.org/en/methods-and-tools/isced",
+      "status": "REGISTERED_REFERENCE_NOT_SYLLABUS",
+      "use": "Cross-national programme/attainment classification; do not treat as subject curriculum."
+    },
+    {
+      "id": "IN-NCF-FS-2022",
+      "name": "National Curriculum Framework for Foundational Stage 2022",
+      "kind": "NATIONAL_CURRICULUM_FRAMEWORK",
+      "authority": "NCERT",
+      "jurisdiction": "IN",
+      "version": "2022",
+      "url": "https://ncf.ncert.gov.in/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "IN-NCF-SE-2023",
+      "name": "National Curriculum Framework for School Education 2023",
+      "kind": "NATIONAL_CURRICULUM_FRAMEWORK",
+      "authority": "NCERT",
+      "jurisdiction": "IN",
+      "version": "2023",
+      "url": "https://ncf.ncert.gov.in/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "US-CCSS-MATH",
+      "name": "Common Core State Standards - Mathematics",
+      "kind": "SUBJECT_STANDARDS",
+      "authority": "CCSS Initiative",
+      "jurisdiction": "US-PARTICIPATING_STATES",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://corestandards.org/mathematics-standards/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "IB-PYP",
+      "name": "International Baccalaureate Primary Years Programme",
+      "kind": "PROGRAMME_FRAMEWORK",
+      "authority": "International Baccalaureate",
+      "jurisdiction": "INTERNATIONAL",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://www.ibo.org/programmes/primary-years-programme/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "IB-MYP",
+      "name": "International Baccalaureate Middle Years Programme",
+      "kind": "PROGRAMME_FRAMEWORK",
+      "authority": "International Baccalaureate",
+      "jurisdiction": "INTERNATIONAL",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://www.ibo.org/programmes/middle-years-programme/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "IB-DP",
+      "name": "International Baccalaureate Diploma Programme",
+      "kind": "PROGRAMME_FRAMEWORK",
+      "authority": "International Baccalaureate",
+      "jurisdiction": "INTERNATIONAL",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://www.ibo.org/programmes/diploma-programme/curriculum/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "EU-EQF",
+      "name": "European Qualifications Framework",
+      "kind": "QUALIFICATION_REFERENCE",
+      "authority": "European Commission",
+      "jurisdiction": "EU",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://europa.eu/europass/en/european-qualifications-framework-eqf",
+      "status": "REGISTERED_REFERENCE_NOT_SYLLABUS"
+    },
+    {
+      "id": "1EDTECH-CASE-1.1",
+      "name": "Competencies and Academic Standards Exchange 1.1",
+      "kind": "INTEROPERABILITY_STANDARD",
+      "authority": "1EdTech Consortium",
+      "jurisdiction": "INTERNATIONAL",
+      "version": "1.1",
+      "url": "https://www.1edtech.org/standards/case",
+      "status": "REGISTERED_INTEROPERABILITY_STANDARD"
+    },
+    {
+      "id": "1EDTECH-LTI-1.3",
+      "name": "Learning Tools Interoperability 1.3",
+      "kind": "INTEROPERABILITY_STANDARD",
+      "authority": "1EdTech Consortium",
+      "jurisdiction": "INTERNATIONAL",
+      "version": "1.3",
+      "url": "https://www.1edtech.org/standards/lti",
+      "status": "REGISTERED_INTEROPERABILITY_STANDARD"
+    },
+    {
+      "id": "US-NGSS",
+      "name": "Next Generation Science Standards",
+      "kind": "SUBJECT_STANDARDS",
+      "authority": "NGSS",
+      "jurisdiction": "US-PARTICIPATING_STATES",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://www.nextgenscience.org/standards",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "AU-AC-V9",
+      "name": "Australian Curriculum Version 9.0",
+      "kind": "NATIONAL_CURRICULUM",
+      "authority": "ACARA",
+      "jurisdiction": "AU",
+      "version": "9.0",
+      "url": "https://www.australiancurriculum.edu.au/",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "ZA-CAPS",
+      "name": "Curriculum and Assessment Policy Statement Grades R-12",
+      "kind": "NATIONAL_CURRICULUM",
+      "authority": "South African Department of Basic Education",
+      "jurisdiction": "ZA",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://www.education.gov.za/Curriculum/NCSGradesR12/CAPS/tabid/420/Default.aspx",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "UK-ENG-NC",
+      "name": "National Curriculum in England",
+      "kind": "NATIONAL_CURRICULUM",
+      "authority": "UK Department for Education",
+      "jurisdiction": "GB-ENG",
+      "version": "CURRENT_EDITION_TO_VERIFY",
+      "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    },
+    {
+      "id": "NZ-NZC",
+      "name": "New Zealand Curriculum / Te Mātaiaho",
+      "kind": "NATIONAL_CURRICULUM",
+      "authority": "New Zealand Ministry of Education",
+      "jurisdiction": "NZ",
+      "version": "2026 curriculum release; implementation schedule must be verified by learning area",
+      "url": "https://tahurangi.education.govt.nz/new-zealand-curriculum/5637175326.p",
+      "status": "SOURCE_REGISTERED_CONTENT_INGESTION_REQUIRED"
+    }
+  ]
+}

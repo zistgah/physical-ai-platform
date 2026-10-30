@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "description": "Deterministic logistics simulation fixtures. All dates are explicit; no external systems are contacted.",
+  "scenarios": [
+    {
+      "id": "released-stock-fulfilment",
+      "input": {
+        "order": {
+          "id": "SIM-WO-001",
+          "lines": [
+            {
+              "part": "M4-BOLT",
+              "qty": 12
+            }
+          ]
+        },
+        "planningDate": "2026-10-30T00:00:00Z",
+        "inventory": [
+          {
+            "id": "LOT-M4-01",
+            "part": "M4-BOLT",
+            "onHand": 20,
+            "reserved": 8,
+            "qualityStatus": "RELEASED",
+            "lot": "M4-2026-01",
+            "origin": "IN",
+            "process": "cold-heading"
+          }
+        ]
+      }
+    },
+    {
+      "id": "supplier-shortage-recovery",
+      "input": {
+        "order": {
+          "id": "SIM-WO-002",
+          "requiredBy": "2026-11-08T00:00:00Z",
+          "lines": [
+            {
+              "part": "SERVO-24V",
+              "qty": 5
+            }
+          ]
+        },
+        "planningDate": "2026-10-30T00:00:00Z",
+        "suppliers": [
+          {
+            "id": "SUP-SERVO-A",
+            "part": "SERVO-24V",
+            "availableQty": 5,
+            "leadDays": 4,
+            "approved": true,
+            "exportStatus": "CLEAR",
+            "lifecycleStatus": "ACTIVE",
+            "origin": "IN",
+            "process": "motor-assembly"
+          }
+        ]
+      }
+    },
+    {
+      "id": "unknown-export-control-hold",
+      "input": {
+        "order": {
+          "id": "SIM-WO-003",
+          "lines": [
+            {
+              "part": "CONTROL-BOARD",
+              "qty": 2
+            }
+          ]
+        },
+        "planningDate": "2026-10-30T00:00:00Z",
+        "suppliers": [
+          {
+            "id": "SUP-BOARD-X",
+            "part": "CONTROL-BOARD",
+            "availableQty": 2,
+            "leadDays": 3,
+            "approved": true,
+            "exportStatus": "UNKNOWN",
+            "lifecycleStatus": "ACTIVE"
+          }
+        ]
+      }
+    }
+  ],
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

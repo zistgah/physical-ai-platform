@@ -1,0 +1,9 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "schema": "circuit-design-space/series-rlc-regimes/1",
+  "times_s": [0.00001, 0.00005, 0.0001, 0.0002, 0.0005, 0.001, 0.002, 0.004],
+  "inductance_h": 0.001,
+  "capacitance_f": 0.000001,
+  "resistance_ohm": [20.0, 63.245553203367585, 200.0],
+  "expected_regimes": ["underdamped", "critically_damped", "overdamped"]
+}

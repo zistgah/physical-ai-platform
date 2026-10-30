@@ -1,0 +1,10 @@
+--- a/tools/conformance-test-iter47.mjs
++++ b/tools/conformance-test-iter47.mjs
+@@ -11,6 +11,7 @@
+ import { supply } from "../drop-in/logistics/module.js";
+ import { prototype } from "../drop-in/prototyping/module.js";
+ import "../drop-in/prototyping/test.mjs";
++import "../drop-in/prototyping/backend-test.mjs";
+ import "../drop-in/prototyping/integration-test.mjs";
+ 
+ function assert(c, m) { if (!c) throw new Error("FAIL: " + m); }

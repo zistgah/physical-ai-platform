@@ -1,0 +1,100 @@
+{
+  "protocol": "ayeai.compute.job/v1",
+  "catalogVersion": "1.0.0",
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks.",
+  "policy": {
+    "canonicalOwner": "Physical AI Platform",
+    "unknownProviderHealth": "HOLD",
+    "fallback": "Explicit only; required accelerators never downgrade",
+    "simulationEvidence": "SIMULATED"
+  },
+  "providers": [
+    {
+      "id": "browser-js-worker",
+      "name": "Native JavaScript Worker",
+      "license": "Platform GPL-3.0-only",
+      "transport": "browser-worker",
+      "accelerators": [
+        "cpu"
+      ],
+      "capabilities": [
+        "reliability.series.monte-carlo"
+      ],
+      "status": "IMPLEMENTED_AND_TESTED",
+      "entrypoint": "browser-worker.js"
+    },
+    {
+      "id": "colab-pytorch",
+      "name": "PyTorch CUDA",
+      "license": "BSD-3-Clause",
+      "transport": "colab-manual",
+      "accelerators": [
+        "cpu",
+        "gpu"
+      ],
+      "capabilities": [
+        "reliability.series.monte-carlo"
+      ],
+      "status": "NOTEBOOK_IMPLEMENTED_GPU_NOT_RUN_HERE",
+      "entrypoint": "notebooks/reliability_monte_carlo_colab.ipynb"
+    },
+    {
+      "id": "colab-jax",
+      "name": "JAX",
+      "license": "Apache-2.0",
+      "transport": "colab-manual",
+      "accelerators": [
+        "cpu",
+        "gpu",
+        "tpu"
+      ],
+      "capabilities": [
+        "reliability.series.monte-carlo"
+      ],
+      "status": "OPTIONAL_NOTEBOOK_PATH_GPU_NOT_RUN_HERE",
+      "entrypoint": "notebooks/reliability_monte_carlo_colab.ipynb"
+    },
+    {
+      "id": "colab-numpy",
+      "name": "NumPy CPU",
+      "license": "BSD-3-Clause",
+      "transport": "colab-manual",
+      "accelerators": [
+        "cpu"
+      ],
+      "capabilities": [
+        "reliability.series.monte-carlo"
+      ],
+      "status": "NOTEBOOK_IMPLEMENTED_CPU_FALLBACK",
+      "entrypoint": "notebooks/reliability_monte_carlo_colab.ipynb"
+    },
+    {
+      "id": "https-json-worker",
+      "name": "Remote HTTPS JSON Worker",
+      "license": "Provider-defined",
+      "transport": "https-json",
+      "accelerators": [
+        "cpu",
+        "gpu",
+        "tpu"
+      ],
+      "capabilities": [
+        "host-defined"
+      ],
+      "status": "TRANSPORT_IMPLEMENTED_PROVIDER_DEPLOYMENT_REQUIRED",
+      "entrypoint": "createHttpsJsonTransport"
+    },
+    {
+      "id": "cupy",
+      "name": "CuPy",
+      "license": "MIT (verify exact package and CUDA distribution)",
+      "transport": "colab-manual",
+      "accelerators": [
+        "gpu"
+      ],
+      "capabilities": [],
+      "status": "FUTURE_ADAPTER_NOT_IMPLEMENTED",
+      "entrypoint": null
+    }
+  ]
+}

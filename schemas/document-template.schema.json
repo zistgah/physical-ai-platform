@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://physical-ai-platform.example/schemas/document-template.schema.json",
+  "title": "PAP Document Template",
+  "type": "object",
+  "required": [
+    "template_id",
+    "template_version",
+    "schema_version",
+    "title",
+    "purpose"
+  ],
+  "properties": {
+    "template_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "template_version": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "guide_mode": {
+      "type": "boolean"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": [
+        "id",
+        "title"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "instruction": {
+          "type": "string"
+        },
+        "subsections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "values": {
+                "type": "array"
+              },
+              "instruction": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

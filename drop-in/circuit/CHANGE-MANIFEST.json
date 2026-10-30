@@ -1,0 +1,33 @@
+{
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "packageVersion": "0.4.1",
+  "baseline": "Iteration 47 supplied archive plus circuit backend federation 0.4.0",
+  "added": [
+    "ENGINEERING-ANALYSIS.md",
+    "CODE-REFERENCE.md",
+    "TEST-COVERAGE.md",
+    "COLAB.md",
+    "notebooks/circuit-backend-lab.ipynb"
+  ],
+  "modified": [
+    "README.md",
+    "backends/test-real-engines.mjs",
+    "manifest.json",
+    "VERIFICATION-REPORT.md",
+    "STITCH-INSTRUCTIONS.md",
+    "STITCHING.md",
+    "backends/test.mjs"
+  ],
+  "unchanged": [
+    "module.js",
+    "test.mjs",
+    "backends/index.js",
+    "backends/test.mjs",
+    "samples/rc-lowpass.json",
+    "samples/rl-step.json",
+    "samples/resistive-divider.json",
+    "samples/backends/diode-clamp.json"
+  ],
+  "integrationBoundary": "Circuit package only. No canonical kernel, platform schema, registry, UI, acceptance script, or unrelated package modified.",
+  "additionalSeparatePackage": "drop-in/circuit-design-space/ is delivered as a separate archive and is not nested in this package."
+}

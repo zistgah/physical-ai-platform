@@ -1,0 +1,5 @@
+{
+  "operation": "geometry.planar.offset",
+  "payload": {"coordinates": [[0,0],[20,0],[20,10],[0,10],[0,0]], "offsetMm": -1, "joinStyle": "mitre"},
+  "expected": {"areaMm2": 144, "polygonCount": 1, "purpose": "10 x 20 mm rectangular pocket boundary offset inward by 1 mm"}
+}

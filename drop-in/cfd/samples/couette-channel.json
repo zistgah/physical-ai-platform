@@ -1,0 +1,23 @@
+{
+  "id": "cfd-couette-channel-32",
+  "description": "Steady laminar Couette flow driven by a moving upper wall with zero pressure gradient.",
+  "input": {
+    "mesh": {
+      "cells": 32,
+      "height": 0.01
+    },
+    "fluid": {
+      "density": 998.2,
+      "dynamicViscosity": 0.001002
+    },
+    "pressureGradient": 0,
+    "wall": {
+      "bottomVelocity": 0,
+      "topVelocity": 0.1
+    },
+    "tolerance": 1e-10,
+    "maxIterations": 20000
+  },
+  "_copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "_license": "GPL-3.0-only"
+}

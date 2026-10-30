@@ -1,0 +1,33 @@
+record_or_family,source_url,provenance_note,accessed_at
+ISO/IEC/IEEE 15288:2023,https://www.iso.org/standard/81702.html,Official ISO record; current 2023 edition.,2026-10-24
+ISO/IEC/IEEE 12207:2026,https://www.iso.org/standard/90219.html,Official ISO record; 2026 edition published and 2017 withdrawn.,2026-10-24
+ISO/IEC/IEEE 24748-1:2024,https://www.iso.org/standard/84709.html,Official ISO record.,2026-10-24
+ISO/IEC/IEEE 24748-4:2026,https://www.iso.org/standard/87797.html,Official ISO record.,2026-10-24
+ISO/IEC/IEEE 24748-7:2026,https://www.iso.org/standard/90139.html,Official ISO record.,2026-10-24
+ISO/IEC/IEEE 24748-8:2026,https://www.iso.org/standard/91563.html,Official ISO record.,2026-10-24
+ISO/IEC/IEEE 24748-10:2026,https://www.iso.org/standard/90086.html,Official ISO record.,2026-10-24
+ISO/IEC/IEEE 42010:2022,https://www.iso.org/standard/74393.html,Official ISO record.,2026-10-24
+ISO/IEC/IEEE 29148:2018,https://committee.iso.org/standard/72089.html,Official ISO/IEC committee record; DIS successor is under development.,2026-10-24
+ISO/IEC 25010:2023,https://www.iso.org/standard/78176.html,Official ISO record.,2026-10-24
+W3C RDF 1.2,https://www.w3.org/TR/rdf12-concepts/,W3C specification snapshot.,2026-10-24
+W3C PROV-O,https://www.w3.org/TR/prov-o/,W3C Recommendation.,2026-10-24
+OMG BPMN/CMMN/DMN,https://www.omg.org/spec/category/business-modeling/About-business-modeling/,OMG official specification catalogue.,2026-10-24
+The Open Group TOGAF,https://publications.opengroup.org/standards/togaf,Official TOGAF publication catalogue.,2026-10-24
+The Open Group ArchiMate,https://www.opengroup.org/certifications/archimate,Official ArchiMate information.,2026-10-24
+CCSDS OAIS,https://ccsds.org/Pubs/650x0m3.pdf,"Current CCSDS OAIS Recommended Practice, 2024.",2026-10-24
+NIST CSF 2.0,https://www.nist.gov/cyberframework,NIST official framework page.,2026-10-24
+NIST AI RMF,https://www.nist.gov/itl/ai-risk-management-framework,NIST official AI RMF page.,2026-10-24
+ISO/IEC 42001:2023,https://www.iso.org/standard/81230.html,Official ISO record.,2026-10-24
+ISO/IEC 27001/27002,https://www.iso.org/standard/iso-iec-27000-family/,Official ISO family page.,2026-10-24
+OpenAPI 3.2.1,https://spec.openapis.org/oas/v3.2.1.html,Official OpenAPI specification.,2026-10-24
+AsyncAPI 3.0.0,https://www.asyncapi.com/docs/reference/specification/v3.0.0,Official AsyncAPI specification.,2026-10-24
+CycloneDX 1.7,https://cyclonedx.org/specification/overview/,Official CycloneDX specification page.,2026-10-24
+SLSA 1.2,https://slsa.dev/spec/v1.2/,Current approved SLSA specification.,2026-10-24
+in-toto,https://in-toto.io/docs/specs/,Official in-toto specification catalogue.,2026-10-24
+RO-Crate,https://www.researchobject.org/ro-crate/specification.html,Current RO-Crate specification page.,2026-10-24
+NISO JATS 1.4,https://www.niso.org/standards-committees/jats,Official NISO standard page.,2026-10-24
+ISO 14971:2019,https://www.iso.org/standard/72704.html,Official ISO medical-device risk standard record.,2026-10-24
+ISO 26262,https://www.iso.org/publication/PUB200262.html,Official ISO standards package.,2026-10-24
+ISO 18497-1:2024,https://www.iso.org/standard/82684.html,Official ISO agricultural autonomy standard record.,2026-10-24
+ICAO SARPs,https://www.icao.int/safety-management/standards-and-recommended-practices-sarps,Official ICAO SARPs page.,2026-10-24
+IMO conventions/codes,https://www.imo.org/en/ourwork/iiis/pages/survey-verification-certification.aspx,"Official IMO survey, verification and certification requirements page.",2026-10-24

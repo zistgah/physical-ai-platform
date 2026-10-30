@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:manufacturing:backend-request:1",
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks. Licensed under GPL-3.0-only.",
+  "title": "Manufacturing backend request",
+  "type": "object",
+  "required": [
+    "protocol",
+    "requestId",
+    "capability",
+    "operation",
+    "executionClass",
+    "metadata",
+    "payload"
+  ],
+  "properties": {
+    "protocol": {
+      "const": "ayeai.manufacturing.backend/v1"
+    },
+    "requestId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "executionClass": {
+      "enum": [
+        "planning",
+        "simulation",
+        "enterprise-integration",
+        "physical-actuation"
+      ]
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:manufacturing:multi-order-plan-input:1",
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks.",
+  "title": "Manufacturing multi-order planning input",
+  "type": "object",
+  "required": [
+    "orders",
+    "stations"
+  ],
+  "properties": {
+    "orders": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "order",
+          "quality"
+        ],
+        "properties": {
+          "order": {
+            "type": "object",
+            "required": [
+              "id",
+              "quantity",
+              "routing"
+            ]
+          },
+          "quality": {
+            "type": "object",
+            "required": [
+              "status",
+              "exportStatus"
+            ]
+          },
+          "materials": {
+            "type": "array"
+          },
+          "priority": {
+            "type": "number"
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "stations": {
+      "type": "array",
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

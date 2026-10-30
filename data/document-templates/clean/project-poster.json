@@ -1,0 +1,46 @@
+{
+  "template_id": "communication.project_poster",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Research / Project Poster and Public Technical Brief",
+  "purpose": "Communicate a project or research result visually while preserving evidence status and technical accuracy.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "headline",
+      "title": "Title and Authors",
+      "required": true
+    },
+    {
+      "id": "problem",
+      "title": "Problem and Motivation",
+      "required": true
+    },
+    {
+      "id": "objective",
+      "title": "Objective and Contribution",
+      "required": true
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture / Method",
+      "required": true
+    },
+    {
+      "id": "evidence",
+      "title": "Results / Current Status",
+      "required": true
+    },
+    {
+      "id": "impact",
+      "title": "Implications and Next Steps",
+      "required": true
+    },
+    {
+      "id": "sources",
+      "title": "References and Acknowledgements",
+      "required": true
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

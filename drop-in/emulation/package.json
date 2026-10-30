@@ -1,0 +1,20 @@
+{
+  "name": "physical-ai-emulation-drop-in",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=20"
+  },
+  "papDeployment": "browser-only; Node is used only for package verification, never for platform runtime",
+  "scripts": {
+    "test": "node test.mjs && node sample-test.mjs && node browser-contract-test.mjs && node mutation-test.mjs",
+    "test:unit": "node test.mjs",
+    "test:samples": "node sample-test.mjs",
+    "test:spine": "node spine-integration-test.mjs",
+    "test:browser-contract": "node browser-contract-test.mjs",
+    "test:mutation": "node mutation-test.mjs"
+  },
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary."
+}

@@ -1,0 +1,3 @@
+# Optional. Install a JAX build compatible with the selected Colab runtime.
+# GPU-specific installation varies by CUDA/runtime version; follow current JAX docs.
+jax>=0.4.25

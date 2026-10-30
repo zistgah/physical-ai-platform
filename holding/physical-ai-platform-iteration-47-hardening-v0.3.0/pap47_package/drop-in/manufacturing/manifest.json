@@ -1,0 +1,17 @@
+{
+  "packageId": "pap.drop-in.manufacturing",
+  "version": "0.3.0",
+  "apiVersion": "1.0.0",
+  "entry": "module.js",
+  "tests": [
+    "test.mjs"
+  ],
+  "integrationStatus": "DROP_IN_NOT_REGISTERED",
+  "runtime": "ESM; no external dependencies",
+  "license": "GPL-3.0-only",
+  "canonicalKernelChanges": false,
+  "acceptanceScriptChanges": false,
+  "failureSemantics": "HOLD on invalid, missing, unverified or out-of-bound inputs",
+  "qualification": "Finite-capacity operation routing",
+  "copyright": "\u00a9 1993-2026 Abhishek Choudhary. All rights reserved."
+}

@@ -1,0 +1,52 @@
+{
+  "template_id": "communication.project_poster",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Research / Project Poster and Public Technical Brief",
+  "purpose": "Communicate a project or research result visually while preserving evidence status and technical accuracy.",
+  "guide_mode": true,
+  "sections": [
+    {
+      "id": "headline",
+      "title": "Title and Authors",
+      "required": true,
+      "instruction": "Specific title, authors, affiliations, project ID, date and contact/QR destination."
+    },
+    {
+      "id": "problem",
+      "title": "Problem and Motivation",
+      "required": true,
+      "instruction": "One concise problem statement with source or project need."
+    },
+    {
+      "id": "objective",
+      "title": "Objective and Contribution",
+      "required": true,
+      "instruction": "What is being investigated or built, and what contribution is claimed."
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture / Method",
+      "required": true,
+      "instruction": "Use a readable system diagram with labels, units, legend and version."
+    },
+    {
+      "id": "evidence",
+      "title": "Results / Current Status",
+      "required": true,
+      "instruction": "Show measured, simulated, planned and placeholder results separately. Never imply a prototype exists if only simulated."
+    },
+    {
+      "id": "impact",
+      "title": "Implications and Next Steps",
+      "required": true,
+      "instruction": "Bounded implications, limitations, next milestones and dependencies."
+    },
+    {
+      "id": "sources",
+      "title": "References and Acknowledgements",
+      "required": true,
+      "instruction": "Cite key sources and funders; obtain permission for third-party images/logos."
+    }
+  ]
+}

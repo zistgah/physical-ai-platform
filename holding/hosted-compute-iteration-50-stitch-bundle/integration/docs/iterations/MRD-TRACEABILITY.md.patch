@@ -1,0 +1,14 @@
+--- a/docs/iterations/MRD-TRACEABILITY.md
++++ b/docs/iterations/MRD-TRACEABILITY.md
+@@ -62,4 +62,9 @@
+ 
+ | 4 | Content-addressed identity | content-address.js | contentAddress | PRESENT |
+ 
+-| 10 | Cockpit states | cockpit-machine.js | advance | PRESENT |
+\ No newline at end of file
++| 10 | Cockpit states | cockpit-machine.js | advance | PRESENT |
++
++| 5 | Hosted numerical compute plan/result contract | drop-in/hosted-compute/module.js | createComputePlan / validateComputeResultAsync | PASS (Iteration 50 package conformance) |
++| 5 | Hosted solver backend discovery | drop-in/hosted-compute/module.js | listComputeBackends | PASS (22 catalog entries and filter tests) |
++| 5 | Notebook numerical validation | notebooks/PAP_Hosted_Compute_Backends.ipynb | SciPy/PyTorch/JAX manufactured-solution Poisson | PASS (local CPU execution; GPU/TPU unverified) |
++| 13 | Browser-hosted compute result integrity | drop-in/hosted-compute/module.js | verifyComputeResultDigest | PASS (detached SHA-256 integration test) |

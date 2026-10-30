@@ -1,0 +1,91 @@
+{
+  "template_id": "engineering.technical_specification",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Technical Specification / System Design Report",
+  "purpose": "Define what the system is, must do, how it is structured, how interfaces behave and how conformance will be demonstrated.",
+  "guide_mode": false,
+  "sections": [
+    {
+      "id": "document_control",
+      "title": "Document Control and Configuration",
+      "required": true
+    },
+    {
+      "id": "scope",
+      "title": "Scope: Purpose and System Boundary",
+      "required": true
+    },
+    {
+      "id": "references",
+      "title": "Applicable and Reference Documents",
+      "required": true
+    },
+    {
+      "id": "context",
+      "title": "Operational Concept and Use Cases",
+      "required": true
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements",
+      "required": true
+    },
+    {
+      "id": "architecture",
+      "title": "System Architecture",
+      "required": true
+    },
+    {
+      "id": "interfaces",
+      "title": "Interfaces and Contracts",
+      "required": true
+    },
+    {
+      "id": "behavior",
+      "title": "Functional and State Behavior",
+      "required": true
+    },
+    {
+      "id": "performance",
+      "title": "Performance and Capacity",
+      "required": true
+    },
+    {
+      "id": "safety",
+      "title": "Safety and Security Architecture",
+      "required": true
+    },
+    {
+      "id": "physical",
+      "title": "Physical Design and Materials",
+      "required": true
+    },
+    {
+      "id": "software",
+      "title": "Software: Compute and Data Architecture",
+      "required": true
+    },
+    {
+      "id": "verification",
+      "title": "Verification and Validation Strategy",
+      "required": true
+    },
+    {
+      "id": "manufacturing",
+      "title": "Manufacturing and Supportability",
+      "required": true
+    },
+    {
+      "id": "compliance",
+      "title": "Standards and Regulatory Applicability",
+      "required": true
+    },
+    {
+      "id": "appendices",
+      "title": "Appendices",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

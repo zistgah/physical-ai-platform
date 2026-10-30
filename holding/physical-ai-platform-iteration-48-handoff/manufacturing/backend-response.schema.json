@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:manufacturing:backend-response:1",
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks. Licensed under GPL-3.0-only.",
+  "title": "Manufacturing backend response",
+  "type": "object",
+  "required": [
+    "protocol",
+    "requestId",
+    "backendId",
+    "backendVersion",
+    "status",
+    "diagnostics"
+  ],
+  "properties": {
+    "protocol": {
+      "const": "ayeai.manufacturing.backend/v1"
+    },
+    "requestId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "backendId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "backendVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "SUCCEEDED",
+        "INFEASIBLE",
+        "UNKNOWN",
+        "INVALID",
+        "FAILED",
+        "UNAVAILABLE"
+      ]
+    },
+    "result": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "diagnostics": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

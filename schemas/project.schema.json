@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://physical-ai-platform.example/schemas/project.schema.json",
+  "title": "Physical AI Platform Project Serialization (.pap.json)",
+  "description": "Canonical project package. Distinct from SIR. Iteration 02.",
+  "type": "object",
+  "required": ["formatVersion", "projectIdentity", "metadata", "graph"],
+  "properties": {
+    "formatVersion": { "type": "string", "const": "1.0.0" },
+    "projectIdentity": {
+      "type": "object",
+      "required": ["id", "name", "version"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "version": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "exportedAt": { "type": "string" },
+        "platform": { "type": "string" },
+        "kind": { "const": "pap" }
+      }
+    },
+    "graph": {
+      "type": "object",
+      "required": ["entities", "relations"],
+      "properties": {
+        "entities": {
+          "type": "array",
+          "items": { "type": "object", "required": ["id", "type"] }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "relation", "target"],
+            "properties": {
+              "source": { "type": "string" },
+              "relation": { "type": "string" },
+              "target": { "type": "string" },
+              "metadata": { "type": "object" }
+            }
+          }
+        }
+      }
+    },
+    "configurations": { "type": "array" },
+    "requirements": { "type": "array" },
+    "evidence": { "type": "array" },
+    "provenance": { "type": "array" },
+    "artifacts": { "type": "array" }
+  },
+  "additionalProperties": true
+}

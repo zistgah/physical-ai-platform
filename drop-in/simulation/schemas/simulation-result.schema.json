@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:schemas:simulation-result.schema.json",
+  "title": "Engine-neutral simulation result envelope",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "outcome",
+        "reason"
+      ],
+      "properties": {
+        "outcome": {
+          "const": "HOLD"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    {
+      "type": "object",
+      "required": [
+        "outcome",
+        "bodies",
+        "verification"
+      ],
+      "properties": {
+        "outcome": {
+          "const": "OK"
+        },
+        "bodies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "x",
+              "y",
+              "vx",
+              "vy",
+              "angle",
+              "omega"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "vx": {
+                "type": "number"
+              },
+              "vy": {
+                "type": "number"
+              },
+              "angle": {
+                "type": "number"
+              },
+              "omega": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "backend": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "adapterVersion": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": true
+        },
+        "verification": {
+          "type": "object",
+          "required": [
+            "status",
+            "physicalVerification"
+          ],
+          "properties": {
+            "status": {
+              "const": "SIMULATED"
+            },
+            "physicalVerification": {
+              "const": false
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  ]
+}

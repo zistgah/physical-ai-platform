@@ -1,0 +1,150 @@
+{
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "license": "GPL-3.0-only",
+  "sourcing": {
+    "outcome": "OK",
+    "mode": "CONSTRAINED_SOURCING_LP",
+    "solver": "SciPy HiGHS",
+    "backend": "SCIPY_HIGHS",
+    "objective_value": 25080.0,
+    "currency": "INR",
+    "allocations": [
+      {
+        "offer_id": "S1-SERVO",
+        "supplier_id": "S1",
+        "part": "SERVO-24V",
+        "quantity": 8.0,
+        "unit_cost": 1200,
+        "lead_days": 3,
+        "carbon_kg": 2.1,
+        "extended_cost": 9600.0,
+        "currency": "INR"
+      },
+      {
+        "offer_id": "S2-SERVO",
+        "supplier_id": "S2",
+        "part": "SERVO-24V",
+        "quantity": 4.0,
+        "unit_cost": 1280,
+        "lead_days": 5,
+        "carbon_kg": 1.7,
+        "extended_cost": 5120.0,
+        "currency": "INR"
+      },
+      {
+        "offer_id": "S1-MOTOR",
+        "supplier_id": "S1",
+        "part": "MOTOR-DC",
+        "quantity": 4.0,
+        "unit_cost": 850,
+        "lead_days": 4,
+        "carbon_kg": 1.8,
+        "extended_cost": 3400.0,
+        "currency": "INR"
+      },
+      {
+        "offer_id": "S2-MOTOR",
+        "supplier_id": "S2",
+        "part": "MOTOR-DC",
+        "quantity": 4.0,
+        "unit_cost": 920,
+        "lead_days": 3,
+        "carbon_kg": 1.5,
+        "extended_cost": 3680.0,
+        "currency": "INR"
+      }
+    ],
+    "excluded_offers": [
+      {
+        "offer_id": "S3-SERVO",
+        "reason": "SUPPLIER_NOT_APPROVED"
+      }
+    ],
+    "total_quantity": 20.0,
+    "total_cost": 21800.0,
+    "total_carbon_kg": 36.8,
+    "commitment": "OPTIMIZED_PLAN_NOT_PURCHASED",
+    "limitations": [
+      "Deterministic LP, not stochastic multi-echelon inventory optimization",
+      "No procurement, reservation, customs filing or dispatch is executed",
+      "Weights encode trade-offs; use explicit policy approval before acting"
+    ]
+  },
+  "network_resilience": {
+    "outcome": "OK",
+    "mode": "NETWORKX_RESILIENCE",
+    "vertex_disjoint_path_count": 1,
+    "paths": [
+      [
+        "SUP-A",
+        "RAW-ALLOY",
+        "MACHINE-SITE",
+        "PART"
+      ]
+    ],
+    "minimum_node_cut": [
+      "MACHINE-SITE"
+    ],
+    "articulation_points": [
+      "MACHINE-SITE",
+      "RAW-ALLOY"
+    ],
+    "note": "Node-disjoint paths count independence only at the supplied graph granularity. Model common raw materials, process sites, ownership and jurisdictions as shared nodes."
+  },
+  "monte_carlo": {
+    "outcome": "OK",
+    "mode": "MONTE_CARLO_SERVICE_RISK",
+    "device": "cpu",
+    "iterations": 50000,
+    "seed": 47,
+    "stockout_probability": 0.08778,
+    "mean_fill_rate": 0.9914443349593106,
+    "p05_fill_rate": 0.9348953409356286,
+    "p95_lead_days": 6.636987790292097,
+    "note": "Statistical planning estimate, not a service-level guarantee."
+  },
+  "event_timeline": {
+    "outcome": "OK",
+    "mode": "DISCRETE_EVENT_REPLAY",
+    "timeline": [
+      {
+        "id": "EV-01",
+        "time_days": 0.0,
+        "kind": "PROCUREMENT",
+        "entity_id": "PO-1",
+        "state": "CONFIRMED"
+      },
+      {
+        "id": "EV-02",
+        "time_days": 2.0,
+        "kind": "RECEIPT",
+        "entity_id": "SHIP-1",
+        "state": "RECEIVED"
+      },
+      {
+        "id": "EV-03",
+        "time_days": 2.5,
+        "kind": "KITTING",
+        "entity_id": "KIT-1",
+        "state": "READY"
+      },
+      {
+        "id": "EV-04",
+        "time_days": 4.0,
+        "kind": "DELIVERY",
+        "entity_id": "ORDER-1",
+        "state": "DELIVERED"
+      }
+    ],
+    "makespan_days": 4.0,
+    "event_count": 4,
+    "note": "Deterministic event replay; this does not claim real carrier or warehouse telemetry."
+  },
+  "inventory_policy": {
+    "outcome": "OK",
+    "z": 1.9599639845400536,
+    "safety_stock": 21.47032972460588,
+    "reorder_point": 71.47032972460588,
+    "assumption": "Independent normal demand and lead-time approximation"
+  }
+}

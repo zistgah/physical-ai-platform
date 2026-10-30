@@ -1,0 +1,7 @@
+Command: node tests/acceptance.mjs --no-browser
+Execution limit: 300 seconds
+Result: execution window timed out during the mutation stage. No mutation-stage pass or fail is claimed.
+Separate completed acceptance run: node tests/acceptance.mjs --no-browser --no-mutation
+Result: 63 checks, 55 PASS, 8 SKIP, verdict ACCEPTED.
+Separate browser-enabled run: node tests/acceptance.mjs --no-mutation
+Result: 63 checks, 55 PASS, 7 SKIP, 1 UNVERIFIED. A5 is UNVERIFIED because Playwright is not installed; DOM-stub route checks A2/A4 passed for all 30 routes.

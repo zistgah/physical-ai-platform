@@ -1,0 +1,3 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import { circuitStep } from './module.js';const a=(v,m)=>{if(!v)throw Error(m)};
+const r=circuitStep({netlist:{R:1000,C:1e-6,V:5},steps:10000,dt:1e-5});a(r.outcome==='OK','runs RC transient');a(Math.abs(r.finalVoltage-r.analyticFinalVoltage)<.003,'matches analytical exponential within backward-Euler tolerance');a(r.samples[0].capacitorVoltage>0&&r.finalVoltage<5,'voltage evolves monotonically toward source');a(circuitStep({netlist:{R:0,C:1e-6,V:5}}).outcome==='HOLD','rejects zero resistance');console.log('circuit PASS');

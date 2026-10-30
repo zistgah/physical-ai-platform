@@ -1,0 +1,81 @@
+{
+  "package": "ayeai-physical-ai-simulation-dropin",
+  "version": "3.1.0",
+  "iteration": 47,
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "trademarks": [
+    "AyeAI\u00ae",
+    "AyeAM\u00ae",
+    "AyeCNSe\u00ae"
+  ],
+  "license": "GPL-3.0",
+  "changes": [
+    {
+      "path": "notebooks/simulation-gpu-qualification.ipynb",
+      "change": "Added browser-first Colab notebook with Warp and MuJoCo MJX runtime qualification paths, device detection and evidence export"
+    },
+    {
+      "path": "notebook-check.mjs",
+      "change": "Added notebook structure, provenance, copyright and engine-cell checks"
+    },
+    {
+      "path": "ENGINEERING-ANALYSIS.md",
+      "change": "Consolidated prior-cycle engineering analysis, platform invariants, backend selection and GPU execution boundaries"
+    },
+    {
+      "path": "TEST-COVERAGE-MATRIX.md",
+      "change": "Added requirement and boundary test matrix, with unexecuted GPU/live-runtime items explicit"
+    },
+    {
+      "path": "CODE-REFERENCE.md",
+      "change": "Documented produced source files and comment requirements"
+    },
+    {
+      "path": "BROWSER-COLAB.md",
+      "change": "Added browser-only Colab instructions and honest direct-link policy"
+    },
+    {
+      "path": "GROK-HANDOFF.md",
+      "change": "Updated integration handoff for v3.1.0 and separate uncertainty package"
+    },
+    {
+      "path": "backends/catalog.json",
+      "change": "Added Warp and MJX notebook-only research profiles; no direct driver claim"
+    },
+    {
+      "path": "README.md",
+      "change": "Updated version, browser workflow, backend status and documentation index"
+    },
+    {
+      "path": "manifest.json",
+      "change": "Added notebook entrypoint and qualification state"
+    },
+    {
+      "path": "package.json",
+      "change": "Bumped to 3.1.0 and added notebook metadata validation"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "change": "Added third-party license and dependency notice review"
+    },
+    {
+      "path": "VALIDATION-REPORT.md",
+      "change": "Recorded final package, regression and acceptance outcomes with open qualification gates"
+    },
+    {
+      "path": "CLOSURE-STATEMENT.md",
+      "change": "Separated closed package scope from unverified runtime and physical validation gates"
+    }
+  ],
+  "unchanged": [
+    "module.js",
+    "platform-adapter.js",
+    "backends/registry.js",
+    "backends/rapier2d.js",
+    "backends/rapier2d-session.js",
+    "platform-rapier-adapter.js",
+    "canonical kernel",
+    "acceptance script"
+  ],
+  "separate_dropin": "../uncertainty/"
+}

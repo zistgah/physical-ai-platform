@@ -1,0 +1,49 @@
+template_id: research.technical_report
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Research / Technical Report
+purpose: Record a research programme, engineering investigation or milestone with enough context for internal
+  review, external dissemination or later paper conversion.
+guide_mode: false
+sections:
+- id: cover
+  title: Cover and Document Control
+  required: true
+- id: executive_summary
+  title: Executive Summary
+  required: true
+- id: context
+  title: Background and Need
+  required: true
+- id: objectives
+  title: 'Objectives: Scope and Success Criteria'
+  required: true
+- id: requirements
+  title: Requirements and Traceability
+  required: true
+- id: method
+  title: Methodology and Work Performed
+  required: true
+- id: system
+  title: System / Technical Description
+  required: true
+- id: results
+  title: Results and Evidence
+  required: true
+- id: analysis
+  title: Analysis and Interpretation
+  required: true
+- id: risks
+  title: 'Risks: Safety and Compliance'
+  required: true
+- id: resources
+  title: Resources and Cost
+  required: true
+- id: conclusions
+  title: Conclusions and Recommendations
+  required: true
+- id: appendices
+  title: Appendices
+  required: false
+description: Production template. Content is populated from the canonical project model or reviewed author
+  input.

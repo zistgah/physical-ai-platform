@@ -1,0 +1,68 @@
+{
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved.",
+  "release": "CFD 1.3.0 package bundle",
+  "baseline": "Iteration 47 plus CFD package 1.2.0",
+  "added": [
+    "cfd/BUILD-ANALYSIS.md",
+    "cfd/ARCHITECTURE.md",
+    "cfd/BACKEND-INTEGRATION.md",
+    "cfd/COPYRIGHT-AND-PROVENANCE.md",
+    "cfd/TEST-PLAN.md",
+    "cfd/TEST-MATRIX.md",
+    "cfd/STITCH-INSTRUCTIONS.md",
+    "cfd/manifest.json",
+    "cfd/backend-catalogue/manifest.json",
+    "cfd/backend-catalogue/README.md",
+    "cfd/notebooks/CFD_Backend_Colab.ipynb",
+    "cfd/notebooks/README.md",
+    "cfd/integration/backend-job.js",
+    "cfd/tests/backend-job.test.mjs",
+    "cfd/tests/notebook-structure.test.mjs",
+    "extensions/scientific-backend-orchestration/manifest.json",
+    "extensions/scientific-backend-orchestration/module.js",
+    "extensions/scientific-backend-orchestration/README.md",
+    "extensions/scientific-backend-orchestration/STITCH-INSTRUCTIONS.md",
+    "extensions/scientific-backend-orchestration/tests/test.mjs",
+    "cfd/tests/catalogue.test.mjs",
+    "cfd/tests/package-integrity.test.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "modified": [
+    "cfd/MARKET-COMPARISON.md",
+    "cfd/HANDOFF.md",
+    "cfd/TEST-RESULTS.md",
+    "cfd/TRACEABILITY.md",
+    "cfd/EXPLAINER.md",
+    "extensions/scientific-backend-orchestration/module.js",
+    "extensions/scientific-backend-orchestration/tests/test.mjs",
+    "extensions/scientific-backend-orchestration/README.md",
+    "extensions/scientific-backend-orchestration/STITCH-INSTRUCTIONS.md"
+  ],
+  "preserved": [
+    "cfd/module.js core numerical implementation",
+    "cfd/test.mjs original tests",
+    "cfd/samples/*.json",
+    "cfd/integration/iteration-47-conformance.patch"
+  ],
+  "notChanged": [
+    "canonical kernel",
+    "platform acceptance script",
+    "unrelated drop-in modules"
+  ],
+  "separateNewPackage": {
+    "id": "scientific-backend-orchestration",
+    "reason": "Generic backend discovery and execution lifecycle is a cross-domain capability and must not be embedded inside CFD.",
+    "integrationStatus": "PACKAGE_TESTED_NOT_REGISTERED_IN_PLATFORM"
+  },
+  "externalBackendStatus": "CATALOGUED_NOT_EXECUTION_TESTED",
+  "colabStatus": "NOTEBOOK_SOURCE_READY_NOT_EXECUTED_IN_COLAB",
+  "platformIntegrationStatus": "NOT_CLAIMED",
+  "platformPatchApplied": {
+    "path": "tools/conformance-test-iter47.mjs",
+    "scope": "CFD BIBO fixture only: replaces placeholder-valid one-cell/missing-viscosity expectations with valid physical inputs and residual/convergence assertions.",
+    "why": "The prior conformance fixture encoded the placeholder implementation and is incompatible with a real solver.",
+    "canonicalKernelChanged": false,
+    "acceptanceScriptChanged": false
+  }
+}

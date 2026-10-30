@@ -1,0 +1,48 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "solid": {
+    "id": "sample-pocket-01",
+    "kind": "rectangular-pocket",
+    "units": "mm",
+    "dimensions": { "x": 40, "y": 30, "z": 8 },
+    "cornerRadiusMm": 3,
+    "originMm": { "x": 5, "y": 7 }
+  },
+  "stock": { "id": "stock-01", "units": "mm", "dimensions": { "x": 60, "y": 50, "z": 20 } },
+  "machine": {
+    "id": "mill-01",
+    "ready": true,
+    "emergencyStopClear": true,
+    "doorClosed": true,
+    "workholdingVerified": true,
+    "maxFeedMmMin": 3000,
+    "maxSpindleRpm": 12000,
+    "travelMm": { "x": 500, "y": 400, "z": 300 }
+  },
+  "tool": { "id": "endmill-6", "diameterMm": 6, "maxStepdownMm": 3, "fluteLengthMm": 12 },
+  "process": { "stepdownMm": 2.5, "stepoverMm": 3, "feedMmMin": 600, "spindleRpm": 8000, "safeClearanceMm": 5, "maxSegmentLengthMm": 10 },
+  "material": { "id": "AL6061", "lotId": "LOT-AL-01", "maxCuttingSpeedMMin": 200 },
+  "fixture": { "id": "vise-01", "setupId": "setup-01", "verified": true, "clearanceOutcome": "PASS", "clearanceEvidenceId": "FIX-CLEAR-001" },
+  "surfaceFinish": { "maxRaUm": 3.2 },
+  "inspectionPlan": { "id": "IP-01", "method": "CMM_AND_PROFILOMETER" },
+  "tolerance": { "x": 0.1, "y": 0.1, "z": 0.05, "cornerRadiusMm": 0.05 },
+  "measuredPart": {
+    "units": "mm",
+    "dimensions": { "x": 40.02, "y": 29.98, "z": 8.01 },
+    "cornerRadiusMm": 3.01,
+    "surfaceFinishRaUm": 1.6,
+    "instrument": "CMM-01+PROFILOMETER-01",
+    "calibrationId": "CAL-CMM-2026-001+CAL-PROF-2026-001",
+    "calibrationEvidenceId": "CAL-CERT-001",
+    "calibrationStatus": "VALID",
+    "calibrationValidFrom": "2026-01-01T00:00:00+05:30",
+    "calibrationValidUntil": "2027-01-01T00:00:00+05:30",
+    "evidenceId": "MEAS-0001",
+    "method": "CMM_AND_PROFILOMETER",
+    "measuredAt": "2026-10-30T10:00:00+05:30",
+    "operatorId": "OP-01",
+    "rawEvidenceRef": "evidence://MEAS-0001",
+    "uncertaintyMm": { "x": 0.01, "y": 0.01, "z": 0.005, "cornerRadiusMm": 0.005 },
+    "uncertaintyUm": { "surfaceFinishRaUm": 0.1 }
+  }
+}

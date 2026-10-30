@@ -1,0 +1,69 @@
+template_id: proposal.technical_customer
+template_version: 1.0.0
+schema_version: 1.0.0
+title: Technical Proposal / Customer Proposal / RFP Response
+purpose: Respond to a defined customer need or solicitation with a compliant, technically credible and
+  commercially clear offer.
+guide_mode: true
+sections:
+- id: compliance
+  title: Solicitation Compliance Matrix
+  required: true
+  instruction: Map every RFP/call requirement to response section, evidence, owner and compliance status.
+    Flag exceptions.
+- id: executive
+  title: Executive Summary
+  required: true
+  instruction: Customer need, proposed solution, outcomes, differentiators, price range if authorized
+    and key assumptions.
+- id: understanding
+  title: Understanding of Need
+  required: true
+  instruction: Restate operational context, users, constraints, success criteria and risks for customer
+    confirmation.
+- id: solution
+  title: Proposed Solution
+  required: true
+  instruction: Architecture, scope, functions, components, interfaces, deployment and options.
+- id: requirements
+  title: Requirements Compliance
+  required: true
+  instruction: 'Requirement-by-requirement response: compliant, partial, deviation, not applicable, clarification
+    required.'
+- id: implementation
+  title: Delivery and Implementation Plan
+  required: true
+  instruction: Work packages, schedule, responsibilities, dependencies, acceptance gates, transition and
+    training.
+- id: verification
+  title: 'Verification: Validation and Acceptance'
+  required: true
+  instruction: Test levels, acceptance criteria, evidence, customer witness points, defect handling and
+    handover.
+- id: operations
+  title: 'Operations: Support and Service'
+  required: true
+  instruction: Availability, maintenance, response times, spares, upgrades, cybersecurity and end-of-life.
+- id: security
+  title: 'Safety: Security: Privacy and Compliance'
+  required: true
+  instruction: Applicable requirements, data handling, access, hazards, regulatory profile and responsibility
+    split.
+- id: team
+  title: Team and Governance
+  required: true
+  instruction: Named roles only where confirmed; escalation, customer interfaces and decision rights.
+- id: commercial
+  title: Commercial Offer
+  required: true
+  instruction: Pricing structure, assumptions, taxes, exclusions, validity, payment milestones, warranties
+    and change control.
+- id: risks
+  title: 'Risks: Assumptions and Dependencies'
+  required: true
+  instruction: Customer dependencies, access, data, facilities, approvals, third parties and mitigations.
+- id: appendices
+  title: Appendices
+  required: false
+  instruction: CVs, architecture drawings, compliance matrix, schedule, detailed BOM, certificates and
+    terms.

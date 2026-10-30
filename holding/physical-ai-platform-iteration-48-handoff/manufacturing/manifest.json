@@ -1,0 +1,49 @@
+{
+  "id": "ayeai.physical-ai.manufacturing",
+  "name": "Manufacturing Planning and Backend Orchestration",
+  "version": "1.2.0",
+  "license": "GPL-3.0-only",
+  "entrypoints": {
+    "native": "./module.js",
+    "backends": "./backend-adapters.js",
+    "nodeTransport": "./node-worker-transport.js",
+    "frappeTransport": "createFrappeRestTransport from ./backend-adapters.js",
+    "colabNotebook": "./notebooks/manufacturing_backend_lab.ipynb"
+  },
+  "protocol": "ayeai.manufacturing.backend/v1",
+  "dependencies": {
+    "required": [],
+    "optional": {
+      "google-or-tools": "ortools Python package",
+      "highs": "highspy and numpy, or scipy and numpy (SciPy's HiGHS-backed milp fallback)",
+      "simpy": "simpy Python package",
+      "timefold-solver": "separately deployed Java/Kotlin service",
+      "frepple-community": "separately deployed frePPLe service",
+      "freecad-opencamlib": "FreeCAD and OpenCAMLib runtime",
+      "erpnext": "separately deployed ERPNext/Frappe instance",
+      "linuxcnc": "separately deployed LinuxCNC machine gateway",
+      "scipy-highs-jobshop": "scipy and numpy Python packages (SciPy milp with HiGHS backend)"
+    }
+  },
+  "canonicalIntegration": {
+    "kernelOwner": "host platform",
+    "graphMutation": false,
+    "capacityReservation": false,
+    "physicalActuation": false
+  },
+  "compatibility": {
+    "requiresNode": ">=20 for node-worker-transport",
+    "browserBundle": "backend-adapters.js only; node-worker-transport.js is Node-only",
+    "existingNativeAPI": "route, planOrders, simulateManufacturing preserved"
+  },
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks.",
+  "documentation": [
+    "BUILD-ANALYSIS.md",
+    "API-REFERENCE.md",
+    "BACKENDS.md",
+    "TEST-MATRIX.md",
+    "COLAB-GUIDE.md",
+    "STITCH-INSTRUCTIONS.md",
+    "VERIFICATION.md"
+  ]
+}

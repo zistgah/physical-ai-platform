@@ -1,0 +1,59 @@
+{
+  "id": "measurement-lab-01",
+  "title": "Measurement uncertainty notebook",
+  "cells": [
+    {
+      "id": "intro",
+      "type": "markdown",
+      "content": "Measure one object repeatedly. Record values and units."
+    },
+    {
+      "id": "table",
+      "type": "dataset",
+      "content": {
+        "columns": [
+          "trial",
+          "length_mm"
+        ],
+        "rows": [
+          [
+            1,
+            120.1
+          ],
+          [
+            2,
+            120.0
+          ],
+          [
+            3,
+            120.2
+          ]
+        ]
+      }
+    },
+    {
+      "id": "compute-summary",
+      "type": "code",
+      "adapterId": "pap.education.reference",
+      "operation": "measurement-summary",
+      "inputs": {
+        "values": [
+          120.1,
+          120.0,
+          120.2
+        ],
+        "unit": "mm"
+      }
+    },
+    {
+      "id": "reflect",
+      "type": "question",
+      "content": "What do the spread and instrument resolution tell you?"
+    },
+    {
+      "id": "summary",
+      "type": "reflection",
+      "content": "State a result with unit and an honest uncertainty statement."
+    }
+  ]
+}

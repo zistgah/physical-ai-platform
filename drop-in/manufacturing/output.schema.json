@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:manufacturing:output:1",
+  "title": "Manufacturing route feasibility output",
+  "type": "object",
+  "required": [
+    "outcome",
+    "status",
+    "issues",
+    "blockers",
+    "route",
+    "metrics",
+    "semantics"
+  ],
+  "properties": {
+    "outcome": {
+      "enum": [
+        "OK",
+        "HOLD"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "HOLD"
+      ]
+    },
+    "orderId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issue"
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/issue"
+      }
+    },
+    "warnings": {
+      "type": "array"
+    },
+    "route": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sequence",
+          "stepId",
+          "process",
+          "stationId",
+          "quantity",
+          "requiredMinutes",
+          "capacityMinutes",
+          "projectedBookedMinutes"
+        ]
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "operationCount",
+        "routedOperationCount",
+        "totalRequiredMinutes",
+        "stationCount",
+        "projectedLoads"
+      ]
+    },
+    "semantics": {
+      "type": "object",
+      "required": [
+        "planningOnly",
+        "capacityReserved",
+        "workOrderExecuted",
+        "physicalManufactureProven",
+        "canonicalGraphMutated"
+      ],
+      "properties": {
+        "planningOnly": {
+          "const": true
+        },
+        "capacityReserved": {
+          "const": false
+        },
+        "workOrderExecuted": {
+          "const": false
+        },
+        "physicalManufactureProven": {
+          "const": false
+        },
+        "canonicalGraphMutated": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$defs": {
+    "issue": {
+      "type": "object",
+      "required": [
+        "code",
+        "path",
+        "message",
+        "severity"
+      ],
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "severity": {
+          "const": "BLOCK"
+        }
+      }
+    }
+  },
+  "$comment": "Copyright \u00a9 1993-2026 Abhishek Choudhary. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks."
+}

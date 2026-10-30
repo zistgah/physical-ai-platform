@@ -1,0 +1,99 @@
+{
+  "package": "pap.drop-in.cad",
+  "module": "cadClip",
+  "version": "1.2.0",
+  "iteration_baseline": 47,
+  "license": "GPL-3.0-only",
+  "purpose": "Closed-solid intersection tessellation through replaceable geometry backends",
+  "entrypoints": {
+    "browser": "./module.js",
+    "node_backend_registry": "./backends/registry.mjs"
+  },
+  "operations": [
+    "INTERSECTION"
+  ],
+  "input": {
+    "shape": {
+      "vertices": [
+        {
+          "x": "finite number",
+          "y": "finite number",
+          "z": "finite number"
+        }
+      ],
+      "faces": [
+        [
+          "triangle vertex indices"
+        ]
+      ]
+    },
+    "preconditions": [
+      "closed shell",
+      "finite coordinates",
+      "valid triangle indices",
+      "non-degenerate faces",
+      "volume-bounding geometry for native backends"
+    ],
+    "units": "caller-defined consistent linear unit; tolerance and deflection use the same unit"
+  },
+  "output": {
+    "success": [
+      "outcome=OK",
+      "operation=INTERSECTION",
+      "solid",
+      "mesh",
+      "volume",
+      "topology",
+      "engine"
+    ],
+    "failure": "outcome=HOLD with reason and optional code"
+  },
+  "backends": [
+    {
+      "id": "cgal-epeck",
+      "kind": "mesh",
+      "optional": true,
+      "source": "backends/cgal_backend.cpp",
+      "verification": "source supplied; not compiled in this environment"
+    },
+    {
+      "id": "occt",
+      "kind": "brep",
+      "optional": true,
+      "source": "backends/occt_backend.py",
+      "verification": "executed and tested"
+    },
+    {
+      "id": "manifold3d",
+      "kind": "mesh",
+      "optional": true,
+      "source": "backends/manifold_backend.py",
+      "verification": "adapter supplied; dependency unavailable in this environment"
+    },
+    {
+      "id": "javascript-convex",
+      "kind": "browser",
+      "optional": false,
+      "source": "module.js",
+      "verification": "executed and tested"
+    }
+  ],
+  "compatibility": {
+    "kernel_modified": false,
+    "acceptance_script_modified": false,
+    "canonical_data_model_duplicated": false,
+    "platform_registration_performed": false
+  },
+  "documentation": {
+    "engineering_dossier": "./CAD-ENGINEERING-DOSSIER.md",
+    "test_matrix": "./TEST-MATRIX.md",
+    "colab_notebook": "./COLAB_CAD_WORKBENCH.ipynb",
+    "colab_strategy": "./COLAB-GPU-STRATEGY.md",
+    "licensing": "./COPYRIGHT-AND-LICENSING.md"
+  },
+  "execution": {
+    "product_runtime": "browser-only",
+    "notebook_runtime": "Google Colab remote browser runtime",
+    "gpu_role": "optional auxiliary acceleration; not assumed to accelerate OCCT/CGAL/Manifold Boolean operations"
+  }
+}

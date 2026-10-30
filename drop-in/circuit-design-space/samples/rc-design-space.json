@@ -1,0 +1,22 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "schema": "circuit-design-space/rc-grid/1",
+  "input": {
+    "resistances_ohm": [470, 1000, 2200],
+    "capacitances_f": [1e-6, 2.2e-6],
+    "times_s": [0.0001, 0.0005, 0.001, 0.002, 0.005],
+    "step_v": 5.0,
+    "initial_v": 0.0,
+    "backend": "numpy",
+    "constraints": {
+      "max_tau_s": 0.003,
+      "max_initial_current_a": 0.02,
+      "max_energy_j": 0.0001
+    }
+  },
+  "expected": {
+    "candidate_count": 6,
+    "first_candidate_tau_s": 0.00047,
+    "first_candidate_initial_current_a": 0.010638297872340425
+  }
+}

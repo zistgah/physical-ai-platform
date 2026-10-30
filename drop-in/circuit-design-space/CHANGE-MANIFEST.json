@@ -1,0 +1,24 @@
+{
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "packageVersion": "1.0.0",
+  "classification": "additional-module-not-in-iteration-47-handoff",
+  "added": [
+    "module.py",
+    "test_module.py",
+    "README.md",
+    "EXPLAINER.md",
+    "STITCH-INSTRUCTIONS.md",
+    "TEST-COVERAGE.md",
+    "COLAB.md",
+    "LICENSES.md",
+    "requirements.txt",
+    "requirements-optional-jax.txt",
+    "manifest.json",
+    "notebooks/circuit-design-space-lab.ipynb",
+    "samples/rlc-damping-regimes.json"
+  ],
+  "kernelModified": false,
+  "acceptanceScriptModified": false,
+  "otherDropInsModified": false,
+  "integration": "Separate optional workbench capability. Requires Grok to register a typed adapter against canonical component IDs and unit-bearing parameters."
+}

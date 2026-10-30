@@ -1,0 +1,152 @@
+PASS country directory includes ISO 3166 registry entries without claiming curriculum ingestion
+PASS India directory includes 28 states and 8 union territories
+PASS every Indian state and UT has unique ISO subdivision ID and board-discovery target
+PASS global curriculum ingestion target exists for every country/territory without false coverage
+PASS ISO 3166-2 subdivision discovery directory is broad and does not imply board coverage
+PASS levelled examples cover all eleven learning bands without official alignment claims
+PASS subnational discovery directory contains 5046 unique subdivision targets and no curriculum claims
+PASS subnational directory explicitly avoids assuming each subdivision has a separate board
+PASS levelled examples cover all 11 learner bands without official board alignment
+PASS India subdivision identifiers match the current sourced factfile for key changed states
+PASS global reference frameworks include ISCED and India NCF
+PASS curriculum source cannot become active without source digest
+PASS curriculum source rejects unregistered jurisdiction
+PASS curriculum source requires rights basis and scope
+PASS discovered source can be registered but not counted as active coverage
+PASS ingested source requires SHA-256 digest
+PASS active curriculum source requires independent review metadata
+PASS active curriculum source is versioned and review-backed
+PASS source ID cannot be reused for changed edition digest
+PASS source edition authority and scope cannot be silently changed under same ID
+PASS unknown framework remains HOLD
+PASS reject insecure framework source URL
+PASS reject framework without authority
+PASS framework identifier cannot be silently repurposed at the same version
+PASS reject mapping to unknown framework
+PASS reject accepted mapping without reviewer and review date
+PASS proposed mapping does not become accepted correlation
+PASS accepted mapping requires a verified source edition and extraction
+PASS accepted mapping requires two independent reviewers
+PASS accepted mapping requires reviewer and timestamp
+PASS accepted correlation returns exact reviewed mapping
+PASS accepted mapping identifier cannot be silently repurposed
+PASS rejected mapping is not accepted
+PASS syllabus starter sample builds and topologically orders concepts
+PASS syllabus rejects unknown band
+PASS syllabus rejects empty syllabus
+PASS syllabus rejects duplicate concept IDs
+PASS syllabus rejects prerequisite cycle
+PASS syllabus rejects dangling prerequisite
+PASS framework correlation request without engine holds
+PASS unmapped curriculum standard makes syllabus DRAFT_HOLD
+PASS all intended learner bands are represented
+PASS unregistered teaching role holds
+PASS teacher receives orchestration plan
+PASS parent view is supportive and not grading
+PASS late learner profile avoids age inference and allows accommodations
+PASS notebook rejects empty cells
+PASS notebook rejects duplicate cell IDs
+PASS notebook rejects null or non-object cells without throwing
+PASS notebook enforces cell-count and serialized-size limits
+PASS notebook rejects unknown cell type
+PASS notebook code cell requires explicit adapter
+PASS notebook physical protocol requires supervision and risk assessment
+PASS notebook display-only cells can render without execution adapter
+PASS unavailable notebook runtime returns HOLD
+PASS unsafe unsandboxed notebook adapter is rejected
+PASS adapter self-declaration without host attestation is rejected
+PASS sandboxed adapter can execute a code cell
+PASS physical simulation without supervision returns HOLD
+PASS learning event requires valid timestamp
+PASS duplicate learning event ID is rejected
+PASS mastery progress requires accepted evidence
+PASS mastery without subject-bound evidence reference is rejected
+PASS accepted mastery closes the outcome
+PASS correlation requires explicit cohort scope
+PASS correlation enforces a privacy-preserving minimum cohort size
+PASS correlation reports cohort-scoped descriptive association and no causality
+PASS zero variance correlation returns HOLD
+PASS correlation does not mix observations from other cohorts
+PASS canonical adapter refuses missing project
+PASS canonical adapter publishes draft as Curriculum entity
+PASS package health reports all adapters
+PASS stage progression covers preschool through postdoctoral and late learner
+PASS framework request without any standard references is held as unaligned
+PASS reject non-SHA256 excerpt hashes
+PASS reject standard reference bound to a different concept
+PASS notebook adapter cannot self-assert sandbox status without host verifier
+PASS notebook adapter requires valid host attestation
+PASS physical notebook execution requires supervision, risk and authority references
+PASS physical notebook execution proceeds only with explicit safety context
+PASS notebook execution output limit is enforced
+PASS notebook adapter HOLD is propagated and never marked executed
+PASS explanation engine returns requested source-authored intuitive explanation
+PASS explanation engine returns formal and visual representations
+PASS explanation engine does not invent a missing explanation mode
+PASS explanation mode rejects unsupported type
+PASS test-only LMS repository rolls back mutations when a transaction throws
+PASS measurement notebook computes mean and sample standard deviation
+PASS measurement notebook rejects one sample
+PASS linear notebook recovers exact slope and intercept
+PASS linear notebook rejects singular x data
+PASS first-order control notebook computes a bounded deterministic trajectory
+PASS first-order control rejects excessive step count
+PASS reference runtime rejects unknown operation without eval fallback
+PASS reference measurement computation returns correct sample mean and SD
+PASS reference regression computation returns exact line for exact data
+PASS reference control model rejects nonphysical time constants and excessive steps
+PASS LMS rejects unauthenticated course creation
+PASS LMS rejects course creation by student
+PASS LMS creates a scoped course with explicit outcomes
+PASS LMS rejects duplicate course IDs
+PASS LMS prevents teacher from creating a course outside assigned scope
+PASS LMS rejects out-of-scope course edits
+PASS LMS requires content and outcome references on lessons
+PASS LMS rejects lesson outcomes not declared by course
+PASS LMS adds sequenced lessons before publication
+PASS LMS publishes only complete course structure
+PASS LMS rejects lesson mutation after publication
+PASS LMS rejects self-enrollment into a closed/unpublished course
+PASS LMS allows learner self-enrollment
+PASS LMS prevents learner enrolling another learner
+PASS LMS rejects duplicate enrollment
+PASS LMS creates rubric-based assignment
+PASS LMS rejects invalid rubric points
+PASS LMS rejects duplicate rubric criterion identifiers
+PASS LMS rejects assignment outcome outside course
+PASS LMS rejects enrollment for unknown learner identity
+PASS LMS rejects submission by non-enrolled learner
+PASS LMS accepts enrolled learner submission with artifact reference
+PASS LMS prevents duplicate submission without resubmission policy
+PASS LMS requires every rubric criterion during assessment
+PASS LMS rejects scores above criterion maximum
+PASS LMS accepts complete criterion assessment
+PASS LMS prevents lab assistant from grading
+PASS LMS does not mark mastery from assignment score alone
+PASS LMS requires evidence reference to accept mastery
+PASS LMS refuses mastery when host evidence verifier is absent
+PASS LMS rejects unverified mastery evidence
+PASS LMS accepts host-verified learner- and outcome-bound mastery evidence
+PASS LMS completion requires all declared outcomes
+PASS LMS course completes only after every outcome accepted
+PASS LMS parent cannot view learner progress without explicit consent
+PASS LMS guardian link requires current consent
+PASS LMS guardian link is accepted after consent authority confirms
+PASS LMS parent can view consented progress but cannot grade
+PASS LMS guardian access is withdrawn when consent is revoked
+PASS LMS teacher cannot inspect course outside scope
+PASS LMS records audit events for lifecycle operations
+PASS curriculum ingestion rejects incomplete source edition metadata
+PASS curriculum ingestion registers versioned source edition with digest
+PASS curriculum ingestion rejects duplicate immutable source edition ID
+PASS curriculum extraction requires a registered source
+PASS curriculum extraction stores metadata and outcomes without copyrighted raw text
+PASS curriculum contributor cannot review own extraction
+PASS curriculum reviewer identity must be host-verified
+PASS first independent review is insufficient for verified curriculum content
+PASS same reviewer cannot review one extraction twice
+PASS second independent source review promotes extraction to VERIFIED_CONTENT
+PASS failed review closes revision and requires a new revision
+PASS ingestion coverage report separates registered from verified content
+
+EDUCATION SYLLABUS TESTS: 150 PASS

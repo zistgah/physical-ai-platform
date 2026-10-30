@@ -1,0 +1,45 @@
+{
+  "package": "Physical AI Platform Iteration 47 engineering hardening",
+  "version": "0.3.0",
+  "base": "physical-ai-platform-iteration-47.zip",
+  "scope": "Ten drop-in engineering packages plus targeted business/HIL/fidelity regression patches",
+  "kernelChanged": false,
+  "acceptanceScriptChanged": false,
+  "applicationRoutesChanged": false,
+  "moduleRegistryChanged": false,
+  "dropInPackages": [
+    "cad",
+    "cfd",
+    "circuit",
+    "simulation",
+    "hil",
+    "fabrication",
+    "manufacturing",
+    "prototyping",
+    "logistics",
+    "emulation"
+  ],
+  "patchTargets": [
+    "site/components/core/cost-model.js",
+    "site/components/core/business-engine.js",
+    "site/components/core/business-closure.js",
+    "site/components/simulation/hil-loop.js",
+    "site/components/simulation/hil-realtime.js",
+    "site/components/simulation/hil-transport.js",
+    "site/components/simulation/fidelity-ladder.js",
+    "site/components/simulation/fidelity-levels.js",
+    "site/components/simulation/cad-hil-adapter.js"
+  ],
+  "testResults": {
+    "dropInPackageSuites": "10/10 PASS",
+    "sampleFlows": "10/10 PASS; 8 successful computations and 2 expected HOLD outcomes",
+    "guardrailRegressionSuite": "PASS",
+    "repositoryRegressionSuites": "65/65 PASS",
+    "acceptanceNoMutationNoBrowser": "55 PASS, 8 SKIP",
+    "acceptanceBrowserAttempt": "55 PASS, 7 SKIP, 1 UNVERIFIED because Playwright is not installed",
+    "acceptanceBuiltInMutationStage": "Attempted but timed out while creating/running isolated full-repository mutation copies; not claimed PASS"
+  },
+  "integrationStatus": "DROP_IN_TESTED; PATCHES_TESTED; NOT_UI_INTEGRATED",
+  "license": "GPL-3.0-only",
+  "copyright": "\u00a9 1993-2026 Abhishek Choudhary. All rights reserved."
+}

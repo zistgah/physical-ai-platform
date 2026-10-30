@@ -1,0 +1,92 @@
+{
+  "template_id": "business.pitch_deck",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Pitch Deck",
+  "purpose": "Communicate a business or project opportunity in a short, coherent sequence. The deck is a summary, not a substitute for the underlying plan or diligence.",
+  "guide_mode": false,
+  "output": "pptx",
+  "slides": [
+    {
+      "id": "title",
+      "title": "Title",
+      "required": true
+    },
+    {
+      "id": "problem",
+      "title": "Problem",
+      "required": true
+    },
+    {
+      "id": "customer",
+      "title": "Customer and Use Case",
+      "required": true
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "required": true
+    },
+    {
+      "id": "why_now",
+      "title": "Why Now",
+      "required": false
+    },
+    {
+      "id": "market",
+      "title": "Market",
+      "required": true
+    },
+    {
+      "id": "product",
+      "title": "Product and Technology",
+      "required": true
+    },
+    {
+      "id": "traction",
+      "title": "Validation / Traction",
+      "required": true
+    },
+    {
+      "id": "model",
+      "title": "Business Model",
+      "required": true
+    },
+    {
+      "id": "competition",
+      "title": "Competition",
+      "required": true
+    },
+    {
+      "id": "go_to_market",
+      "title": "Go-to-Market",
+      "required": true
+    },
+    {
+      "id": "roadmap",
+      "title": "Roadmap",
+      "required": true
+    },
+    {
+      "id": "team",
+      "title": "Team",
+      "required": true
+    },
+    {
+      "id": "financials",
+      "title": "Financials and Use of Funds",
+      "required": true
+    },
+    {
+      "id": "ask",
+      "title": "Ask",
+      "required": true
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix",
+      "required": false
+    }
+  ],
+  "description": "Production template. Content is populated from the canonical project model or reviewed author input."
+}

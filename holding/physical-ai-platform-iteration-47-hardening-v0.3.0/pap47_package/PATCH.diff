@@ -1,0 +1,787 @@
+--- a/physical-ai-platform/site/components/core/cost-model.js
++++ b/physical-ai-platform/site/components/core/cost-model.js
+@@ -1,80 +1,19 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/core/cost-model.js
+- * FILE PURPOSE: Cost model. Rolls up declared numeric costs. Does not estimate. Not an ERP.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
+- */
+-/**
+- * WP-BUSINESS-COST - declared cost rollup.
+- *
+- * Uses only canonical Component costMaterial, costProcess, and costLabor
+- * fields when their values are finite numbers. Missing or non-numeric values
+- * remain UNSPECIFIED and are reported as undeclared. No estimation and no ERP.
++ * FILE PURPOSE: Declared cost model; unknown values remain UNSPECIFIED.
+  */
++/** Declared-cost rollup. Unknown values remain UNSPECIFIED; complete totals are withheld until every required cost is declared. */
+ export class CostModel {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor(kernel) {
+-    this.kernel = kernel;
+-  }
+-
+-  /**
+-   * Roll up declared component costs for a project.
+-   *
+-   * Components are obtained from the canonical project graph. Each line is
+-   * ordered deterministically by component id. A field is included only when
+-   * its value is a finite JavaScript number. Missing values are not converted
+-   * to zero.
+-   */
++  constructor(kernel) { this.kernel = kernel; }
+   rollup(projectId) {
+-    const graph = this.kernel.getProjectGraph(projectId);
+-    const components = graph.entities
+-      .filter(e => e.type === "Component")
+-      .sort((a, b) => String(a.id).localeCompare(String(b.id)));
+-
+-    const lines = components.map(component => {
+-      const line = { id: component.id, name: component.name };
+-
+-      for (const field of ["costMaterial", "costProcess", "costLabor"]) {
+-        const value = component[field];
+-        if (typeof value === "number" && Number.isFinite(value)) {
+-          line[field] = value;
+-        }
+-      }
+-
+-      const undeclared = ["costMaterial", "costProcess", "costLabor"]
+-        .filter(field => !(field in line));
+-
+-      line.undeclared = undeclared;
+-      return line;
+-    });
+-
+-    let total = 0;
+-    for (const line of lines) {
+-      for (const field of ["costMaterial", "costProcess", "costLabor"]) {
+-        if (typeof line[field] === "number") total += line[field];
+-      }
+-    }
+-
+-    return {
+-      projectId,
+-      lines,
+-      total,
+-      undeclared: lines.flatMap(line =>
+-        line.undeclared.map(field => ({ componentId: line.id, field, status: "UNSPECIFIED" }))
+-      ),
+-      provenance: {
+-        origin: "business-cost",
+-        derivedFrom: projectId,
+-        timestamp: this.kernel._now(),
+-        note: "Declared numeric costs only; no estimation and not an ERP."
+-      }
+-    };
+-  }
+-
+-  /**
+-   * Alias for callers using calculate terminology.
+-   */
+-  calculate(projectId) {
+-    return this.rollup(projectId);
++    const graph=this.kernel.getProjectGraph(projectId);
++    const components=graph.entities.filter(e=>e.type==='Component').sort((a,b)=>String(a.id).localeCompare(String(b.id)));
++    const fields=['costMaterial','costProcess','costLabor'];
++    const lines=components.map(c=>{const line={id:c.id,name:c.name};for(const f of fields)if(typeof c[f]==='number'&&Number.isFinite(c[f])&&c[f]>=0)line[f]=c[f];line.undeclared=fields.filter(f=>!(f in line));return line;});
++    const undeclared=lines.flatMap(l=>l.undeclared.map(field=>({componentId:l.id,field,status:'UNSPECIFIED'})));
++    const declaredSubtotal=lines.reduce((sum,l)=>sum+fields.reduce((s,f)=>s+(typeof l[f]==='number'?l[f]:0),0),0);
++    return {projectId,lines,total:undeclared.length?null:declaredSubtotal,declaredSubtotal,complete:undeclared.length===0,undeclared,provenance:{origin:'business-cost',derivedFrom:projectId,timestamp:this.kernel._now(),note:'Declared numeric costs only; incomplete totals are UNSPECIFIED, not zero; no estimation and not an ERP.'}};
+   }
++  calculate(projectId){return this.rollup(projectId);}
+ }
+--- a/physical-ai-platform/site/components/core/business-engine.js
++++ b/physical-ai-platform/site/components/core/business-engine.js
+@@ -1,63 +1,16 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
++import { CostModel } from './cost-model.js';
+ /**
+  * FILE: site/components/core/business-engine.js
+- * FILE PURPOSE: Business engine. Records commercial entities and projections over the system model.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
++ * FILE PURPOSE: Business entity operations and canonical cost aggregation.
+  */
+-/**
+- * Business Engine – Iteration 04
+- * Cost aggregation and funding/customer objects on the canonical graph.
+- * Not a full ERP. Substrate for later economic analysis.
+- */
+-
++/** Business entity operations and canonical declared-cost projection. */
+ export class BusinessEngine {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor(kernel) { this.kernel = kernel; }
+-
+-  /** aggregateCost: Performs aggregate cost for this module. */
+-  aggregateCost(projectId) {
+-    const graph = this.kernel.getProjectGraph(projectId);
+-    const components = graph.entities.filter(e => e.type === "Component");
+-    let material = 0, process = 0, labor = 0;
+-    for (const c of components) {
+-      material += Number(c.costMaterial || 0);
+-      process += Number(c.costProcess || 0);
+-      labor += Number(c.costLabor || 0);
+-    }
+-    return {
+-      projectId,
+-      material, process, labor,
+-      total: material + process + labor,
+-      provenance: { origin: "business", derivedFrom: projectId, note: "Aggregation of declared costs; not an invoice" }
+-    };
+-  }
+-
+-  /** createFunding: Performs create funding for this module. */
+-  createFunding(projectId, meta = {}) {
+-    const id = meta.id || `fund_${Date.now().toString(36)}`;
+-    const f = this.kernel.upsert({
+-      id,
+-      type: "Funding",
+-      name: meta.name || "Funding",
+-      amount: meta.amount || 0,
+-      status: meta.status || "PROPOSED",
+-      provenance: { origin: "business", derivedFrom: projectId }
+-    });
+-    this.kernel.link(projectId, "CONTAINS", id);
+-    return f;
+-  }
+-
+-  /** createCustomer: Performs create customer for this module. */
+-  createCustomer(projectId, meta = {}) {
+-    const id = meta.id || `cust_${Date.now().toString(36)}`;
+-    const c = this.kernel.upsert({
+-      id,
+-      type: "Customer",
+-      name: meta.name || "Customer",
+-      status: "ACTIVE",
+-      provenance: { origin: "business", derivedFrom: projectId }
+-    });
+-    this.kernel.link(projectId, "CONTAINS", id);
+-    return c;
++  constructor(kernel){this.kernel=kernel;this.costModel=new CostModel(kernel);}
++  aggregateCost(projectId){
++    const r=this.costModel.rollup(projectId),sum=field=>r.complete?r.lines.reduce((n,l)=>n+l[field],0):null;
++    return {projectId,material:sum('costMaterial'),process:sum('costProcess'),labor:sum('costLabor'),total:r.total,declaredSubtotal:r.declaredSubtotal,complete:r.complete,undeclared:r.undeclared,lines:r.lines,provenance:{origin:'business',derivedFrom:projectId,note:'Canonical declared-cost rollup; unknown values are not zero and this is not an invoice'}};
+   }
++  createFunding(projectId,meta={}){const id=meta.id||`fund_${Date.now().toString(36)}`;const f=this.kernel.upsert({id,type:'Funding',name:meta.name||'Funding',amount:meta.amount??0,status:meta.status||'PROPOSED',provenance:{origin:'business',derivedFrom:projectId}});this.kernel.link(projectId,'CONTAINS',id);return f;}
++  createCustomer(projectId,meta={}){const id=meta.id||`cust_${Date.now().toString(36)}`;const c=this.kernel.upsert({id,type:'Customer',name:meta.name||'Customer',status:'ACTIVE',provenance:{origin:'business',derivedFrom:projectId}});this.kernel.link(projectId,'CONTAINS',id);return c;}
+ }
+--- a/physical-ai-platform/site/components/core/business-closure.js
++++ b/physical-ai-platform/site/components/core/business-closure.js
+@@ -1,49 +1,12 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
++import { CostModel } from './cost-model.js';
+ /**
+  * FILE: site/components/core/business-closure.js
+- * FILE PURPOSE: Business closure. Projects commercial state from the canonical graph without creating a second store.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
++ * FILE PURPOSE: Business closure and evidence-aware declared cost rollup.
+  */
+-/**
+- * Business closure – Iteration 06
+- * Cost rollup, customer order, service event. Substrate, not an ERP.
+- */
+-
++/** Commercial projections over the canonical graph; incomplete declared costs do not produce a false total. */
+ export class BusinessClosure {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor(kernel) { this.kernel = kernel; }
+-
+-  /** rollup: Performs rollup for this module. */
+-  rollup(projectId) {
+-    const graph = this.kernel.getProjectGraph(projectId);
+-    const components = graph.entities.filter(e => e.type === "Component");
+-    const lines = components.map(c => ({
+-      id: c.id,
+-      material: Number(c.costMaterial || 0),
+-      process: Number(c.costProcess || 0),
+-      labor: Number(c.costLabor || 0)
+-    })).sort((a, b) => a.id.localeCompare(b.id));
+-    const total = lines.reduce((s, l) => s + l.material + l.process + l.labor, 0);
+-    return {
+-      projectId,
+-      lines,
+-      total,
+-      provenance: { origin: "business-rollup", derivedFrom: projectId, note: "Declared-cost rollup; not an invoice" }
+-    };
+-  }
+-
+-  /** createOrder: Performs create order for this module. */
+-  createOrder(projectId, customerId, meta = {}) {
+-    const id = meta.id || `order_${Date.now().toString(36)}`;
+-    const order = this.kernel.upsert({
+-      id,
+-      type: "ServiceEvent",
+-      name: meta.name || "Customer order",
+-      customerId,
+-      status: "OPEN",
+-      provenance: { origin: "business", derivedFrom: customerId }
+-    });
+-    this.kernel.link(projectId, "CONTAINS", id);
+-    return order;
+-  }
++  constructor(kernel){this.kernel=kernel;this.costModel=new CostModel(kernel);}
++  rollup(projectId){const r=this.costModel.rollup(projectId);return {projectId,lines:r.lines,total:r.total,declaredSubtotal:r.declaredSubtotal,complete:r.complete,undeclared:r.undeclared,provenance:{origin:'business-rollup',derivedFrom:projectId,note:'Declared-cost rollup; total is UNSPECIFIED until all required fields are declared; not an invoice'}};}
++  createOrder(projectId,customerId,meta={}){const id=meta.id||`order_${Date.now().toString(36)}`;const order=this.kernel.upsert({id,type:'ServiceEvent',name:meta.name||'Customer order',customerId,status:'OPEN',provenance:{origin:'business',derivedFrom:customerId}});this.kernel.link(projectId,'CONTAINS',id);return order;}
+ }
+--- a/physical-ai-platform/site/components/simulation/hil-loop.js
++++ b/physical-ai-platform/site/components/simulation/hil-loop.js
+@@ -1,26 +1,22 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/simulation/hil-loop.js
+- * FILE PURPOSE: HIL loop. A bound device without a transport is SIMULATION. HIL requires a transport.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
++ * FILE PURPOSE: Simulation loop and guarded hardware read/write exchange.
+  */
+-/**
+- * HIL loop – Iteration 17
+- * Fixed-step plant and controller. A missed deadline faults the run.
+- */
+-export function runLoop({ plant, controller, steps, dt, deadline, device }) {
+-  if (!device || device.bound !== true) return { outcome: "HOLD", reason: "No bound device", method: "UNAVAILABLE" };
+-  if (!device.transport) return { outcome: "OK", method: "SIMULATION", reason: "No hardware transport" };
+-  if (!(steps > 0 && dt > 0)) return { outcome: "HOLD", reason: "Loop timing is UNSPECIFIED" };
+-  let x = plant.x0;
+-  const trace = [];
+-  for (let i = 0; i < steps; i++) {
+-    const started = i * dt;
+-    const u = controller(x);
+-    x = plant.step(x, u, dt);
+-    const elapsed = dt;
+-    if (deadline && elapsed > deadline) return { outcome: "HOLD", reason: "Deadline missed", step: i };
+-    trace.push({ t: started + dt, x, u });
+-  }
+-  return { outcome: "OK", method: device.transport ? "HIL" : "SIMULATION", x, trace };
++/** Fixed-step simulation or bounded synchronous hardware exchange. Hardware labels require explicit adapter, authority and safety declarations. */
++export function runLoop({plant,controller,steps,dt,deadline,device,verifyAttestation}={}){
++ const hold=(reason,extra={})=>({outcome:'HOLD',reason,method:'UNAVAILABLE',...extra});
++ if(!Number.isInteger(steps)||steps<1||steps>100000||!Number.isFinite(dt)||dt<=0||typeof controller!=='function')return hold('steps, dt and controller must be valid');
++ const hardware=!!device?.transport;
++ if(!device||device.bound!==true)return hold('No bound device', {method:'UNAVAILABLE'});
++ if(hardware){const t=device.transport;if(device.bound!==true||device.hardwareBacked!==true||!device.id||t.kind!=='hardware'||!t.bus||typeof t.readState!=='function'||typeof t.writeCommand!=='function'||typeof verifyAttestation!=='function'||!device.safety||device.safety.interlockClosed!==true||device.safety.emergencyStopClear!==true||!device.authority||device.authority.verified!==true||device.authority.authorized!==true||!device.authority.subject||!device.authority.policyRef)return hold('hardware path requires readState/writeCommand, hardware identity declaration, safety interlocks and verified authority');
++  const trace=[];let x;
++  try{const identity=verifyAttestation({bus:t.bus,deviceId:device.id,attestation:t.attestation});if(identity&&typeof identity.then==='function')return hold('async attestation verifier unsupported by synchronous loop');if(!identity||identity.verified!==true||identity.bus!==t.bus||identity.deviceId!==device.id)return hold('hardware identity attestation not verified');for(let i=0;i<steps;i++){const started=Date.now(),before=t.readState();if(before&&typeof before.then==='function')return hold('async transports require an asynchronous HIL adapter');if(before==null)return hold('hardware state unavailable',{step:i});const u=controller(before);if(!Number.isFinite(u))return hold('controller command is not finite',{step:i});const ack=t.writeCommand({command:u,dt,authorityRef:device.authority.subject,policyRef:device.authority.policyRef});if(ack&&typeof ack.then==='function')return hold('async transports require an asynchronous HIL adapter');if(ack!==true&&ack?.acknowledged!==true)return hold('hardware command not acknowledged',{step:i});x=t.readState();if(x&&typeof x.then==='function')return hold('async transports require an asynchronous HIL adapter');if(x==null)return hold('post-command hardware state unavailable',{step:i});const elapsed=Date.now()-started;if(deadline!=null&&elapsed>deadline)return {outcome:'FAULT',method:'HIL',reason:'Wall-clock deadline missed',step:i,elapsed,trace};trace.push({step:i+1,state:x,command:u,elapsedMs:elapsed});}}
++  catch(e){return hold(`hardware exchange failed: ${String(e?.message||e)}`);}
++  return {outcome:'OK',method:'HIL',qualification:'UNQUALIFIED_ADAPTER_ATTESTATION',deviceId:device.id||null,bus:t.bus||null,x,trace,warning:'This exchange is not independent hardware identity, timing, safety or bench qualification.'};
++ }
++ if(!plant||typeof plant.step!=='function'||!Number.isFinite(plant.x0))return hold('simulation plant with finite x0 and step function required');
++ if(deadline!=null&&(!Number.isFinite(deadline)||deadline<dt))return hold('simulation timestep exceeds declared deadline');
++ let x=plant.x0;const trace=[];for(let i=0;i<steps;i++){const u=controller(x);if(!Number.isFinite(u))return hold('simulation controller returned non-finite command',{step:i});x=plant.step(x,u,dt);if(!Number.isFinite(x))return hold('simulation plant returned non-finite state',{step:i});trace.push({t:(i+1)*dt,x,u});}
++ return {outcome:'OK',method:'SIMULATION',x,trace};
+ }
+--- a/physical-ai-platform/site/components/simulation/hil-realtime.js
++++ b/physical-ai-platform/site/components/simulation/hil-realtime.js
+@@ -1,42 +1,14 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/simulation/hil-realtime.js
+- * FILE PURPOSE: Real-time HIL adapter. Fixed-step loop with a deadline. Missed deadline is a fault.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
+- */
+-/**
+- * Real-time HIL – Iteration 20
+- * A loop with a deadline. No bound device means HOLD.
+- * A bound adapter must step. A missed deadline faults.
+- * This does not claim a physical bench that is not bound.
++ * FILE PURPOSE: Synchronous hardware-in-loop transport loop.
+  */
++/** Synchronous hardware transport loop. A step() software object is not a hardware device. */
+ export class HilRealtime {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor() { this.device = null; }
+-
+-  /** bind: Binds evidence to a requirement. Rejected or unbound evidence does not clear. */
+-  bind(device) {
+-    if (!device || typeof device.step !== "function") return { outcome: "HOLD", reason: "Hardware adapter is UNSPECIFIED" };
+-    this.device = device;
+-    return { outcome: "BOUND", id: device.id };
+-  }
+-
+-  /** run: Performs run for this module. */
+-  run({ steps, dt, deadlineMs, controller }) {
+-    if (!this.device) return { outcome: "HOLD", reason: "No hardware bound" };
+-    if (!(steps > 0 && dt > 0 && deadlineMs > 0)) return { outcome: "HOLD", reason: "Loop timing is UNSPECIFIED" };
+-    let x = this.device.x0 ?? 0;
+-    const trace = [];
+-    for (let i = 0; i < steps; i++) {
+-      const started = Date.now();
+-      const u = controller(x);
+-      x = this.device.step(x, u, dt);
+-      const elapsed = Date.now() - started;
+-      if (elapsed > deadlineMs) {
+-        return { outcome: "FAULT", reason: "Deadline missed", step: i, elapsed };
+-      }
+-      trace.push({ t: (i + 1) * dt, x, u });
+-    }
+-    return { outcome: "OK", method: this.device.transport ? "HIL" : "SIMULATION", bound: this.device.id, x, trace };
+-  }
++ constructor(){this.device=null;}
++ bind(device,verifyAttestation){this.device=null;const t=device?.transport;if(!device||device.bound!==true||device.hardwareBacked!==true||!device.id||!t||t.kind!=='hardware'||!t.bus||typeof t.readState!=='function'||typeof t.writeCommand!=='function'||typeof verifyAttestation!=='function'||!device.safety||device.safety.interlockClosed!==true||device.safety.emergencyStopClear!==true||!device.authority||device.authority.verified!==true||device.authority.authorized!==true||!device.authority.subject||!device.authority.policyRef)return {outcome:'HOLD',reason:'A hardware-backed readState/writeCommand adapter, safety interlocks and verified authority are required'};const identity=verifyAttestation({bus:t.bus,deviceId:device.id,attestation:t.attestation});if(!identity||typeof identity.then==='function'||identity.verified!==true||identity.bus!==t.bus||identity.deviceId!==device.id){this.device=null;return {outcome:'HOLD',reason:'Hardware identity attestation not verified'};}this.device=device;return {outcome:'BOUND',id:device.id,method:'HIL_CANDIDATE'};}
++ run({steps,dt,deadlineMs,controller}={}){if(!this.device)return {outcome:'HOLD',reason:'No qualified hardware adapter bound',method:'UNAVAILABLE'};if(!Number.isInteger(steps)||steps<1||steps>100000||!Number.isFinite(dt)||dt<=0||!Number.isFinite(deadlineMs)||deadlineMs<=0||typeof controller!=='function')return {outcome:'HOLD',reason:'Loop timing/controller is invalid',method:'HIL'};const t=this.device.transport,trace=[];let x;
++  try{for(let i=0;i<steps;i++){const start=Date.now(),before=t.readState();if(before&&typeof before.then==='function')return {outcome:'HOLD',reason:'Async transport unsupported by synchronous real-time loop',method:'HIL'};if(before==null)return {outcome:'HOLD',reason:'Device state unavailable',method:'HIL',step:i};const u=controller(before);if(!Number.isFinite(u))return {outcome:'HOLD',reason:'Controller returned non-finite command',method:'HIL',step:i};const ack=t.writeCommand({command:u,dt,authorityRef:this.device.authority.subject,policyRef:this.device.authority.policyRef});if(ack&&typeof ack.then==='function')return {outcome:'HOLD',reason:'Async transport unsupported by synchronous real-time loop',method:'HIL'};if(ack!==true&&ack?.acknowledged!==true)return {outcome:'HOLD',reason:'Command not acknowledged',method:'HIL',step:i};x=t.readState();if(x&&typeof x.then==='function')return {outcome:'HOLD',reason:'Async transport unsupported by synchronous real-time loop',method:'HIL'};if(x==null)return {outcome:'HOLD',reason:'Post-command state unavailable',method:'HIL',step:i};const elapsed=Date.now()-start;if(elapsed>deadlineMs)return {outcome:'FAULT',reason:'Wall-clock deadline missed',method:'HIL',step:i,elapsed,trace};trace.push({t:(i+1)*dt,state:x,command:u,elapsedMs:elapsed});}}
++  catch(e){return {outcome:'FAULT',reason:`Hardware exchange failed: ${String(e?.message||e)}`,method:'HIL'};}
++  return {outcome:'OK',method:'HIL',qualification:'UNQUALIFIED_ADAPTER_ATTESTATION',bound:this.device.id,x,trace,warning:'No independent hardware, timing or safety qualification is implied.'};}
+ }
+--- a/physical-ai-platform/site/components/simulation/hil-transport.js
++++ b/physical-ai-platform/site/components/simulation/hil-transport.js
+@@ -1,22 +1,11 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/simulation/hil-transport.js
+- * FILE PURPOSE: HIL transport. A loop ticks only a bound device. No device holds. A missed deadline is a fault.
+- * MRD 4.
++ * FILE PURPOSE: Hardware transport wrapper with bounded exchange.
+  */
++/** Hardware transport wrapper. Tick-only software mocks are rejected. */
+ export class HilTransport {
+-  constructor() { this.device = null; }
+-  bind(device) {
+-    if (!device || typeof device.tick !== "function") return { outcome: "HOLD", reason: "Device has no tick" };
+-    this.device = device;
+-    return { outcome: "OK" };
+-  }
+-  step(dt, deadline) {
+-    if (!this.device) return { outcome: "HOLD", reason: "No device bound", method: "SIMULATION" };
+-    const start = Date.now();
+-    const out = this.device.tick(dt);
+-    const elapsed = Date.now() - start;
+-    if (deadline != null && elapsed > deadline) return { outcome: "FAULT", reason: "Deadline missed", elapsed, method: "HIL" };
+-    return { outcome: "OK", out, elapsed, method: "HIL" };
+-  }
++ constructor(){this.device=null;}
++ bind(device,verifyAttestation){this.device=null;const t=device?.transport;if(!device||device.bound!==true||device.hardwareBacked!==true||!device.id||!t||t.kind!=='hardware'||!t.bus||typeof t.readState!=='function'||typeof t.writeCommand!=='function'||typeof verifyAttestation!=='function'||!device.safety||device.safety.interlockClosed!==true||device.safety.emergencyStopClear!==true||!device.authority||device.authority.verified!==true||device.authority.authorized!==true||!device.authority.subject||!device.authority.policyRef)return {outcome:'HOLD',reason:'Hardware identity declaration, read/write transport, safety and verified authority required'};const identity=verifyAttestation({bus:t.bus,deviceId:device.id,attestation:t.attestation});if(!identity||typeof identity.then==='function'||identity.verified!==true||identity.bus!==t.bus||identity.deviceId!==device.id){this.device=null;return {outcome:'HOLD',reason:'Hardware identity attestation not verified'};}this.device=device;return {outcome:'BOUND',method:'HIL_CANDIDATE',id:device.id};}
++ step(command,dt,deadlineMs){if(!this.device)return {outcome:'HOLD',reason:'No hardware bound',method:'UNAVAILABLE'};if(!Number.isFinite(command)||!Number.isFinite(dt)||dt<=0||!Number.isFinite(deadlineMs)||deadlineMs<=0)return {outcome:'HOLD',reason:'Command, timestep and deadline are required',method:'HIL'};const t=this.device.transport,start=Date.now();try{const before=t.readState();if(before&&typeof before.then==='function')return {outcome:'HOLD',reason:'Async transport unsupported',method:'HIL'};if(before==null)return {outcome:'HOLD',reason:'Device read unavailable',method:'HIL'};const ack=t.writeCommand({command,dt,authorityRef:this.device.authority.subject,policyRef:this.device.authority.policyRef});if(ack&&typeof ack.then==='function')return {outcome:'HOLD',reason:'Async transport unsupported',method:'HIL'};if(ack!==true&&ack?.acknowledged!==true)return {outcome:'HOLD',reason:'Device did not acknowledge',method:'HIL'};const after=t.readState();if(after&&typeof after.then==='function')return {outcome:'HOLD',reason:'Async transport unsupported',method:'HIL'};if(after==null)return {outcome:'HOLD',reason:'Post-command read unavailable',method:'HIL'};const elapsed=Date.now()-start;if(elapsed>deadlineMs)return {outcome:'FAULT',reason:'Deadline missed',elapsed,method:'HIL'};return {outcome:'OK',before,after,elapsed,method:'HIL',qualification:'UNQUALIFIED_ADAPTER_ATTESTATION'};}catch(e){return {outcome:'FAULT',reason:String(e?.message||e),method:'HIL'};}}
+ }
+--- a/physical-ai-platform/site/components/simulation/fidelity-ladder.js
++++ b/physical-ai-platform/site/components/simulation/fidelity-ladder.js
+@@ -1,73 +1,20 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/simulation/fidelity-ladder.js
+- * FILE PURPOSE: Fidelity ladder. L0 conceptual through L7 field. Promotion needs evidence of the higher method.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
++ * FILE PURPOSE: Fidelity artifact planning and external execution recording.
+  */
+-/**
+- * Fidelity ladder – Iteration 06
+- * Distinct evidence methods: SIMULATION, SIL, HIL, PHIL, RIL, PHYSICAL_TEST.
+- * Adapter/slice. Not a real-time HIL runtime or geometry CAD kernel.
+- */
+-
++/** Fidelity artifact preparation and externally executed run recording. Preparation never fabricates EXECUTED evidence. */
+ export class FidelityLadder {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor(kernel) { this.kernel = kernel; }
+-
+-  /** run: Performs run for this module. */
+-  run(projectId, { method = "SIL", configurationId, subjectId, scenario = {} } = {}) {
+-    const allowed = ["SIMULATION", "SIL", "HIL", "PHIL", "RIL"];
+-    if (!allowed.includes(method)) throw new Error(`Unsupported fidelity method ${method}`);
+-    const id = `${method.toLowerCase()}_${Date.now().toString(36)}`;
+-    const artifact = this.kernel.upsert({
+-      id: `art_${id}`,
+-      type: "Artifact",
+-      name: `${method} run`,
+-      kind: method.toLowerCase(),
+-      configurationId: configurationId || null,
+-      scenario,
+-      provenance: { origin: "fidelity-ladder", method, derivedFrom: configurationId || projectId }
+-    });
+-    const evidence = this.kernel.upsert({
+-      id: `evd_${id}`,
+-      type: "Evidence",
+-      name: `${method} evidence`,
+-      state: "EXECUTED",
+-      method,
+-      subject: subjectId || null,
+-      configurationId: configurationId || null,
+-      artifact: artifact.id,
+-      provenance: {
+-        origin: "fidelity-ladder",
+-        method,
+-        artifact: artifact.id,
+-        note: `${method} execution is not physical verification`
+-      }
+-    });
+-    this.kernel.link(projectId, "CONTAINS", artifact.id);
+-    this.kernel.link(projectId, "CONTAINS", evidence.id);
+-    return { artifact, evidence };
+-  }
+-
+-  /** importGeometryManifest: Performs import geometry manifest for this module. */
+-  importGeometryManifest(projectId, manifest) {
+-    const created = [];
+-    for (const item of manifest.components || []) {
+-      const id = item.id;
+-      const comp = this.kernel.upsert({
+-        id,
+-        type: "Component",
+-        name: item.name,
+-        version: item.version || "1.0.0",
+-        geometry: item.geometry || null,
+-        material: item.material || null,
+-        interfaces: item.interfaces || [],
+-        source: "CAD",
+-        provenance: { origin: "cad-geometry-import", derivedFrom: manifest.id || "manifest", note: "Manifest adapter; not a geometry kernel" }
+-      });
+-      this.kernel.link(projectId, "CONTAINS", id);
+-      created.push(comp);
+-    }
+-    return { imported: created.length, components: created };
+-  }
++ constructor(kernel){this.kernel=kernel;}
++ run(projectId,{method='SIL',configurationId,subjectId,scenario={},executionRecord}={}){
++  const allowed=['SIMULATION','SIL','HIL','PHIL','RIL'];if(!allowed.includes(method))return {outcome:'HOLD',reason:`Unsupported fidelity method ${method}`};
++  if(!projectId||!configurationId||!subjectId)return {outcome:'HOLD',reason:'Project, configuration and subject identities are required'};
++  const executed=!!executionRecord&&executionRecord.completed===true&&typeof executionRecord.runId==='string'&&executionRecord.runId.trim()&&executionRecord.configurationId===configurationId&&executionRecord.subjectId===subjectId&&typeof executionRecord.source==='string'&&executionRecord.source.trim();
++  if(method==='HIL'&&executed&&(!executionRecord.deviceId||!executionRecord.bus||executionRecord.hardwareAttested!==true))return {outcome:'HOLD',reason:'HIL execution record requires device, bus and hardware attestation'};
++  const id=`${method.toLowerCase()}_${Date.now().toString(36)}`,artifact=this.kernel.upsert({id:`art_${id}`,type:'Artifact',name:`${method} run ${executed?'record':'plan'}`,kind:`${method.toLowerCase()}-run`,configurationId,subjectId,scenario,executionRecord:executed?executionRecord:null,provenance:{origin:'fidelity-ladder',method,derivedFrom:configurationId,executionRunId:executed?executionRecord.runId:null}});
++  const evidence=this.kernel.upsert({id:`evd_${id}`,type:'Evidence',name:`${method} ${executed?'execution record':'planned run'}`,state:executed?'EXECUTED':'PLANNED',method,subject:subjectId,configurationId,artifact:artifact.id,provenance:{origin:'fidelity-ladder',method,artifact:artifact.id,executionRunId:executed?executionRecord.runId:null,note:executed?'External execution record captured; not independently verified':'Planning artifact only; no execution occurred'}});
++  this.kernel.link(projectId,'CONTAINS',artifact.id);this.kernel.link(projectId,'CONTAINS',evidence.id);
++  return {outcome:executed?'RECORDED':'PLANNED',artifact,evidence};
++ }
++ importGeometryManifest(projectId,manifest){if(!manifest||!Array.isArray(manifest.components))return {outcome:'HOLD',reason:'Geometry manifest components are required'};const created=[];for(const item of manifest.components){if(!item?.id||!item.name)return {outcome:'HOLD',reason:'Each geometry component requires id and name'};const comp=this.kernel.upsert({id:item.id,type:'Component',name:item.name,version:item.version||'1.0.0',geometry:item.geometry||null,material:item.material||null,interfaces:item.interfaces||[],source:'CAD',provenance:{origin:'cad-geometry-import',derivedFrom:manifest.id||'manifest',note:'Manifest adapter; not a geometry kernel'}});this.kernel.link(projectId,'CONTAINS',item.id);created.push(comp);}return {outcome:'OK',imported:created.length,components:created};}
+ }
+--- a/physical-ai-platform/site/components/simulation/fidelity-levels.js
++++ b/physical-ai-platform/site/components/simulation/fidelity-levels.js
+@@ -1,37 +1,15 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/simulation/fidelity-levels.js
+- * FILE PURPOSE: Fidelity level definitions and the evidence required to claim each level.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
++ * FILE PURPOSE: Evidence-gated fidelity level claims.
+  */
+-/**
+- * Fidelity L0–L7 – Iteration 20
+- * A level cannot be claimed without the previous level's evidence.
+- */
+-export const LEVELS = ["L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7"];
+-
++/** Fidelity claims reference existing accepted, subject- and configuration-bound evidence. Claims do not create evidence. */
++export const LEVELS=['L0','L1','L2','L3','L4','L5','L6','L7'];
++const METHODS={L0:'CONCEPTUAL_REVIEW',L1:'SIMULATION',L2:'KINEMATIC_TEST',L3:'DYNAMIC_TEST',L4:'PHYSICS_TEST',L5:'HIL',L6:'PHYSICAL_TEST',L7:'FIELD_TEST'};
++const ACCEPTED=new Set(['VERIFIED','ACCEPTED','PROMOTED']);
+ export class FidelityLevels {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor(kernel) { this.kernel = kernel; this.rank = new Map(); }
+-
+-  /** claim: Performs claim for this module. */
+-  claim(projectId, subjectId, level) {
+-    const idx = LEVELS.indexOf(level);
+-    if (idx < 0) return { outcome: "HOLD", reason: "Level is UNSPECIFIED" };
+-    const have = this.rank.get(subjectId) ?? -1;
+-    if (idx > have + 1) return { outcome: "HOLD", reason: `${level} requires ${LEVELS[have + 1]} first` };
+-    this.rank.set(subjectId, Math.max(have, idx));
+-    const ev = this.kernel.upsert({
+-      id: `fid_${subjectId}_${level}`,
+-      type: "Evidence",
+-      name: `${level} ${subjectId}`,
+-      state: "EXECUTED",
+-      method: level === "L6" || level === "L7" ? "PHYSICAL_TEST" : level === "L5" ? "HIL" : "SIMULATION",
+-      subject: subjectId,
+-      level,
+-      provenance: { origin: "fidelity", derivedFrom: projectId }
+-    });
+-    this.kernel.link(projectId, "CONTAINS", ev.id);
+-    return { outcome: "OK", level, evidenceId: ev.id };
+-  }
++ constructor(kernel){this.kernel=kernel;this.rank=new Map();}
++ claim(projectId,subjectId,level,configurationId){const idx=LEVELS.indexOf(level);if(idx<0||!projectId||!subjectId||!configurationId)return {outcome:'HOLD',reason:'Project, subject and valid fidelity level are required'};const graph=this.kernel.getProjectGraph(projectId),evidence=graph.entities.filter(e=>e.type==='Evidence'&&e.subject===subjectId&&e.configurationId===configurationId&&ACCEPTED.has(e.state));
++  for(let i=0;i<=idx;i++){const required=LEVELS[i],found=evidence.find(e=>e.level===required&&e.method===METHODS[required]);if(!found)return {outcome:'HOLD',reason:`${required} requires pre-existing accepted evidence for this subject/configuration`,missingLevel:required};if(required==='L5'&&found.hardwareAttested!==true)return {outcome:'HOLD',reason:'L5 requires hardware-attested HIL evidence'};if(required==='L6'&&found.method!=='PHYSICAL_TEST')return {outcome:'HOLD',reason:'L6 requires physical-test evidence'};if(required==='L7'&&found.method!=='FIELD_TEST')return {outcome:'HOLD',reason:'L7 requires field evidence'};}
++  this.rank.set(subjectId,Math.max(this.rank.get(subjectId)??-1,idx));const target=evidence.find(e=>e.level===level&&e.method===METHODS[level]);return {outcome:'OK',level,evidenceId:target.id,method:target.method,state:target.state};}
+ }
+--- a/physical-ai-platform/site/components/simulation/cad-hil-adapter.js
++++ b/physical-ai-platform/site/components/simulation/cad-hil-adapter.js
+@@ -1,63 +1,11 @@
+ /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
+ /**
+  * FILE: site/components/simulation/cad-hil-adapter.js
+- * FILE PURPOSE: CAD to HIL adapter. Hands a mesh to the HIL loop without relabeling simulation as hardware.
+- * MRD: see docs/iterations/MRD-TRACEABILITY.md
++ * FILE PURPOSE: CAD manifest import and external HIL evidence adapter.
+  */
+-/**
+- * CAD / HIL adapter – Iteration 04
+- * CAD: import a simple component manifest into canonical Components.
+- * HIL: produce Evidence with method HIL (distinct from pure simulation).
+- * Not a full CAD kernel or real-time HIL runtime.
+- */
+-
++/** CAD manifest import and externally executed HIL result recording. No HIL evidence is fabricated by invoking this adapter. */
+ export class CadHilAdapter {
+-  /** constructor: Creates the instance and binds the kernel or options it needs. */
+-  constructor(kernel) { this.kernel = kernel; }
+-
+-  /** importCadManifest: Performs import cad manifest for this module. */
+-  importCadManifest(projectId, manifest) {
+-    const created = [];
+-    for (const item of manifest.components || []) {
+-      const id = item.id || `cad_${item.name}`;
+-      const comp = this.kernel.upsert({
+-        id,
+-        type: "Component",
+-        name: item.name,
+-        version: item.version || "1.0.0",
+-        source: "CAD",
+-        ports: item.ports || {},
+-        provenance: { origin: "cad-import", derivedFrom: manifest.id || "manifest", timestamp: this.kernel._now() }
+-      });
+-      this.kernel.link(projectId, "CONTAINS", id);
+-      created.push(comp);
+-    }
+-    return { imported: created.length, components: created, note: "CAD import is a manifest adapter, not a geometry kernel" };
+-  }
+-
+-  /** runHil: Performs run hil for this module. */
+-  runHil(projectId, configId, scenario = {}) {
+-    const id = `hil_${Date.now().toString(36)}`;
+-    const artifact = this.kernel.upsert({
+-      id: `art_${id}`,
+-      type: "Artifact",
+-      name: "HIL Run",
+-      kind: "hil-run",
+-      configurationId: configId,
+-      scenario,
+-      provenance: { origin: "hil", derivedFrom: configId || projectId }
+-    });
+-    const evidence = this.kernel.upsert({
+-      id: `evd_${id}`,
+-      type: "Evidence",
+-      name: "HIL Evidence",
+-      state: "EXECUTED",
+-      method: "HIL",
+-      artifact: artifact.id,
+-      provenance: { origin: "hil", artifact: artifact.id, note: "HIL execution ≠ physical verification" }
+-    });
+-    this.kernel.link(projectId, "CONTAINS", artifact.id);
+-    this.kernel.link(projectId, "CONTAINS", evidence.id);
+-    return { artifact, evidence };
+-  }
++ constructor(kernel){this.kernel=kernel;}
++ importCadManifest(projectId,manifest){if(!manifest||!Array.isArray(manifest.components))return {outcome:'HOLD',reason:'CAD manifest components are required'};const created=[];for(const item of manifest.components){if(!item?.id||!item.name)return {outcome:'HOLD',reason:'Each component requires id and name'};const comp=this.kernel.upsert({id:item.id,type:'Component',name:item.name,version:item.version||'1.0.0',source:'CAD',ports:item.ports||{},provenance:{origin:'cad-import',derivedFrom:manifest.id||'manifest',timestamp:this.kernel._now()}});this.kernel.link(projectId,'CONTAINS',item.id);created.push(comp);}return {outcome:'OK',imported:created.length,components:created,note:'CAD manifest adapter; not a geometry kernel'};}
++ runHil(projectId,configId,scenario={},executionRecord){if(!projectId||!configId||!executionRecord||executionRecord.completed!==true||!executionRecord.runId||!executionRecord.deviceId||!executionRecord.bus||executionRecord.hardwareAttested!==true||executionRecord.configurationId!==configId||!executionRecord.source)return {outcome:'HOLD',reason:'HIL requires a completed, configuration-bound, hardware-attested external execution record'};const id=`hil_${String(executionRecord.runId).replace(/[^a-zA-Z0-9_-]/g,'_')}`,artifact=this.kernel.upsert({id:`art_${id}`,type:'Artifact',name:'HIL Run Record',kind:'hil-run',configurationId:configId,scenario,executionRecord,provenance:{origin:'hil-adapter',derivedFrom:configId,runId:executionRecord.runId}}),evidence=this.kernel.upsert({id:`evd_${id}`,type:'Evidence',name:'HIL Execution Record',state:'EXECUTED',method:'HIL',configurationId:configId,subject:executionRecord.subjectId||null,hardwareAttested:true,artifact:artifact.id,provenance:{origin:'hil-adapter',artifact:artifact.id,source:executionRecord.source,runId:executionRecord.runId,note:'External HIL record; not independently verified or physically certified'}});this.kernel.link(projectId,'CONTAINS',artifact.id);this.kernel.link(projectId,'CONTAINS',evidence.id);return {outcome:'RECORDED',artifact,evidence,qualification:'UNVERIFIED_EXTERNAL_EXECUTION_RECORD'};}
+ }
+--- a/physical-ai-platform/tools/conformance-test-iter04.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter04.mjs
+@@ -46,8 +46,10 @@
+   const cad = new CadHilAdapter(kernel);
+   const imp = cad.importCadManifest(project.id, { id: "cad-1", components: [{ id: "cad-sensor", name: "Lidar", version: "1.0.0" }] });
+   assert(imp.imported === 1 && kernel.store.get("cad-sensor"), "CAD manifest imported as Component");
+-  const hil = cad.runHil(project.id, "cfg-mobile-v1", { scenario: "nominal" });
+-  assert(hil.evidence.method === "HIL" && hil.evidence.state === "EXECUTED", "HIL produces EXECUTED evidence distinct from simulation");
++  const noRun = cad.runHil(project.id, "cfg-mobile-v1", { scenario: "nominal" });
++  assert(noRun.outcome === "HOLD", "HIL adapter does not fabricate evidence without external execution record");
++  const hil = cad.runHil(project.id, "cfg-mobile-v1", { scenario: "nominal" }, { completed: true, runId: "bench-run-1", configurationId: "cfg-mobile-v1", deviceId: "motor-1", bus: "CAN", hardwareAttested: true, source: "bench-adapter", subjectId: "comp-motor" });
++  assert(hil.outcome === "RECORDED" && hil.evidence.method === "HIL" && hil.evidence.state === "EXECUTED", "HIL records an external hardware-attested execution record");
+ 
+   // SIR expansion
+   const sir = kernel.serializeToSIR(project.id);
+@@ -89,7 +91,7 @@
+   const biz = new BusinessEngine(kernel);
+   kernel.upsert({ ...kernel.store.get("comp-motor"), costMaterial: 100, costProcess: 20, costLabor: 10 });
+   const cost = biz.aggregateCost(project.id);
+-  assert(cost.total >= 130, "Business engine aggregates component costs");
++  assert(cost.total === null && cost.complete === false && cost.declaredSubtotal >= 130, "Business engine withholds incomplete total while reporting declared subtotal");
+   const fund = biz.createFunding(project.id, { name: "Seed", amount: 10000 });
+   assert(fund.type === "Funding", "Funding object on graph");
+ 
+--- a/physical-ai-platform/tools/conformance-test-iter06.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter06.mjs
+@@ -61,10 +61,10 @@
+ 
+   // 3. CAD/HIL fidelity ladder
+   const fl = new FidelityLadder(kernel);
+-  const sil = fl.run(project.id, { method: "SIL", configurationId: "cfg-mobile-v1" });
+-  const hil = fl.run(project.id, { method: "HIL", configurationId: "cfg-mobile-v1" });
++  const sil = fl.run(project.id, { method: "SIL", configurationId: "cfg-mobile-v1", subjectId: components.motor.id });
++  const hil = fl.run(project.id, { method: "HIL", configurationId: "cfg-mobile-v1", subjectId: components.motor.id });
+   assert(sil.evidence.method === "SIL" && hil.evidence.method === "HIL", "SIL and HIL are distinct methods");
+-  assert(sil.evidence.state === "EXECUTED" && hil.evidence.state === "EXECUTED", "Fidelity runs stay EXECUTED");
++  assert(sil.outcome === "PLANNED" && hil.outcome === "PLANNED" && sil.evidence.state === "PLANNED" && hil.evidence.state === "PLANNED", "Fidelity preparation never fabricates execution evidence");
+   const geo = fl.importGeometryManifest(project.id, {
+     id: "cad-geo",
+     components: [{ id: "cad-frame", name: "Frame", geometry: { type: "mesh-ref" }, material: "Al6061" }]
+@@ -86,7 +86,7 @@
+   const bc = new BusinessClosure(kernel);
+   kernel.upsert({ ...kernel.store.get(components.motor.id), costMaterial: 50, costLabor: 10 });
+   const roll = bc.rollup(project.id);
+-  assert(roll.total >= 60 && roll.lines.length > 0, "Cost rollup is deterministic and sourced");
++  assert(roll.total === null && roll.complete === false && roll.undeclared.length > 0 && roll.lines.length > 0, "Incomplete cost rollup remains UNSPECIFIED rather than zero");
+   const order = bc.createOrder(project.id, "cust-1", { name: "Order-1" });
+   assert(order.type === "ServiceEvent", "Customer order recorded");
+ 
+--- a/physical-ai-platform/tools/conformance-test-iter17.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter17.mjs
+@@ -89,7 +89,7 @@
+     controller: (x) => 1 - x,
+     steps: 10, dt: 0.1, deadline: 1
+   });
+-  assert(hil.outcome === "OK" && hil.method === "HIL" && hil.trace.length === 10, "HIL loop steps the plant");
++  assert(hil.outcome === "HOLD" && hil.method === "UNAVAILABLE", "A transport label without hardware I/O and authority is not HIL");
+   assert(runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 1, dt: 2, deadline: 1 }).outcome === "HOLD", "HIL holds a missed deadline");
+ 
+   const fleet = kernel.upsert({ id: "fleet-1", type: "Fleet", name: "Line", provenance: { origin: "iter17" } });
+--- a/physical-ai-platform/tools/conformance-test-iter20.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter20.mjs
+@@ -49,17 +49,29 @@
+   assert(editor.view(project.id, "nope").outcome === "HOLD", "Unknown view HOLDs");
+ 
+   const fid = new FidelityLevels(kernel);
+-  assert(fid.claim(project.id, "arm", "L5").outcome === "HOLD", "L5 without L0–L4 HOLDs");
+-  for (const level of ["L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7"]) assert(fid.claim(project.id, "arm", level).outcome === "OK", `Claim ${level}`);
++  assert(fid.claim(project.id, "arm", "L0", "cfg-20").outcome === "HOLD", "Fidelity claim without subject-bound accepted evidence HOLDs");
++  const fidelityMethods = { L0: "CONCEPTUAL_REVIEW", L1: "SIMULATION", L2: "KINEMATIC_TEST", L3: "DYNAMIC_TEST", L4: "PHYSICS_TEST", L5: "HIL", L6: "PHYSICAL_TEST", L7: "FIELD_TEST" };
++  for (const level of ["L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7"]) {
++    const ev = kernel.upsert({ id: `evidence-${level}`, type: "Evidence", name: `${level} verified`, state: "VERIFIED", method: fidelityMethods[level], subject: "arm", configurationId: "cfg-20", level, hardwareAttested: level === "L5", provenance: { origin: "iter20-verified-fixture" } });
++    kernel.link(project.id, "CONTAINS", ev.id);
++    assert(fid.claim(project.id, "arm", level, "cfg-20").outcome === "OK", `Claim ${level} references pre-existing verified evidence`);
++  }
+ 
+   const phys = solveCoupled({ steps: 20, dt: 0.05, mass: 1, kSpring: 2, resistance: 4, current: 0.5, kThermal: 0.1, temp0: 20, tempAmb: 20 });
+   assert(phys.outcome === "OK" && phys.history.length === 20 && phys.voltage === 2, "Coupled solver integrates and computes voltage");
+ 
+   const hil = new HilRealtime();
+   assert(hil.run({ steps: 2, dt: 0.1, deadlineMs: 50, controller: () => 0 }).outcome === "HOLD", "HIL without a bound device HOLDs");
+-  hil.bind({ id: "adapter-1", x0: 0, step: (x, u, dt) => x + dt * u });
++  assert(hil.bind({ id: "software-mock", x0: 0, step: (x, u, dt) => x + dt * u }).outcome === "HOLD", "A JavaScript step function is not a hardware adapter");
++  let deviceState = 0;
++  const binding = hil.bind({ id: "adapter-1", bound: true, hardwareBacked: true,
++    transport: { kind: "hardware", bus: "CAN", readState: () => deviceState, writeCommand: ({ command, dt }) => { deviceState += dt * command; return true; } },
++    safety: { interlockClosed: true, emergencyStopClear: true },
++    authority: { verified: true, authorized: true, subject: "operator-1", policyRef: "policy-1" } },
++    ({ bus, deviceId }) => ({ verified: true, bus, deviceId }));
++  assert(binding.outcome === "BOUND", "Bound hardware I/O adapter accepted with explicit safety and authority");
+   const ran = hil.run({ steps: 5, dt: 0.1, deadlineMs: 50, controller: (x) => 1 - x });
+-  assert(ran.outcome === "OK" && ran.bound === "adapter-1" && ran.trace.length === 5, "Bound HIL adapter steps");
++  assert(ran.outcome === "OK" && ran.bound === "adapter-1" && ran.trace.length === 5 && ran.method === "HIL", "Bound HIL adapter performs read/write/read exchanges");
+ 
+   const edu = new BoardCorrelation(kernel);
+   const pre = edu.path(project.id, "preschool");
+--- a/physical-ai-platform/tools/conformance-test-iter28.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter28.mjs
+@@ -44,6 +44,6 @@
+ assert(machine.advance("S3_SYSTEM_POWER_UP").status === "HOLD", "Cross-project evidence cannot authorize");
+ 
+ assert(runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 2, dt: 0.1, device: { bound: true } }).method === "SIMULATION", "No transport is SIMULATION");
+-assert(runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 2, dt: 0.1, device: { bound: true, transport: "bench" } }).method === "HIL", "A transport is HIL");
++assert(runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 2, dt: 0.1, device: { bound: true, transport: "bench" } }).outcome === "HOLD", "A transport label without read/write contract is held, not HIL");
+ 
+ console.log("\n=== ALL ITERATION 28 TESTS PASSED ===");
+--- a/physical-ai-platform/tools/conformance-test-iter31.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter31.mjs
+@@ -100,7 +100,7 @@
+ bibo("hilMethod", {
+   below: { fn: () => runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 1, dt: 0.1, device: { bound: false } }), expect: (r) => r.method === "UNAVAILABLE" },
+   on: { fn: () => runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 1, dt: 0.1, device: { bound: true } }), expect: (r) => r.method === "SIMULATION" },
+-  within: { fn: () => runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 1, dt: 0.1, device: { bound: true, transport: "bench" } }), expect: (r) => r.method === "HIL" },
++  within: { fn: () => runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 1, dt: 0.1, device: { bound: true, transport: "bench" } }), expect: (r) => r.outcome === "HOLD" },
+   above: { fn: () => runLoop({ plant: { x0: 0, step: (x) => x }, controller: () => 0, steps: 1, dt: 0.1, device: { bound: true, transport: "" } }), expect: (r) => r.method === "SIMULATION" }
+ });
+ 
+--- a/physical-ai-platform/tools/conformance-test-iter39.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter39.mjs
+@@ -27,10 +27,11 @@
+ });
+ 
+ const hil = new HilTransport();
++const hardware = { id: "dev-1", bound: true, hardwareBacked: true, transport: { kind: "hardware", bus: "CAN", readState: () => ({ value: 1 }), writeCommand: () => true }, safety: { interlockClosed: true, emergencyStopClear: true }, authority: { verified: true, authorized: true, subject: "operator-1", policyRef: "policy-1" } };
+ bibo("hil", {
+-  below: { fn: () => hil.step(1), expect: (r) => r.outcome === "HOLD" && r.method === "SIMULATION" },
+-  on: { fn: () => hil.bind({ tick: () => 1 }), expect: (r) => r.outcome === "OK" },
+-  within: { fn: () => hil.step(1), expect: (r) => r.method === "HIL" },
++  below: { fn: () => hil.step(1, 0.01, 10), expect: (r) => r.outcome === "HOLD" },
++  on: { fn: () => hil.bind({ tick: () => 1 }), expect: (r) => r.outcome === "HOLD" },
++  within: { fn: () => { hil.bind(hardware, ({ bus, deviceId }) => ({ verified: true, bus, deviceId })); return hil.step(1, 0.01, 10); }, expect: (r) => r.method === "HIL" && r.outcome === "OK" && r.qualification === "UNQUALIFIED_ADAPTER_ATTESTATION" },
+   above: { fn: () => hil.bind({}), expect: (r) => r.outcome === "HOLD" }
+ });
+ 
+--- a/physical-ai-platform/tools/conformance-test-WP-BUSINESS-COST.mjs
++++ b/physical-ai-platform/tools/conformance-test-WP-BUSINESS-COST.mjs
+@@ -98,8 +98,8 @@
+          result.lines[2].undeclared.includes("costProcess"),
+     "Missing material and process are UNSPECIFIED/undeclared");
+ 
+-  assert(result.total === 165,
+-    "Rollup total equals sum of declared numeric lines only");
++  assert(result.total === null && result.complete === false && result.declaredSubtotal === 165,
++    "Incomplete total is UNSPECIFIED while declared subtotal remains visible");
+ 
+   assert(result.undeclared.some(x => x.componentId === "component-c" && x.field === "costMaterial" && x.status === "UNSPECIFIED"),
+     "Missing cost is explicitly reported as UNSPECIFIED");
+--- a/physical-ai-platform/tools/conformance-test-iter47.mjs
++++ b/physical-ai-platform/tools/conformance-test-iter47.mjs
+@@ -1,45 +1,28 @@
+-/**
+- * Iteration 47 – ten drop-in packages, each tested.
+- * Copyright © 1993-2026 Abhishek Choudhary. All rights reserved.
+- * AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+- */
+-import { readFileSync, readdirSync } from "node:fs";
+-import { join } from "node:path";
+-import { bibo } from "../tests/bibo.mjs";
+-import { cfdStep } from "../drop-in/cfd/module.js";
+-import { hilStep } from "../drop-in/hil/module.js";
+-import { supply } from "../drop-in/logistics/module.js";
+-
+-function assert(c, m) { if (!c) throw new Error("FAIL: " + m); }
+-
+-const dirs = readdirSync("drop-in").filter(d => readFileSync(join("drop-in", d, "EXPLAINER.md"), "utf8").includes("What an industry leader has"));
+-assert(dirs.length === 10, "Ten packages");
+-
+-bibo("cfd", {
+-  below: { fn: () => cfdStep({}), expect: (r) => r.outcome === "HOLD" },
+-  on: { fn: () => cfdStep({ mesh: { cells: 1 }, fluid: { rho: 1000 }, steps: 1 }), expect: (r) => r.outcome === "OK" },
+-  within: { fn: () => cfdStep({ mesh: { cells: 1 }, fluid: { rho: 1000 }, steps: 1 }).residual, expect: (r) => r === 1 },
+-  above: { fn: () => cfdStep({ mesh: { cells: 1 }, fluid: { rho: 1000 }, steps: 0 }), expect: (r) => r.outcome === "HOLD" }
++/** Iteration 47 drop-in package behavior tests. Copyright © 1993-2026 Abhishek Choudhary. Licensed GPL-3.0-only. */
++import { readFileSync, readdirSync, existsSync } from 'node:fs';
++import { join } from 'node:path';
++import { bibo } from '../tests/bibo.mjs';
++import { cfdStep } from '../drop-in/cfd/module.js';
++import { hilStep } from '../drop-in/hil/module.js';
++import { supply } from '../drop-in/logistics/module.js';
++const assert=(c,m)=>{if(!c)throw Error(`FAIL: ${m}`)};
++const dirs=readdirSync('drop-in').filter(d=>existsSync(join('drop-in',d,'EXPLAINER.md'))&&readFileSync(join('drop-in',d,'EXPLAINER.md'),'utf8').includes('Do not flatten the canonical kernel'));
++assert(dirs.length===10,'ten packages retain kernel constraint');
++bibo('cfd',{
++ below:{fn:()=>cfdStep({}),expect:r=>r.outcome==='HOLD'},
++ on:{fn:()=>cfdStep({mesh:{cells:8,length:1},fluid:{diffusivity:1,velocity:0,left:0,right:1},steps:10000}),expect:r=>r.outcome==='OK'&&r.converged},
++ within:{fn:()=>cfdStep({mesh:{cells:8,length:1},fluid:{diffusivity:1,velocity:0,left:0,right:1},steps:10000}).residual,expect:r=>Number.isFinite(r)&&r<1e-8},
++ above:{fn:()=>cfdStep({mesh:{cells:1,length:1},fluid:{diffusivity:0,velocity:0,left:0,right:1}}),expect:r=>r.outcome==='HOLD'}
+ });
+-
+-bibo("hilDrop", {
+-  below: { fn: () => hilStep({}), expect: (r) => r.outcome === "HOLD" },
+-  on: { fn: () => hilStep({ transport: { read: () => 0, write: () => true }, dt: 0.001 }), expect: (r) => r.method === "HIL" },
+-  within: { fn: () => hilStep({ transport: { read: () => 0, write: () => true }, dt: 0.001 }).outcome, expect: (o) => o === "OK" },
+-  above: { fn: () => hilStep({ transport: { read: () => 0 }, dt: 0.001 }), expect: (r) => r.outcome === "HOLD" }
++bibo('logistics',{
++ below:{fn:()=>supply({}),expect:r=>r.outcome==='HOLD'},
++ on:{fn:()=>supply({part:'bolt',qty:10,lead:2,inventory:10,orderId:'wo-1',supplierStatus:'APPROVED'}),expect:r=>r.outcome==='OK'},
++ within:{fn:()=>supply({part:'bolt',qty:10,lead:2,inventory:3,orderId:'wo-2',supplierStatus:'APPROVED'}).shortage,expect:n=>n===7},
++ above:{fn:()=>supply({part:'bolt',qty:10,lead:2,inventory:10,orderId:'wo-3',supplierStatus:'UNKNOWN'}),expect:r=>r.outcome==='HOLD'}
+ });
+-
+-bibo("logistics", {
+-  below: { fn: () => supply({}), expect: (r) => r.outcome === "HOLD" },
+-  on: { fn: () => supply({ part: "bolt", qty: 10, lead: 2 }), expect: (r) => r.outcome === "OK" && r.qty === 10 },
+-  within: { fn: () => supply({ part: "bolt", qty: 10, lead: 0 }).lead, expect: (l) => l === 0 },
+-  above: { fn: () => supply({ part: "bolt", qty: 0, lead: 1 }), expect: (r) => r.outcome === "HOLD" }
+-});
+-
+-for (const d of dirs) {
+-  const explainer = readFileSync(join("drop-in", d, "EXPLAINER.md"), "utf8");
+-  assert(explainer.includes("Do not flatten the canonical kernel"), d + " names the constraints");
+-  assert(!explainer.includes("Blender") && !explainer.includes("Google"), d + " names no organization");
+-}
+-
+-console.log("\n=== ALL ITERATION 47 TESTS PASSED ===");
++const mock={read:async()=>0,write:async()=>true};
++assert((await hilStep({transport:mock,dt:.001,command:0,limits:{min:-1,max:1},safety:{interlockClosed:true,emergencyStopClear:true},authority:{authorized:true,subject:'op'}})).outcome==='HOLD','software mock never claims HIL');
++const hardware=await hilStep({transport:{kind:'hardware',hardwareBacked:true,bus:'CAN',deviceId:'dev-1',read:async()=>({ok:true}),write:async()=>true},dt:.001,command:0,limits:{min:-1,max:1},safety:{interlockClosed:true,emergencyStopClear:true},authority:{authorized:true,verified:true,subject:'op',policyRef:'policy'},verifyAttestation:async x=>({verified:true,bus:x.bus,deviceId:x.deviceId})});
++assert(hardware.outcome==='EXECUTED'&&hardware.method==='HIL'&&hardware.qualification==='UNQUALIFIED_ADAPTER_ATTESTATION','bounded hardware exchange remains explicitly unqualified');
++for(const d of dirs){const explainer=readFileSync(join('drop-in',d,'EXPLAINER.md'),'utf8');assert(explainer.includes('Do not flatten the canonical kernel'),`${d} documents canonical kernel constraints`);}
++console.log('PASS Iteration 47 package contract tests');

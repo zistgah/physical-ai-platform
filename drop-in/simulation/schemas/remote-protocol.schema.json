@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:schemas:remote-protocol:1.0",
+  "title": "Simulation remote backend JSON-RPC envelope",
+  "oneOf": [
+    {"type":"object","required":["jsonrpc","id","method","params"],"properties":{"jsonrpc":{"const":"2.0"},"id":{"type":"integer","minimum":1},"method":{"enum":["simulation.backend.hello","simulation.run"]},"params":{"type":"object"}},"additionalProperties":false},
+    {"type":"object","required":["jsonrpc","id","result"],"properties":{"jsonrpc":{"const":"2.0"},"id":{"type":"integer","minimum":1},"result":{"type":"object"}},"additionalProperties":false},
+    {"type":"object","required":["jsonrpc","id","error"],"properties":{"jsonrpc":{"const":"2.0"},"id":{"type":["integer","null"]},"error":{"type":"object","required":["code","message"],"properties":{"code":{"type":"integer"},"message":{"type":"string"},"data":{}},"additionalProperties":false}},"additionalProperties":false}
+  ]
+}

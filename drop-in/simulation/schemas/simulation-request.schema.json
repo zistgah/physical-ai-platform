@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:schemas:simulation-request.schema.json",
+  "title": "Planar rigid-disc simulation request",
+  "type": "object",
+  "required": [
+    "bodies",
+    "dt"
+  ],
+  "properties": {
+    "bodies": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/body"
+      }
+    },
+    "dt": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "steps": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000,
+      "default": 1
+    },
+    "gravity": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "floor": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "default": 0
+    },
+    "solverIterations": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "default": 16
+    },
+    "positionIterations": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "default": 20
+    },
+    "maxSubsteps": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64,
+      "default": 64
+    },
+    "seed": {
+      "type": "number",
+      "default": 1
+    },
+    "recordHistory": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "$defs": {
+    "body": {
+      "type": "object",
+      "required": [
+        "id",
+        "x",
+        "y",
+        "vx",
+        "vy",
+        "mass",
+        "radius"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "vx": {
+          "type": "number"
+        },
+        "vy": {
+          "type": "number"
+        },
+        "mass": {
+          "type": "number",
+          "minimum": 0
+        },
+        "radius": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "static": {
+          "type": "boolean"
+        },
+        "restitution": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "friction": {
+          "type": "number",
+          "minimum": 0
+        },
+        "angle": {
+          "type": "number"
+        },
+        "omega": {
+          "type": "number"
+        },
+        "fx": {
+          "type": "number"
+        },
+        "fy": {
+          "type": "number"
+        },
+        "torque": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

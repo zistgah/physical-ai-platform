@@ -1,0 +1,39 @@
+{
+  "schema": "PAI-DROPIN-CHANGE-MANIFEST/1",
+  "package": "fabrication",
+  "version": "2.2.0",
+  "base_iteration": 47,
+  "changes": [
+    {"path":"module.js","change":"modified","purpose":"Add external normalized toolpath validation and execution of preplanned backend toolpaths while retaining HOLD/FAIL behavior."},
+    {"path":"backends/backend-adapters.mjs","change":"added","purpose":"Capability-driven optional backend registry, handshake, timeout, cancellation, provenance, pipeline and normalized CAM import validation."},
+    {"path":"backends/python-worker-host.mjs","change":"added","purpose":"Node/desktop isolated-process bridge with explicit root, no shell, allowlist, timeout and output bounds."},
+    {"path":"python/fabrication_geometry_worker.py","change":"added","purpose":"Optional CadQuery/OCCT, Trimesh, Shapely/GEOS and SciPy worker with STEP/mesh inspection, tessellation, polygon offset/boolean/validation and constrained process optimization."},
+    {"path":"python/requirements-geometry.txt","change":"added","purpose":"Optional host-only dependency ranges; no mandatory browser dependency."},
+    {"path":"python/requirements-geometry-tested.txt","change":"added","purpose":"Direct dependency versions exercised by the handoff tests; not a transitive lockfile."},
+    {"path":"samples/backend/","change":"added","purpose":"Executable known-answer Shapely geometry and SciPy process-optimization samples."},
+    {"path":"verification/","change":"added","purpose":"Captured package, stitch, regression and acceptance logs including explicit unverified stages."},
+    {"path":"backend-catalog.json","change":"added","purpose":"Optional backend inventory with roles, capabilities, licenses and actual runtime status."},
+    {"path":"backend-tests.mjs","change":"added","purpose":"Backend protocol tests plus real geometry library and external CAM normalized-toolpath tests."},
+    {"path":"BACKEND-INTEGRATION.md","change":"added","purpose":"Detailed backend strategy, security, licensing, operation contracts and limitations."},
+    {"path":"STITCH-INSTRUCTIONS.md","change":"added","purpose":"Exact bounded integration procedure for Grok."}
+  ],
+  "compatibility": {
+    "fabricateExportPreserved": true,
+    "fabricateRemainsAsync": true,
+    "additiveInputs": ["preplannedToolpath", "backendEvidence"],
+    "kernelChanged": false,
+    "acceptanceScriptChanged": false,
+    "otherDropInsChanged": false,
+    "mandatoryExternalDependencies": false
+  },
+  "runtimeStatus": {
+    "cadqueryOcct": "installed-and-tested-in-build-environment",
+    "trimesh": "installed-and-tested-in-build-environment",
+    "shapelyGeos": "installed-and-tested-in-build-environment",
+    "scipy": "installed-and-tested-in-build-environment",
+    "opencamlib": "not-installed-adapter-contract-only",
+    "freecadCam": "not-installed-adapter-contract-only",
+    "camotics": "not-installed-adapter-contract-only",
+    "cavalierContours": "not-installed-adapter-contract-only"
+  }
+}

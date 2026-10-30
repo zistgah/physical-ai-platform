@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ayeai:pap:prototyping:backend-response:1.0.0",
+  "title": "Physical AI Platform backend worker response",
+  "type": "object",
+  "required": [
+    "protocolVersion",
+    "status",
+    "exitCode",
+    "backendId",
+    "operation",
+    "inputDigest",
+    "runId",
+    "backendVersion",
+    "startedAt",
+    "completedAt",
+    "outputDigest",
+    "outputArtifacts",
+    "environmentFingerprint",
+    "metrics"
+  ],
+  "properties": {
+    "protocolVersion": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "enum": [
+        "COMPLETED",
+        "FAILED",
+        "CANCELLED",
+        "RUNNING"
+      ]
+    },
+    "exitCode": {
+      "type": "integer"
+    },
+    "backendId": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "inputDigest": {
+      "type": "string",
+      "pattern": "^sha256:[a-fA-F0-9]{64}$"
+    },
+    "runId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "backendVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "outputDigest": {
+      "type": "string",
+      "pattern": "^sha256:[a-fA-F0-9]{64}$"
+    },
+    "outputArtifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "deterministic": {
+      "type": "boolean"
+    },
+    "environmentFingerprint": {
+      "type": "string",
+      "pattern": "^sha256:[a-fA-F0-9]{64}$"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "result": {},
+    "diagnostics": {
+      "type": "array"
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": [
+        "uri",
+        "digest",
+        "mediaType",
+        "format"
+      ],
+      "properties": {
+        "uri": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(artifact|cas|https|s3|gs|inline):"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[a-fA-F0-9]{64}$"
+        },
+        "mediaType": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$comment": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}

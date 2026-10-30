@@ -1,0 +1,41 @@
+{
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "nodes": [
+    {
+      "id": "SUP-A"
+    },
+    {
+      "id": "SUP-B"
+    },
+    {
+      "id": "RAW-ALLOY"
+    },
+    {
+      "id": "MACHINE-SITE"
+    },
+    {
+      "id": "PART"
+    }
+  ],
+  "edges": [
+    {
+      "from": "SUP-A",
+      "to": "RAW-ALLOY"
+    },
+    {
+      "from": "SUP-B",
+      "to": "RAW-ALLOY"
+    },
+    {
+      "from": "RAW-ALLOY",
+      "to": "MACHINE-SITE"
+    },
+    {
+      "from": "MACHINE-SITE",
+      "to": "PART"
+    }
+  ],
+  "source": "SUP-A",
+  "sink": "PART",
+  "expected_independent_paths": 1
+}

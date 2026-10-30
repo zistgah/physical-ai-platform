@@ -1,0 +1,43 @@
+{
+  "id": "feedback-control-lab-01",
+  "title": "Feedback loop exploration",
+  "cells": [
+    {
+      "id": "diagram",
+      "type": "markdown",
+      "content": "Setpoint -> comparator -> controller -> actuator -> plant -> sensor -> feedback."
+    },
+    {
+      "id": "experiment",
+      "type": "simulation",
+      "adapterId": "pap.education.reference",
+      "simulationRef": "closed-loop-temperature",
+      "parameters": {
+        "setpoint": 22,
+        "initialTemperature": 18,
+        "samplePeriodSeconds": 1
+      },
+      "operation": "first-order-control",
+      "inputs": {
+        "setpoint": 22,
+        "initial": 18,
+        "ambient": 18,
+        "processGain": 1,
+        "timeConstant": 5,
+        "kp": 2,
+        "dt": 0.1,
+        "duration": 10
+      }
+    },
+    {
+      "id": "analysis",
+      "type": "question",
+      "content": "Compare rise time, overshoot and steady-state error. Do not infer physical safety from this simulation."
+    },
+    {
+      "id": "reflection",
+      "type": "reflection",
+      "content": "Identify model assumptions and one validation experiment."
+    }
+  ]
+}

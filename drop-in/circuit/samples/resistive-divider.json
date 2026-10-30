@@ -1,0 +1,18 @@
+{
+  "copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.",
+  "name": "10 V resistive divider",
+  "description": "Two equal 1 kOhm resistors; expected midpoint is 5 V.",
+  "input": {
+    "netlist": { "elements": [
+      { "id": "V1", "type": "V", "n1": "supply", "n2": "0", "value": 10 },
+      { "id": "R1", "type": "R", "n1": "supply", "n2": "mid", "value": 1000 },
+      { "id": "R2", "type": "R", "n1": "mid", "n2": "0", "value": 1000 }
+    ] },
+    "steps": 2,
+    "dt": 0.001
+  },
+  "assertions": [
+    { "path": "final.nodeVoltages.mid", "expected": 5, "tolerance": 1e-10 },
+    { "path": "final.branchCurrents.V1", "expected": -0.005, "tolerance": 1e-10 }
+  ]
+}

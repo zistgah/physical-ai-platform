@@ -1,0 +1,31 @@
+{
+  "package": "ayeai.physical-ai.compute-orchestration",
+  "version": "1.0.0",
+  "copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks.",
+  "added": [
+    "LICENSE",
+    "module.js",
+    "browser-worker.js",
+    "manifest.json",
+    "schemas/job.schema.json",
+    "schemas/result.schema.json",
+    "samples/reliability-series-job.json",
+    "test.mjs",
+    "test_notebooks.py",
+    "EXPLAINER.md",
+    "BUILD-ANALYSIS.md",
+    "API-REFERENCE.md",
+    "TEST-MATRIX.md",
+    "STITCH-INSTRUCTIONS.md",
+    "COLAB-GUIDE.md",
+    "VERIFICATION.md",
+    "notebooks/reliability_monte_carlo_colab.ipynb",
+    "notebooks/README.md",
+    "provider-catalog.json",
+    "samples/README.md"
+  ],
+  "modified": [],
+  "kernelChanged": false,
+  "acceptanceScriptChanged": false,
+  "unrelatedModulesChanged": false
+}

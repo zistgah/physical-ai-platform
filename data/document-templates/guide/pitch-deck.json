@@ -1,0 +1,107 @@
+{
+  "template_id": "business.pitch_deck",
+  "template_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "title": "Pitch Deck",
+  "purpose": "Communicate a business or project opportunity in a short, coherent sequence. The deck is a summary, not a substitute for the underlying plan or diligence.",
+  "guide_mode": true,
+  "output": "pptx",
+  "slides": [
+    {
+      "id": "title",
+      "title": "Title",
+      "required": true,
+      "instruction": "Company/project, one-line proposition, date, presenter and contact."
+    },
+    {
+      "id": "problem",
+      "title": "Problem",
+      "required": true,
+      "instruction": "One clearly evidenced customer problem; quantify only where supported."
+    },
+    {
+      "id": "customer",
+      "title": "Customer and Use Case",
+      "required": true,
+      "instruction": "Who experiences the problem, who uses, who pays and who approves."
+    },
+    {
+      "id": "solution",
+      "title": "Solution",
+      "required": true,
+      "instruction": "Show product/service and user workflow. Use real product/simulation images with fidelity labels."
+    },
+    {
+      "id": "why_now",
+      "title": "Why Now",
+      "required": false,
+      "instruction": "Technical, regulatory, economic or market timing with sources."
+    },
+    {
+      "id": "market",
+      "title": "Market",
+      "required": true,
+      "instruction": "Segment and sizing logic; avoid unsupported giant TAM claims."
+    },
+    {
+      "id": "product",
+      "title": "Product and Technology",
+      "required": true,
+      "instruction": "Architecture, maturity, roadmap, IP and defensibility."
+    },
+    {
+      "id": "traction",
+      "title": "Validation / Traction",
+      "required": true,
+      "instruction": "Separate revenue, contracts, pilots, LOIs, user tests, lab tests and simulation."
+    },
+    {
+      "id": "model",
+      "title": "Business Model",
+      "required": true,
+      "instruction": "Pricing, revenue streams, channels and economics."
+    },
+    {
+      "id": "competition",
+      "title": "Competition",
+      "required": true,
+      "instruction": "Alternatives and differentiation on decision-relevant dimensions."
+    },
+    {
+      "id": "go_to_market",
+      "title": "Go-to-Market",
+      "required": true,
+      "instruction": "Sales motion, partnerships, procurement and adoption plan."
+    },
+    {
+      "id": "roadmap",
+      "title": "Roadmap",
+      "required": true,
+      "instruction": "Milestones, work packages, validation and regulatory gates."
+    },
+    {
+      "id": "team",
+      "title": "Team",
+      "required": true,
+      "instruction": "Relevant verified capabilities and missing hires."
+    },
+    {
+      "id": "financials",
+      "title": "Financials and Use of Funds",
+      "required": true,
+      "instruction": "Capital ask, runway, milestone-linked spend and scenario summary."
+    },
+    {
+      "id": "ask",
+      "title": "Ask",
+      "required": true,
+      "instruction": "Specific request and next step."
+    },
+    {
+      "id": "appendix",
+      "title": "Appendix",
+      "required": false,
+      "instruction": "Detailed metrics, assumptions, technical architecture, financials and sources."
+    }
+  ]
+}

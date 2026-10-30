@@ -1,0 +1,41 @@
+{
+  "protocol": "ayeai.manufacturing.backend/v1",
+  "requestId": "sample-simpy-001",
+  "capability": "manufacturing.discrete-event.simulate",
+  "operation": "simulate-flow",
+  "executionClass": "simulation",
+  "metadata": {
+    "timeUnit": "minute",
+    "evidenceState": "SIMULATED"
+  },
+  "payload": {
+    "stations": [
+      {
+        "id": "mill-01",
+        "capacity": 1
+      }
+    ],
+    "jobs": [
+      {
+        "id": "job-a",
+        "arrivalMinute": 0,
+        "operations": [
+          {
+            "stationId": "mill-01",
+            "durationMinutes": 5
+          }
+        ]
+      },
+      {
+        "id": "job-b",
+        "arrivalMinute": 0,
+        "operations": [
+          {
+            "stationId": "mill-01",
+            "durationMinutes": 3
+          }
+        ]
+      }
+    ]
+  }
+}

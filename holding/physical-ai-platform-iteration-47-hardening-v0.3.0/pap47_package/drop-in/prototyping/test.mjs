@@ -1,0 +1,4 @@
+/** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed GPL-3.0-only. */
+import { prototype } from './module.js';const a=(v,m)=>{if(!v)throw Error(m)};
+const config={id:'robot-a',hash:'sha256:abc',components:['mcu','motor']};const ev=[{id:'test-1',subject:'robot-a',configurationHash:'sha256:abc',type:'functional-test',state:'ACCEPTED',provenance:{source:'lab-run-4',timestamp:'2026-10-30T00:00:00Z'}}];
+a(prototype({config,evidence:ev,requiredEvidence:['functional-test']}).outcome==='OK','creates revision from bound accepted evidence');a(prototype({config,evidence:ev,requiredEvidence:['safety-test']}).outcome==='HOLD','missing evidence holds');a(prototype({config,evidence:[{...ev[0],configurationHash:'other'}],requiredEvidence:['functional-test']}).outcome==='HOLD','stale configuration evidence rejected');console.log('prototyping PASS');

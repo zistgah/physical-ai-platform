@@ -1,0 +1,69 @@
+{
+  "protocol": "ayeai.manufacturing.backend/v1",
+  "requestId": "sample-jobshop-001",
+  "capability": "manufacturing.jobshop.optimize",
+  "operation": "solve-jobshop",
+  "executionClass": "planning",
+  "metadata": {
+    "modelVersion": "1.0.0",
+    "timeUnit": "minute"
+  },
+  "payload": {
+    "model": {
+      "modelVersion": "1.0.0",
+      "timeUnit": "minute",
+      "horizonMinutes": 480,
+      "objective": [
+        "minimize-makespan"
+      ],
+      "operations": [
+        {
+          "id": "cut-10",
+          "orderId": "WO-SAMPLE-1",
+          "sequence": 0,
+          "process": "CUT",
+          "durationMinutes": 25,
+          "eligibleStationIds": [
+            "laser-01"
+          ]
+        },
+        {
+          "id": "mill-20",
+          "orderId": "WO-SAMPLE-1",
+          "sequence": 1,
+          "process": "MILL",
+          "durationMinutes": 45,
+          "eligibleStationIds": [
+            "mill-01",
+            "mill-02"
+          ]
+        }
+      ],
+      "stations": [
+        {
+          "id": "laser-01",
+          "availableMinutes": 240
+        },
+        {
+          "id": "mill-01",
+          "availableMinutes": 240
+        },
+        {
+          "id": "mill-02",
+          "availableMinutes": 240
+        }
+      ],
+      "constraints": {
+        "eachOperationExactlyOnce": true,
+        "operationPrecedence": true,
+        "stationNoOverlap": true,
+        "respectExistingBookedCapacity": true
+      }
+    },
+    "solverOptions": {
+      "timeLimitSeconds": 10,
+      "deterministic": true,
+      "randomSeed": 0
+    }
+  }
+}

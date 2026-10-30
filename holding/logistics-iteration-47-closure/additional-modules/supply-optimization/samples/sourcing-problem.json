@@ -1,0 +1,91 @@
+{
+  "_copyright": "Copyright \u00a9 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI\u00ae, AyeAM\u00ae and AyeCNSe\u00ae are registered trademarks of Abhishek Choudhary.",
+  "demand": [
+    {
+      "part": "SERVO-24V",
+      "quantity": 12,
+      "due_days": 7,
+      "currency": "INR"
+    },
+    {
+      "part": "MOTOR-DC",
+      "quantity": 8,
+      "due_days": 10,
+      "currency": "INR"
+    }
+  ],
+  "offers": [
+    {
+      "id": "S1-SERVO",
+      "supplier_id": "S1",
+      "part": "SERVO-24V",
+      "capacity": 8,
+      "unit_cost": 1200,
+      "lead_days": 3,
+      "carbon_kg": 2.1,
+      "currency": "INR",
+      "approved": true,
+      "export_status": "CLEAR",
+      "lifecycle_status": "ACTIVE"
+    },
+    {
+      "id": "S2-SERVO",
+      "supplier_id": "S2",
+      "part": "SERVO-24V",
+      "capacity": 8,
+      "unit_cost": 1280,
+      "lead_days": 5,
+      "carbon_kg": 1.7,
+      "currency": "INR",
+      "approved": true,
+      "export_status": "CLEAR",
+      "lifecycle_status": "ACTIVE"
+    },
+    {
+      "id": "S3-SERVO",
+      "supplier_id": "S3",
+      "part": "SERVO-24V",
+      "capacity": 10,
+      "unit_cost": 900,
+      "lead_days": 2,
+      "carbon_kg": 1.1,
+      "currency": "INR",
+      "approved": false,
+      "export_status": "CLEAR",
+      "lifecycle_status": "ACTIVE"
+    },
+    {
+      "id": "S1-MOTOR",
+      "supplier_id": "S1",
+      "part": "MOTOR-DC",
+      "capacity": 4,
+      "unit_cost": 850,
+      "lead_days": 4,
+      "carbon_kg": 1.8,
+      "currency": "INR",
+      "approved": true,
+      "export_status": "CLEAR",
+      "lifecycle_status": "ACTIVE"
+    },
+    {
+      "id": "S2-MOTOR",
+      "supplier_id": "S2",
+      "part": "MOTOR-DC",
+      "capacity": 8,
+      "unit_cost": 920,
+      "lead_days": 3,
+      "carbon_kg": 1.5,
+      "currency": "INR",
+      "approved": true,
+      "export_status": "CLEAR",
+      "lifecycle_status": "ACTIVE"
+    }
+  ],
+  "weights": {
+    "cost": 1.0,
+    "lead_time": 20.0,
+    "carbon": 50.0
+  },
+  "max_supplier_share": 0.75,
+  "carbon_cap_kg": 100
+}

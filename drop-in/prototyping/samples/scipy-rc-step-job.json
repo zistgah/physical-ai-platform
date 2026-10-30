@@ -1,0 +1,39 @@
+{
+  "jobId": "sample-scipy-rc-001",
+  "projectId": "sample-project-01",
+  "configurationId": "sample-cfg-01",
+  "configurationFingerprint": "sha256:sample-cfg-01",
+  "revisionId": "sample-rev-02",
+  "testId": "sample-test-01",
+  "backendVersion": "1.17.0",
+  "domain": "numerics",
+  "operation": "numerics.ode",
+  "inputFormat": "JSON",
+  "inputDigest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "inputArtifacts": [
+    {
+      "uri": "artifact://samples/rc-step.json",
+      "digest": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "mediaType": "application/json"
+    }
+  ],
+  "units": {
+    "resistance": "ohm",
+    "capacitance": "F",
+    "voltage": "V",
+    "time": "s"
+  },
+  "solverOptions": {
+    "problem": "rc-step",
+    "resistanceOhm": 1000,
+    "capacitanceFarad": 1e-06,
+    "stepVoltageV": 1,
+    "method": "RK45",
+    "rtol": 1e-10,
+    "atol": 1e-12
+  },
+  "timeoutMs": 30000,
+  "deterministic": true,
+  "seed": 42,
+  "_copyright": "Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary."
+}
