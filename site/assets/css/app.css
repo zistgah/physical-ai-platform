@@ -185,3 +185,15 @@ footer a { color: var(--accent); }
   .wb-tree, .wb-props { border: 0; }
   .status-strip { grid-template-columns: 1fr; }
 }
+
+/* Alpha 0.2.0: operations, tools, CAD and simulation panels */
+.page-actions { margin: 12px 0 20px; }
+.page-actions h2, .sim-tool h2 { font-size: 1.05rem; margin: 0 0 8px; }
+.result { margin-top: 10px; overflow-x: auto; }
+.result-table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+.result-table th, .result-table td { border: 1px solid rgba(127,127,127,0.35); padding: 4px 8px; text-align: left; vertical-align: top; }
+.tool-json { max-height: 260px; overflow: auto; white-space: pre-wrap; word-break: break-word; font-size: 0.78rem; }
+.tool-chart, .cad-canvas { max-width: 100%; height: auto; background: #0f1420; border-radius: 6px; }
+.tool-status { opacity: 0.85; }
+.tool-list li { margin: 4px 0; }
+.cad-canvas { cursor: crosshair; }

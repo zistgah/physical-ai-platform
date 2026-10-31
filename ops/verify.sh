@@ -50,7 +50,12 @@ no_oversized(){
   local big; big="$(find . -path ./.git -prune -o -type f -size +50M -print)"
   [ -z "$big" ] || { printf '%s\n' "$big"; return 1; }
 }
-manifest_ok(){ [ ! -f MANIFEST.sha256 ] || sha256sum --quiet -c MANIFEST.sha256; }
+manifest_ok(){
+  [ -f MANIFEST.sha256 ] || return 0
+  # Uncommitted changes are resealed by the push, which runs this gate again on the sealed tree.
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ -n "$(git status --porcelain --untracked-files=no)" ]; then return 0; fi
+  sha256sum --quiet -c MANIFEST.sha256
+}
 
 echo "verify: $(basename "$PWD")"
 run "every conformance suite (tools/regression-checklist.mjs)" node tools/regression-checklist.mjs

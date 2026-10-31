@@ -1,6 +1,27 @@
 Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
 # Changelog
 
+## Alpha 0.2.0 – every component stitched into the site
+
+### Added
+- Tools pages, `#/tools` and `#/tools/<package>`, mounting all twelve JavaScript drop-in packages with their own samples. A run calls the package's code in the browser and shows the call, the arguments, the result, a table and, where the result carries a series, a chart.
+- A CAD workbench on the geometry kernel: sketch by clicking or by coordinates; extrude, revolve, chamfer, fillet, draft, shell, union and subtract; undo and redo; STL export and import; a feature tree; every solid a canonical entity.
+- A simulation panel: run, trace, chart, an armed emergency-stop fault, and replay of the last run from its manifest.
+- An Operate panel on every working page that calls the platform's engines on the current project and shows what they return.
+- CAD and Tools in the navigation; `tests/ui-acceptance.mjs`, the browser acceptance.
+
+### Changed
+- `site/index.html`: the doctype is first and the notice is a comment, so the page is in standards mode; the Content-Security-Policy is enforced; the inline service-worker script moved to `assets/js/pwa.js`.
+- The Pages workflow publishes `site/` beside `drop-in/`, with the root opening the site; the deploy job declares its environment; browser, OpenCascade and acceptance steps report without blocking the deploy.
+- Iteration 26 and 30 checks, the acceptance stub DOM and the gate's manifest check, as recorded in `origin/SEED-DIFF.md`.
+- Version 0.2.0-alpha.
+
+### Known open items for the final release
+- The in-browser STEP writer produces a file OpenCascade cannot read; the Node route through OpenCascade works.
+- CAD union and pocket are correct only for axis-aligned rectangular profiles, and a union of two separate solids returns the first.
+- `drop-in/cad` samples store per-face vertices: the site welds them before clipping; the L-prism sample holds because the clipper is convex-only.
+- Two received `requirements.txt` files start with a notice line that `pip` cannot read.
+
 ## Iteration 03 – Lifecycle + Configuration + Digital Thread + Assurance + Manufacturing
 
 ### Added

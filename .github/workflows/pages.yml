@@ -19,21 +19,34 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install -g playwright && npx playwright install chromium
+      - run: npm install -g playwright && npx playwright install --with-deps chromium
+        continue-on-error: true
       - run: pip install cadquery-ocp
         continue-on-error: true
       - run: node tools/regression-checklist.mjs
       - run: node tests/acceptance.mjs
         continue-on-error: true
       - run: node tools/test-components.mjs
+      - run: node tests/ui-acceptance.mjs
+        continue-on-error: true
 
   deploy:
     needs: test
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Assemble the site beside its drop-in packages
+        run: |
+          mkdir -p _pages
+          cp -r site drop-in _pages/
+          printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=site/"><title>Physical AI Platform</title><a href="site/">Open the Physical AI Platform</a>' > _pages/index.html
+          touch _pages/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: './site'
-      - uses: actions/deploy-pages@v4
+          path: './_pages'
+      - id: deployment
+        uses: actions/deploy-pages@v4

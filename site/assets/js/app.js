@@ -37,6 +37,10 @@ import { FaultInjection } from "../../components/simulation/fault-injection.js";
 import { createCadSession } from "../../components/cad/cad-workbench.js";
 import { FactoryResolution } from "../../components/manufacturing/factory-resolution.js";
 import { BusinessEngine } from "../../components/core/business-engine.js";
+import { toolsIndexView, toolPackageView } from "../../components/tools/tools-view.js";
+import { cadToolView } from "../../components/workbench/cad-tool.js";
+import { simToolSection } from "../../components/workbench/sim-tool.js";
+import { mountPageActions } from "../../components/workbench/page-actions.js";
 
 let kernel = createKernel();
 let currentProject = null;
@@ -84,7 +88,7 @@ const routes = {
   "/research": research,
   "/build": build,
   "/workbench": workbenchView,
-  "/simulate": simulate,
+  "/simulate": simulateView,
   "/manufacture": manufactureView,
   "/deploy": deployView,
   "/regulate": regulateView,
@@ -98,7 +102,8 @@ const routes = {
   "/graph": graphInspector,
   "/editor": editorView,
   "/cockpit": cockpitView,
-  "/cad": cadView,
+  "/cad": cadWorkbenchView,
+  "/tools": toolsView,
   "/boundaries": capabilityView,
   "/lifecycle": lifecycleView,
   "/configuration": configurationView,
@@ -637,10 +642,20 @@ function notebooksView() {
   </div>`;
 }
 
+function toolsView() { toolsIndexView(document.querySelector("#app")); }
+function cadWorkbenchView() { cadToolView(document.querySelector("#app"), kernel, currentProject); }
+function simulateView() {
+  simulate();
+  const root = document.querySelector("#sim-root");
+  if (root) root.before(simToolSection());
+}
+
 function router() {
   const p = (location.hash.slice(1) || "/").split("?")[0];
+  if (p.startsWith("/tools/")) { toolPackageView(document.querySelector("#app"), decodeURIComponent(p.slice(7))); return; }
   const fn = routes[p] || home;
   fn();
+  mountPageActions(document.querySelector("#app"), routes[p] ? p : "/", { kernel, project: currentProject, onChange: () => { try { kernel.saveToLocal(); } catch {} } });
   document.querySelectorAll("nav a").forEach(a => {
     a.style.fontWeight = a.getAttribute("href") === location.hash || (location.hash === "" && a.getAttribute("href") === "#/") ? "700" : "400";
   });

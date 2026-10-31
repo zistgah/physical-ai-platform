@@ -17,7 +17,9 @@ assert(INDEMNITY.includes("indemnify"), "Indemnity is present");
 assert(disclaimerFor("hil").context.includes("transport"), "HIL context is present");
 const html = readFileSync("site/index.html", "utf8");
 assert(html.includes("manifest.webmanifest"), "PWA manifest is linked");
-assert(html.includes("serviceWorker"), "Service worker is registered");
+// Alpha 0.2.0: the registration moved from an inline script to assets/js/pwa.js so the CSP can be enforced.
+const pwaJs = html.includes("assets/js/pwa.js") ? readFileSync("site/assets/js/pwa.js", "utf8") : "";
+assert(html.includes("serviceWorker") || pwaJs.includes("serviceWorker"), "Service worker is registered");
 const app = readFileSync("site/assets/js/app.js", "utf8");
 assert(app.includes("pwa-install"), "Install button is on the landing");
 assert(app.includes("class=\"workbench\""), "Workbench has an industrial layout");

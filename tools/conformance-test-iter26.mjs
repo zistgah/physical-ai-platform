@@ -74,8 +74,12 @@ function run() {
   let occ;
   try {
     writeFileSync(join(scratch, "mesh.json"), JSON.stringify(base.mesh));
-    const occLine = execFileSync("python3", [join(root, "tools/step-from-mesh.py"), join(scratch, "mesh.json"), join(scratch, "cube.stp")]).toString().trim().split("\n").at(-1);
+    const occLine = execFileSync("python3", [join(root, "tools/step-from-mesh.py"), join(scratch, "mesh.json"), join(scratch, "cube.stp")], { stdio: ["ignore", "pipe", "pipe"] }).toString().trim().split("\n").at(-1);
     occ = JSON.parse(occLine);
+  } catch (e) {
+    // Update fix: OpenCascade installed but unable to run here makes this one check UNVERIFIED, with the reason printed.
+    const why = String(e.stderr || e.message || e).trim().split("\n").filter(Boolean).slice(-1)[0] || "no message";
+    occ = { unverified: "OpenCascade could not run here: " + why };
   } finally { rmSync(scratch, { recursive: true, force: true }); }
   // Seed fix: without OpenCascade this one check is UNVERIFIED, not PASS and not FAIL.
   if (occ.unverified) console.log("UNVERIFIED: OpenCascade STEP volume matches the cube (" + occ.unverified + ")");

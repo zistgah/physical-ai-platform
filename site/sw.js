@@ -1,6 +1,6 @@
 /* Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
-const CACHE = "pai-v30";
-const SHELL = ["./index.html", "./assets/css/app.css", "./assets/js/app.js", "./manifest.webmanifest"];
+const CACHE = "pai-v31";
+const SHELL = ["./index.html", "./assets/css/app.css", "./assets/js/app.js", "./assets/js/pwa.js", "./manifest.webmanifest"];
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));
 });

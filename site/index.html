@@ -1,9 +1,8 @@
-Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
-© 1993–2026 Abhishek Choudhary. All rights reserved.
 <!doctype html>
+<!-- Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. © 1993–2026 Abhishek Choudhary. All rights reserved. -->
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0d1117">
@@ -25,6 +24,8 @@ Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM®
     <a href="#/learn">Learn</a>
     <a href="#/research">Research</a>
     <a href="#/build">Build</a>
+        <a href="#/cad">CAD</a>
+        <a href="#/tools">Tools</a>
     <a href="#/simulate">Simulate</a>
     <a href="#/lifecycle">Lifecycle</a>
     <a href="#/configuration">Configuration</a>
@@ -50,11 +51,7 @@ Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM®
   <p>Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL v3</a>.</p>
   <p>Static GitHub Pages deployment. No mandatory backend. Canonical system model is the source of truth. <a href="#/disclaimer">Disclaimer and indemnity</a>.</p>
 </footer>
-<script>
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js");
-let deferred;
-window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; window.__pwaPrompt = e; });
-</script>
+<script src="./assets/js/pwa.js"></script>
 <script type="module" src="./assets/js/app.js"></script>
 </body>
 </html>

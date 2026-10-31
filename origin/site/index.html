@@ -1,0 +1,60 @@
+Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary.
+© 1993–2026 Abhishek Choudhary. All rights reserved.
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1117">
+<meta name="description" content="Sovereign Physical AI and Robotics Guidance Platform – role-adaptive systems engineering, simulation, education, research, manufacturing and compliance for physical AI.">
+<title>Physical AI Platform – Sovereign Robotics & Physical AI</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./assets/css/app.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">PAI</span>
+    <strong>Physical AI Platform</strong>
+  </div>
+  <nav id="main-nav">
+    <a href="#/">Home</a>
+    <a href="#/explore">Explore</a>
+    <a href="#/learn">Learn</a>
+    <a href="#/research">Research</a>
+    <a href="#/build">Build</a>
+    <a href="#/simulate">Simulate</a>
+    <a href="#/lifecycle">Lifecycle</a>
+    <a href="#/configuration">Configuration</a>
+    <a href="#/traceability">Traceability</a>
+    <a href="#/assurance">Assurance</a>
+    <a href="#/compliance">Compliance</a>
+    <a href="#/manufacture">Manufacture</a>
+    <a href="#/deploy">Deploy</a>
+    <a href="#/regulate">Regulate</a>
+    <a href="#/standards">Standards</a>
+    <a href="#/standards">Standards</a>
+    <a href="#/education">Education</a>
+    <a href="#/notebooks">Notebooks</a>
+    <a href="#/research">Research</a>
+    <a href="#/operations">Operations</a>
+    <a href="#/ai-guide">AI Guide</a>
+    <a href="#/about">About</a>
+  </nav>
+  <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+</header>
+<main id="app"></main>
+<footer>
+  <p>Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL v3</a>.</p>
+  <p>Static GitHub Pages deployment. No mandatory backend. Canonical system model is the source of truth. <a href="#/disclaimer">Disclaimer and indemnity</a>.</p>
+</footer>
+<script>
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js");
+let deferred;
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; window.__pwaPrompt = e; });
+</script>
+<script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

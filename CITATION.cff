@@ -3,7 +3,7 @@ cff-version: 1.2.0
 message: If you use this software, please cite it as below.
 title: Physical AI Platform
 doi: 10.5281/zenodo.23819806
-version: 0.1.0
+version: 0.2.0-alpha
 authors:
   - family-names: Choudhary
     given-names: Abhishek

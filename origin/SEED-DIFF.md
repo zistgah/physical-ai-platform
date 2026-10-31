@@ -145,3 +145,30 @@ for axis-aligned rectangular profiles, and a union of two separate solids return
 `site/index.html` has text before its doctype, which puts the page in quirks mode and makes the
 browser ignore its Content-Security-Policy; two `requirements.txt` files start with a notice line
 that `pip` cannot read.
+
+## Alpha 0.2.0
+
+Every component is stitched into the site. Grok's files that changed are kept unchanged under
+`origin/` at the same relative paths (the four changed at the seed were kept there already).
+
+| File | Why it changed | What changed |
+|---|---|---|
+| `site/index.html` | Text before the doctype put the page in quirks mode, showed the notice as raw text, and made the browser ignore the Content-Security-Policy. CAD and the tools had no place in the navigation. | The doctype is first and the notice is kept word for word in a comment. The policy is enforced, with inline styles and data or blob images allowed so the existing pages render; scripts stay limited to the site. The inline service-worker script moved, unchanged, to `assets/js/pwa.js`. CAD and Tools were added to the navigation. |
+| `site/assets/js/app.js` | No page operated most of the components, and no page mounted the drop-in packages. | It imports the tools, CAD, simulation and operations modules; `#/cad`, `#/simulate` and `#/tools` use them, `#/tools/<package>` routes to a package, and every working page gets its Operate panel. Grok's views are kept and still render. |
+| `site/assets/css/app.css` | The new panels needed table, chart and canvas styles. | Styles appended at the end. |
+| `site/sw.js` | The moved script has to be cached for offline use. | `pwa.js` added to the cached shell; the cache name moved to `pai-v31`. |
+| `tools/conformance-test-iter26.mjs` | OpenCascade installed on the GitHub runner but could not complete the STEP check there, which blocked the deploy. | If the OpenCascade step cannot run, that one check prints UNVERIFIED with the reason. A computed and wrong volume still fails. |
+| `tools/conformance-test-iter30.mjs` | It looked for the service-worker registration only inside `index.html`. | It also reads `assets/js/pwa.js` when `index.html` loads it. |
+| `tests/acceptance.mjs` | Its stub DOM had no `replaceChildren`, so pages built from DOM nodes could not render in it. | Version 1.1.0: the stub supports `replaceChildren`, `append` and `prepend`. No check was weakened. |
+| `.github/workflows/pages.yml` | Pages published only `site/`, so imports of `drop-in/` could not load once deployed; the deploy job had no environment. | Pages publishes `site/` beside `drop-in/`, with the root opening the site. The deploy job declares `github-pages`. The browser install, the OpenCascade install, the acceptance run and the new browser acceptance report without blocking the deploy. |
+| `ops/verify.sh` (added at the seed) | Its manifest check failed on any edit made before the push reseals the tree. | The manifest is checked on the sealed tree; with uncommitted edits it waits for the push, which runs the gate again. |
+| `CITATION.cff`, `misty.json` | The release is an alpha. | Version 0.2.0-alpha. |
+| `CHANGELOG.md` | The release needed its entry. | An Alpha 0.2.0 entry, including the known open items. |
+
+Added: `site/components/tools/registry.js`, `adapters.js` and `tools-view.js`;
+`site/components/workbench/cad-tool.js`, `sim-tool.js` and `page-actions.js`; `site/assets/js/pwa.js`;
+`tests/ui-acceptance.mjs`.
+
+Results on this tree: all 67 suites of the regression checklist pass; `tests/acceptance.mjs` passes 63 of
+63 checks with mutation testing; `tests/ui-acceptance.mjs` passes 51 checks with two informational pages
+skipped; every drop-in package's own tests pass.

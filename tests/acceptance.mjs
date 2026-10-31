@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /** Copyright © 1993-2026 Abhishek Choudhary. All rights reserved. AyeAI®, AyeAM® and AyeCNSe® are registered trademarks of Abhishek Choudhary. */
 /**
- * pap-acceptance 1.0.0
+ * pap-acceptance 1.1.0
  * Mechanical acceptance for the Physical AI Platform.
  *
  * © 1993–2026 Abhishek Choudhary. All rights reserved.
@@ -22,7 +22,7 @@ import { createServer } from "node:http";
 import { extname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-const VERSION = "1.0.0";
+const VERSION = "1.1.0";
 const SELF = fileURLToPath(import.meta.url);
 const NOTICE = [
   `pap-acceptance ${VERSION}`,
@@ -168,7 +168,9 @@ async function childSmoke(specPath) {
     byId.set(id, el); return el;
   }
   const app = { _html: "", set innerHTML(v) { this._html = String(v); sink(this._html); }, get innerHTML() { return this._html; },
-    get innerText() { return stripTags(this._html); }, querySelector: () => stub("app.qs"), querySelectorAll: () => [], addEventListener() {}, style: {}, classList: stub("cl"), dataset: {} };
+    get innerText() { return stripTags(this._html); }, querySelector: () => stub("app.qs"), querySelectorAll: () => [], addEventListener() {}, style: {}, classList: stub("cl"), dataset: {},
+    // 1.1.0: pages that build their DOM with nodes (textContent) rather than innerHTML
+    replaceChildren(...k) { this._html = k.map((n) => String(n?.textContent ?? "")).join(" ") || "(dom)"; }, append() {}, prepend() {} };
   const document = {
     querySelector: (sel) => (sel === "#app" ? app : stub("qs:" + sel)),
     querySelectorAll: () => [],
