@@ -1,0 +1,19 @@
+{
+    "_type": "https://in-toto.io/Statement/v1",
+    "predicateType": "https://project-ilm.org/attestations/candor/v1",
+    "subject": [
+        {
+            "name": "zistgah/physical-ai-platform",
+            "digest": {
+                "gitCommit": "75a8f65038e0d6b3cd34fc6a610d920f89e20856"
+            }
+        }
+    ],
+    "predicate": {
+        "action": "MINT",
+        "reason": "update",
+        "utc": "20261031T140232Z",
+        "host": "ilm01-lin",
+        "note": "10.5281/zenodo.23838129"
+    }
+}
